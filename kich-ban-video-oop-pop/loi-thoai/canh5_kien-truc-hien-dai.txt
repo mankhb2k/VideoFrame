@@ -1,0 +1,13 @@
+Vậy vì sao tư duy này hợp với hệ thống hiện đại? Có bốn lý do.
+
+Một, mở rộng theo chiều ngang. Thêm khả năng là thêm một khối, không phải sửa code cũ. Đây là nguyên tắc Open Closed: mở cho việc mở rộng, đóng với việc sửa đổi.
+
+Hai, dễ test. Bạn thay một protocol bằng một bản giả, mà không cần dựng cả cây phụ thuộc phía sau.
+
+Ba, nhiều nhóm làm song song. Protocol là hợp đồng giữa các module, mỗi bên chỉ cần biết hợp đồng, không cần biết bên kia làm thế nào.
+
+Bốn, đổi công nghệ dễ hơn. Tầng trên chỉ phụ thuộc vào giao diện, chứ không phụ thuộc vào thứ cụ thể đằng sau.
+
+Nhưng đừng vội vứt OOP. Khi mô hình thật sự là quan hệ là một, và cây chỉ sâu một hai tầng, như các lớp View trong bộ UI toolkit hay thực thể trong game engine, kế thừa vẫn hoạt động tốt. Và protocol cũng có thể bị lạm dụng: trừu tượng hóa mọi thứ khi chưa cần cũng là một mớ rối khác.
+
+Quy tắc ngón tay cái: chỉ kế thừa khi quan hệ là một thật sự, ổn định, và không quá hai tầng. Chia sẻ một khả năng thì dùng interface hoặc hàm riêng. Và chưa có hai nơi cùng cần thì đừng tạo interface sớm.

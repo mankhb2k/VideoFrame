@@ -1,0 +1,9 @@
+OOP, hay lập trình hướng đối tượng, xoay quanh một ý tưởng: gói dữ liệu và hành vi vào cùng một chỗ, gọi là class. Bốn khái niệm bạn hay nghe là đóng gói, trừu tượng, kế thừa và đa hình.
+
+Đóng gói nghĩa là giấu trạng thái bên trong, chỉ mở ra những hàm cần thiết. Hãy nhìn vào ví dụ. Class Animal có một thuộc tính riêng tư tên là energy, bên ngoài không thể chạm vào. Chỉ có hàm eat mới được phép tăng năng lượng.
+
+Kế thừa nghĩa là class con tái sử dụng code của class cha. Class Bird kế thừa Animal, nên chim tự động biết ăn. Thêm vào đó, nó có hàm fly để bay. Rồi Sparrow, chim sẻ, kế thừa Bird, và thế là chim sẻ vừa ăn được vừa bay được, mà bạn không phải viết lại gì cả. Đây chính là thứ khiến OOP hấp dẫn: viết một lần, dùng ở mọi nơi.
+
+Còn đa hình thì sao? Đa hình cho phép bạn gọi cùng một hàm trên nhiều kiểu khác nhau. Trong TypeScript, abstract class Shape buộc mọi class con phải tự cài đặt hàm area. Circle tính diện tích theo bán kính. Bạn tạo một mảng các Shape, rồi gọi area cho từng phần tử, mà không cần biết đó là hình gì.
+
+Trong nhiều thập niên, OOP thắng lớn vì đây là cách rất tự nhiên để mô hình hóa thế giới thật, nhất là trong những đội nhóm lớn. Và TypeScript càng tiếp thêm động lực: từ khóa class có sẵn từ ES 2015, cùng với extends, abstract và private. Dùng được ngay. Cho đến khi yêu cầu bắt đầu thay đổi.

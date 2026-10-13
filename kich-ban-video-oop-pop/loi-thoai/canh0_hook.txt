@@ -1,0 +1,5 @@
+Bạn mở một file code, và chỉ muốn dùng đúng một hàm. Nhưng hàm đó nằm trong class cha. Class cha lại kế thừa class ông. Class ông lại kế thừa thêm một class nữa. Đến tầng thứ năm, bạn bắt đầu tự hỏi: mình đang đọc code, hay đang đọc gia phả?
+
+Lập trình viên Joe Armstrong, cha đẻ của ngôn ngữ Erlang, từng nói về chuyện này rất hay. Bạn muốn một quả chuối, nhưng thứ bạn nhận được là một con khỉ đang cầm quả chuối, và cả khu rừng xung quanh nó.
+
+Trong video này, mình sẽ so sánh hai cách tổ chức code. OOP, với ví dụ bằng TypeScript. Và POP, tức là Protocol-Oriented Programming, với ví dụ bằng Swift. Cuối video, bạn sẽ có bảy luật để viết TypeScript theo tư duy POP, giúp ứng dụng dễ mở rộng hơn.

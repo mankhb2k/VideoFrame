@@ -1,0 +1,285 @@
+{
+ "scene": "scene-3",
+ "cues": [
+  {
+   "t": 0.05,
+   "type": "pop",
+   "gain": 0.6,
+   "note": "Animal/Bird nodes appear"
+  },
+  {
+   "t": 0.85,
+   "type": "pop",
+   "gain": 0.5,
+   "note": "Sparrow node + avatar"
+  },
+  {
+   "t": 1.25,
+   "type": "pop",
+   "gain": 0.5,
+   "note": "Penguin avatar appears above the tree"
+  },
+  {
+   "t": 5.2,
+   "type": "whoosh",
+   "gain": 0.6,
+   "note": "Penguin drops toward Bird"
+  },
+  {
+   "t": 5.75,
+   "type": "thud",
+   "gain": 0.7,
+   "note": "Penguin lands on Bird, branch draws, node appears"
+  },
+  {
+   "t": 5.75,
+   "type": "type",
+   "d": 1.1,
+   "gain": 0.7,
+   "note": "class Penguin extends Bird {"
+  },
+  {
+   "t": 7.62,
+   "type": "pop",
+   "gain": 0.6,
+   "note": "fly() chip on Bird"
+  },
+  {
+   "t": 8.7,
+   "type": "pop",
+   "gain": 0.5,
+   "note": "inherited fly() on Penguin"
+  },
+  {
+   "t": 10.9,
+   "type": "pop",
+   "gain": 0.6,
+   "note": "two bad options appear"
+  },
+  {
+   "t": 12.46,
+   "type": "click",
+   "gain": 0.8,
+   "note": "cursor presses option 1"
+  },
+  {
+   "t": 13.7,
+   "type": "type",
+   "d": 1.2,
+   "gain": 0.7,
+   "note": "fly() { throw new Error() }"
+  },
+  {
+   "t": 14.08,
+   "type": "glitch",
+   "gain": 0.9,
+   "note": "RGB glitch on Penguin fly()"
+  },
+  {
+   "t": 14.12,
+   "type": "error",
+   "gain": 0.9,
+   "note": "Penguin branch turns red"
+  },
+  {
+   "t": 15.65,
+   "type": "click",
+   "gain": 0.8,
+   "note": "cursor presses option 2"
+  },
+  {
+   "t": 19.3,
+   "type": "pop",
+   "gain": 0.6,
+   "note": "Liskov title"
+  },
+  {
+   "t": 21.2,
+   "type": "pop",
+   "gain": 0.5,
+   "note": "Bird pill"
+  },
+  {
+   "t": 22.95,
+   "type": "pop",
+   "gain": 0.5,
+   "note": "Penguin pill"
+  },
+  {
+   "t": 23.85,
+   "type": "error",
+   "gain": 0.8,
+   "note": "Bird != Penguin"
+  },
+  {
+   "t": 24.8,
+   "type": "type",
+   "d": 2.2,
+   "gain": 0.7,
+   "note": "function release(birds) code"
+  },
+  {
+   "t": 25.7,
+   "type": "pop",
+   "gain": 0.6,
+   "note": "flock of three birds"
+  },
+  {
+   "t": 26.4,
+   "type": "ding",
+   "gain": 0.6,
+   "note": "Sparrow fly() ok"
+  },
+  {
+   "t": 27.05,
+   "type": "ding",
+   "gain": 0.6,
+   "note": "Sparrow fly() ok"
+  },
+  {
+   "t": 27.5,
+   "type": "thud",
+   "gain": 1.0,
+   "note": "Penguin explodes"
+  },
+  {
+   "t": 27.5,
+   "type": "glitch",
+   "gain": 0.9,
+   "note": "crash glitch on Penguin badge"
+  },
+  {
+   "t": 27.6,
+   "type": "error",
+   "gain": 0.9,
+   "note": "Error banner"
+  },
+  {
+   "t": 30.6,
+   "type": "pop",
+   "gain": 0.5,
+   "note": "empty placeholder box for Drone"
+  },
+  {
+   "t": 31.7,
+   "type": "whoosh",
+   "gain": 0.8,
+   "note": "Drone flies in"
+  },
+  {
+   "t": 33.2,
+   "type": "type",
+   "d": 2.0,
+   "gain": 0.6,
+   "note": "class Drone { fly() }"
+  },
+  {
+   "t": 33.3,
+   "type": "pop",
+   "gain": 0.6,
+   "note": "Drone node"
+  },
+  {
+   "t": 34.4,
+   "type": "pop",
+   "gain": 0.5,
+   "note": "Drone fly() chip"
+  },
+  {
+   "t": 35.1,
+   "type": "pop",
+   "gain": 0.5,
+   "note": "ghost Animal chip, link cut"
+  },
+  {
+   "t": 36.3,
+   "type": "whoosh",
+   "gain": 0.5,
+   "note": "arrow flies toward Bird"
+  },
+  {
+   "t": 37.05,
+   "type": "error",
+   "gain": 0.9,
+   "note": "arrow rejected, red X on Bird"
+  },
+  {
+   "t": 39.2,
+   "type": "pop",
+   "gain": 0.5,
+   "note": "extends: only 1 class chip"
+  },
+  {
+   "t": 42.55,
+   "type": "pop",
+   "gain": 0.5,
+   "note": "Bird fly() tile"
+  },
+  {
+   "t": 42.65,
+   "type": "whoosh",
+   "gain": 0.6,
+   "note": "fly() copy flies across"
+  },
+  {
+   "t": 43.45,
+   "type": "pop",
+   "gain": 0.6,
+   "note": "Drone fly() tile (copy)"
+  },
+  {
+   "t": 45.7,
+   "type": "thud",
+   "gain": 0.6,
+   "note": "Hai ban can sua line"
+  },
+  {
+   "t": 48.6,
+   "type": "error",
+   "gain": 0.7,
+   "note": "one copy forgotten, red"
+  },
+  {
+   "t": 51.15,
+   "type": "pop",
+   "gain": 0.5,
+   "note": "extra grey nodes sprout"
+  },
+  {
+   "t": 52.6,
+   "type": "tick",
+   "gain": 0.5,
+   "note": "tangled arrows draw"
+  },
+  {
+   "t": 54.28,
+   "type": "thud",
+   "gain": 0.8,
+   "note": "Ai dam sua?"
+  },
+  {
+   "t": 54.28,
+   "type": "glitch",
+   "gain": 0.6,
+   "note": "RGB glitch on Ai dam sua?"
+  },
+  {
+   "t": 55.0,
+   "type": "whoosh",
+   "gain": 1.0,
+   "note": "camera pulls back to giant monkey"
+  },
+  {
+   "t": 57.4,
+   "type": "pop",
+   "gain": 0.5,
+   "note": "closing line 1"
+  },
+  {
+   "t": 59.45,
+   "type": "pop",
+   "gain": 0.5,
+   "note": "closing line 2"
+  }
+ ]
+}

@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html>
+  <head><meta charset="UTF-8"></head>
+  <body>
+<template>
+<style>
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 500;
+  src: url('assets/fonts/be-vietnam-pro-vietnamese-500-normal.woff2') format('woff2');
+  unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;
+}
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 500;
+  src: url('assets/fonts/be-vietnam-pro-latin-ext-500-normal.woff2') format('woff2');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 500;
+  src: url('assets/fonts/be-vietnam-pro-latin-500-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: url('assets/fonts/be-vietnam-pro-vietnamese-700-normal.woff2') format('woff2');
+  unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;
+}
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: url('assets/fonts/be-vietnam-pro-latin-ext-700-normal.woff2') format('woff2');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: url('assets/fonts/be-vietnam-pro-latin-700-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 800;
+  src: url('assets/fonts/be-vietnam-pro-vietnamese-800-normal.woff2') format('woff2');
+  unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;
+}
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 800;
+  src: url('assets/fonts/be-vietnam-pro-latin-ext-800-normal.woff2') format('woff2');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 800;
+  src: url('assets/fonts/be-vietnam-pro-latin-800-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+#root { position: absolute; inset: 0; }
+.s3-bg { position: absolute; inset: 0; background: #0B1020; }
+.s3-bg::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(rgba(148,163,184,0.13) 2px, transparent 2.6px); background-size: 48px 48px; }
+.s3-stage { position: absolute; inset: 0; overflow: hidden; font-family: 'Be Vietnam Pro', sans-serif; color: #E2E8F0; }
+.s3-world { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; transform-origin: 0 0; }
+.s3-cluster { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; transform-origin: 960px 540px; }
+.s3-abs { position: absolute; }
+.s3-svg { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; overflow: visible; }
+.s3-mono { font-family: 'JetBrains Mono', monospace; }
+
+.s3-node { position: absolute; width: 240px; height: 76px; border-radius: 999px; border: 3px solid #F59E0B; background: #16213E; color: #E2E8F0; font: 700 34px/70px 'JetBrains Mono', monospace; text-align: center; }
+.s3-xn { position: absolute; width: 150px; height: 52px; border-radius: 999px; border: 3px solid #64748B; background: #16213E; color: #94A3B8; font: 700 26px/46px 'JetBrains Mono', monospace; text-align: center; }
+.s3-av { position: absolute; width: 200px; height: 200px; }
+.s3-fly { position: absolute; width: 140px; height: 48px; border-radius: 12px; border: 3px solid #F59E0B; background: #0F1730; color: #E2E8F0; font: 700 30px/42px 'JetBrains Mono', monospace; text-align: center; }
+.s3-gl { display: grid; width: 100%; height: 100%; }
+.s3-gl > span { grid-area: 1 / 1; display: block; }
+.s3-gc { opacity: 0; mix-blend-mode: screen; }
+.s3-gw { color: #FF6A3D; }
+.s3-gk { color: #22D3EE; }
+.s3-gb { position: relative; z-index: 2; }
+.s3-lbl { position: absolute; font: 500 28px/1.25 'Be Vietnam Pro', sans-serif; color: #94A3B8; }
+
+.s3-req { position: absolute; left: 96px; top: 96px; height: 60px; padding: 0 26px 0 14px; border-radius: 999px; background: #16213E; border: 2px solid rgba(245,158,11,0.55); display: flex; align-items: center; gap: 14px; font: 700 32px/60px 'Be Vietnam Pro', sans-serif; color: #E2E8F0; }
+.s3-req i { display: block; width: 34px; height: 34px; border-radius: 50%; background: #F59E0B; color: #0B1020; font: 800 24px/34px 'Be Vietnam Pro', sans-serif; text-align: center; font-style: normal; }
+.s3-req-t { position: relative; display: block; width: 350px; height: 60px; }
+.s3-req-t span { position: absolute; left: 0; top: 0; white-space: nowrap; }
+
+.s3-code { position: absolute; left: 1080px; top: 140px; width: 744px; height: 250px; border-radius: 16px; background: #0F1730; border: 2px solid rgba(148,163,184,0.18); box-shadow: 0 18px 50px rgba(0,0,0,0.35); overflow: hidden; }
+.s3-code-head { height: 52px; display: flex; align-items: center; gap: 10px; padding: 0 20px; background: #16213E; font: 500 28px/52px 'JetBrains Mono', monospace; color: #94A3B8; }
+.s3-code-head i { display: block; width: 14px; height: 14px; border-radius: 50%; background: #475569; }
+.s3-code-head span { margin-left: 12px; }
+.s3-code-body { position: absolute; left: 0; top: 52px; right: 0; bottom: 0; }
+.s3-set { position: absolute; left: 28px; top: 18px; right: 20px; }
+.s3-ln { position: relative; height: 46px; font: 400 30px/46px 'JetBrains Mono', monospace; white-space: pre; color: #E2E8F0; }
+.s3-ty { display: inline-block; white-space: pre; }
+.s3-ty b { font-weight: 400; }
+.s3-caret { position: absolute; top: 7px; width: 3px; height: 32px; background: #E2E8F0; opacity: 0; }
+.k { color: #F59E0B; }
+.c { color: #94A3B8; }
+
+.s3-opt { position: absolute; top: 450px; width: 356px; height: 150px; border-radius: 18px; background: #16213E; border: 3px solid rgba(148,163,184,0.45); padding: 18px 22px; }
+.s3-opt b { display: block; font: 800 40px/1 'Be Vietnam Pro', sans-serif; color: #F59E0B; margin-bottom: 10px; }
+.s3-opt span { display: block; font: 700 32px/1.2 'Be Vietnam Pro', sans-serif; color: #E2E8F0; }
+.s3-cursor { position: absolute; left: 0; top: 0; width: 56px; height: 64px; transform-origin: 0 0; }
+
+.s3-lk-title { position: absolute; left: 1080px; top: 450px; width: 744px; font: 800 56px/1.1 'Be Vietnam Pro', sans-serif; color: #E2E8F0; }
+.s3-lk-pill { position: absolute; top: 590px; height: 84px; border-radius: 999px; border: 3px solid #F59E0B; background: #16213E; font: 700 40px/78px 'JetBrains Mono', monospace; text-align: center; color: #E2E8F0; }
+.s3-lk-eq { position: absolute; left: 1320px; top: 570px; width: 120px; height: 120px; font: 800 96px/120px 'Be Vietnam Pro', sans-serif; text-align: center; }
+.s3-lk-eq span { position: absolute; left: 0; top: 0; width: 120px; }
+
+.s3-fl-av { position: absolute; top: 440px; }
+.s3-ptr { position: absolute; left: 1064px; top: 424px; width: 232px; height: 300px; border-radius: 22px; border: 3px solid #F59E0B; background: rgba(245,158,11,0.08); }
+.s3-badge { position: absolute; top: 660px; width: 200px; height: 52px; border-radius: 12px; font: 700 30px/46px 'JetBrains Mono', monospace; text-align: center; }
+.s3-ok { border: 3px solid #10B981; background: rgba(16,185,129,0.15); color: #6EE7B7; }
+.s3-bad { border: 3px solid #EF4444; background: rgba(239,68,68,0.18); color: #FCA5A5; }
+.s3-err { position: absolute; left: 1080px; top: 770px; width: 744px; height: 76px; border-radius: 14px; background: rgba(239,68,68,0.16); border: 3px solid #EF4444; color: #FCA5A5; font: 700 32px/70px 'JetBrains Mono', monospace; padding-left: 26px; }
+.s3-ring { position: absolute; width: 200px; height: 200px; border-radius: 50%; border: 8px solid #EF4444; }
+
+.s3-chip { position: absolute; border-radius: 14px; background: #16213E; border: 3px solid rgba(148,163,184,0.45); font: 700 30px/1 'JetBrains Mono', monospace; padding: 16px 22px; white-space: nowrap; }
+.s3-tile { position: absolute; top: 230px; width: 280px; height: 120px; border-radius: 18px; background: #16213E; border: 3px solid #F59E0B; text-align: center; }
+.s3-tile b { display: block; font: 700 44px/60px 'JetBrains Mono', monospace; margin-top: 10px; color: #E2E8F0; }
+.s3-tile span { display: block; font: 500 28px/40px 'Be Vietnam Pro', sans-serif; color: #94A3B8; }
+.s3-key { position: absolute; left: 1080px; top: 376px; width: 744px; font: 800 56px/1.1 'Be Vietnam Pro', sans-serif; color: #E2E8F0; }
+
+.s3-who { position: absolute; left: 540px; top: 430px; width: 840px; height: 160px; border-radius: 28px; background: rgba(11,16,32,0.9); border: 4px solid #F59E0B; box-shadow: 0 0 80px rgba(245,158,11,0.25); }
+.s3-who .s3-gl { height: 160px; font: 800 96px/152px 'Be Vietnam Pro', sans-serif; text-align: center; }
+
+.s3-final { position: absolute; left: 0; top: 0; width: 1920px; height: 300px; background: linear-gradient(180deg, rgba(11,16,32,0.96) 0%, rgba(11,16,32,0.8) 62%, rgba(11,16,32,0) 100%); text-align: center; padding-top: 70px; }
+.s3-final div { font: 800 56px/1.2 'Be Vietnam Pro', sans-serif; color: #E2E8F0; }
+.s3-final div + div { color: #F59E0B; }
+</style>
+
+<div data-hf-id="hf-tkwd" id="root" data-composition-id="scene-3" data-width="1920" data-height="1080">
+  <div data-hf-id="hf-ul9a" class="s3-bg"></div>
+  <div data-hf-id="hf-01w3" class="s3-stage">
+    <div data-hf-id="hf-u6i8" class="s3-world" data-layout-allow-overflow="">
+      <!-- khu rừng nút xám (lộ ra khi lùi camera) -->
+      <svg data-hf-id="hf-n6vw" class="s3-svg s3-forest" viewBox="0 0 1920 1080" width="1920" height="1080">
+        <defs data-hf-id="hf-mh0t">
+          <g data-hf-id="hf-wnj3" id="s3-mini">
+            <g data-hf-id="hf-hk5d" stroke="#64748B" stroke-width="18" fill="none" stroke-linecap="round">
+              <path data-hf-id="hf-awve" d="M750 100 L400 420 M750 100 L1100 420 M400 420 L200 760 M400 420 L600 760 M1100 420 L900 760 M1100 420 L1300 760 M200 760 L100 1080 M200 760 L300 1080 M900 760 L800 1080 M900 760 L1000 1080 M1300 760 L1200 1080 M1300 760 L1400 1080" />
+            </g>
+            <g data-hf-id="hf-w8za" fill="#1E293B" stroke="#64748B" stroke-width="14">
+              <circle data-hf-id="hf-i40c" cx="750" cy="100" r="76" /><circle data-hf-id="hf-9vzz" cx="400" cy="420" r="70" /><circle data-hf-id="hf-b3fh" cx="1100" cy="420" r="70" />
+              <circle data-hf-id="hf-vxmr" cx="200" cy="760" r="64" /><circle data-hf-id="hf-xtdj" cx="600" cy="760" r="64" /><circle data-hf-id="hf-77bo" cx="900" cy="760" r="64" /><circle data-hf-id="hf-a10d" cx="1300" cy="760" r="64" />
+              <circle data-hf-id="hf-jg8h" cx="100" cy="1080" r="56" /><circle data-hf-id="hf-9gub" cx="300" cy="1080" r="56" /><circle data-hf-id="hf-howq" cx="800" cy="1080" r="56" /><circle data-hf-id="hf-81tn" cx="1000" cy="1080" r="56" /><circle data-hf-id="hf-cgll" cx="1200" cy="1080" r="56" /><circle data-hf-id="hf-tml3" cx="1400" cy="1080" r="56" />
+            </g>
+          </g>
+        </defs>
+        <g data-hf-id="hf-vne6" class="s3-forest-g" />
+      </svg>
+      <img data-hf-id="hf-48xf" class="s3-abs s3-monkey" src="assets/images/khi-cam-chuoi.png" style="left:1960px;top:-1300px;width:4000px;height:4000px;" alt="">
+
+      <div data-hf-id="hf-v48j" class="s3-cluster">
+        <svg data-hf-id="hf-d7uo" class="s3-svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+          <defs data-hf-id="hf-vl9d">
+            <marker data-hf-id="hf-hqq1" id="s3-ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path data-hf-id="hf-nmiy" d="M0 0 L10 5 L0 10 Z" fill="#64748B" /></marker>
+            <marker data-hf-id="hf-flvb" id="s3-ahr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path data-hf-id="hf-qsmq" d="M0 0 L10 5 L0 10 Z" fill="#EF4444" /></marker>
+          </defs>
+          <g data-hf-id="hf-m74g" class="s3-tangle" />
+          <g data-hf-id="hf-3gu5" fill="none" stroke="#F59E0B" stroke-width="5" stroke-linecap="round">
+            <path data-hf-id="hf-4f5f" class="s3-e s3-e-ab" pathLength="1" d="M480 268 L480 392" />
+            <path data-hf-id="hf-trio" class="s3-e s3-e-bs" pathLength="1" d="M480 468 C480 530 220 520 220 582" />
+            <path data-hf-id="hf-jjw1" class="s3-e s3-e-bp" pathLength="1" d="M480 468 C480 530 740 520 740 582" />
+            <path data-hf-id="hf-c93b" class="s3-e s3-e-bf" pathLength="1" d="M360 430 L330 430" stroke-width="4" />
+          </g>
+        </svg>
+
+        <div data-hf-id="hf-96kz" class="s3-node s3-n-animal" style="left:360px;top:192px">Animal</div>
+        <div data-hf-id="hf-bx9h" class="s3-node s3-n-bird" style="left:360px;top:392px">Bird</div>
+        <div data-hf-id="hf-f3oa" class="s3-node s3-n-sparrow" style="left:100px;top:582px">Sparrow</div>
+        <div data-hf-id="hf-hdal" class="s3-node s3-n-penguin" style="left:620px;top:582px">Penguin</div>
+        <img data-hf-id="hf-fe60" class="s3-av s3-av-sparrow" src="assets/images/chim-se.png" style="left:120px;top:664px" alt="">
+        <img data-hf-id="hf-4pjo" class="s3-av s3-av-penguin" src="assets/images/canh-cut.png" style="left:640px;top:664px" alt="">
+        <div data-hf-id="hf-8589" class="s3-fly s3-fly-bird" style="left:190px;top:408px">fly()</div>
+        <div data-hf-id="hf-n3fm" class="s3-fly s3-fly-pen" style="left:870px;top:711px;border-style:dashed;"><div data-hf-id="hf-fmye" class="s3-gl"><span data-hf-id="hf-q1s3" class="s3-gc s3-gw">fly()</span><span data-hf-id="hf-htmv" class="s3-gc s3-gk">fly()</span><span data-hf-id="hf-qp0v" class="s3-gb">fly()</span></div></div>
+        <div data-hf-id="hf-iqio" class="s3-lbl s3-lbl-inh" style="left:870px;top:763px">kế thừa</div>
+
+        <!-- Drone -->
+        <div data-hf-id="hf-xpyu" class="s3-node s3-n-drone" style="left:1330px;top:582px">Drone</div>
+        <div data-hf-id="hf-6adn" class="s3-abs s3-dronewrap" style="left:1350px;top:664px;width:200px;height:200px"><img data-hf-id="hf-e51r" class="s3-av s3-av-drone" src="assets/images/drone.png" style="left:0;top:0" alt=""></div>
+        <div data-hf-id="hf-6v7b" class="s3-fly s3-fly-drone" style="left:1590px;top:598px">fly()</div>
+        <div data-hf-id="hf-b7x9" class="s3-node s3-ghost" style="left:1330px;top:392px;border:3px dashed rgba(148,163,184,0.7);background:transparent;color:rgba(148,163,184,0.85)">Animal</div>
+        <svg data-hf-id="hf-zl16" class="s3-svg s3-gcut" viewBox="0 0 1920 1080" width="1920" height="1080"><path data-hf-id="hf-dnhb" d="M1450 470 L1450 580" stroke="#94A3B8" stroke-width="4" stroke-dasharray="8 8" fill="none" /><circle data-hf-id="hf-bwat" cx="1450" cy="526" r="18" fill="#0B1020" stroke="#94A3B8" stroke-width="4" /><path data-hf-id="hf-9xcv" d="M1442 518 L1458 534 M1458 518 L1442 534" stroke="#94A3B8" stroke-width="4" stroke-linecap="round" /></svg>
+        <div data-hf-id="hf-ds2d" class="s3-abs s3-ph" style="left:1330px;top:582px;width:240px;height:76px;border-radius:999px;border:3px dashed rgba(148,163,184,0.7)"></div>
+        <div data-hf-id="hf-oako" class="s3-abs s3-ph" style="left:1350px;top:664px;width:200px;height:200px;border-radius:24px;border:3px dashed rgba(148,163,184,0.7)"></div>
+        <svg data-hf-id="hf-rojc" class="s3-svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+          <g data-hf-id="hf-9ueq" transform="translate(1330 620) rotate(194.6)">
+            <g data-hf-id="hf-7fa0" class="s3-arrow" opacity="0">
+              <line data-hf-id="hf-txgn" x1="0" y1="0" x2="206" y2="0" stroke="#F59E0B" stroke-width="8" stroke-linecap="round" />
+              <polygon data-hf-id="hf-e3bb" points="244,0 204,-22 204,22" fill="#F59E0B" />
+            </g>
+          </g>
+          <g data-hf-id="hf-z8rp" class="s3-xmark" opacity="0" transform="translate(648 436)">
+            <circle data-hf-id="hf-9jh2" r="30" fill="#EF4444" /><path data-hf-id="hf-uzlt" d="M-12 -12 L12 12 M12 -12 L-12 12" stroke="#fff" stroke-width="7" stroke-linecap="round" />
+          </g>
+        </svg>
+        <div data-hf-id="hf-782y" class="s3-chip s3-notbird" style="left:700px;top:412px;border-color:#EF4444;color:#FCA5A5;font-family:'Be Vietnam Pro',sans-serif;font-size:30px">Không phải chim</div>
+      </div>
+
+      <!-- cột phải: code, lựa chọn, Liskov, đàn chim -->
+      <div data-hf-id="hf-hv5k" class="s3-code s3-code-w">
+        <div data-hf-id="hf-e2mv" class="s3-code-head"><i data-hf-id="hf-wt6k"></i><i data-hf-id="hf-zeb8"></i><i data-hf-id="hf-y7e5"></i><span data-hf-id="hf-p0pr" class="s3-code-file" style="position:relative;display:inline-block;width:260px;height:52px"><span data-hf-id="hf-289t" class="s3-cf1" style="position:absolute;left:0;top:0">penguin.ts</span><span data-hf-id="hf-uu2n" class="s3-cf2" style="position:absolute;left:0;top:0">release.ts</span></span></div>
+        <div data-hf-id="hf-id8d" class="s3-code-body">
+          <div data-hf-id="hf-3u4k" class="s3-set s3-set-a">
+            <div data-hf-id="hf-kqax" class="s3-ln"><span data-hf-id="hf-f5gd" class="s3-ty"><b data-hf-id="hf-bmr4" class="k">class</b> Penguin <b data-hf-id="hf-np9d" class="k">extends</b> Bird {</span><i data-hf-id="hf-f5q0" class="s3-caret"></i></div>
+            <div data-hf-id="hf-5jq5" class="s3-ln"><span data-hf-id="hf-kni6" class="s3-ty">  fly() { <b data-hf-id="hf-we2m" class="k">throw new</b> Error() }</span><i data-hf-id="hf-c61c" class="s3-caret"></i></div>
+            <div data-hf-id="hf-6qn8" class="s3-ln"><span data-hf-id="hf-p7iw" class="s3-ty">}</span><i data-hf-id="hf-az49" class="s3-caret"></i></div>
+          </div>
+          <div data-hf-id="hf-epm7" class="s3-set s3-set-b">
+            <div data-hf-id="hf-6cc7" class="s3-ln"><span data-hf-id="hf-5xjj" class="s3-ty"><b data-hf-id="hf-rhr4" class="k">function</b> release(birds: Bird[]) {</span><i data-hf-id="hf-bdfa" class="s3-caret"></i></div>
+            <div data-hf-id="hf-7j9a" class="s3-ln"><span data-hf-id="hf-z4h6" class="s3-ty">  birds.forEach(b =&gt; b.fly());</span><i data-hf-id="hf-a6i7" class="s3-caret"></i></div>
+            <div data-hf-id="hf-74y9" class="s3-ln"><span data-hf-id="hf-090w" class="s3-ty">}</span><i data-hf-id="hf-akt8" class="s3-caret"></i></div>
+          </div>
+        </div>
+      </div>
+
+      <div data-hf-id="hf-j033" class="s3-code s3-code-d" style="top:110px;height:232px">
+        <div data-hf-id="hf-56mv" class="s3-code-head"><i data-hf-id="hf-ylp6"></i><i data-hf-id="hf-0l8b"></i><i data-hf-id="hf-0zjc"></i><span data-hf-id="hf-6ggk">drone.ts</span></div>
+        <div data-hf-id="hf-0p01" class="s3-code-body"><div data-hf-id="hf-vtzr" class="s3-set s3-set-dd">
+          <div data-hf-id="hf-8bvc" class="s3-ln"><span data-hf-id="hf-uxmg" class="s3-ty"><b data-hf-id="hf-xlsm" class="k" style="font-weight:400">class</b> Drone {</span><i data-hf-id="hf-9dw5" class="s3-caret"></i></div>
+          <div data-hf-id="hf-7xkb" class="s3-ln"><span data-hf-id="hf-aajn" class="s3-ty">  fly() { <b data-hf-id="hf-w0e0" class="c" style="font-weight:400">// bay</b> }</span><i data-hf-id="hf-9s76" class="s3-caret"></i></div>
+          <div data-hf-id="hf-94he" class="s3-ln"><span data-hf-id="hf-z23t" class="s3-ty">}</span><i data-hf-id="hf-8la3" class="s3-caret"></i></div>
+        </div></div>
+      </div>
+
+      <div data-hf-id="hf-kb7c" class="s3-abs s3-opts">
+        <div data-hf-id="hf-1ipu" class="s3-opt s3-opt-1" style="left:1080px"><b data-hf-id="hf-t4n0">1</b><span data-hf-id="hf-um79">Ném lỗi trong fly()</span></div>
+        <div data-hf-id="hf-rkxv" class="s3-opt s3-opt-2" style="left:1468px"><b data-hf-id="hf-rxpx">2</b><span data-hf-id="hf-lwmn">Tách lại cả cây</span></div>
+      </div>
+      <svg data-hf-id="hf-tqrq" class="s3-cursor" viewBox="0 0 30 46" opacity="0"><path data-hf-id="hf-ggk8" d="M1 1 L1 38 L10 30 L17 45 L24 42 L17 28 L29 28 Z" fill="#fff" stroke="#0B1020" stroke-width="2.5" stroke-linejoin="round" /></svg>
+
+      <div data-hf-id="hf-imw5" class="s3-abs s3-lisk">
+        <div data-hf-id="hf-xv3u" class="s3-lk-title">Nguyên tắc Liskov</div>
+        <div data-hf-id="hf-nm44" class="s3-lk-pill s3-lk-bird" style="left:1080px;width:220px">Bird</div>
+        <div data-hf-id="hf-vuob" class="s3-lk-eq"><span data-hf-id="hf-50o6" class="s3-lk-eq1" style="color:#E2E8F0">=</span><span data-hf-id="hf-csqr" class="s3-lk-eq2" style="color:#EF4444">≠</span></div>
+        <div data-hf-id="hf-y9o0" class="s3-lk-pill s3-lk-pen" style="left:1464px;width:300px">Penguin</div>
+      </div>
+
+      <div data-hf-id="hf-6zkx" class="s3-abs s3-flock">
+        <div data-hf-id="hf-dmhr" class="s3-ptr"></div>
+        <img data-hf-id="hf-wi25" class="s3-av s3-fl-av s3-fl-1" src="assets/images/chim-se.png" style="left:1080px" alt="">
+        <img data-hf-id="hf-3qrk" class="s3-av s3-fl-av s3-fl-2" src="assets/images/chim-se.png" style="left:1352px" alt="">
+        <img data-hf-id="hf-i2ti" class="s3-av s3-fl-av s3-fl-3" src="assets/images/canh-cut.png" style="left:1624px" alt="">
+        <div data-hf-id="hf-zn1m" class="s3-badge s3-ok s3-bd-1" style="left:1080px">fly() ok</div>
+        <div data-hf-id="hf-d81f" class="s3-badge s3-ok s3-bd-2" style="left:1352px">fly() ok</div>
+        <div data-hf-id="hf-iy2l" class="s3-badge s3-bad s3-bd-3" style="left:1624px"><div data-hf-id="hf-agd6" class="s3-gl"><span data-hf-id="hf-0q5g" class="s3-gc s3-gw">fly() ✕</span><span data-hf-id="hf-gwb4" class="s3-gc s3-gk">fly() ✕</span><span data-hf-id="hf-lul4" class="s3-gb">fly() ✕</span></div></div>
+        <div data-hf-id="hf-oqo4" class="s3-ring s3-ring-1" style="left:1624px;top:440px;opacity:0"></div>
+        <div data-hf-id="hf-y2c3" class="s3-ring s3-ring-2" style="left:1624px;top:440px;opacity:0"></div>
+        <div data-hf-id="hf-o5hc" class="s3-err"><div data-hf-id="hf-auo7" class="s3-gl"><span data-hf-id="hf-pjkk" class="s3-gc s3-gw">Error: Penguin không bay được</span><span data-hf-id="hf-dw0o" class="s3-gc s3-gk">Error: Penguin không bay được</span><span data-hf-id="hf-lm9c" class="s3-gb">Error: Penguin không bay được</span></div></div>
+      </div>
+
+      <!-- Drone: các chip phụ -->
+      <div data-hf-id="hf-r3tq" class="s3-chip s3-ts" style="left:1100px;top:196px"><span data-hf-id="hf-k071" class="k">extends</span> <span data-hf-id="hf-mjtr" style="color:#E2E8F0">: chỉ 1 class</span></div>
+      <div data-hf-id="hf-q6j7" class="s3-abs s3-copybanner">
+        <div data-hf-id="hf-uubu" class="s3-tile s3-tile-1" style="left:1080px"><b data-hf-id="hf-uk9h">fly()</b><span data-hf-id="hf-vt6u">Bird</span></div>
+        <div data-hf-id="hf-nf8v" class="s3-abs" style="left:1372px;top:236px;width:56px;font:800 80px/110px 'Be Vietnam Pro',sans-serif;text-align:center;color:#E2E8F0">=</div>
+        <div data-hf-id="hf-1zm1" class="s3-tile s3-tile-2" style="left:1440px"><b data-hf-id="hf-bfpl">fly()</b><span data-hf-id="hf-b4t1">Drone</span></div>
+        <div data-hf-id="hf-bqgx" class="s3-chip s3-forgot" style="left:1556px;top:196px;padding:8px 16px;border-color:#EF4444;background:#2A1620;color:#FCA5A5;font-family:'Be Vietnam Pro',sans-serif;font-size:28px">bản bị quên</div>
+        <div data-hf-id="hf-uya6" class="s3-key">Hai bản cần sửa</div>
+      </div>
+
+      <div data-hf-id="hf-1dud" class="s3-fly s3-fly-clone" style="left:190px;top:408px;opacity:0">fly()</div>
+
+      <div data-hf-id="hf-bfwx" class="s3-who" data-layout-allow-overlap=""><div data-hf-id="hf-b8z8" class="s3-gl"><span data-hf-id="hf-jl7t" class="s3-gc s3-gw">Ai dám sửa?</span><span data-hf-id="hf-ouot" class="s3-gc s3-gk">Ai dám sửa?</span><span data-hf-id="hf-sryd" class="s3-gb">Ai dám sửa?</span></div></div>
+    </div>
+
+    <div data-hf-id="hf-chil" class="s3-req"><i data-hf-id="hf-2r6v">!</i><span data-hf-id="hf-hraj" class="s3-req-t"><span data-hf-id="hf-tju9" class="s3-rq1">Sếp: thêm Penguin</span><span data-hf-id="hf-84hr" class="s3-rq2">Tuần sau: thêm Drone</span></span></div>
+    <div data-hf-id="hf-kkdd" class="s3-final"><div data-hf-id="hf-4v5b" class="s3-f1">Chỉ cần quả chuối,</div><div data-hf-id="hf-c9wi" class="s3-f2">nhận cả con khỉ và khu rừng</div></div>
+  </div>
+
+  <script>
+  (function () {
+    window.__timelines = window.__timelines || {};
+    var tl = gsap.timeline({ paused: true });
+    window.__timelines["scene-3"] = tl;
+    var DUR = 62.2;
+    var $ = function (s) { return document.querySelector(s); };
+    var $$ = function (s) { return gsap.utils.toArray(s); };
+    var hash = function (n) { var x = Math.sin(n * 127.1 + 311.7) * 43758.5453; return x - Math.floor(x); };
+    var NODE = { Animal: [480, 230], Bird: [480, 430], Sparrow: [220, 620], Penguin: [740, 620], Drone: [1450, 620] };
+
+    /* ---------- dựng động (xác định, không ngẫu nhiên) ---------- */
+    var NS = "http://www.w3.org/2000/svg";
+    // khu rừng
+    var fg = $(".s3-forest-g");
+    var fi = 0;
+    for (var j = 0; j < 4; j++) {
+      for (var i = 0; i < 5; i++) {
+        var fx0 = -1400 + 2300 * i + (j % 2) * 520 + ((i * 3 + j) % 3) * 90;
+        var fy0 = -2500 + 1950 * j + ((i + j * 2) % 3) * 70;
+        if (fx0 + 1500 > -200 && fx0 < 2200 && fy0 + 1200 > -200 && fy0 < 1350) continue;
+        var u = document.createElementNS(NS, "use");
+        u.setAttribute("href", "#s3-mini");
+        u.setAttribute("x", fx0); u.setAttribute("y", fy0);
+        fg.appendChild(u); fi++;
+      }
+    }
+    // mớ rối: nút phụ
+    var EXTRA = [["Eagle",150,330],["Duck",720,320],["Plane",930,470],["Kite",1160,320],["Robot",1260,500],["Rocket",1660,330],["Owl",400,790],["Bat",1010,880],["Ostrich",1260,810],["Jet",1690,560],["Hawk",1100,690],["Balloon",840,190]];
+    var cluster = $(".s3-cluster");
+    EXTRA.forEach(function (e) {
+      NODE[e[0]] = [e[1], e[2]];
+      var d = document.createElement("div");
+      d.className = "s3-xn"; d.textContent = e[0]; d.setAttribute("data-layout-allow-overlap", "");
+      d.style.left = (e[1] - 75) + "px"; d.style.top = (e[2] - 26) + "px";
+      cluster.appendChild(d);
+    });
+    var LINKS = [["Eagle","Animal",-90],["Eagle","Sparrow",140],["Duck","Bird",70],["Duck","Penguin",-110],["Plane","Drone",90],["Plane","Bird",-80],["Kite","Plane",60],["Kite","Drone",-120],["Robot","Drone",80],["Robot","Penguin",-150],["Rocket","Kite",70],["Rocket","Drone",-100],["Owl","Sparrow",60],["Owl","Penguin",-90],["Bat","Penguin",110],["Bat","Ostrich",50],["Ostrich","Drone",-70],["Jet","Robot",90],["Jet","Rocket",-60],["Balloon","Animal",50],["Hawk","Plane",-70],["Hawk","Bird",100],["Sparrow","Drone",-200],["Penguin","Eagle",160],["Animal","Drone",120],["Hawk","Ostrich",-60]];
+    var tg = $(".s3-tangle");
+    LINKS.forEach(function (l, idx) {
+      var a = NODE[l[0]], b = NODE[l[1]];
+      var dx = b[0] - a[0], dy = b[1] - a[1], len = Math.sqrt(dx * dx + dy * dy) || 1;
+      var cx = (a[0] + b[0]) / 2 + (-dy / len) * l[2] * 2.2, cy = (a[1] + b[1]) / 2 + (dx / len) * l[2] * 2.2;
+      var p = document.createElementNS(NS, "path");
+      p.setAttribute("d", "M" + a[0] + " " + a[1] + " Q" + cx + " " + cy + " " + b[0] + " " + b[1]);
+      p.setAttribute("pathLength", "1");
+      var red = idx % 5 === 2;
+      p.setAttribute("stroke", red ? "#EF4444" : "#64748B");
+      p.setAttribute("stroke-width", "4"); p.setAttribute("fill", "none");
+      p.setAttribute("marker-end", red ? "url(#s3-ahr)" : "url(#s3-ah)");
+      p.setAttribute("class", "s3-tl");
+      tg.appendChild(p);
+    });
+
+    /* ---------- camera: một hàm thuần của thời gian ---------- */
+    var MX = 3960, MY = 700, ZEND = 1.715;
+    var WP = [
+      { t: 0,    z: 0.09, fx: 960,  fy: 540, cy: 540 },
+      { t: 1.8,  z: 0,    fx: 960,  fy: 540, cy: 540, e: "power2.out" },
+      { t: 12.0, z: 0,    fx: 960,  fy: 540, cy: 540 },
+      { t: 13.9, z: -0.03, fx: 960, fy: 530, cy: 540, e: "power2.inOut" },
+      { t: 15.6, z: -0.03, fx: 960, fy: 530, cy: 540 },
+      { t: 17.0, z: 0,    fx: 960,  fy: 540, cy: 540, e: "power2.inOut" },
+      { t: 24.0, z: 0,    fx: 960,  fy: 540, cy: 540 },
+      { t: 25.6, z: -0.025, fx: 960, fy: 540, cy: 540, e: "power2.inOut" },
+      { t: 29.0, z: -0.025, fx: 960, fy: 540, cy: 540 },
+      { t: 30.6, z: 0,    fx: 960,  fy: 540, cy: 540, e: "power2.inOut" },
+      { t: 52.6, z: 0,    fx: 960,  fy: 540, cy: 540 },
+      { t: 54.9, z: -0.04, fx: 960, fy: 560, cy: 540, e: "power1.inOut" },
+      { t: 55.0, z: -0.04, fx: 960, fy: 560, cy: 540 },
+      { t: 58.2, z: ZEND, fx: MX, fy: MY, cy: 575, e: "power2.inOut" },
+      { t: DUR,  z: ZEND + 0.012, fx: MX, fy: MY, cy: 575, e: "none" }
+    ];
+    var SHAKES = [{ t: 14.08, d: 0.55, a: 14 }, { t: 27.5, d: 0.7, a: 18 }, { t: 37.05, d: 0.35, a: 8 }];
+    var world = $(".s3-world");
+    var camTargets = ["z", "fx", "fy", "cy"];
+    function camAt(t) {
+      var i = 1;
+      while (i < WP.length - 1 && t > WP[i].t) i++;
+      var a = WP[i - 1], b = WP[i];
+      var p = Math.max(0, Math.min(1, (t - a.t) / (b.t - a.t)));
+      var q = gsap.parseEase(b.e || "none")(p);
+      var o = {};
+      camTargets.forEach(function (k) { o[k] = a[k] + (b[k] - a[k]) * q; });
+      return o;
+    }
+    function applyCamera() {
+      var t = tl.time();
+      var c = camAt(t);
+      var dx = Math.sin(t * 0.55) * 3.5, dy = Math.sin(t * 0.55 * 1.3) * 2;
+      SHAKES.forEach(function (s) {
+        if (t >= s.t && t < s.t + s.d) {
+          var k = 1 - (t - s.t) / s.d, st = Math.floor(t * 30);
+          dx += (hash(st * 13 + 1) * 2 - 1) * s.a * k * k;
+          dy += (hash(st * 29 + 5) * 2 - 1) * s.a * 0.6 * k * k;
+        }
+      });
+      var sc = Math.exp(-c.z);
+      world.style.transform = "translate(" + (960 + dx) + "px," + (c.cy + dy) + "px) scale(" + sc + ") translate(" + (-c.fx) + "px," + (-c.fy) + "px)";
+    }
+    var drv = { p: 0 };
+    tl.to(drv, { p: 1, duration: DUR, ease: "none", onUpdate: applyCamera }, 0);
+    applyCamera();
+
+    /* ---------- tiện ích ---------- */
+    function typeLn(ln, start, dur) {
+      var ty = ln.querySelector(".s3-ty"), cr = ln.querySelector(".s3-caret");
+      var n = ty.textContent.length;
+      tl.fromTo(ty, { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: dur, ease: "steps(" + n + ")" }, start);
+      tl.set(cr, { opacity: 1 }, start);
+      tl.fromTo(cr, { x: 0 }, { x: n * 18, duration: dur, ease: "steps(" + n + ")" }, start);
+      tl.set(cr, { opacity: 0 }, start + dur + 0.12);
+    }
+    function pop(sel, at, dur, extra) {
+      tl.fromTo(sel, Object.assign({ scale: 0, opacity: 0 }, (extra && extra.from) || {}), Object.assign({ scale: 1, opacity: 1, duration: dur || 0.5, ease: "power3.out" }, (extra && extra.to) || {}), at);
+    }
+    function fadeIn(sel, at, dur, y) {
+      tl.fromTo(sel, { opacity: 0, y: y === undefined ? 24 : y }, { opacity: 1, y: 0, duration: dur || 0.5, ease: "power3.out" }, at);
+    }
+    function fadeOut(sel, at, dur) { tl.to(sel, { opacity: 0, duration: dur || 0.4, ease: "power2.in" }, at); }
+    function draw(sel, at, dur) { tl.fromTo(sel, { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: dur || 0.5, ease: "power2.out" }, at); }
+    function glitch(stack, start, dur, maxSplit) {
+      var copies = $$(stack + " .s3-gc"), amp = { a: 0 };
+      tl.set(amp, { a: 1 }, start);
+      tl.set(copies, { opacity: 0.85 }, start);
+      tl.to(amp, { a: 0, duration: dur, ease: "power3.in", onUpdate: function () {
+        var st = Math.floor(tl.time() / (1 / 20));
+        copies.forEach(function (el, layer) {
+          gsap.set(el, { x: (hash(st * 13 + layer * 7) * 2 - 1) * maxSplit * amp.a, y: (hash(st * 29 + layer * 11) * 2 - 1) * maxSplit * 0.35 * amp.a });
+        });
+      } }, start);
+      tl.set(copies, { x: 0, y: 0, opacity: 0 }, start + dur);
+    }
+
+    /* ---------- 0.0 vào cảnh ---------- */
+    tl.fromTo(".s3-stage", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power1.out" }, 0);
+    tl.fromTo(".s3-stage", { opacity: 1 }, { opacity: 0, duration: 0.4, ease: "power1.in", immediateRender: false }, DUR - 0.4);
+
+    // cây gọn hiện lại (0.0 - 1.2)
+    pop(".s3-n-animal", 0.05, 0.5);
+    draw(".s3-e-ab", 0.3, 0.4);
+    pop(".s3-n-bird", 0.35, 0.5);
+    draw(".s3-e-bs", 0.65, 0.5);
+    pop(".s3-n-sparrow", 0.85, 0.5);
+    fadeIn(".s3-av-sparrow", 1.0, 0.5, 20);
+    // "Rồi xếp báo" (0.30)
+    tl.fromTo(".s3-req", { opacity: 0, x: -60 }, { opacity: 1, x: 0, duration: 0.5, ease: "power3.out" }, 0.1);
+    gsap.set(".s3-rq2", { opacity: 0 });
+    tl.fromTo(".s3-rq1", { opacity: 1 }, { opacity: 0, duration: 0.3 }, 30.35);
+    tl.fromTo(".s3-rq2", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 30.55);   // "tuần sau" 30.72
+
+    // "thêm chim cánh cụt" (1.42): Penguin xuất hiện phía trên, lắc lư chờ
+    var peng = $(".s3-av-penguin");
+    gsap.set(peng, { transformOrigin: "50% 100%" });
+    tl.fromTo(peng, { y: -560, scale: 0, opacity: 0 }, { y: -560, scale: 1, opacity: 1, duration: 0.5, ease: "power3.out" }, 1.25);
+    tl.to(peng, { rotation: 7, duration: 0.7, ease: "sine.inOut" }, 2.0);
+    tl.to(peng, { rotation: -5, duration: 0.8, ease: "sine.inOut" }, 2.9);
+    tl.to(peng, { rotation: 6, duration: 0.8, ease: "sine.inOut" }, 3.8);
+    tl.to(peng, { rotation: -3, duration: 0.5, ease: "sine.inOut" }, 4.7);
+    // "Chim cánh cụt là một loài chim" (3.56): cửa sổ code mở, Bird sáng lên (loài chim 4.48)
+    fadeIn(".s3-code-w", 3.45, 0.5, 30);
+    gsap.set(".s3-set-b", { opacity: 0 });
+    tl.to(".s3-n-bird", { boxShadow: "0 0 40px rgba(245,158,11,0.7)", duration: 0.3 }, 4.35);
+    tl.to(".s3-n-bird", { boxShadow: "0 0 0px rgba(245,158,11,0)", duration: 0.4 }, 5.1);
+    // "nên bạn cho nó kế thừa Bird" (5.26 / kế thừa 5.98): Penguin rơi vào nhánh Bird
+    tl.to(peng, { y: 0, rotation: 0, duration: 0.55, ease: "power2.in" }, 5.2);
+    tl.to(peng, { scaleY: 0.82, scaleX: 1.12, duration: 0.1, ease: "power1.out" }, 5.75);
+    tl.to(peng, { scaleY: 1, scaleX: 1, duration: 0.45, ease: "back.out(2.4)" }, 5.85);
+    draw(".s3-e-bp", 5.65, 0.4);
+    pop(".s3-n-penguin", 5.75, 0.45);
+    var A = $$(".s3-set-a .s3-ln"), B = $$(".s3-set-b .s3-ln");
+    typeLn(A[0], 5.75, 1.1);
+    typeLn(A[2], 6.95, 0.3);
+    // "Nhưng Bird có hàm fly" (hàm fly 7.76)
+    pop(".s3-fly-bird", 7.62, 0.45);
+    draw(".s3-e-bf", 7.72, 0.3);
+    tl.to(".s3-fly-bird", { boxShadow: "0 0 36px rgba(245,158,11,0.6)", duration: 0.4 }, 7.9);
+    // "Còn chim cánh cụt" (9.02): fly() kế thừa xuống Penguin; "không biết bay" (9.76): lắc đầu
+    fadeIn(".s3-fly-pen", 8.7, 0.45, 0);
+    fadeIn(".s3-lbl-inh", 8.95, 0.4, 0);
+    tl.to(peng, { rotation: -7, duration: 0.18, ease: "sine.inOut" }, 9.65);
+    tl.to(peng, { rotation: 7, duration: 0.3, ease: "sine.inOut" }, 9.83);
+    tl.to(peng, { rotation: -5, duration: 0.3, ease: "sine.inOut" }, 10.13);
+    tl.to(peng, { rotation: 0, duration: 0.25, ease: "sine.inOut" }, 10.43);
+    // "hai lựa chọn xấu" (11.0)
+    pop(".s3-opt-1", 10.9, 0.5);
+    pop(".s3-opt-2", 11.2, 0.5);
+    // "Một là cho hàm fly ... ném ra một lỗi" (12.66 / ném 14.18): con trỏ bấm thẻ 1
+    var cur = ".s3-cursor";
+    tl.fromTo(cur, { x: 1700, y: 820, opacity: 0 }, { x: 1360, y: 575, opacity: 1, duration: 0.9, ease: "power2.inOut" }, 11.5);
+    tl.to([".s3-opt-1", cur], { scale: 0.9, duration: 0.14, ease: "power1.in" }, 12.46);
+    tl.to([".s3-opt-1", cur], { scale: 1, duration: 0.5, ease: "back.out(2.2)" }, 12.61);
+    tl.to(".s3-opt-1", { borderColor: "#F59E0B", backgroundColor: "rgba(245,158,11,0.18)", duration: 0.3 }, 12.62);
+    typeLn(A[1], 13.7, 1.2);
+    // "ném ra một lỗi" (14.18): nhánh Penguin đỏ + glitch + rung
+    glitch(".s3-fly-pen", 14.08, 0.5, 9);
+    tl.to(".s3-n-penguin", { borderColor: "#EF4444", backgroundColor: "rgba(239,68,68,0.22)", duration: 0.25 }, 14.08);
+    tl.to(".s3-e-bp", { stroke: "#EF4444", duration: 0.25 }, 14.08);
+    tl.to(".s3-fly-pen", { borderColor: "#EF4444", color: "#FCA5A5", duration: 0.25 }, 14.58);
+    tl.to(".s3-av-penguin", { filter: "drop-shadow(0 0 22px rgba(239,68,68,0.75))", duration: 0.3 }, 14.1);
+    // "Hai là tách lại cả cây" (15.86 / 16.30)
+    tl.to(cur, { x: 1730, y: 575, duration: 0.6, ease: "power2.inOut" }, 15.0);
+    tl.to([".s3-opt-2", cur], { scale: 0.9, duration: 0.14, ease: "power1.in" }, 15.65);
+    tl.to([".s3-opt-2", cur], { scale: 1, duration: 0.5, ease: "back.out(2.2)" }, 15.80);
+    tl.to(".s3-opt-2", { borderColor: "#F59E0B", backgroundColor: "rgba(245,158,11,0.18)", duration: 0.3 }, 15.81);
+    tl.to(".s3-n-animal, .s3-n-bird, .s3-n-sparrow", { rotation: 3, duration: 0.12, ease: "sine.inOut" }, 16.2);
+    tl.to(".s3-n-animal, .s3-n-bird, .s3-n-sparrow", { rotation: -3, duration: 0.14, ease: "sine.inOut" }, 16.32);
+    tl.to(".s3-n-animal, .s3-n-bird, .s3-n-sparrow", { rotation: 0, duration: 0.2, ease: "sine.inOut" }, 16.46);
+    tl.to(cur, { x: 1760, y: 880, opacity: 0, duration: 0.6, ease: "power2.out" }, 16.9);
+
+    // "Cách thứ nhất phá vỡ nguyên tắc thay thế Liskov" (18.42 / Liskov 20.22)
+    fadeOut(".s3-opts .s3-opt", 18.3, 0.4);
+    fadeIn(".s3-lk-title", 19.3, 0.5, 20);
+    // "Ở bất cứ chỗ nào dùng được Bird" (21.32): Bird = Penguin ?
+    pop(".s3-lk-bird", 21.2, 0.45);
+    fadeIn(".s3-lk-eq1", 21.9, 0.35, 0);
+    pop(".s3-lk-pen", 22.95, 0.45);                                       // "thì penguin" 23.12
+    gsap.set(".s3-lk-eq2", { opacity: 0 });
+    tl.fromTo(".s3-lk-eq2", { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.35, ease: "power3.out" }, 23.85);
+    tl.to(".s3-lk-eq1", { opacity: 0, duration: 0.2 }, 23.85);
+    tl.to(".s3-lk-pen", { borderColor: "#EF4444", backgroundColor: "rgba(239,68,68,0.2)", duration: 0.3 }, 23.95);
+    fadeOut(".s3-lisk", 24.45, 0.35);
+
+    // "Vậy mà khi một hàm gọi fly cho cả đàn chim" (24.84 / gọi fly 25.68 / đàn chim 26.48)
+    tl.to(".s3-set-a", { opacity: 0, duration: 0.25 }, 24.5);
+    tl.to(".s3-set-b", { opacity: 1, duration: 0.01 }, 24.75);
+    gsap.set(".s3-cf2", { opacity: 0 });
+    tl.to(".s3-cf1", { opacity: 0, duration: 0.2 }, 24.5);
+    tl.to(".s3-cf2", { opacity: 1, duration: 0.2 }, 24.6);
+    typeLn(B[0], 24.8, 1.0);
+    typeLn(B[1], 25.85, 1.0);
+    typeLn(B[2], 27.0, 0.25);
+    ["1", "2", "3"].forEach(function (n, i) {
+      tl.fromTo(".s3-fl-" + n, { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "power3.out" }, 25.7 + i * 0.15);
+      gsap.set(".s3-bd-" + n, { opacity: 0, y: 14 });
+    });
+    tl.fromTo(".s3-ptr", { opacity: 0, x: 0 }, { opacity: 1, x: 0, duration: 0.3 }, 26.15);
+    tl.to(".s3-bd-1", { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 26.4);
+    tl.to(".s3-ptr", { x: 272, duration: 0.35, ease: "power2.inOut" }, 26.7);
+    tl.to(".s3-bd-2", { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 27.05);
+    tl.to(".s3-ptr", { x: 544, borderColor: "#EF4444", backgroundColor: "rgba(239,68,68,0.14)", duration: 0.3, ease: "power2.inOut" }, 27.15);
+    // "chương trình nổ" (27.44 / nổ 27.60)
+    tl.to(".s3-bd-3", { opacity: 1, y: 0, duration: 0.2 }, 27.5);
+    tl.fromTo(".s3-ring-1", { scale: 0.3, opacity: 0.95 }, { scale: 2.1, opacity: 0, duration: 0.7, ease: "power2.out", immediateRender: false }, 27.5);
+    tl.fromTo(".s3-ring-2", { scale: 0.2, opacity: 0.8 }, { scale: 1.5, opacity: 0, duration: 0.6, ease: "power2.out", immediateRender: false }, 27.65);
+    tl.to(".s3-fl-3", { x: 8, duration: 0.05 }, 27.5);
+    tl.to(".s3-fl-3", { x: -8, duration: 0.07 }, 27.55);
+    tl.to(".s3-fl-3", { x: 5, duration: 0.07 }, 27.62);
+    tl.to(".s3-fl-3", { x: 0, duration: 0.1 }, 27.7);
+    glitch(".s3-bd-3", 27.5, 0.5, 8);
+    tl.fromTo(".s3-err", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 27.6);
+    glitch(".s3-err", 27.65, 0.5, 8);
+
+    // "Chưa hết" (29.56): dọn cột phải
+    fadeOut(".s3-code-w, .s3-flock", 29.4, 0.5);
+
+    // "tuần sau" (30.72): khung trống cho Drone dựng lên ở nửa phải
+    tl.fromTo(".s3-ph", { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.5, ease: "power3.out" }, 30.6);
+    tl.to(".s3-ph", { borderColor: "#F59E0B", duration: 0.4 }, 31.45);          // "Xếp muốn thêm" 31.44
+    // "máy bay không người lái" (32.26): Drone bay vào khung
+    var dw = $(".s3-dronewrap"), dimg = $(".s3-av-drone");
+    tl.fromTo(dw, { x: 760, y: -720, rotation: -14, opacity: 0 }, { x: 0, y: 0, rotation: 0, opacity: 1, duration: 1.5, ease: "power3.out" }, 31.7);
+    tl.to(".s3-ph", { opacity: 0, duration: 0.3 }, 33.2);
+    pop(".s3-n-drone", 33.3, 0.45);                                              // "tên là drone" 33.44
+    var bob = { p: 0 };
+    tl.to(bob, { p: 1, duration: DUR - 32, ease: "none", onUpdate: function () {
+      var t = tl.time();
+      gsap.set(dimg, { y: Math.sin(t * 2.2) * 8, rotation: Math.sin(t * 1.7) * 2.2 });
+    } }, 32);
+    // code của Drone ở góc phải trên: "tên là drone" (33.44) ... "Nó biết bay" (34.50)
+    fadeIn(".s3-code-d", 33.05, 0.5, 24);
+    var DL = $$(".s3-set-dd .s3-ln");
+    typeLn(DL[0], 33.2, 0.8);
+    typeLn(DL[1], 34.35, 1.0);
+    typeLn(DL[2], 35.45, 0.2);
+    pop(".s3-fly-drone", 34.4, 0.45);
+    // "nhưng không phải động vật" (35.24): Animal mờ, đứt nối
+    tl.fromTo(".s3-ghost", { opacity: 0, y: -16 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 35.1);
+    tl.fromTo(".s3-gcut", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 35.55);
+    fadeOut(".s3-code-d", 38.7, 0.3);
+    // "Nó không thể kế thừa Bird" (36.42 / Bird 37.16): mũi tên bay tới Bird rồi bật ngược
+    gsap.set(".s3-arrow", { opacity: 0 });
+    tl.set(".s3-arrow", { opacity: 1 }, 36.25);
+    tl.fromTo(".s3-arrow", { x: 0, rotation: 0, svgOrigin: "0 0" }, { x: 490, duration: 0.75, ease: "power2.in" }, 36.3);
+    tl.fromTo(".s3-xmark", { scale: 0, opacity: 0, svgOrigin: "648 436" }, { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2.4)" }, 37.05);
+    tl.to(".s3-arrow", { x: 60, rotation: -22, duration: 0.65, ease: "power3.out" }, 37.1);
+    tl.to(".s3-arrow", { opacity: 0.35, duration: 0.4 }, 37.6);
+    gsap.set(".s3-notbird", { opacity: 0 });
+    tl.fromTo(".s3-notbird", { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.4, ease: "power3.out" }, 37.6);     // "vì nó đâu phải chim" 37.74
+    // "Mà TypeScript chỉ cho phép kế thừa một class" (39.34 / một class 40.66)
+    fadeIn(".s3-ts", 39.2, 0.5, 18);
+    fadeOut(".s3-ts", 42.0, 0.3);
+    fadeOut(".s3-ghost, .s3-gcut", 42.0, 0.4);
+    // "Vậy là bạn copy logic bay sang chỗ khác" (copy 42.72)
+    tl.fromTo(".s3-copybanner", { opacity: 0 }, { opacity: 1, duration: 0.01 }, 42.5);
+    tl.fromTo(".s3-tile-1", { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.45, ease: "power3.out" }, 42.55);
+    tl.fromTo(".s3-copybanner > .s3-abs", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 43.0);
+    tl.fromTo(".s3-fly-clone", { x: 0, y: 0, opacity: 0, scale: 1 }, { opacity: 1, duration: 0.01 }, 42.55);
+    tl.to(".s3-fly-clone", { x: 1250, y: -150, scale: 1.7, duration: 0.9, ease: "power2.inOut" }, 42.65);
+    tl.to(".s3-fly-clone", { opacity: 0, duration: 0.15 }, 43.5);
+    tl.fromTo(".s3-tile-2", { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(1.6)" }, 43.45);
+    // "có hai bản sao cần sửa" (45.74 / hai 45.86) ... "một bản bị quên" (48.72)
+    tl.fromTo(".s3-key", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 45.7);
+    gsap.set(".s3-forgot", { opacity: 0 });
+    tl.fromTo(".s3-forgot", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.4, ease: "power3.out" }, 48.6);
+    tl.to(".s3-tile-2", { borderColor: "#EF4444", duration: 0.4 }, 48.6);
+    tl.to(".s3-tile-2 b", { color: "#FCA5A5", duration: 0.4 }, 48.6);
+    tl.to(".s3-fly-drone", { borderColor: "#EF4444", color: "#FCA5A5", duration: 0.4 }, 48.6);
+
+    // "Cứ thế, cây kế thừa mọc thêm nhánh" (50.46 / 51.26): thêm nút xám
+    fadeOut(".s3-copybanner, .s3-notbird, .s3-lbl-inh", 50.6, 0.5);
+    $$(".s3-xn").forEach(function (el, i) {
+      tl.fromTo(el, { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: "power3.out" }, 51.15 + i * 0.09);
+    });
+    // "các mũi tên chồng chéo lên nhau" (52.70): mũi tên chằng chịt
+    tl.fromTo(".s3-tl", { strokeDasharray: 1, strokeDashoffset: 1, opacity: 0 }, { strokeDashoffset: 0, opacity: 0.95, duration: 0.5, ease: "power2.out", stagger: 0.06 }, 52.6);
+    tl.to(".s3-n-animal, .s3-n-bird, .s3-n-sparrow, .s3-n-drone", { borderColor: "#94A3B8", duration: 1.2 }, 53.4);
+    tl.to(".s3-cluster", { scale: 0.84, duration: 2.0, ease: "power2.inOut" }, 53.4);
+    var jit = { a: 0 };
+    tl.to(jit, { a: 1, duration: 2.4, ease: "none", onUpdate: function () {
+      var t = tl.time(), st = Math.floor(t * 12);
+      $$(".s3-xn").forEach(function (el, i) {
+        gsap.set(el, { x: (hash(st * 7 + i) * 2 - 1) * 5 * jit.a, y: (hash(st * 11 + i * 3) * 2 - 1) * 4 * jit.a });
+      });
+    } }, 53.0);
+    tl.set($$(".s3-xn"), { x: 0, y: 0 }, 55.5);
+    // "và không ai dám sửa nữa" (54.38)
+    tl.fromTo(".s3-who", { scale: 0.4, opacity: 0, transformOrigin: "50% 50%" }, { scale: 1, opacity: 1, duration: 0.45, ease: "power3.out" }, 54.28);
+    glitch(".s3-who", 54.28, 0.45, 12);
+
+    // "Đây chính là con khỉ và quả chuối" (56.22): camera lùi ra
+    fadeOut(".s3-req", 54.7, 0.4);
+    tl.fromTo(".s3-forest-g", { opacity: 0 }, { opacity: 0.8, duration: 1.6, ease: "power2.inOut" }, 55.7);
+    tl.fromTo(".s3-monkey", { opacity: 0 }, { opacity: 1, duration: 1.0, ease: "power2.inOut" }, 55.8);
+    // "Bạn chỉ muốn khả năng bay" (57.56) / "nhưng OOP bắt bạn lấy cả dòng dõi" (59.58)
+    tl.fromTo(".s3-final", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 57.3);
+    tl.fromTo(".s3-f1", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 57.4);
+    tl.fromTo(".s3-f2", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 59.45);
+  })();
+  </script>
+</div>
+
+</template>
+  </body>
+</html>

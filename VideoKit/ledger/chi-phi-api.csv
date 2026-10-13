@@ -1,0 +1,6 @@
+ngay,du_an,dich_vu,model,muc_dich,so_luong,chi_phi_usd_uoc_tinh,ghi_chu
+2026-10-13,oop-vs-pop,Google Gemini TTS,gemini-3.8-flash-lite-tts,giong doc 8 canh,8,0.00,goi mien phi; model Flash het han muc ngay
+2026-10-13,oop-vs-pop,OpenAI Images,gpt-image-2.5-flare,6 anh nhan vat nen trong,6,0.085,medium 1024x1024
+2026-10-13,oop-vs-pop,OpenAI Images,gpt-image-1-mini/2.5-flare/2.5-sunburst/1.5,so sanh model (4 anh thu),4,0.088,chi de chon model
+2026-10-13,oop-vs-pop,OpenAI Audio,whisper-1,moc tung tu 8 canh (8.7 phut),8,0.055,0.006 USD moi phut
+2026-10-13,oop-vs-pop,OpenAI Images,gpt-image-2.5-flare,3 phuong an nen thumbnail 1536x864,3,0.126,quality high; edits voi anh tham chieu

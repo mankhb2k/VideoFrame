@@ -1,0 +1,715 @@
+{
+ "van_ban": "Bạn mở một file code và chỉ muốn dùng đúng một hàm, nhưng hàm đó nằm trong classcha. Classcha lại kế thừa classong, classong lại kế thừa thêm một class nữa. Đến tầng thứ 5, bạn bắt đầu tự hỏi, mình đang đọc code hay đọc gia phả? Lập trình viên Joe Armstrong, cha đẻ của ngôn ngữ Erlang, từng nói về chuyện này rất hay. Bạn muốn một quả chuối, nhưng thứ bạn nhận được là một con khỉ đang cầm quả chuối và cả khu rừng xung quanh nó. Trong video này, mình sẽ so sánh 2 cách tổ chức code, OOP với ví dụ bằng TypeScript và POP, tức là Protocol Oriented Programming, với ví dụ bằng Swift. Cuối video, bạn sẽ có 7 luật để viết TypeScript theo tù duy POP, giúp ứng dụng dễ mở rộng hơn.",
+ "cac_tu": [
+  {
+   "tu": "Bạn",
+   "bat_dau": 0.3,
+   "ket_thuc": 0.6
+  },
+  {
+   "tu": "mở",
+   "bat_dau": 0.6,
+   "ket_thuc": 0.82
+  },
+  {
+   "tu": "một",
+   "bat_dau": 0.82,
+   "ket_thuc": 1.06
+  },
+  {
+   "tu": "file",
+   "bat_dau": 1.06,
+   "ket_thuc": 1.24
+  },
+  {
+   "tu": "code",
+   "bat_dau": 1.24,
+   "ket_thuc": 1.4
+  },
+  {
+   "tu": "và",
+   "bat_dau": 1.4,
+   "ket_thuc": 1.78
+  },
+  {
+   "tu": "chỉ",
+   "bat_dau": 1.78,
+   "ket_thuc": 2.04
+  },
+  {
+   "tu": "muốn",
+   "bat_dau": 2.04,
+   "ket_thuc": 2.16
+  },
+  {
+   "tu": "dùng",
+   "bat_dau": 2.16,
+   "ket_thuc": 2.36
+  },
+  {
+   "tu": "đúng",
+   "bat_dau": 2.36,
+   "ket_thuc": 2.68
+  },
+  {
+   "tu": "một",
+   "bat_dau": 2.68,
+   "ket_thuc": 3.08
+  },
+  {
+   "tu": "hàm",
+   "bat_dau": 3.08,
+   "ket_thuc": 3.38
+  },
+  {
+   "tu": "nhưng",
+   "bat_dau": 3.88,
+   "ket_thuc": 3.92
+  },
+  {
+   "tu": "hàm",
+   "bat_dau": 3.92,
+   "ket_thuc": 4.16
+  },
+  {
+   "tu": "đó",
+   "bat_dau": 4.16,
+   "ket_thuc": 4.46
+  },
+  {
+   "tu": "nằm",
+   "bat_dau": 4.46,
+   "ket_thuc": 4.62
+  },
+  {
+   "tu": "trong",
+   "bat_dau": 4.62,
+   "ket_thuc": 4.9
+  },
+  {
+   "tu": "classcha",
+   "bat_dau": 4.9,
+   "ket_thuc": 5.38
+  },
+  {
+   "tu": "Classcha",
+   "bat_dau": 5.92,
+   "ket_thuc": 6.36
+  },
+  {
+   "tu": "lại",
+   "bat_dau": 6.36,
+   "ket_thuc": 6.62
+  },
+  {
+   "tu": "kế",
+   "bat_dau": 6.62,
+   "ket_thuc": 6.8
+  },
+  {
+   "tu": "thừa",
+   "bat_dau": 6.8,
+   "ket_thuc": 6.94
+  },
+  {
+   "tu": "classong",
+   "bat_dau": 6.94,
+   "ket_thuc": 7.52
+  },
+  {
+   "tu": "classong",
+   "bat_dau": 7.92,
+   "ket_thuc": 8.36
+  },
+  {
+   "tu": "lại",
+   "bat_dau": 8.36,
+   "ket_thuc": 8.54
+  },
+  {
+   "tu": "kế",
+   "bat_dau": 8.54,
+   "ket_thuc": 8.74
+  },
+  {
+   "tu": "thừa",
+   "bat_dau": 8.74,
+   "ket_thuc": 8.94
+  },
+  {
+   "tu": "thêm",
+   "bat_dau": 8.94,
+   "ket_thuc": 9.16
+  },
+  {
+   "tu": "một",
+   "bat_dau": 9.16,
+   "ket_thuc": 9.34
+  },
+  {
+   "tu": "class",
+   "bat_dau": 9.34,
+   "ket_thuc": 9.56
+  },
+  {
+   "tu": "nữa",
+   "bat_dau": 9.56,
+   "ket_thuc": 9.78
+  },
+  {
+   "tu": "Đến",
+   "bat_dau": 10.46,
+   "ket_thuc": 10.48
+  },
+  {
+   "tu": "tầng",
+   "bat_dau": 10.48,
+   "ket_thuc": 10.66
+  },
+  {
+   "tu": "thứ",
+   "bat_dau": 10.66,
+   "ket_thuc": 10.84
+  },
+  {
+   "tu": "5",
+   "bat_dau": 10.84,
+   "ket_thuc": 11.06
+  },
+  {
+   "tu": "bạn",
+   "bat_dau": 11.42,
+   "ket_thuc": 11.46
+  },
+  {
+   "tu": "bắt",
+   "bat_dau": 11.46,
+   "ket_thuc": 11.62
+  },
+  {
+   "tu": "đầu",
+   "bat_dau": 11.62,
+   "ket_thuc": 11.72
+  },
+  {
+   "tu": "tự",
+   "bat_dau": 11.72,
+   "ket_thuc": 12.04
+  },
+  {
+   "tu": "hỏi",
+   "bat_dau": 12.04,
+   "ket_thuc": 12.14
+  },
+  {
+   "tu": "mình",
+   "bat_dau": 12.7,
+   "ket_thuc": 12.8
+  },
+  {
+   "tu": "đang",
+   "bat_dau": 12.8,
+   "ket_thuc": 13.04
+  },
+  {
+   "tu": "đọc",
+   "bat_dau": 13.04,
+   "ket_thuc": 13.08
+  },
+  {
+   "tu": "code",
+   "bat_dau": 13.08,
+   "ket_thuc": 13.48
+  },
+  {
+   "tu": "hay",
+   "bat_dau": 13.48,
+   "ket_thuc": 13.92
+  },
+  {
+   "tu": "đọc",
+   "bat_dau": 13.92,
+   "ket_thuc": 14.3
+  },
+  {
+   "tu": "gia",
+   "bat_dau": 14.3,
+   "ket_thuc": 14.56
+  },
+  {
+   "tu": "phả",
+   "bat_dau": 14.56,
+   "ket_thuc": 14.78
+  },
+  {
+   "tu": "Lập",
+   "bat_dau": 15.78,
+   "ket_thuc": 15.9
+  },
+  {
+   "tu": "trình",
+   "bat_dau": 15.9,
+   "ket_thuc": 16.08
+  },
+  {
+   "tu": "viên",
+   "bat_dau": 16.08,
+   "ket_thuc": 16.26
+  },
+  {
+   "tu": "Joe",
+   "bat_dau": 16.26,
+   "ket_thuc": 16.6
+  },
+  {
+   "tu": "Armstrong",
+   "bat_dau": 16.6,
+   "ket_thuc": 17.06
+  },
+  {
+   "tu": "cha",
+   "bat_dau": 17.58,
+   "ket_thuc": 17.58
+  },
+  {
+   "tu": "đẻ",
+   "bat_dau": 17.58,
+   "ket_thuc": 17.76
+  },
+  {
+   "tu": "của",
+   "bat_dau": 17.76,
+   "ket_thuc": 18.08
+  },
+  {
+   "tu": "ngôn",
+   "bat_dau": 18.08,
+   "ket_thuc": 18.12
+  },
+  {
+   "tu": "ngữ",
+   "bat_dau": 18.12,
+   "ket_thuc": 18.28
+  },
+  {
+   "tu": "Erlang",
+   "bat_dau": 18.28,
+   "ket_thuc": 18.74
+  },
+  {
+   "tu": "từng",
+   "bat_dau": 19.2,
+   "ket_thuc": 19.3
+  },
+  {
+   "tu": "nói",
+   "bat_dau": 19.3,
+   "ket_thuc": 19.46
+  },
+  {
+   "tu": "về",
+   "bat_dau": 19.46,
+   "ket_thuc": 19.66
+  },
+  {
+   "tu": "chuyện",
+   "bat_dau": 19.66,
+   "ket_thuc": 19.74
+  },
+  {
+   "tu": "này",
+   "bat_dau": 19.74,
+   "ket_thuc": 19.98
+  },
+  {
+   "tu": "rất",
+   "bat_dau": 19.98,
+   "ket_thuc": 20.16
+  },
+  {
+   "tu": "hay",
+   "bat_dau": 20.16,
+   "ket_thuc": 20.32
+  },
+  {
+   "tu": "Bạn",
+   "bat_dau": 21.08,
+   "ket_thuc": 21.08
+  },
+  {
+   "tu": "muốn",
+   "bat_dau": 21.08,
+   "ket_thuc": 21.24
+  },
+  {
+   "tu": "một",
+   "bat_dau": 21.24,
+   "ket_thuc": 21.58
+  },
+  {
+   "tu": "quả",
+   "bat_dau": 21.58,
+   "ket_thuc": 21.58
+  },
+  {
+   "tu": "chuối",
+   "bat_dau": 21.58,
+   "ket_thuc": 21.84
+  },
+  {
+   "tu": "nhưng",
+   "bat_dau": 22.34,
+   "ket_thuc": 22.44
+  },
+  {
+   "tu": "thứ",
+   "bat_dau": 22.44,
+   "ket_thuc": 22.62
+  },
+  {
+   "tu": "bạn",
+   "bat_dau": 22.62,
+   "ket_thuc": 22.82
+  },
+  {
+   "tu": "nhận",
+   "bat_dau": 22.82,
+   "ket_thuc": 22.94
+  },
+  {
+   "tu": "được",
+   "bat_dau": 22.94,
+   "ket_thuc": 23.16
+  },
+  {
+   "tu": "là",
+   "bat_dau": 23.16,
+   "ket_thuc": 23.46
+  },
+  {
+   "tu": "một",
+   "bat_dau": 23.46,
+   "ket_thuc": 23.7
+  },
+  {
+   "tu": "con",
+   "bat_dau": 23.7,
+   "ket_thuc": 23.9
+  },
+  {
+   "tu": "khỉ",
+   "bat_dau": 23.9,
+   "ket_thuc": 24.06
+  },
+  {
+   "tu": "đang",
+   "bat_dau": 24.06,
+   "ket_thuc": 24.4
+  },
+  {
+   "tu": "cầm",
+   "bat_dau": 24.4,
+   "ket_thuc": 24.48
+  },
+  {
+   "tu": "quả",
+   "bat_dau": 24.48,
+   "ket_thuc": 24.72
+  },
+  {
+   "tu": "chuối",
+   "bat_dau": 24.72,
+   "ket_thuc": 25.0
+  },
+  {
+   "tu": "và",
+   "bat_dau": 25.0,
+   "ket_thuc": 25.44
+  },
+  {
+   "tu": "cả",
+   "bat_dau": 25.44,
+   "ket_thuc": 25.7
+  },
+  {
+   "tu": "khu",
+   "bat_dau": 25.7,
+   "ket_thuc": 25.8
+  },
+  {
+   "tu": "rừng",
+   "bat_dau": 25.8,
+   "ket_thuc": 26.0
+  },
+  {
+   "tu": "xung",
+   "bat_dau": 26.0,
+   "ket_thuc": 26.22
+  },
+  {
+   "tu": "quanh",
+   "bat_dau": 26.22,
+   "ket_thuc": 26.38
+  },
+  {
+   "tu": "nó",
+   "bat_dau": 26.38,
+   "ket_thuc": 26.62
+  },
+  {
+   "tu": "Trong",
+   "bat_dau": 27.38,
+   "ket_thuc": 27.68
+  },
+  {
+   "tu": "video",
+   "bat_dau": 27.68,
+   "ket_thuc": 27.96
+  },
+  {
+   "tu": "này",
+   "bat_dau": 27.96,
+   "ket_thuc": 28.2
+  },
+  {
+   "tu": "mình",
+   "bat_dau": 28.56,
+   "ket_thuc": 28.62
+  },
+  {
+   "tu": "sẽ",
+   "bat_dau": 28.62,
+   "ket_thuc": 28.86
+  },
+  {
+   "tu": "so",
+   "bat_dau": 28.86,
+   "ket_thuc": 28.96
+  },
+  {
+   "tu": "sánh",
+   "bat_dau": 28.96,
+   "ket_thuc": 29.12
+  },
+  {
+   "tu": "2",
+   "bat_dau": 29.12,
+   "ket_thuc": 29.5
+  },
+  {
+   "tu": "cách",
+   "bat_dau": 29.5,
+   "ket_thuc": 29.64
+  },
+  {
+   "tu": "tổ",
+   "bat_dau": 29.64,
+   "ket_thuc": 29.8
+  },
+  {
+   "tu": "chức",
+   "bat_dau": 29.8,
+   "ket_thuc": 29.96
+  },
+  {
+   "tu": "code",
+   "bat_dau": 29.96,
+   "ket_thuc": 30.2
+  },
+  {
+   "tu": "OOP",
+   "bat_dau": 30.94,
+   "ket_thuc": 31.16
+  },
+  {
+   "tu": "với",
+   "bat_dau": 31.16,
+   "ket_thuc": 31.86
+  },
+  {
+   "tu": "ví",
+   "bat_dau": 31.86,
+   "ket_thuc": 32.2
+  },
+  {
+   "tu": "dụ",
+   "bat_dau": 32.2,
+   "ket_thuc": 32.2
+  },
+  {
+   "tu": "bằng",
+   "bat_dau": 32.2,
+   "ket_thuc": 32.52
+  },
+  {
+   "tu": "TypeScript",
+   "bat_dau": 32.52,
+   "ket_thuc": 32.94
+  },
+  {
+   "tu": "và",
+   "bat_dau": 32.94,
+   "ket_thuc": 33.54
+  },
+  {
+   "tu": "POP",
+   "bat_dau": 33.54,
+   "ket_thuc": 34.06
+  },
+  {
+   "tu": "tức",
+   "bat_dau": 34.62,
+   "ket_thuc": 34.62
+  },
+  {
+   "tu": "là",
+   "bat_dau": 34.62,
+   "ket_thuc": 34.92
+  },
+  {
+   "tu": "Protocol",
+   "bat_dau": 34.92,
+   "ket_thuc": 35.26
+  },
+  {
+   "tu": "Oriented",
+   "bat_dau": 35.26,
+   "ket_thuc": 35.88
+  },
+  {
+   "tu": "Programming",
+   "bat_dau": 35.88,
+   "ket_thuc": 36.84
+  },
+  {
+   "tu": "với",
+   "bat_dau": 37.1,
+   "ket_thuc": 37.16
+  },
+  {
+   "tu": "ví",
+   "bat_dau": 37.16,
+   "ket_thuc": 37.46
+  },
+  {
+   "tu": "dụ",
+   "bat_dau": 37.46,
+   "ket_thuc": 37.46
+  },
+  {
+   "tu": "bằng",
+   "bat_dau": 37.46,
+   "ket_thuc": 37.74
+  },
+  {
+   "tu": "Swift",
+   "bat_dau": 37.74,
+   "ket_thuc": 38.08
+  },
+  {
+   "tu": "Cuối",
+   "bat_dau": 38.94,
+   "ket_thuc": 38.94
+  },
+  {
+   "tu": "video",
+   "bat_dau": 38.94,
+   "ket_thuc": 39.3
+  },
+  {
+   "tu": "bạn",
+   "bat_dau": 39.8,
+   "ket_thuc": 39.9
+  },
+  {
+   "tu": "sẽ",
+   "bat_dau": 39.9,
+   "ket_thuc": 40.12
+  },
+  {
+   "tu": "có",
+   "bat_dau": 40.12,
+   "ket_thuc": 40.28
+  },
+  {
+   "tu": "7",
+   "bat_dau": 40.28,
+   "ket_thuc": 40.58
+  },
+  {
+   "tu": "luật",
+   "bat_dau": 40.58,
+   "ket_thuc": 40.72
+  },
+  {
+   "tu": "để",
+   "bat_dau": 40.72,
+   "ket_thuc": 41.06
+  },
+  {
+   "tu": "viết",
+   "bat_dau": 41.06,
+   "ket_thuc": 41.06
+  },
+  {
+   "tu": "TypeScript",
+   "bat_dau": 41.06,
+   "ket_thuc": 41.54
+  },
+  {
+   "tu": "theo",
+   "bat_dau": 41.54,
+   "ket_thuc": 41.8
+  },
+  {
+   "tu": "tù",
+   "bat_dau": 41.8,
+   "ket_thuc": 42.08
+  },
+  {
+   "tu": "duy",
+   "bat_dau": 42.08,
+   "ket_thuc": 42.14
+  },
+  {
+   "tu": "POP",
+   "bat_dau": 42.14,
+   "ket_thuc": 42.64
+  },
+  {
+   "tu": "giúp",
+   "bat_dau": 43.24,
+   "ket_thuc": 43.24
+  },
+  {
+   "tu": "ứng",
+   "bat_dau": 43.24,
+   "ket_thuc": 43.4
+  },
+  {
+   "tu": "dụng",
+   "bat_dau": 43.4,
+   "ket_thuc": 43.68
+  },
+  {
+   "tu": "dễ",
+   "bat_dau": 43.68,
+   "ket_thuc": 43.9
+  },
+  {
+   "tu": "mở",
+   "bat_dau": 43.9,
+   "ket_thuc": 44.1
+  },
+  {
+   "tu": "rộng",
+   "bat_dau": 44.1,
+   "ket_thuc": 44.28
+  },
+  {
+   "tu": "hơn",
+   "bat_dau": 44.28,
+   "ket_thuc": 44.4
+  }
+ ]
+}

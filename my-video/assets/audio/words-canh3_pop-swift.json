@@ -1,0 +1,1510 @@
+{
+ "van_ban": "Năm 2015, tại hội nghị WWDC, kỹ sư Dave Abrahams của Apple giới thiệu Protocol-Oriented Programming trong ngôn ngữ Swift với một khẩu hiệu Đừng bắt đầu bằng Class, hãy bắt đầu bằng Protocol. Protocol là một bản cam kết về hành vi. Thay vì hỏi, con này thuộc dòng dõi nhà ai? Ta hỏi, con này làm được gì? Ai bay được thì ký vào Flyable, ai ăn được thì ký vào Ether. Và nhờ Extension, Protocol có thể kèm sẵn cách làm mặc định nên bạn không phải viết lại ở từng nơi. Hãy giải lại bài toán vừa rồi. Ta có hai Protocol, Flyable và Ether. Flyable có một Extension đưa sẵn hành vi bay mặc định. Sparrow là một struct ký cả Flyable lẫn Ether và chỉ cần tự viết hàm Ether. Penguin chỉ ký Ether, đơn giản là nó không ký Flyable, thế thôi. Còn Drone chỉ ký Flyable và không cần dính dáng gì tới Animal. Điều quan trọng nhất nằm ở hàm Release. Hàm này nhận một mảng các phần tử Flyable rồi gọi Fly cho từng phần tử. Truyền vào Sparrow và Drone thì ổn. Còn nếu bạn truyền vào Penguin, trình biên dịch sẽ báo lỗi ngay lúc build, chứ không đợi đến khi chạy mới nổ. Bạn cũng sẽ để ý, ở đây mọi thứ là struct, tức là kiểu giá trị và không có cây thừa kế nào cả. Một kiểu có thể ký nhiều Protocol cùng lúc, điều mà cây thừa class đơn không làm được. Swift vẫn có class khi bạn cần. Tuy nhiên, PoP chỉ đổi thứ tự ưu tiên, khả năng trước, dòng dõi sau. Hãy nhớ lại câu hỏi đầu tiên, thay vì hỏi nó là cái gì, PoP hỏi nó làm được gì.",
+ "cac_tu": [
+  {
+   "tu": "Năm",
+   "bat_dau": 0.3,
+   "ket_thuc": 0.74
+  },
+  {
+   "tu": "2015",
+   "bat_dau": 0.74,
+   "ket_thuc": 1.54
+  },
+  {
+   "tu": "tại",
+   "bat_dau": 1.96,
+   "ket_thuc": 2.12
+  },
+  {
+   "tu": "hội",
+   "bat_dau": 2.12,
+   "ket_thuc": 2.28
+  },
+  {
+   "tu": "nghị",
+   "bat_dau": 2.28,
+   "ket_thuc": 2.48
+  },
+  {
+   "tu": "WWDC",
+   "bat_dau": 2.48,
+   "ket_thuc": 3.62
+  },
+  {
+   "tu": "kỹ",
+   "bat_dau": 4.18,
+   "ket_thuc": 4.2
+  },
+  {
+   "tu": "sư",
+   "bat_dau": 4.2,
+   "ket_thuc": 4.38
+  },
+  {
+   "tu": "Dave",
+   "bat_dau": 4.38,
+   "ket_thuc": 4.82
+  },
+  {
+   "tu": "Abrahams",
+   "bat_dau": 4.82,
+   "ket_thuc": 5.3
+  },
+  {
+   "tu": "của",
+   "bat_dau": 5.3,
+   "ket_thuc": 5.46
+  },
+  {
+   "tu": "Apple",
+   "bat_dau": 5.46,
+   "ket_thuc": 5.76
+  },
+  {
+   "tu": "giới",
+   "bat_dau": 5.76,
+   "ket_thuc": 6.14
+  },
+  {
+   "tu": "thiệu",
+   "bat_dau": 6.14,
+   "ket_thuc": 6.38
+  },
+  {
+   "tu": "Protocol",
+   "bat_dau": 6.68,
+   "ket_thuc": 7.12
+  },
+  {
+   "tu": "Oriented",
+   "bat_dau": 7.12,
+   "ket_thuc": 7.56
+  },
+  {
+   "tu": "Programming",
+   "bat_dau": 7.56,
+   "ket_thuc": 8.26
+  },
+  {
+   "tu": "trong",
+   "bat_dau": 8.26,
+   "ket_thuc": 8.46
+  },
+  {
+   "tu": "ngôn",
+   "bat_dau": 8.46,
+   "ket_thuc": 8.6
+  },
+  {
+   "tu": "ngữ",
+   "bat_dau": 8.6,
+   "ket_thuc": 8.7
+  },
+  {
+   "tu": "Swift",
+   "bat_dau": 8.7,
+   "ket_thuc": 9.1
+  },
+  {
+   "tu": "với",
+   "bat_dau": 9.1,
+   "ket_thuc": 9.68
+  },
+  {
+   "tu": "một",
+   "bat_dau": 9.68,
+   "ket_thuc": 9.92
+  },
+  {
+   "tu": "khẩu",
+   "bat_dau": 9.92,
+   "ket_thuc": 10.0
+  },
+  {
+   "tu": "hiệu",
+   "bat_dau": 10.0,
+   "ket_thuc": 10.22
+  },
+  {
+   "tu": "Đừng",
+   "bat_dau": 10.48,
+   "ket_thuc": 10.92
+  },
+  {
+   "tu": "bắt",
+   "bat_dau": 10.92,
+   "ket_thuc": 11.1
+  },
+  {
+   "tu": "đầu",
+   "bat_dau": 11.1,
+   "ket_thuc": 11.22
+  },
+  {
+   "tu": "bằng",
+   "bat_dau": 11.22,
+   "ket_thuc": 11.32
+  },
+  {
+   "tu": "Class",
+   "bat_dau": 11.32,
+   "ket_thuc": 11.7
+  },
+  {
+   "tu": "hãy",
+   "bat_dau": 12.12,
+   "ket_thuc": 12.24
+  },
+  {
+   "tu": "bắt",
+   "bat_dau": 12.24,
+   "ket_thuc": 12.46
+  },
+  {
+   "tu": "đầu",
+   "bat_dau": 12.46,
+   "ket_thuc": 12.66
+  },
+  {
+   "tu": "bằng",
+   "bat_dau": 12.66,
+   "ket_thuc": 13.1
+  },
+  {
+   "tu": "Protocol",
+   "bat_dau": 13.1,
+   "ket_thuc": 13.58
+  },
+  {
+   "tu": "Protocol",
+   "bat_dau": 14.96,
+   "ket_thuc": 15.1
+  },
+  {
+   "tu": "là",
+   "bat_dau": 15.1,
+   "ket_thuc": 15.32
+  },
+  {
+   "tu": "một",
+   "bat_dau": 15.32,
+   "ket_thuc": 15.64
+  },
+  {
+   "tu": "bản",
+   "bat_dau": 15.64,
+   "ket_thuc": 15.64
+  },
+  {
+   "tu": "cam",
+   "bat_dau": 15.64,
+   "ket_thuc": 16.0
+  },
+  {
+   "tu": "kết",
+   "bat_dau": 16.0,
+   "ket_thuc": 16.2
+  },
+  {
+   "tu": "về",
+   "bat_dau": 16.2,
+   "ket_thuc": 16.46
+  },
+  {
+   "tu": "hành",
+   "bat_dau": 16.46,
+   "ket_thuc": 16.6
+  },
+  {
+   "tu": "vi",
+   "bat_dau": 16.6,
+   "ket_thuc": 16.8
+  },
+  {
+   "tu": "Thay",
+   "bat_dau": 17.36,
+   "ket_thuc": 17.36
+  },
+  {
+   "tu": "vì",
+   "bat_dau": 17.36,
+   "ket_thuc": 17.66
+  },
+  {
+   "tu": "hỏi",
+   "bat_dau": 17.66,
+   "ket_thuc": 17.84
+  },
+  {
+   "tu": "con",
+   "bat_dau": 18.14,
+   "ket_thuc": 18.14
+  },
+  {
+   "tu": "này",
+   "bat_dau": 18.14,
+   "ket_thuc": 18.24
+  },
+  {
+   "tu": "thuộc",
+   "bat_dau": 18.24,
+   "ket_thuc": 18.4
+  },
+  {
+   "tu": "dòng",
+   "bat_dau": 18.4,
+   "ket_thuc": 18.5
+  },
+  {
+   "tu": "dõi",
+   "bat_dau": 18.5,
+   "ket_thuc": 18.68
+  },
+  {
+   "tu": "nhà",
+   "bat_dau": 18.68,
+   "ket_thuc": 18.86
+  },
+  {
+   "tu": "ai",
+   "bat_dau": 18.86,
+   "ket_thuc": 19.1
+  },
+  {
+   "tu": "Ta",
+   "bat_dau": 19.52,
+   "ket_thuc": 19.62
+  },
+  {
+   "tu": "hỏi",
+   "bat_dau": 19.62,
+   "ket_thuc": 19.82
+  },
+  {
+   "tu": "con",
+   "bat_dau": 20.06,
+   "ket_thuc": 20.18
+  },
+  {
+   "tu": "này",
+   "bat_dau": 20.18,
+   "ket_thuc": 20.3
+  },
+  {
+   "tu": "làm",
+   "bat_dau": 20.3,
+   "ket_thuc": 20.4
+  },
+  {
+   "tu": "được",
+   "bat_dau": 20.4,
+   "ket_thuc": 20.56
+  },
+  {
+   "tu": "gì",
+   "bat_dau": 20.56,
+   "ket_thuc": 20.76
+  },
+  {
+   "tu": "Ai",
+   "bat_dau": 21.48,
+   "ket_thuc": 21.56
+  },
+  {
+   "tu": "bay",
+   "bat_dau": 21.56,
+   "ket_thuc": 21.76
+  },
+  {
+   "tu": "được",
+   "bat_dau": 21.76,
+   "ket_thuc": 22.02
+  },
+  {
+   "tu": "thì",
+   "bat_dau": 22.02,
+   "ket_thuc": 22.38
+  },
+  {
+   "tu": "ký",
+   "bat_dau": 22.38,
+   "ket_thuc": 22.38
+  },
+  {
+   "tu": "vào",
+   "bat_dau": 22.38,
+   "ket_thuc": 22.58
+  },
+  {
+   "tu": "Flyable",
+   "bat_dau": 22.58,
+   "ket_thuc": 23.08
+  },
+  {
+   "tu": "ai",
+   "bat_dau": 23.58,
+   "ket_thuc": 23.64
+  },
+  {
+   "tu": "ăn",
+   "bat_dau": 23.64,
+   "ket_thuc": 23.82
+  },
+  {
+   "tu": "được",
+   "bat_dau": 23.82,
+   "ket_thuc": 24.0
+  },
+  {
+   "tu": "thì",
+   "bat_dau": 24.0,
+   "ket_thuc": 24.38
+  },
+  {
+   "tu": "ký",
+   "bat_dau": 24.38,
+   "ket_thuc": 24.38
+  },
+  {
+   "tu": "vào",
+   "bat_dau": 24.38,
+   "ket_thuc": 24.56
+  },
+  {
+   "tu": "Ether",
+   "bat_dau": 24.56,
+   "ket_thuc": 24.9
+  },
+  {
+   "tu": "Và",
+   "bat_dau": 25.6,
+   "ket_thuc": 25.76
+  },
+  {
+   "tu": "nhờ",
+   "bat_dau": 25.76,
+   "ket_thuc": 25.9
+  },
+  {
+   "tu": "Extension",
+   "bat_dau": 25.9,
+   "ket_thuc": 26.52
+  },
+  {
+   "tu": "Protocol",
+   "bat_dau": 27.28,
+   "ket_thuc": 27.28
+  },
+  {
+   "tu": "có",
+   "bat_dau": 27.28,
+   "ket_thuc": 27.58
+  },
+  {
+   "tu": "thể",
+   "bat_dau": 27.58,
+   "ket_thuc": 27.74
+  },
+  {
+   "tu": "kèm",
+   "bat_dau": 27.74,
+   "ket_thuc": 28.18
+  },
+  {
+   "tu": "sẵn",
+   "bat_dau": 28.18,
+   "ket_thuc": 28.42
+  },
+  {
+   "tu": "cách",
+   "bat_dau": 28.42,
+   "ket_thuc": 28.6
+  },
+  {
+   "tu": "làm",
+   "bat_dau": 28.6,
+   "ket_thuc": 28.82
+  },
+  {
+   "tu": "mặc",
+   "bat_dau": 28.82,
+   "ket_thuc": 29.0
+  },
+  {
+   "tu": "định",
+   "bat_dau": 29.0,
+   "ket_thuc": 29.14
+  },
+  {
+   "tu": "nên",
+   "bat_dau": 29.14,
+   "ket_thuc": 29.6
+  },
+  {
+   "tu": "bạn",
+   "bat_dau": 29.6,
+   "ket_thuc": 29.88
+  },
+  {
+   "tu": "không",
+   "bat_dau": 29.88,
+   "ket_thuc": 30.12
+  },
+  {
+   "tu": "phải",
+   "bat_dau": 30.12,
+   "ket_thuc": 30.28
+  },
+  {
+   "tu": "viết",
+   "bat_dau": 30.28,
+   "ket_thuc": 30.38
+  },
+  {
+   "tu": "lại",
+   "bat_dau": 30.38,
+   "ket_thuc": 30.64
+  },
+  {
+   "tu": "ở",
+   "bat_dau": 30.64,
+   "ket_thuc": 30.8
+  },
+  {
+   "tu": "từng",
+   "bat_dau": 30.8,
+   "ket_thuc": 31.08
+  },
+  {
+   "tu": "nơi",
+   "bat_dau": 31.08,
+   "ket_thuc": 31.14
+  },
+  {
+   "tu": "Hãy",
+   "bat_dau": 32.06,
+   "ket_thuc": 32.06
+  },
+  {
+   "tu": "giải",
+   "bat_dau": 32.06,
+   "ket_thuc": 32.18
+  },
+  {
+   "tu": "lại",
+   "bat_dau": 32.18,
+   "ket_thuc": 32.36
+  },
+  {
+   "tu": "bài",
+   "bat_dau": 32.36,
+   "ket_thuc": 32.54
+  },
+  {
+   "tu": "toán",
+   "bat_dau": 32.54,
+   "ket_thuc": 32.64
+  },
+  {
+   "tu": "vừa",
+   "bat_dau": 32.64,
+   "ket_thuc": 32.82
+  },
+  {
+   "tu": "rồi",
+   "bat_dau": 32.82,
+   "ket_thuc": 33.0
+  },
+  {
+   "tu": "Ta",
+   "bat_dau": 33.52,
+   "ket_thuc": 33.6
+  },
+  {
+   "tu": "có",
+   "bat_dau": 33.6,
+   "ket_thuc": 33.68
+  },
+  {
+   "tu": "hai",
+   "bat_dau": 33.68,
+   "ket_thuc": 33.86
+  },
+  {
+   "tu": "Protocol",
+   "bat_dau": 33.86,
+   "ket_thuc": 34.32
+  },
+  {
+   "tu": "Flyable",
+   "bat_dau": 35.06,
+   "ket_thuc": 35.24
+  },
+  {
+   "tu": "và",
+   "bat_dau": 35.24,
+   "ket_thuc": 35.74
+  },
+  {
+   "tu": "Ether",
+   "bat_dau": 35.74,
+   "ket_thuc": 36.0
+  },
+  {
+   "tu": "Flyable",
+   "bat_dau": 36.9,
+   "ket_thuc": 37.08
+  },
+  {
+   "tu": "có",
+   "bat_dau": 37.08,
+   "ket_thuc": 37.36
+  },
+  {
+   "tu": "một",
+   "bat_dau": 37.36,
+   "ket_thuc": 37.72
+  },
+  {
+   "tu": "Extension",
+   "bat_dau": 37.72,
+   "ket_thuc": 38.3
+  },
+  {
+   "tu": "đưa",
+   "bat_dau": 38.3,
+   "ket_thuc": 38.88
+  },
+  {
+   "tu": "sẵn",
+   "bat_dau": 38.88,
+   "ket_thuc": 39.1
+  },
+  {
+   "tu": "hành",
+   "bat_dau": 39.1,
+   "ket_thuc": 39.34
+  },
+  {
+   "tu": "vi",
+   "bat_dau": 39.34,
+   "ket_thuc": 39.48
+  },
+  {
+   "tu": "bay",
+   "bat_dau": 39.48,
+   "ket_thuc": 39.68
+  },
+  {
+   "tu": "mặc",
+   "bat_dau": 39.68,
+   "ket_thuc": 39.88
+  },
+  {
+   "tu": "định",
+   "bat_dau": 39.88,
+   "ket_thuc": 40.0
+  },
+  {
+   "tu": "Sparrow",
+   "bat_dau": 40.76,
+   "ket_thuc": 40.9
+  },
+  {
+   "tu": "là",
+   "bat_dau": 40.9,
+   "ket_thuc": 41.08
+  },
+  {
+   "tu": "một",
+   "bat_dau": 41.08,
+   "ket_thuc": 41.36
+  },
+  {
+   "tu": "struct",
+   "bat_dau": 41.36,
+   "ket_thuc": 41.56
+  },
+  {
+   "tu": "ký",
+   "bat_dau": 41.56,
+   "ket_thuc": 42.02
+  },
+  {
+   "tu": "cả",
+   "bat_dau": 42.02,
+   "ket_thuc": 42.46
+  },
+  {
+   "tu": "Flyable",
+   "bat_dau": 42.46,
+   "ket_thuc": 42.86
+  },
+  {
+   "tu": "lẫn",
+   "bat_dau": 42.86,
+   "ket_thuc": 43.12
+  },
+  {
+   "tu": "Ether",
+   "bat_dau": 43.12,
+   "ket_thuc": 43.48
+  },
+  {
+   "tu": "và",
+   "bat_dau": 43.48,
+   "ket_thuc": 43.98
+  },
+  {
+   "tu": "chỉ",
+   "bat_dau": 43.98,
+   "ket_thuc": 44.2
+  },
+  {
+   "tu": "cần",
+   "bat_dau": 44.2,
+   "ket_thuc": 44.34
+  },
+  {
+   "tu": "tự",
+   "bat_dau": 44.34,
+   "ket_thuc": 44.78
+  },
+  {
+   "tu": "viết",
+   "bat_dau": 44.78,
+   "ket_thuc": 44.92
+  },
+  {
+   "tu": "hàm",
+   "bat_dau": 44.92,
+   "ket_thuc": 45.06
+  },
+  {
+   "tu": "Ether",
+   "bat_dau": 45.06,
+   "ket_thuc": 45.36
+  },
+  {
+   "tu": "Penguin",
+   "bat_dau": 46.16,
+   "ket_thuc": 46.36
+  },
+  {
+   "tu": "chỉ",
+   "bat_dau": 46.36,
+   "ket_thuc": 46.76
+  },
+  {
+   "tu": "ký",
+   "bat_dau": 46.76,
+   "ket_thuc": 46.86
+  },
+  {
+   "tu": "Ether",
+   "bat_dau": 46.86,
+   "ket_thuc": 47.24
+  },
+  {
+   "tu": "đơn",
+   "bat_dau": 47.86,
+   "ket_thuc": 47.9
+  },
+  {
+   "tu": "giản",
+   "bat_dau": 47.9,
+   "ket_thuc": 48.04
+  },
+  {
+   "tu": "là",
+   "bat_dau": 48.04,
+   "ket_thuc": 48.44
+  },
+  {
+   "tu": "nó",
+   "bat_dau": 48.44,
+   "ket_thuc": 48.78
+  },
+  {
+   "tu": "không",
+   "bat_dau": 48.78,
+   "ket_thuc": 48.98
+  },
+  {
+   "tu": "ký",
+   "bat_dau": 48.98,
+   "ket_thuc": 49.08
+  },
+  {
+   "tu": "Flyable",
+   "bat_dau": 49.08,
+   "ket_thuc": 49.54
+  },
+  {
+   "tu": "thế",
+   "bat_dau": 49.88,
+   "ket_thuc": 49.98
+  },
+  {
+   "tu": "thôi",
+   "bat_dau": 49.98,
+   "ket_thuc": 50.2
+  },
+  {
+   "tu": "Còn",
+   "bat_dau": 50.68,
+   "ket_thuc": 50.78
+  },
+  {
+   "tu": "Drone",
+   "bat_dau": 50.78,
+   "ket_thuc": 51.1
+  },
+  {
+   "tu": "chỉ",
+   "bat_dau": 51.1,
+   "ket_thuc": 51.56
+  },
+  {
+   "tu": "ký",
+   "bat_dau": 51.56,
+   "ket_thuc": 51.7
+  },
+  {
+   "tu": "Flyable",
+   "bat_dau": 51.7,
+   "ket_thuc": 52.2
+  },
+  {
+   "tu": "và",
+   "bat_dau": 52.2,
+   "ket_thuc": 52.7
+  },
+  {
+   "tu": "không",
+   "bat_dau": 52.7,
+   "ket_thuc": 52.94
+  },
+  {
+   "tu": "cần",
+   "bat_dau": 52.94,
+   "ket_thuc": 53.16
+  },
+  {
+   "tu": "dính",
+   "bat_dau": 53.16,
+   "ket_thuc": 53.3
+  },
+  {
+   "tu": "dáng",
+   "bat_dau": 53.3,
+   "ket_thuc": 53.5
+  },
+  {
+   "tu": "gì",
+   "bat_dau": 53.5,
+   "ket_thuc": 53.78
+  },
+  {
+   "tu": "tới",
+   "bat_dau": 53.78,
+   "ket_thuc": 54.08
+  },
+  {
+   "tu": "Animal",
+   "bat_dau": 54.08,
+   "ket_thuc": 54.48
+  },
+  {
+   "tu": "Điều",
+   "bat_dau": 55.64,
+   "ket_thuc": 55.64
+  },
+  {
+   "tu": "quan",
+   "bat_dau": 55.64,
+   "ket_thuc": 55.86
+  },
+  {
+   "tu": "trọng",
+   "bat_dau": 55.86,
+   "ket_thuc": 55.96
+  },
+  {
+   "tu": "nhất",
+   "bat_dau": 55.96,
+   "ket_thuc": 56.26
+  },
+  {
+   "tu": "nằm",
+   "bat_dau": 56.26,
+   "ket_thuc": 56.54
+  },
+  {
+   "tu": "ở",
+   "bat_dau": 56.54,
+   "ket_thuc": 56.76
+  },
+  {
+   "tu": "hàm",
+   "bat_dau": 56.76,
+   "ket_thuc": 56.9
+  },
+  {
+   "tu": "Release",
+   "bat_dau": 56.9,
+   "ket_thuc": 57.44
+  },
+  {
+   "tu": "Hàm",
+   "bat_dau": 57.44,
+   "ket_thuc": 58.12
+  },
+  {
+   "tu": "này",
+   "bat_dau": 58.12,
+   "ket_thuc": 58.36
+  },
+  {
+   "tu": "nhận",
+   "bat_dau": 58.36,
+   "ket_thuc": 58.52
+  },
+  {
+   "tu": "một",
+   "bat_dau": 58.52,
+   "ket_thuc": 58.94
+  },
+  {
+   "tu": "mảng",
+   "bat_dau": 58.94,
+   "ket_thuc": 59.08
+  },
+  {
+   "tu": "các",
+   "bat_dau": 59.08,
+   "ket_thuc": 59.46
+  },
+  {
+   "tu": "phần",
+   "bat_dau": 59.46,
+   "ket_thuc": 59.46
+  },
+  {
+   "tu": "tử",
+   "bat_dau": 59.46,
+   "ket_thuc": 59.58
+  },
+  {
+   "tu": "Flyable",
+   "bat_dau": 59.58,
+   "ket_thuc": 60.16
+  },
+  {
+   "tu": "rồi",
+   "bat_dau": 60.16,
+   "ket_thuc": 60.66
+  },
+  {
+   "tu": "gọi",
+   "bat_dau": 60.66,
+   "ket_thuc": 60.84
+  },
+  {
+   "tu": "Fly",
+   "bat_dau": 60.84,
+   "ket_thuc": 61.34
+  },
+  {
+   "tu": "cho",
+   "bat_dau": 61.34,
+   "ket_thuc": 61.76
+  },
+  {
+   "tu": "từng",
+   "bat_dau": 61.76,
+   "ket_thuc": 62.12
+  },
+  {
+   "tu": "phần",
+   "bat_dau": 62.12,
+   "ket_thuc": 62.12
+  },
+  {
+   "tu": "tử",
+   "bat_dau": 62.12,
+   "ket_thuc": 62.56
+  },
+  {
+   "tu": "Truyền",
+   "bat_dau": 63.06,
+   "ket_thuc": 63.06
+  },
+  {
+   "tu": "vào",
+   "bat_dau": 63.06,
+   "ket_thuc": 63.22
+  },
+  {
+   "tu": "Sparrow",
+   "bat_dau": 63.22,
+   "ket_thuc": 63.6
+  },
+  {
+   "tu": "và",
+   "bat_dau": 63.6,
+   "ket_thuc": 63.76
+  },
+  {
+   "tu": "Drone",
+   "bat_dau": 63.76,
+   "ket_thuc": 64.0
+  },
+  {
+   "tu": "thì",
+   "bat_dau": 64.0,
+   "ket_thuc": 64.34
+  },
+  {
+   "tu": "ổn",
+   "bat_dau": 64.34,
+   "ket_thuc": 64.5
+  },
+  {
+   "tu": "Còn",
+   "bat_dau": 65.06,
+   "ket_thuc": 65.06
+  },
+  {
+   "tu": "nếu",
+   "bat_dau": 65.06,
+   "ket_thuc": 65.18
+  },
+  {
+   "tu": "bạn",
+   "bat_dau": 65.18,
+   "ket_thuc": 65.42
+  },
+  {
+   "tu": "truyền",
+   "bat_dau": 65.42,
+   "ket_thuc": 65.56
+  },
+  {
+   "tu": "vào",
+   "bat_dau": 65.56,
+   "ket_thuc": 65.68
+  },
+  {
+   "tu": "Penguin",
+   "bat_dau": 65.68,
+   "ket_thuc": 66.04
+  },
+  {
+   "tu": "trình",
+   "bat_dau": 66.52,
+   "ket_thuc": 66.58
+  },
+  {
+   "tu": "biên",
+   "bat_dau": 66.58,
+   "ket_thuc": 66.76
+  },
+  {
+   "tu": "dịch",
+   "bat_dau": 66.76,
+   "ket_thuc": 66.86
+  },
+  {
+   "tu": "sẽ",
+   "bat_dau": 66.86,
+   "ket_thuc": 67.08
+  },
+  {
+   "tu": "báo",
+   "bat_dau": 67.08,
+   "ket_thuc": 67.24
+  },
+  {
+   "tu": "lỗi",
+   "bat_dau": 67.24,
+   "ket_thuc": 67.36
+  },
+  {
+   "tu": "ngay",
+   "bat_dau": 67.36,
+   "ket_thuc": 67.64
+  },
+  {
+   "tu": "lúc",
+   "bat_dau": 67.64,
+   "ket_thuc": 67.74
+  },
+  {
+   "tu": "build",
+   "bat_dau": 67.74,
+   "ket_thuc": 68.02
+  },
+  {
+   "tu": "chứ",
+   "bat_dau": 68.48,
+   "ket_thuc": 68.5
+  },
+  {
+   "tu": "không",
+   "bat_dau": 68.5,
+   "ket_thuc": 68.72
+  },
+  {
+   "tu": "đợi",
+   "bat_dau": 68.72,
+   "ket_thuc": 68.92
+  },
+  {
+   "tu": "đến",
+   "bat_dau": 68.92,
+   "ket_thuc": 69.08
+  },
+  {
+   "tu": "khi",
+   "bat_dau": 69.08,
+   "ket_thuc": 69.3
+  },
+  {
+   "tu": "chạy",
+   "bat_dau": 69.3,
+   "ket_thuc": 69.46
+  },
+  {
+   "tu": "mới",
+   "bat_dau": 69.46,
+   "ket_thuc": 69.68
+  },
+  {
+   "tu": "nổ",
+   "bat_dau": 69.68,
+   "ket_thuc": 69.86
+  },
+  {
+   "tu": "Bạn",
+   "bat_dau": 70.96,
+   "ket_thuc": 70.96
+  },
+  {
+   "tu": "cũng",
+   "bat_dau": 70.96,
+   "ket_thuc": 71.1
+  },
+  {
+   "tu": "sẽ",
+   "bat_dau": 71.1,
+   "ket_thuc": 71.34
+  },
+  {
+   "tu": "để",
+   "bat_dau": 71.34,
+   "ket_thuc": 71.38
+  },
+  {
+   "tu": "ý",
+   "bat_dau": 71.38,
+   "ket_thuc": 71.56
+  },
+  {
+   "tu": "ở",
+   "bat_dau": 71.94,
+   "ket_thuc": 72.02
+  },
+  {
+   "tu": "đây",
+   "bat_dau": 72.02,
+   "ket_thuc": 72.18
+  },
+  {
+   "tu": "mọi",
+   "bat_dau": 72.18,
+   "ket_thuc": 72.6
+  },
+  {
+   "tu": "thứ",
+   "bat_dau": 72.6,
+   "ket_thuc": 72.76
+  },
+  {
+   "tu": "là",
+   "bat_dau": 72.76,
+   "ket_thuc": 72.98
+  },
+  {
+   "tu": "struct",
+   "bat_dau": 72.98,
+   "ket_thuc": 73.34
+  },
+  {
+   "tu": "tức",
+   "bat_dau": 73.66,
+   "ket_thuc": 73.72
+  },
+  {
+   "tu": "là",
+   "bat_dau": 73.72,
+   "ket_thuc": 74.02
+  },
+  {
+   "tu": "kiểu",
+   "bat_dau": 74.02,
+   "ket_thuc": 74.06
+  },
+  {
+   "tu": "giá",
+   "bat_dau": 74.06,
+   "ket_thuc": 74.3
+  },
+  {
+   "tu": "trị",
+   "bat_dau": 74.3,
+   "ket_thuc": 74.46
+  },
+  {
+   "tu": "và",
+   "bat_dau": 74.46,
+   "ket_thuc": 74.98
+  },
+  {
+   "tu": "không",
+   "bat_dau": 74.98,
+   "ket_thuc": 75.18
+  },
+  {
+   "tu": "có",
+   "bat_dau": 75.18,
+   "ket_thuc": 75.5
+  },
+  {
+   "tu": "cây",
+   "bat_dau": 75.5,
+   "ket_thuc": 75.7
+  },
+  {
+   "tu": "thừa",
+   "bat_dau": 75.7,
+   "ket_thuc": 75.76
+  },
+  {
+   "tu": "kế",
+   "bat_dau": 75.76,
+   "ket_thuc": 75.92
+  },
+  {
+   "tu": "nào",
+   "bat_dau": 75.92,
+   "ket_thuc": 76.12
+  },
+  {
+   "tu": "cả",
+   "bat_dau": 76.12,
+   "ket_thuc": 76.32
+  },
+  {
+   "tu": "Một",
+   "bat_dau": 76.82,
+   "ket_thuc": 77.06
+  },
+  {
+   "tu": "kiểu",
+   "bat_dau": 77.06,
+   "ket_thuc": 77.26
+  },
+  {
+   "tu": "có",
+   "bat_dau": 77.26,
+   "ket_thuc": 77.48
+  },
+  {
+   "tu": "thể",
+   "bat_dau": 77.48,
+   "ket_thuc": 77.6
+  },
+  {
+   "tu": "ký",
+   "bat_dau": 77.6,
+   "ket_thuc": 77.78
+  },
+  {
+   "tu": "nhiều",
+   "bat_dau": 77.78,
+   "ket_thuc": 78.1
+  },
+  {
+   "tu": "Protocol",
+   "bat_dau": 78.1,
+   "ket_thuc": 78.46
+  },
+  {
+   "tu": "cùng",
+   "bat_dau": 78.46,
+   "ket_thuc": 78.64
+  },
+  {
+   "tu": "lúc",
+   "bat_dau": 78.64,
+   "ket_thuc": 78.84
+  },
+  {
+   "tu": "điều",
+   "bat_dau": 79.38,
+   "ket_thuc": 79.38
+  },
+  {
+   "tu": "mà",
+   "bat_dau": 79.38,
+   "ket_thuc": 79.7
+  },
+  {
+   "tu": "cây",
+   "bat_dau": 79.7,
+   "ket_thuc": 79.76
+  },
+  {
+   "tu": "thừa",
+   "bat_dau": 79.76,
+   "ket_thuc": 79.88
+  },
+  {
+   "tu": "class",
+   "bat_dau": 79.88,
+   "ket_thuc": 80.22
+  },
+  {
+   "tu": "đơn",
+   "bat_dau": 80.22,
+   "ket_thuc": 80.38
+  },
+  {
+   "tu": "không",
+   "bat_dau": 80.38,
+   "ket_thuc": 80.6
+  },
+  {
+   "tu": "làm",
+   "bat_dau": 80.6,
+   "ket_thuc": 80.74
+  },
+  {
+   "tu": "được",
+   "bat_dau": 80.74,
+   "ket_thuc": 80.9
+  },
+  {
+   "tu": "Swift",
+   "bat_dau": 81.58,
+   "ket_thuc": 81.94
+  },
+  {
+   "tu": "vẫn",
+   "bat_dau": 81.94,
+   "ket_thuc": 82.24
+  },
+  {
+   "tu": "có",
+   "bat_dau": 82.24,
+   "ket_thuc": 82.48
+  },
+  {
+   "tu": "class",
+   "bat_dau": 82.48,
+   "ket_thuc": 82.8
+  },
+  {
+   "tu": "khi",
+   "bat_dau": 82.8,
+   "ket_thuc": 82.94
+  },
+  {
+   "tu": "bạn",
+   "bat_dau": 82.94,
+   "ket_thuc": 83.16
+  },
+  {
+   "tu": "cần",
+   "bat_dau": 83.16,
+   "ket_thuc": 83.3
+  },
+  {
+   "tu": "Tuy",
+   "bat_dau": 83.3,
+   "ket_thuc": 83.88
+  },
+  {
+   "tu": "nhiên",
+   "bat_dau": 83.88,
+   "ket_thuc": 83.88
+  },
+  {
+   "tu": "PoP",
+   "bat_dau": 84.1,
+   "ket_thuc": 84.26
+  },
+  {
+   "tu": "chỉ",
+   "bat_dau": 84.26,
+   "ket_thuc": 84.78
+  },
+  {
+   "tu": "đổi",
+   "bat_dau": 84.78,
+   "ket_thuc": 84.94
+  },
+  {
+   "tu": "thứ",
+   "bat_dau": 84.94,
+   "ket_thuc": 85.14
+  },
+  {
+   "tu": "tự",
+   "bat_dau": 85.14,
+   "ket_thuc": 85.26
+  },
+  {
+   "tu": "ưu",
+   "bat_dau": 85.26,
+   "ket_thuc": 85.42
+  },
+  {
+   "tu": "tiên",
+   "bat_dau": 85.42,
+   "ket_thuc": 85.58
+  },
+  {
+   "tu": "khả",
+   "bat_dau": 86.24,
+   "ket_thuc": 86.24
+  },
+  {
+   "tu": "năng",
+   "bat_dau": 86.24,
+   "ket_thuc": 86.36
+  },
+  {
+   "tu": "trước",
+   "bat_dau": 86.36,
+   "ket_thuc": 86.64
+  },
+  {
+   "tu": "dòng",
+   "bat_dau": 87.02,
+   "ket_thuc": 87.1
+  },
+  {
+   "tu": "dõi",
+   "bat_dau": 87.1,
+   "ket_thuc": 87.36
+  },
+  {
+   "tu": "sau",
+   "bat_dau": 87.36,
+   "ket_thuc": 87.52
+  },
+  {
+   "tu": "Hãy",
+   "bat_dau": 88.52,
+   "ket_thuc": 88.52
+  },
+  {
+   "tu": "nhớ",
+   "bat_dau": 88.52,
+   "ket_thuc": 88.52
+  },
+  {
+   "tu": "lại",
+   "bat_dau": 88.52,
+   "ket_thuc": 88.74
+  },
+  {
+   "tu": "câu",
+   "bat_dau": 88.74,
+   "ket_thuc": 88.8
+  },
+  {
+   "tu": "hỏi",
+   "bat_dau": 88.8,
+   "ket_thuc": 88.88
+  },
+  {
+   "tu": "đầu",
+   "bat_dau": 88.88,
+   "ket_thuc": 89.04
+  },
+  {
+   "tu": "tiên",
+   "bat_dau": 89.04,
+   "ket_thuc": 89.22
+  },
+  {
+   "tu": "thay",
+   "bat_dau": 89.84,
+   "ket_thuc": 89.84
+  },
+  {
+   "tu": "vì",
+   "bat_dau": 89.84,
+   "ket_thuc": 90.1
+  },
+  {
+   "tu": "hỏi",
+   "bat_dau": 90.1,
+   "ket_thuc": 90.24
+  },
+  {
+   "tu": "nó",
+   "bat_dau": 90.24,
+   "ket_thuc": 90.52
+  },
+  {
+   "tu": "là",
+   "bat_dau": 90.52,
+   "ket_thuc": 90.7
+  },
+  {
+   "tu": "cái",
+   "bat_dau": 90.7,
+   "ket_thuc": 90.88
+  },
+  {
+   "tu": "gì",
+   "bat_dau": 90.88,
+   "ket_thuc": 91.04
+  },
+  {
+   "tu": "PoP",
+   "bat_dau": 91.64,
+   "ket_thuc": 92.0
+  },
+  {
+   "tu": "hỏi",
+   "bat_dau": 92.0,
+   "ket_thuc": 92.2
+  },
+  {
+   "tu": "nó",
+   "bat_dau": 92.2,
+   "ket_thuc": 92.88
+  },
+  {
+   "tu": "làm",
+   "bat_dau": 92.88,
+   "ket_thuc": 93.04
+  },
+  {
+   "tu": "được",
+   "bat_dau": 93.04,
+   "ket_thuc": 93.2
+  },
+  {
+   "tu": "gì",
+   "bat_dau": 93.2,
+   "ket_thuc": 93.32
+  }
+ ]
+}

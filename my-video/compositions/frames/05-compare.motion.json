@@ -1,0 +1,7 @@
+{
+  "scene": "05-compare",
+  "duration_s": 62.9,
+  "rules": ["comparison-split", "waterfall-entry", "stat-bars-and-fills", "press-release-spring", "svg-path-draw"],
+  "exit": { "vector": "stage opacity fade-out 1 to 0 over last 0.4s; table content static (0 px/s)", "still_moving": false },
+  "entry": { "vector": "stage opacity fade-in over 0.4s; first arrivals (headers) rise ~60px over 0.3s from t=0.35s", "from_rest": true }
+}

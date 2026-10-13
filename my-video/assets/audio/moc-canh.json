@@ -1,0 +1,50 @@
+[
+ {
+  "canh": "canh0_hook",
+  "audio": 44.4,
+  "start": 0,
+  "duration": 45.0
+ },
+ {
+  "canh": "canh1_oop-typescript",
+  "audio": 76.56,
+  "start": 45.0,
+  "duration": 77.2
+ },
+ {
+  "canh": "canh2_ke-thua-hong",
+  "audio": 61.56,
+  "start": 122.2,
+  "duration": 62.2
+ },
+ {
+  "canh": "canh3_pop-swift",
+  "audio": 93.28,
+  "start": 184.4,
+  "duration": 93.9
+ },
+ {
+  "canh": "canh4_so-sanh",
+  "audio": 62.32,
+  "start": 278.3,
+  "duration": 62.9
+ },
+ {
+  "canh": "canh5_kien-truc-hien-dai",
+  "audio": 62.92,
+  "start": 341.2,
+  "duration": 63.5
+ },
+ {
+  "canh": "canh6_bay-luat-typescript",
+  "audio": 84.64,
+  "start": 404.7,
+  "duration": 92.2
+ },
+ {
+  "canh": "canh7_chot",
+  "audio": 24.16,
+  "start": 496.9,
+  "duration": 24.8
+ }
+]

@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+  <head><meta charset="UTF-8"></head>
+  <body>
+<template>
+<style>
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 500;
+  src: url('assets/fonts/be-vietnam-pro-vietnamese-500-normal.woff2') format('woff2');
+  unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;
+}
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 500;
+  src: url('assets/fonts/be-vietnam-pro-latin-ext-500-normal.woff2') format('woff2');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 500;
+  src: url('assets/fonts/be-vietnam-pro-latin-500-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: url('assets/fonts/be-vietnam-pro-vietnamese-700-normal.woff2') format('woff2');
+  unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;
+}
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: url('assets/fonts/be-vietnam-pro-latin-ext-700-normal.woff2') format('woff2');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: url('assets/fonts/be-vietnam-pro-latin-700-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 800;
+  src: url('assets/fonts/be-vietnam-pro-vietnamese-800-normal.woff2') format('woff2');
+  unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;
+}
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 800;
+  src: url('assets/fonts/be-vietnam-pro-latin-ext-800-normal.woff2') format('woff2');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 800;
+  src: url('assets/fonts/be-vietnam-pro-latin-800-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+#root { position: absolute; inset: 0; }
+.s4-bg { position: absolute; inset: 0; background: #0B1020; }
+.s4-skin { position: absolute; inset: 0; }
+.s4-skin0 { background: #0B1020; }
+.s4-skin1 { background: #121A33; }
+.s4-skin::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(rgba(148,163,184,0.13) 2px, transparent 2.6px); background-size: 48px 48px; }
+.s4-skin1::before { background-image: radial-gradient(rgba(226,232,240,0.12) 2px, transparent 2.6px); }
+.s4-skin1::after { content: ""; position: absolute; inset: 0; background: radial-gradient(900px 600px at 82% 12%, rgba(16,185,129,0.14), transparent 70%); }
+.s4-stage { position: absolute; inset: 0; overflow: hidden; font-family: 'Be Vietnam Pro', sans-serif; color: #E2E8F0; }
+.s4-abs { position: absolute; }
+.s4-mono { font-family: 'JetBrains Mono', monospace; }
+
+/* intro */
+.s4-wwdc { position: absolute; left: 96px; top: 118px; font: 800 150px/1.05 'Be Vietnam Pro', sans-serif; color: #10B981; letter-spacing: -2px; white-space: nowrap; }
+.s4-dave { position: absolute; left: 96px; top: 330px; height: 130px; display: flex; align-items: center; gap: 28px; }
+.s4-dave .s4-dav { width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, #10B981, #065F46); font: 800 50px/120px 'Be Vietnam Pro', sans-serif; text-align: center; color: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.35); }
+.s4-dave b { display: block; white-space: nowrap; font: 800 64px/1.05 'Be Vietnam Pro', sans-serif; }
+.s4-dave span { display: block; font: 500 36px/1.3 'Be Vietnam Pro', sans-serif; color: #94A3B8; }
+.s4-pills { position: absolute; left: 96px; top: 500px; display: flex; gap: 20px; }
+.s4-pill { height: 64px; padding: 0 28px; border-radius: 999px; border: 3px solid #10B981; background: rgba(16,185,129,0.1); font: 700 34px/58px 'Be Vietnam Pro', sans-serif; color: #E2E8F0; white-space: nowrap; }
+.s4-pill.s4-p2 { border-color: rgba(148,163,184,0.6); background: transparent; color: #94A3B8; font-family: 'JetBrains Mono', monospace; }
+.s4-slogan { position: absolute; left: 96px; top: 630px; font: 800 68px/1.2 'Be Vietnam Pro', sans-serif; }
+.s4-slogan div { white-space: nowrap; position: relative; width: max-content; }
+.s4-slogan .s4-cls { color: #F59E0B; position: relative; display: inline-block; }
+.s4-slogan .s4-cls::after { content: ""; position: absolute; left: -4px; right: -4px; top: 52%; height: 6px; background: #F59E0B; transform-origin: 0 50%; transform: scaleX(var(--s4-strike, 0)); }
+.s4-slogan .s4-pro { color: #10B981; }
+.s4-contract { position: absolute; left: 1240px; top: 140px; width: 464px; height: 420px; border-radius: 22px; background: #16213E; border: 3px solid rgba(16,185,129,0.6); box-shadow: 0 24px 60px rgba(0,0,0,0.35); }
+.s4-contract h4 { position: absolute; left: 36px; top: 30px; font: 800 44px/1.1 'Be Vietnam Pro', sans-serif; color: #10B981; }
+.s4-contract .s4-cr { position: absolute; left: 36px; font: 700 36px/1 'JetBrains Mono', monospace; color: #E2E8F0; white-space: nowrap; }
+.s4-contract .s4-cr i { font-style: normal; color: #10B981; margin-right: 14px; }
+.s4-stamp { position: absolute; right: 30px; bottom: 36px; padding: 6px 22px; border: 5px solid #10B981; border-radius: 12px; font: 800 44px/1.2 'Be Vietnam Pro', sans-serif; color: #10B981; }
+
+/* blocks */
+.s4-blk { position: absolute; width: 252px; height: 84px; border-radius: 10px; background: linear-gradient(180deg, var(--c1) 0%, var(--c2) 100%); box-shadow: 0 8px 0 var(--c3), 0 14px 26px rgba(0,0,0,0.35); display: flex; align-items: center; gap: 10px; padding: 0 12px; color: #fff; font: 800 28px/1 'Be Vietnam Pro', sans-serif; }
+.s4-blk::before { content: ""; position: absolute; left: 6px; right: 6px; top: 5px; height: 14px; border-radius: 8px; background: rgba(255,255,255,0.22); }
+.s4-blk .s4-studs { position: absolute; left: 0; right: 0; top: -12px; height: 14px; display: flex; justify-content: space-around; padding: 0 22px; }
+.s4-blk .s4-studs i { display: block; width: 44px; height: 14px; border-radius: 8px 8px 0 0; background: var(--c1); box-shadow: inset 0 3px 0 rgba(255,255,255,0.25); }
+.s4-blk svg { width: 34px; height: 34px; flex: none; position: relative; }
+.s4-blk span { position: relative; }
+.s4-bf { --c1: #0FA375; --c2: #0A8560; --c3: #066549; }
+.s4-be { --c1: #0B8F68; --c2: #067553; --c3: #045A40; }
+.s4-bs { --c1: #2F8F7A; --c2: #236E5E; --c3: #184D42; }
+.s4-btag { position: absolute; width: 428px; text-align: center; font: 500 34px/1.2 'Be Vietnam Pro', sans-serif; color: #94A3B8; }
+.s4-ext { position: absolute; left: 126px; top: 710px; width: 720px; height: 84px; border-radius: 14px; background: #0F1730; border: 3px solid #10B981; display: flex; align-items: center; padding: 0 22px; gap: 16px; font: 500 30px/1 'JetBrains Mono', monospace; white-space: nowrap; }
+.s4-ext .s4-kw { color: #7DD3FC; }
+.s4-ext em { font-style: normal; margin-left: auto; padding: 6px 14px; border-radius: 999px; background: rgba(16,185,129,0.18); border: 2px solid #10B981; color: #6EE7B7; font: 700 26px/1.1 'Be Vietnam Pro', sans-serif; }
+.s4-gear { position: absolute; left: 880px; top: 712px; width: 80px; height: 80px; }
+
+/* code */
+.s4-code { position: absolute; left: 96px; top: 150px; width: 820px; height: 330px; border-radius: 16px; background: #0F1730; border: 2px solid rgba(148,163,184,0.18); box-shadow: 0 18px 50px rgba(0,0,0,0.35); overflow: hidden; }
+.s4-code-head { height: 52px; display: flex; align-items: center; gap: 10px; padding: 0 20px; background: #16213E; font: 500 28px/52px 'JetBrains Mono', monospace; color: #94A3B8; }
+.s4-code-head i { display: block; width: 14px; height: 14px; border-radius: 50%; background: #475569; }
+.s4-code-body { position: absolute; left: 0; top: 52px; right: 0; bottom: 0; }
+.s4-set { position: absolute; left: 28px; top: 18px; right: 20px; }
+.s4-ln { position: relative; height: 46px; font: 400 30px/46px 'JetBrains Mono', monospace; white-space: pre; color: #E2E8F0; }
+.s4-ty { display: inline-block; white-space: pre; position: relative; }
+.s4-caret { position: absolute; top: 7px; width: 3px; height: 32px; background: #10B981; opacity: 0; }
+.kw { color: #7DD3FC; }
+.st { color: #10B981; }
+.cm { color: #94A3B8; }
+.s4-und { position: absolute; height: 5px; background: #10B981; border-radius: 3px; transform-origin: 0 50%; }
+
+/* cards */
+.s4-card { position: absolute; top: 250px; width: 276px; height: 590px; border-radius: 20px; background: #16213E; border: 3px solid rgba(148,163,184,0.35); }
+.s4-card .s4-av { position: absolute; left: 36px; top: 18px; width: 200px; height: 200px; }
+.s4-cname { position: absolute; left: 0; right: 0; top: 226px; text-align: center; font: 700 36px/1.1 'JetBrains Mono', monospace; }
+.s4-ctag { position: absolute; left: 0; right: 0; top: 276px; text-align: center; font: 500 28px/1.1 'JetBrains Mono', monospace; color: #94A3B8; }
+.s4-slot { position: absolute; box-sizing: border-box; left: 12px; width: 252px; height: 84px; border-radius: 12px; border: 3px dashed rgba(148,163,184,0.5); color: rgba(148,163,184,0.78); font: 700 28px/78px 'Be Vietnam Pro', sans-serif; text-align: center; }
+.s4-status { position: absolute; left: 12px; width: 252px; top: 530px; height: 44px; border-radius: 10px; font: 700 28px/40px 'Be Vietnam Pro', sans-serif; text-align: center; }
+.s4-st-ok { border: 3px solid #10B981; background: rgba(16,185,129,0.15); color: #6EE7B7; }
+.s4-st-bad { border: 3px solid #EF4444; background: rgba(239,68,68,0.16); color: #FCA5A5; }
+.s4-xmark { position: absolute; left: 106px; top: 4px; width: 40px; height: 40px; border-radius: 50%; background: #EF4444; color: #fff; font: 800 28px/40px 'Be Vietnam Pro', sans-serif; text-align: center; }
+.s4-ring { position: absolute; left: 0; top: 0; width: 90px; height: 90px; border-radius: 50%; border: 6px solid #fff; }
+.s4-animal { position: absolute; left: 1548px; top: 150px; width: 276px; height: 60px; border-radius: 999px; border: 3px dashed rgba(148,163,184,0.6); font: 700 30px/54px 'JetBrains Mono', monospace; text-align: center; color: rgba(148,163,184,0.8); }
+.s4-cursor { position: absolute; left: 0; top: 0; width: 52px; height: 62px; transform-origin: 0 0; }
+
+.s4-gate { position: absolute; left: 96px; top: 720px; width: 820px; height: 130px; border-radius: 18px; background: rgba(16,185,129,0.07); border: 3px solid rgba(16,185,129,0.5); }
+.s4-gate .s4-gblk { position: absolute; left: 22px; top: 24px; }
+.s4-gate .s4-garrow { position: absolute; left: 300px; top: 20px; font: 800 64px/90px 'Be Vietnam Pro', sans-serif; color: #94A3B8; }
+.s4-gate .s4-gname { position: absolute; left: 380px; top: 28px; font: 700 42px/74px 'JetBrains Mono', monospace; color: #E2E8F0; }
+.s4-gate .s4-lamp { position: absolute; right: 30px; top: 40px; width: 50px; height: 50px; border-radius: 50%; background: #334155; border: 4px solid rgba(148,163,184,0.5); }
+.s4-err { position: absolute; left: 96px; top: 560px; width: 820px; height: 90px; border-radius: 14px; background: rgba(239,68,68,0.16); border: 3px solid #EF4444; display: flex; align-items: center; gap: 18px; padding: 0 24px; font: 700 30px/1.1 'JetBrains Mono', monospace; color: #FCA5A5; white-space: nowrap; }
+.s4-err i { display: block; width: 40px; height: 40px; border-radius: 50%; background: #EF4444; color: #fff; font: 800 28px/40px 'Be Vietnam Pro', sans-serif; text-align: center; font-style: normal; flex: none; }
+.s4-notree { position: absolute; left: 96px; top: 560px; width: 340px; height: 300px; }
+.s4-nt-cap { position: absolute; left: 470px; top: 600px; width: 420px; font: 700 40px/1.25 'Be Vietnam Pro', sans-serif; color: #E2E8F0; }
+.s4-clschip { position: absolute; left: 470px; top: 740px; padding: 14px 24px; border-radius: 14px; border: 3px dashed rgba(148,163,184,0.7); font: 700 32px/1 'JetBrains Mono', monospace; color: #94A3B8; white-space: nowrap; }
+.s4-clschip b { color: #94A3B8; font-weight: 700; }
+.s4-key { position: absolute; left: 96px; width: 820px; font: 800 76px/1.1 'Be Vietnam Pro', sans-serif; white-space: nowrap; }
+.s4-key i { display: inline-block; width: 84px; height: 84px; border-radius: 50%; margin-right: 24px; vertical-align: -14px; font: 800 52px/84px 'Be Vietnam Pro', sans-serif; text-align: center; font-style: normal; color: #0B1020; }
+.s4-k1 { color: #10B981; }
+.s4-k1 i { background: #10B981; }
+.s4-k2 { color: #94A3B8; }
+.s4-k2 i { background: #94A3B8; }
+.s4-final { position: absolute; left: 0; width: 1920px; text-align: center; white-space: nowrap; }
+.s4-q1 { top: 300px; font: 800 100px/1.1 'Be Vietnam Pro', sans-serif; color: #94A3B8; }
+.s4-q1 span { position: relative; display: inline-block; }
+.s4-q1 span::after { content: ""; position: absolute; left: -10px; right: -10px; top: 54%; height: 8px; background: #94A3B8; transform-origin: 0 50%; transform: scaleX(var(--s4-q, 0)); }
+.s4-q2 { top: 470px; font: 800 130px/1.1 'Be Vietnam Pro', sans-serif; color: #10B981; }
+</style>
+
+<div data-hf-id="hf-xxok" id="root" data-composition-id="scene-4" data-width="1920" data-height="1080">
+  <div data-hf-id="hf-5zzv" class="s4-bg">
+    <div data-hf-id="hf-67jo" class="s4-skin s4-skin0">
+      <svg data-hf-id="hf-rmru" class="s4-abs" style="left:0;top:0;opacity:0.35" width="1920" height="1080" viewBox="0 0 1920 1080">
+        <g data-hf-id="hf-x9r7" stroke="#475569" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.7">
+          <path data-hf-id="hf-zfx3" d="M1500 200 L1380 330 M1500 200 L1640 330 M1380 330 L1300 470 M1380 330 L1460 470 M1640 330 L1580 470 M1640 330 L1720 470 M1300 470 L1260 600 M1460 470 L1500 600 M1640 330 L1500 470" />
+          <path data-hf-id="hf-goji" d="M1450 760 L1330 880 M1450 760 L1600 880 M1330 880 L1240 1010 M1600 880 L1700 1010 M1330 880 L1600 1010" />
+        </g>
+        <g data-hf-id="hf-b8w3" fill="#1E293B" stroke="#475569" stroke-width="5">
+          <circle data-hf-id="hf-sgwy" cx="1500" cy="200" r="24" /><circle data-hf-id="hf-koza" cx="1380" cy="330" r="22" /><circle data-hf-id="hf-jitr" cx="1640" cy="330" r="22" /><circle data-hf-id="hf-x81d" cx="1300" cy="470" r="20" /><circle data-hf-id="hf-if28" cx="1460" cy="470" r="20" /><circle data-hf-id="hf-icjb" cx="1580" cy="470" r="20" /><circle data-hf-id="hf-4osr" cx="1720" cy="470" r="20" /><circle data-hf-id="hf-xjhu" cx="1260" cy="600" r="18" /><circle data-hf-id="hf-1ac7" cx="1500" cy="600" r="18" />
+          <circle data-hf-id="hf-e6lt" cx="1450" cy="760" r="24" /><circle data-hf-id="hf-cfj5" cx="1330" cy="880" r="22" /><circle data-hf-id="hf-3v4l" cx="1600" cy="880" r="22" /><circle data-hf-id="hf-iqgm" cx="1240" cy="1010" r="18" /><circle data-hf-id="hf-4rut" cx="1700" cy="1010" r="18" /><circle data-hf-id="hf-knj2" cx="1600" cy="1010" r="18" />
+        </g>
+      </svg>
+    </div>
+    <div data-hf-id="hf-2x8d" class="s4-skin s4-skin1"></div>
+  </div>
+
+  <div data-hf-id="hf-fbjk" class="s4-stage">
+    <!-- ===== mở đầu: WWDC 2015 ===== -->
+    <div data-hf-id="hf-vkrm" class="s4-abs s4-intro">
+      <div data-hf-id="hf-62ps" class="s4-wwdc">WWDC 2015</div>
+      <div data-hf-id="hf-xtm4" class="s4-dave"><div data-hf-id="hf-3vf0" class="s4-dav">DA</div><div data-hf-id="hf-yeow"><b data-hf-id="hf-r6lo">Dave Abrahams</b><span data-hf-id="hf-atks">Kỹ sư Apple</span></div></div>
+      <div data-hf-id="hf-9x3m" class="s4-pills"><div data-hf-id="hf-loge" class="s4-pill s4-p1">Protocol-Oriented Programming</div><div data-hf-id="hf-zw06" class="s4-pill s4-p2">Swift</div></div>
+      <div data-hf-id="hf-jxzg" class="s4-slogan">
+        <div data-hf-id="hf-m0am" class="s4-sl1">Đừng bắt đầu bằng <span data-hf-id="hf-lnh1" class="s4-cls">class</span>,</div>
+        <div data-hf-id="hf-dxn9" class="s4-sl2">hãy bắt đầu bằng <span data-hf-id="hf-xlve" class="s4-pro">protocol</span>.</div>
+      </div>
+      <svg data-hf-id="hf-p2db" class="s4-abs s4-tree2" style="left:1260px;top:170px" width="340" height="300" viewBox="0 0 340 300">
+        <g data-hf-id="hf-xz4k" stroke="#F59E0B" stroke-width="7" fill="none" stroke-linecap="round" opacity="0.85"><path data-hf-id="hf-uecb" d="M170 50 L90 140 M170 50 L250 140 M90 140 L50 230 M90 140 L130 230 M250 140 L210 230 M250 140 L290 230" /></g>
+        <g data-hf-id="hf-e6fi" fill="#16213E" stroke="#F59E0B" stroke-width="7"><circle data-hf-id="hf-ye9a" cx="170" cy="50" r="30" /><circle data-hf-id="hf-i9js" cx="90" cy="140" r="26" /><circle data-hf-id="hf-fsg6" cx="250" cy="140" r="26" /><circle data-hf-id="hf-0rzm" cx="50" cy="230" r="22" /><circle data-hf-id="hf-4x3d" cx="130" cy="230" r="22" /><circle data-hf-id="hf-n40g" cx="210" cy="230" r="22" /><circle data-hf-id="hf-z7aw" cx="290" cy="230" r="22" /></g>
+        <g data-hf-id="hf-lss2" class="s4-t2-slash"><path data-hf-id="hf-k6rs" d="M30 20 L310 280" stroke="#94A3B8" stroke-width="12" stroke-linecap="round" fill="none" /></g>
+      </svg>
+      <div data-hf-id="hf-im4k" class="s4-contract">
+        <h4 data-hf-id="hf-endt">Cam kết hành vi</h4>
+        <div data-hf-id="hf-ygxh" class="s4-cr" style="top:124px"><i data-hf-id="hf-q7i5">✓</i>func fly()</div>
+        <div data-hf-id="hf-3f8l" class="s4-cr" style="top:196px"><i data-hf-id="hf-qrv5">✓</i>func eat()</div>
+        <div data-hf-id="hf-uec2" class="s4-cr" style="top:268px;color:#94A3B8"><i data-hf-id="hf-di0k" style="color:#94A3B8">✎</i>chữ ký</div>
+        <div data-hf-id="hf-9wbn" class="s4-stamp">KÝ</div>
+      </div>
+    </div>
+
+    <!-- ===== ba khối Lego ===== -->
+    <div data-hf-id="hf-q9ef" class="s4-abs s4-lego">
+      <div data-hf-id="hf-op8z" class="s4-blk s4-bf s4-b-f" style="left:96px;top:580px"><div data-hf-id="hf-ecyr" class="s4-studs"><i data-hf-id="hf-wt6k"></i><i data-hf-id="hf-zeb8"></i><i data-hf-id="hf-y7e5"></i></div>
+        <svg data-hf-id="hf-b65t" viewBox="0 0 44 44"><path data-hf-id="hf-fael" d="M3 30 C8 10 28 6 42 12 C32 14 28 21 26 30 C20 24 11 25 3 30Z M10 33 C16 29 22 30 26 35 C20 37 14 37 10 33Z" fill="#fff" /></svg><span data-hf-id="hf-0x2y">Flyable</span></div>
+      <div data-hf-id="hf-bgns" class="s4-blk s4-be s4-b-e" style="left:378px;top:580px"><div data-hf-id="hf-25ur" class="s4-studs"><i data-hf-id="hf-ylp6"></i><i data-hf-id="hf-0l8b"></i><i data-hf-id="hf-0zjc"></i></div>
+        <svg data-hf-id="hf-57mt" viewBox="0 0 44 44"><path data-hf-id="hf-1aw7" d="M22 14 C12 10 5 18 8 29 C10 38 17 42 22 39 C27 42 34 38 36 29 C39 18 32 10 22 14Z" fill="#fff" /><path data-hf-id="hf-p354" d="M22 14 C22 8 26 5 31 4 C31 9 28 13 22 14Z" fill="#fff" /></svg><span data-hf-id="hf-y9jm">Eater</span></div>
+      <div data-hf-id="hf-rfve" class="s4-blk s4-bs s4-b-s" style="left:660px;top:580px"><div data-hf-id="hf-1rjq" class="s4-studs"><i data-hf-id="hf-zsm9"></i><i data-hf-id="hf-06xa"></i><i data-hf-id="hf-26gf"></i></div>
+        <svg data-hf-id="hf-6ejw" viewBox="0 0 44 44"><path data-hf-id="hf-jo0w" d="M5 17 H14 L26 7 V37 L14 27 H5Z" fill="#fff" /><path data-hf-id="hf-fidj" d="M31 16 C35 20 35 25 31 29 M35 11 C42 18 42 27 35 34" stroke="#fff" stroke-width="3.2" fill="none" stroke-linecap="round" /></svg><span data-hf-id="hf-73jh">SoundPlayer</span></div>
+      <div data-hf-id="hf-yicw" class="s4-btag s4-bt-f" style="left:192px;top:626px">biết bay</div>
+      <div data-hf-id="hf-ii29" class="s4-btag s4-bt-e" style="left:746px;top:626px">biết ăn</div>
+      <div data-hf-id="hf-qj1m" class="s4-btag s4-bt-s" style="left:1300px;top:626px">phát âm thanh</div>
+      <div data-hf-id="hf-lakv" class="s4-ext"><span data-hf-id="hf-fif0" class="s4-kw">extension</span><span data-hf-id="hf-4tge">Flyable</span><span data-hf-id="hf-spfz">{ fly() }</span><em data-hf-id="hf-b8rq">mặc định</em></div>
+      <svg data-hf-id="hf-q4n5" class="s4-gear" viewBox="0 0 80 80"><g data-hf-id="hf-h551" class="s4-gear-g" fill="none" stroke="#10B981" stroke-width="7"><circle data-hf-id="hf-cfs5" cx="40" cy="40" r="14" /><path data-hf-id="hf-2lrm" d="M40 6 V18 M40 62 V74 M6 40 H18 M62 40 H74 M16 16 L24 24 M56 56 L64 64 M64 16 L56 24 M24 56 L16 64" stroke-linecap="round" /></g></svg>
+    </div>
+
+    <!-- ===== code ===== -->
+    <div data-hf-id="hf-iull" class="s4-code">
+      <div data-hf-id="hf-14ec" class="s4-code-head"><i data-hf-id="hf-2krg"></i><i data-hf-id="hf-oz7w"></i><i data-hf-id="hf-okwv"></i><span data-hf-id="hf-8rsm" class="s4-cfile" style="position:relative;display:inline-block;width:320px;height:52px;margin-left:12px"><span data-hf-id="hf-vw6q" class="s4-cf s4-cf1" style="position:absolute;left:0;top:0">protocols.swift</span><span data-hf-id="hf-5dng" class="s4-cf s4-cf2" style="position:absolute;left:0;top:0">Sparrow.swift</span><span data-hf-id="hf-09dd" class="s4-cf s4-cf3" style="position:absolute;left:0;top:0">Penguin.swift</span><span data-hf-id="hf-i9lw" class="s4-cf s4-cf4" style="position:absolute;left:0;top:0">Drone.swift</span><span data-hf-id="hf-t6xq" class="s4-cf s4-cf5" style="position:absolute;left:0;top:0">release.swift</span></span></div>
+      <div data-hf-id="hf-mrgy" class="s4-code-body">
+        <div data-hf-id="hf-6vqn" class="s4-set s4-set-p">
+          <div data-hf-id="hf-6umo" class="s4-ln"><span data-hf-id="hf-3rdx" class="s4-ty"><b data-hf-id="hf-xodh" class="kw" style="font-weight:400">protocol</b> Flyable { <b data-hf-id="hf-x8af" class="kw" style="font-weight:400">func</b> fly() }</span><i data-hf-id="hf-acl3" class="s4-caret"></i></div>
+          <div data-hf-id="hf-q7vs" class="s4-ln"><span data-hf-id="hf-mmvm" class="s4-ty"><b data-hf-id="hf-hzi1" class="kw" style="font-weight:400">protocol</b> Eater { <b data-hf-id="hf-f7ef" class="kw" style="font-weight:400">func</b> eat() }</span><i data-hf-id="hf-l647" class="s4-caret"></i></div>
+          <div data-hf-id="hf-p0yp" class="s4-ln"><span data-hf-id="hf-wxcw" class="s4-ty"><b data-hf-id="hf-w65m" class="kw" style="font-weight:400">extension</b> Flyable {</span><i data-hf-id="hf-krt6" class="s4-caret"></i></div>
+          <div data-hf-id="hf-pf9q" class="s4-ln"><span data-hf-id="hf-j4rs" class="s4-ty">    <b data-hf-id="hf-et3e" class="kw" style="font-weight:400">func</b> fly() { print(<b data-hf-id="hf-he76" class="st" style="font-weight:400">"Đang bay"</b>) }</span><i data-hf-id="hf-kdi5" class="s4-caret"></i></div>
+          <div data-hf-id="hf-o8cn" class="s4-ln"><span data-hf-id="hf-wkrb" class="s4-ty">}</span><i data-hf-id="hf-n5nc" class="s4-caret"></i></div>
+        </div>
+        <div data-hf-id="hf-w090" class="s4-set s4-set-s">
+          <div data-hf-id="hf-omno" class="s4-ln"><span data-hf-id="hf-5s6t" class="s4-ty"><b data-hf-id="hf-k2a8" class="kw" style="font-weight:400">struct</b> Sparrow: Flyable, Eater {</span><i data-hf-id="hf-mrcb" class="s4-caret"></i></div>
+          <div data-hf-id="hf-nfql" class="s4-ln"><span data-hf-id="hf-lcrb" class="s4-ty">    <b data-hf-id="hf-eesd" class="kw" style="font-weight:400">func</b> eat() { print(<b data-hf-id="hf-2gj4" class="st" style="font-weight:400">"Chim sẻ ăn"</b>) }</span><i data-hf-id="hf-md1a" class="s4-caret"></i></div>
+          <div data-hf-id="hf-nu1m" class="s4-ln"><span data-hf-id="hf-ipsn" class="s4-ty">}</span><i data-hf-id="hf-lyq9" class="s4-caret"></i></div>
+        </div>
+        <div data-hf-id="hf-k5wx" class="s4-set s4-set-n">
+          <div data-hf-id="hf-t00z" class="s4-ln"><span data-hf-id="hf-ngrm" class="s4-ty"><b data-hf-id="hf-egdk" class="kw" style="font-weight:400">struct</b> Penguin: Eater {</span><i data-hf-id="hf-oqvg" class="s4-caret"></i></div>
+          <div data-hf-id="hf-tec0" class="s4-ln"><span data-hf-id="hf-tvpz" class="s4-ty">    <b data-hf-id="hf-h6xk" class="kw" style="font-weight:400">func</b> eat() { print(<b data-hf-id="hf-436z" class="st" style="font-weight:400">"Cánh cụt ăn"</b>) }</span><i data-hf-id="hf-ockf" class="s4-caret"></i></div>
+          <div data-hf-id="hf-dxfs" class="s4-ln"><span data-hf-id="hf-ibhm" class="s4-ty">}</span><i data-hf-id="hf-vjet" class="s4-caret"></i></div>
+        </div>
+        <div data-hf-id="hf-0mjf" class="s4-set s4-set-d">
+          <div data-hf-id="hf-dj4r" class="s4-ln"><span data-hf-id="hf-p51r" class="s4-ty"><b data-hf-id="hf-d9gh" class="kw" style="font-weight:400">struct</b> Drone: Flyable {}</span><i data-hf-id="hf-vxpu" class="s4-caret"></i></div>
+          <div data-hf-id="hf-d4tq" class="s4-ln"><span data-hf-id="hf-35te" class="s4-ty cm">// không cần là động vật</span><i data-hf-id="hf-wc0v" class="s4-caret"></i></div>
+        </div>
+        <div data-hf-id="hf-wrwt" class="s4-set s4-set-r">
+          <div data-hf-id="hf-cqip" class="s4-ln"><span data-hf-id="hf-i63q" class="s4-ty"><b data-hf-id="hf-gsmj" class="kw" style="font-weight:400">func</b> release(_ things: [<b data-hf-id="hf-i4yl" class="kw" style="font-weight:400">any</b> Flyable]) {</span><i data-hf-id="hf-wqbw" class="s4-caret"></i></div>
+          <div data-hf-id="hf-cc7o" class="s4-ln"><span data-hf-id="hf-6kav" class="s4-ty">    things.forEach { $0.fly() }</span><i data-hf-id="hf-x4mx" class="s4-caret"></i></div>
+          <div data-hf-id="hf-bxwn" class="s4-ln"><span data-hf-id="hf-hx6l" class="s4-ty">}</span><i data-hf-id="hf-xixy" class="s4-caret"></i></div>
+          <div data-hf-id="hf-el7f" class="s4-ln s4-ln-ok"><span data-hf-id="hf-a5sm" class="s4-ty">release([Sparrow(), Drone()])  <b data-hf-id="hf-hfvd" class="cm" style="font-weight:400">// OK</b></span><i data-hf-id="hf-xx8z" class="s4-caret"></i></div>
+          <div data-hf-id="hf-0ms6" class="s4-ln s4-ln-bad"><span data-hf-id="hf-u67k" class="s4-ty s4-ty-bad">release([Penguin()])  <b data-hf-id="hf-nfg0" class="cm" style="font-weight:400">// lỗi biên dịch</b></span><i data-hf-id="hf-ybk0" class="s4-caret"></i></div>
+        </div>
+        <div data-hf-id="hf-s4hu" class="s4-und s4-und-any" style="opacity:0"></div>
+        <div data-hf-id="hf-q43k" class="s4-und s4-und-bad" style="opacity:0;background:#EF4444"></div>
+      </div>
+    </div>
+
+    <!-- ===== thẻ nhân vật ===== -->
+    <div data-hf-id="hf-z4y2" class="s4-animal">Animal</div>
+    <svg data-hf-id="hf-anv6" class="s4-abs s4-cut" style="left:1548px;top:150px;opacity:0" width="276" height="100" viewBox="0 0 276 100"><path data-hf-id="hf-vpz8" d="M138 60 L138 100" stroke="#94A3B8" stroke-width="4" stroke-dasharray="8 8" /><circle data-hf-id="hf-2nfu" cx="138" cy="80" r="16" fill="#121A33" stroke="#94A3B8" stroke-width="4" /><path data-hf-id="hf-qc37" d="M130 72 L146 88 M146 72 L130 88" stroke="#94A3B8" stroke-width="4" stroke-linecap="round" /></svg>
+
+    <div data-hf-id="hf-6z0q" class="s4-card s4-card-sp" style="left:960px">
+      <img data-hf-id="hf-gbeg" class="s4-av" src="assets/images/chim-se.png" alt="">
+      <div data-hf-id="hf-8ejo" class="s4-cname">Sparrow</div><div data-hf-id="hf-jcox" class="s4-ctag s4-ctag-sp">struct</div>
+      <div data-hf-id="hf-3dgm" class="s4-slot" style="top:332px">Flyable</div><div data-hf-id="hf-8chz" class="s4-slot" style="top:436px">Eater</div>
+      <div data-hf-id="hf-sy02" class="s4-status s4-st-ok s4-stt-sp">ổn</div>
+    </div>
+    <div data-hf-id="hf-4wvt" class="s4-card s4-card-pe" style="left:1254px">
+      <img data-hf-id="hf-fmz3" class="s4-av" src="assets/images/canh-cut.png" alt="">
+      <div data-hf-id="hf-gryc" class="s4-cname">Penguin</div><div data-hf-id="hf-4dkl" class="s4-ctag s4-ctag-pe">struct</div>
+      <div data-hf-id="hf-a8i9" class="s4-slot s4-pe-a" style="top:332px">Flyable</div><div data-hf-id="hf-h1lz" class="s4-slot" style="top:436px">Eater</div>
+      <div data-hf-id="hf-wqjo" class="s4-xmark">✕</div>
+      <div data-hf-id="hf-io3z" class="s4-status s4-st-bad s4-stt-pe">lỗi biên dịch</div>
+    </div>
+    <div data-hf-id="hf-cgw6" class="s4-card s4-card-dr" style="left:1548px">
+      <img data-hf-id="hf-aone" class="s4-av" src="assets/images/drone.png" alt="">
+      <div data-hf-id="hf-u9jq" class="s4-cname">Drone</div><div data-hf-id="hf-3bjq" class="s4-ctag s4-ctag-dr">struct</div>
+      <div data-hf-id="hf-zlgq" class="s4-slot" style="top:332px">Flyable</div><div data-hf-id="hf-gnay" class="s4-slot" style="top:436px">Eater</div>
+      <div data-hf-id="hf-dis9" class="s4-status s4-st-ok s4-stt-dr">ổn</div>
+    </div>
+    <div data-hf-id="hf-aq4a" class="s4-abs s4-clones"></div>
+    <div data-hf-id="hf-i8sn" class="s4-ring s4-ring-a" style="opacity:0"></div>
+    <svg data-hf-id="hf-5dzn" class="s4-cursor" viewBox="0 0 30 46" opacity="0"><path data-hf-id="hf-ggk8" d="M1 1 L1 38 L10 30 L17 45 L24 42 L17 28 L29 28 Z" fill="#fff" stroke="#0B1020" stroke-width="2.5" stroke-linejoin="round" /></svg>
+
+    <!-- ===== phần dưới trái ===== -->
+    <div data-hf-id="hf-thlf" class="s4-gate"><div data-hf-id="hf-nf6n" class="s4-gblk s4-blk s4-bf"><div data-hf-id="hf-1d8p" class="s4-studs"><i data-hf-id="hf-o6lu"></i><i data-hf-id="hf-jqbp"></i><i data-hf-id="hf-qkg0"></i></div><svg data-hf-id="hf-608v" viewBox="0 0 44 44"><path data-hf-id="hf-8j6p" d="M3 30 C8 10 28 6 42 12 C32 14 28 21 26 30 C20 24 11 25 3 30Z M10 33 C16 29 22 30 26 35 C20 37 14 37 10 33Z" fill="#fff" /></svg><span data-hf-id="hf-57rf">Flyable</span></div><div data-hf-id="hf-j5hy" class="s4-garrow">→</div><div data-hf-id="hf-jxxu" class="s4-gname">release()</div><div data-hf-id="hf-dbww" class="s4-lamp"></div></div>
+    <div data-hf-id="hf-l6pn" class="s4-err"><i data-hf-id="hf-slcb">✕</i><span data-hf-id="hf-4w8c">error: Penguin không là Flyable</span></div>
+    <svg data-hf-id="hf-vv75" class="s4-notree" viewBox="0 0 340 300">
+      <g data-hf-id="hf-th64" stroke="#F59E0B" stroke-width="7" fill="none" stroke-linecap="round" opacity="0.85">
+        <path data-hf-id="hf-2h5n" d="M170 50 L90 140 M170 50 L250 140 M90 140 L50 230 M90 140 L130 230 M250 140 L210 230 M250 140 L290 230" />
+      </g>
+      <g data-hf-id="hf-fimq" fill="#16213E" stroke="#F59E0B" stroke-width="7"><circle data-hf-id="hf-wvjm" cx="170" cy="50" r="30" /><circle data-hf-id="hf-z8ds" cx="90" cy="140" r="26" /><circle data-hf-id="hf-m3m2" cx="250" cy="140" r="26" /><circle data-hf-id="hf-cd4m" cx="50" cy="230" r="22" /><circle data-hf-id="hf-iph9" cx="130" cy="230" r="22" /><circle data-hf-id="hf-2t48" cx="210" cy="230" r="22" /><circle data-hf-id="hf-rxxs" cx="290" cy="230" r="22" /></g>
+      <g data-hf-id="hf-jste" class="s4-nt-slash"><path data-hf-id="hf-d7j5" d="M30 20 L310 280" stroke="#0B1020" stroke-width="22" stroke-linecap="round" opacity="0.0" /><path data-hf-id="hf-2qz0" d="M30 20 L310 280" stroke="#94A3B8" stroke-width="12" stroke-linecap="round" /></g>
+    </svg>
+    <div data-hf-id="hf-bi87" class="s4-nt-cap">Không có<br data-hf-id="hf-x5px">cây thừa kế</div>
+    <div data-hf-id="hf-j93j" class="s4-clschip"><b data-hf-id="hf-t6zj">class</b>  vẫn dùng khi cần</div>
+    <div data-hf-id="hf-e8u3" class="s4-key s4-k1" style="top:540px"><i data-hf-id="hf-943b">1</i>Khả năng</div>
+    <div data-hf-id="hf-snr6" class="s4-key s4-k2" style="top:660px"><i data-hf-id="hf-8psa">2</i>Dòng dõi</div>
+
+    <div data-hf-id="hf-rlku" class="s4-final s4-q1"><span data-hf-id="hf-lnyd">Nó là cái gì?</span></div>
+    <div data-hf-id="hf-30cc" class="s4-final s4-q2">Nó làm được gì?</div>
+  </div>
+
+  <script>
+  (function () {
+    window.__timelines = window.__timelines || {};
+    var tl = gsap.timeline({ paused: true });
+    window.__timelines["scene-4"] = tl;
+    var DUR = 93.9;
+    var $ = function (s) { return document.querySelector(s); };
+    var $$ = function (s) { return gsap.utils.toArray(s); };
+    var hash = function (n) { var x = Math.sin(n * 127.1 + 311.7) * 43758.5453; return x - Math.floor(x); };
+
+    /* ---------- tiện ích ---------- */
+    function typeLn(ln, start, dur) {
+      var ty = ln.querySelector(".s4-ty"), cr = ln.querySelector(".s4-caret");
+      var n = ty.textContent.length;
+      tl.fromTo(ty, { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: dur, ease: "steps(" + n + ")" }, start);
+      tl.set(cr, { opacity: 1 }, start);
+      tl.fromTo(cr, { x: 0 }, { x: n * 18, duration: dur, ease: "steps(" + n + ")" }, start);
+      tl.set(cr, { opacity: 0 }, start + dur + 0.12);
+    }
+    function pop(sel, at, dur) { tl.fromTo(sel, { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: dur || 0.5, ease: "power3.out" }, at); }
+    function fadeIn(sel, at, dur, y) { tl.fromTo(sel, { opacity: 0, y: y === undefined ? 24 : y }, { opacity: 1, y: 0, duration: dur || 0.5, ease: "power3.out" }, at); }
+    function fadeOut(sel, at, dur) { tl.to(sel, { opacity: 0, duration: dur || 0.4, ease: "power2.in" }, at); }
+    function shake(sel, at, amp) {
+      var xs = [amp, -amp, amp * 0.6, -amp * 0.4, 0];
+      xs.forEach(function (x, i) { tl.to(sel, { x: x, duration: 0.06, ease: "none" }, at + i * 0.06); });
+    }
+    function dimLines(set, keep, at) {
+      $$(set + " .s4-ln").forEach(function (el, i) { tl.to(el, { opacity: keep.indexOf(i) >= 0 ? 1 : 0.4, duration: 0.3 }, at); });
+    }
+    function allLines(set, at) { tl.to(set + " .s4-ln", { opacity: 1, duration: 0.3 }, at); }
+
+    /* ---------- bố cục ---------- */
+    var BIN = { f: [96, 580], e: [378, 580], s: [660, 580] };
+    var CARDL = { sp: 960, pe: 1254, dr: 1548 }, CARDT = 250;
+    var SLOT = function (c, k) { return [CARDL[c] + 3 + 12, CARDT + 3 + (k === "f" ? 332 : 436)]; };
+    var BLKN = { f: "s4-bf", e: "s4-be", s: "s4-bs" };
+    var proto = { f: $(".s4-b-f"), e: $(".s4-b-e"), s: $(".s4-b-s") };
+    var clones = $(".s4-clones");
+    function mkClone(kind, slotPos) {
+      var d = document.createElement("div");
+      d.className = "s4-blk " + BLKN[kind];
+      d.innerHTML = proto[kind].innerHTML;
+      d.style.left = slotPos[0] + "px"; d.style.top = slotPos[1] + "px";
+      clones.appendChild(d);
+      return d;
+    }
+
+    /* ---------- vào cảnh ---------- */
+    tl.fromTo(".s4-stage", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power1.out" }, 0);
+    tl.fromTo(".s4-stage", { opacity: 1 }, { opacity: 0, duration: 0.4, ease: "power1.in", immediateRender: false }, DUR - 0.4);
+
+    // theme-crossfade-morph: nền chuyển sáng hơn một nấc
+    tl.fromTo(".s4-skin1", { opacity: 0 }, { opacity: 1, duration: 0.9, ease: "power2.inOut" }, 0.3);
+    tl.fromTo(".s4-skin0", { opacity: 1 }, { opacity: 0, duration: 0.9, ease: "power2.inOut", immediateRender: false }, 0.3);
+
+    // "Năm 2015, tại hội nghị WWDC" (0.30)
+    tl.fromTo(".s4-wwdc", { scale: 0.6, opacity: 0, transformOrigin: "0% 50%" }, { scale: 1, opacity: 1, duration: 0.6, ease: "power3.out" }, 0.2);
+    // "kỹ sư Dave Abrahams của Apple" (4.18)
+    fadeIn(".s4-dave", 4.05, 0.6, 26);
+    // "Protocol Oriented Programming" (6.68) ... "Swift" (8.70)
+    fadeIn(".s4-p1", 6.55, 0.5, 20);
+    fadeIn(".s4-p2", 8.55, 0.5, 20);
+    // "Đừng bắt đầu bằng Class" (10.48 / Class 11.32): gạch class
+    fadeIn(".s4-sl1", 10.38, 0.6, 26);
+    tl.to(".s4-cls", { "--s4-strike": 1, duration: 0.4, ease: "power2.out" }, 11.2);
+    // "hãy bắt đầu bằng Protocol" (12.12 / Protocol 13.10)
+    fadeIn(".s4-sl2", 12.0, 0.6, 26);
+    tl.fromTo(".s4-pro", { textShadow: "0 0 0px rgba(16,185,129,0)" }, { textShadow: "0 0 28px rgba(16,185,129,0.65)", duration: 0.6 }, 12.95);
+    // "Protocol là một bản cam kết về hành vi" (14.96 / cam kết 15.64 / hành vi 16.46)
+    tl.fromTo(".s4-contract", { opacity: 0, x: 60, scale: 0.92 }, { opacity: 1, x: 0, scale: 1, duration: 0.6, ease: "power3.out" }, 14.85);
+    tl.fromTo(".s4-cr", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.4, ease: "power3.out", stagger: 0.4 }, 15.3);
+    tl.fromTo(".s4-stamp", { opacity: 0, scale: 2.2, rotation: -14 }, { opacity: 1, scale: 1, rotation: -8, duration: 0.35, ease: "power3.in" }, 15.9);
+    // "Thay vì hỏi con này thuộc dòng dõi nhà ai" (17.36): cây dòng dõi hiện ra rồi bị gạch
+    tl.to(".s4-contract", { opacity: 0, duration: 0.3 }, 17.1);
+    tl.fromTo(".s4-tree2", { opacity: 0, scale: 0.85, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.5, ease: "power3.out" }, 17.25);
+    gsap.set(".s4-t2-slash path", { strokeDasharray: 400, strokeDashoffset: 400 });
+    tl.to(".s4-t2-slash path", { strokeDashoffset: 0, duration: 0.5, ease: "power2.out" }, 19.0);
+    // tới "Ta hỏi con này làm được gì" (19.52): dọn phần mở đầu
+    fadeOut(".s4-intro", 19.2, 0.4);
+
+    /* ---------- ba khối Lego bay vào giữa khung ---------- */
+    var cxs = { f: 406, e: 960, s: 1514 };
+    var stageOff = {};
+    ["f", "e", "s"].forEach(function (k) { stageOff[k] = [cxs[k] - (BIN[k][0] + 126), 470 - (BIN[k][1] + 42)]; });
+    var fromSide = { f: [-1300, -120, -28], e: [0, -820, 20], s: [1300, 140, 28] };
+    var startAt = { f: 19.3, e: 19.55, s: 19.8 };
+    ["f", "e", "s"].forEach(function (k) {
+      var o = stageOff[k], s0 = fromSide[k];
+      tl.fromTo(proto[k], { x: o[0] + s0[0], y: o[1] + s0[1], scale: 0.5, rotation: s0[2], opacity: 0 }, { x: o[0], y: o[1], scale: 2.0, rotation: 0, opacity: 1, duration: 0.9, ease: "power3.out" }, startAt[k]);
+    });
+    fadeIn(".s4-bt-f", 20.5, 0.5, 14);
+    fadeIn(".s4-bt-e", 20.7, 0.5, 14);
+    fadeIn(".s4-bt-s", 20.9, 0.5, 14);
+    // "Ai bay được thì ký vào Flyable" (21.48)
+    tl.to(proto.f, { scale: 2.2, duration: 0.4, ease: "power2.out" }, 21.38);
+    tl.to([proto.e, proto.s], { opacity: 0.45, duration: 0.3 }, 21.38);
+    tl.to(".s4-bt-f", { color: "#6EE7B7", duration: 0.3 }, 21.38);
+    // "ai ăn được thì ký vào Eater" (23.58)
+    tl.to(proto.f, { scale: 2.0, opacity: 0.45, duration: 0.3 }, 23.45);
+    tl.to(".s4-bt-f", { color: "#94A3B8", duration: 0.3 }, 23.45);
+    tl.to(proto.e, { scale: 2.2, opacity: 1, duration: 0.4, ease: "power2.out" }, 23.48);
+    tl.to(".s4-bt-e", { color: "#6EE7B7", duration: 0.3 }, 23.48);
+    // "Và nhờ Extension" (25.76)
+    tl.to(proto.e, { scale: 2.0, opacity: 0.45, duration: 0.3 }, 25.5);
+    tl.to(".s4-bt-e", { color: "#94A3B8", duration: 0.3 }, 25.5);
+    tl.to(proto.f, { scale: 2.1, opacity: 1, duration: 0.4, ease: "power2.out" }, 25.55);
+    tl.fromTo(".s4-ext", { opacity: 0, y: 30, scaleX: 0.7, transformOrigin: "0% 50%" }, { opacity: 1, y: 0, scaleX: 1, duration: 0.6, ease: "power3.out" }, 25.62);
+    tl.fromTo(".s4-gear", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 26.3);
+    var gear = { r: 0 };
+    tl.to(gear, { r: 360, duration: 4.6, ease: "none", onUpdate: function () { gsap.set(".s4-gear-g", { rotation: gear.r, svgOrigin: "40 40" }); } }, 26.3);
+    // "mặc định" (28.82)
+    tl.to(".s4-ext", { boxShadow: "0 0 36px rgba(16,185,129,0.45)", duration: 0.5 }, 28.7);
+
+    /* ---------- "Hãy giải lại bài toán" (32.06): hộp khối + code + thẻ ---------- */
+    fadeOut(".s4-ext, .s4-gear, .s4-btag", 31.8, 0.4);
+    ["f", "e", "s"].forEach(function (k, i) {
+      tl.to(proto[k], { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.8, ease: "power3.inOut" }, 31.95 + i * 0.1);
+    });
+    tl.fromTo(".s4-code", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 32.4);
+    var cardEl = { sp: ".s4-card-sp", pe: ".s4-card-pe", dr: ".s4-card-dr" };
+    ["sp", "pe", "dr"].forEach(function (c, i) {
+      tl.fromTo(cardEl[c], { opacity: 0, y: 40 }, { opacity: 0.35, y: 0, duration: 0.5, ease: "power3.out" }, 33.2 + i * 0.15);
+    });
+    ["s", "n", "d", "r"].forEach(function (k) { gsap.set(".s4-set-" + k, { opacity: 0 }); });
+    gsap.set(".s4-cf2, .s4-cf3, .s4-cf4, .s4-cf5", { opacity: 0 });
+    var P = $$(".s4-set-p .s4-ln"), S = $$(".s4-set-s .s4-ln"), N = $$(".s4-set-n .s4-ln"), D = $$(".s4-set-d .s4-ln"), R = $$(".s4-set-r .s4-ln");
+    function swapSet(from, to, at, fcls, tcls) {
+      tl.to(".s4-set-" + from, { opacity: 0, duration: 0.25 }, at);
+      tl.to(".s4-set-" + to, { opacity: 1, duration: 0.01 }, at + 0.28);
+      tl.to(fcls, { opacity: 0, duration: 0.2 }, at);
+      tl.to(tcls, { opacity: 1, duration: 0.2 }, at + 0.1);
+    }
+    // "Ta có hai Protocol, Flyable (35.06) và Eater (35.74)"
+    typeLn(P[0], 34.2, 1.0);
+    tl.to(proto.f, { scale: 1.12, duration: 0.2 }, 34.95);
+    tl.to(proto.f, { scale: 1, duration: 0.3 }, 35.15);
+    typeLn(P[1], 35.3, 1.0);
+    tl.to(proto.e, { scale: 1.12, duration: 0.2 }, 35.65);
+    tl.to(proto.e, { scale: 1, duration: 0.3 }, 35.85);
+    // "Flyable có một Extension (37.72), đưa sẵn hành vi bay mặc định (38.30-40.00)"
+    typeLn(P[2], 36.8, 0.9);
+    typeLn(P[3], 37.75, 2.1);
+    typeLn(P[4], 39.9, 0.2);
+    dimLines(".s4-set-p", [2, 3, 4], 37.7);
+
+    /* ---------- con trỏ + khối khớp ---------- */
+    var cur = ".s4-cursor";
+    var curPos = [1500, 900];
+    gsap.set(cur, { x: curPos[0], y: curPos[1] });
+    var DRAG = 0.5;
+    // lock = thời điểm khối khớp vào ô (đặt ~0.1s trước từ được nói)
+    function place(kind, card, lock, opts) {
+      opts = opts || {};
+      var t0 = lock - 0.07 - DRAG;
+      var sp = SLOT(card, kind), b = BIN[kind];
+      var c = mkClone(kind, sp);
+      var dx = b[0] - sp[0], dy = b[1] - sp[1];
+      var from = [b[0] + 60, b[1] + 42];
+      var to = [sp[0] + 60, sp[1] + 42];
+      var dragStart = t0 + 0.07;
+      tl.to(cur, { x: from[0], y: from[1], opacity: 1, duration: 0.3, ease: "power2.inOut" }, t0 - 0.35);
+      tl.fromTo(c, { x: dx, y: dy, opacity: 0, scale: 1 }, { x: dx, y: dy, opacity: 1, duration: 0.01 }, t0 - 0.05);
+      tl.to([c, cur], { scale: 0.9, duration: 0.12, ease: "power1.in" }, t0 - 0.05);
+      tl.to(c, { x: 0, duration: DRAG, ease: "power2.out" }, dragStart);
+      tl.to(c, { y: 0, duration: DRAG, ease: "power2.in" }, dragStart);
+      tl.to(cur, { x: to[0], duration: DRAG, ease: "power2.out" }, dragStart);
+      tl.to(cur, { y: to[1], duration: DRAG, ease: "power2.in" }, dragStart);
+      if (!opts.reject) {
+        tl.to([c, cur], { scale: 1, duration: 0.5, ease: "back.out(2.4)" }, lock);
+        var slotEl = $$(cardEl[card] + " .s4-slot")[kind === "f" ? 0 : 1];
+        tl.to(slotEl, { opacity: 0, duration: 0.2 }, lock);
+        tl.fromTo(".s4-ring-a", { x: sp[0] + 126 - 45, y: sp[1] + 42 - 45, scale: 0.4, opacity: 0.9 }, { scale: 2.4, opacity: 0, duration: 0.5, ease: "power2.out", immediateRender: false }, lock);
+        curPos = to;
+      } else {
+        tl.to(c, { x: dx * 0.35, y: dy * 0.35 - 70, rotation: -12, opacity: 0, scale: 0.9, duration: 0.7, ease: "power3.out" }, lock + 0.12);
+        tl.to(cur, { x: from[0] + 140, y: from[1] - 40, scale: 1, duration: 0.7, ease: "power3.out" }, lock + 0.12);
+        curPos = [from[0] + 140, from[1] - 40];
+      }
+    }
+    function cursorAway(at) { tl.to(cur, { opacity: 0, x: "+=80", y: "+=60", duration: 0.5, ease: "power2.in" }, at); }
+    function activate(card, at) {
+      tl.to(cardEl[card], { opacity: 1, borderColor: "#10B981", duration: 0.4 }, at);
+      tl.fromTo(cardEl[card] + " .s4-av", { scale: 0.85 }, { scale: 1, duration: 0.5, ease: "back.out(2)" }, at);
+    }
+
+    // "Sparrow là một struct (40.76/41.36), ký cả Flyable (42.46) lẫn Eater (43.12)"
+    swapSet("p", "s", 40.35, ".s4-cf1", ".s4-cf2");
+    activate("sp", 40.65);
+    typeLn(S[0], 41.1, 1.9);
+    place("f", "sp", 42.35);
+    place("e", "sp", 43.0);
+    // "chỉ cần tự viết hàm eat" (43.98 - 45.36)
+    typeLn(S[1], 44.2, 1.2);
+    typeLn(S[2], 45.45, 0.2);
+    dimLines(".s4-set-s", [1], 44.15);
+    // "Penguin chỉ ký Eater" (46.16 / Eater 46.86)
+    swapSet("s", "n", 45.8, ".s4-cf2", ".s4-cf3");
+    activate("pe", 46.05);
+    typeLn(N[0], 46.1, 1.1);
+    place("e", "pe", 46.76);
+    typeLn(N[1], 47.25, 1.1);
+    typeLn(N[2], 48.4, 0.2);
+    // "nó không ký Flyable" (48.44 / ký Flyable 49.08): khối bật ra, dấu X đỏ, rung
+    place("f", "pe", 49.0, { reject: true });
+    tl.to(".s4-pe-a", { borderColor: "#EF4444", color: "rgba(239,68,68,0.9)", duration: 0.15 }, 49.0);
+    tl.fromTo(".s4-card-pe .s4-xmark", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2.4)", immediateRender: false }, 49.0);
+    shake(".s4-pe-a", 49.0, 9);
+    shake(".s4-card-pe .s4-av", 49.0, 6);
+    gsap.set(".s4-card-pe .s4-xmark", { opacity: 0 });
+    // "Còn Drone chỉ ký Flyable" (50.68 / Flyable 51.70)
+    swapSet("n", "d", 50.3, ".s4-cf3", ".s4-cf4");
+    activate("dr", 50.55);
+    typeLn(D[0], 50.8, 1.3);
+    place("f", "dr", 51.6);
+    // "không cần dính dáng gì tới Animal" (52.70 / Animal 54.08)
+    typeLn(D[1], 52.6, 1.6);
+    cursorAway(52.2);
+    tl.fromTo(".s4-animal", { opacity: 0, y: -16 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 53.95);
+    tl.fromTo(".s4-cut", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 54.25);
+
+    /* ---------- "Điều quan trọng nhất nằm ở hàm Release" (55.64 / 56.90) ---------- */
+    fadeOut(".s4-lego", 55.5, 0.5);
+    swapSet("d", "r", 55.5, ".s4-cf4", ".s4-cf5");
+    fadeIn(".s4-gate", 56.6, 0.55, 24);
+    typeLn(R[0], 56.8, 2.4);
+    var r0 = $(".s4-set-r .s4-ln .s4-ty").textContent, ai = r0.indexOf("[any Flyable]");
+    var und = $(".s4-und-any");
+    und.style.left = (28 + ai * 18) + "px"; und.style.top = (18 + 38) + "px"; und.style.width = (13 * 18) + "px";
+    tl.fromTo(und, { opacity: 1, scaleX: 0 }, { opacity: 1, scaleX: 1, duration: 0.5, ease: "power2.out", immediateRender: false }, 59.4);
+    gsap.set(und, { opacity: 0 });
+    tl.to(".s4-und-any", { opacity: 0, duration: 0.3 }, 61.0);
+    // "rồi gọi Fly cho từng phần tử" (60.66)
+    typeLn(R[1], 60.5, 1.6);
+    typeLn(R[2], 62.2, 0.2);
+    dimLines(".s4-set-r", [0, 1], 60.4);
+    // "Truyền vào Sparrow và Drone thì ổn" (63.06 / ổn 64.34)
+    typeLn(R[3], 62.95, 1.5);
+    allLines(".s4-set-r", 62.9);
+    tl.fromTo(".s4-stt-sp", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 64.2);
+    tl.fromTo(".s4-stt-dr", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 64.35);
+    tl.fromTo([".s4-card-sp", ".s4-card-dr"], { scale: 1 }, { scale: 1.03, duration: 0.25, ease: "power2.out", immediateRender: false }, 64.2);
+    tl.to([".s4-card-sp", ".s4-card-dr"], { scale: 1, duration: 0.35, ease: "power2.inOut" }, 64.45);
+    tl.to(".s4-lamp", { backgroundColor: "#10B981", borderColor: "#6EE7B7", boxShadow: "0 0 30px rgba(16,185,129,0.8)", duration: 0.3 }, 64.2);
+    // "Còn nếu bạn truyền vào Penguin" (65.06) ... "trình biên dịch sẽ báo lỗi ngay lúc build" (66.52)
+    typeLn(R[4], 65.0, 1.4);
+    var bu = $(".s4-und-bad");
+    bu.style.left = (28 + 8 * 18) + "px"; bu.style.top = (18 + 4 * 46 + 38) + "px"; bu.style.width = (11 * 18) + "px";
+    gsap.set(bu, { opacity: 0 });
+    tl.fromTo(bu, { opacity: 1, scaleX: 0 }, { opacity: 1, scaleX: 1, duration: 0.4, ease: "power2.out", immediateRender: false }, 66.4);
+    tl.to(".s4-ty-bad", { color: "#FCA5A5", duration: 0.3 }, 66.4);
+    tl.fromTo(".s4-err", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 66.4);
+    tl.to(".s4-lamp", { backgroundColor: "#EF4444", borderColor: "#FCA5A5", boxShadow: "0 0 30px rgba(239,68,68,0.8)", duration: 0.2 }, 66.4);
+    tl.to(".s4-card-pe", { opacity: 1, borderColor: "#EF4444", duration: 0.3 }, 66.4);
+    tl.fromTo(".s4-stt-pe", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 66.5);
+    shake(".s4-card-pe", 66.5, 8);
+    // "chứ không đợi đến khi chạy mới nổ" (68.48 - 69.86) rồi sang phần struct
+    fadeOut(".s4-err, .s4-gate", 70.4, 0.4);
+    tl.to(".s4-code", { opacity: 0.3, duration: 0.5 }, 70.5);
+    // "mọi thứ là struct" (72.18 / struct 72.98)
+    ["sp", "pe", "dr"].forEach(function (c, i) {
+      var t = 72.4 + i * 0.35;
+      tl.to(".s4-ctag-" + c, { color: "#10B981", scale: 1.25, duration: 0.3, ease: "power2.out" }, t);
+      tl.to(".s4-ctag-" + c, { scale: 1, duration: 0.4, ease: "power2.inOut" }, t + 0.5);
+    });
+    // "không có cây thừa kế nào cả" (74.98 / thừa kế 75.70)
+    tl.fromTo(".s4-notree", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 74.8);
+    tl.fromTo(".s4-nt-slash", { opacity: 0 }, { opacity: 1, duration: 0.01 }, 75.55);
+    tl.fromTo(".s4-nt-slash path", { strokeDasharray: 400, strokeDashoffset: 400 }, { strokeDashoffset: 0, duration: 0.5, ease: "power2.out", immediateRender: false }, 75.55);
+    fadeIn(".s4-nt-cap", 74.9, 0.5, 18);
+    // "Một kiểu có thể ký nhiều Protocol cùng lúc" (76.82 / nhiều 77.78)
+    tl.to(".s4-card-sp", { borderColor: "#6EE7B7", boxShadow: "0 0 46px rgba(16,185,129,0.5)", duration: 0.4 }, 76.7);
+    tl.to(".s4-card-sp .s4-slot", { borderColor: "#6EE7B7", duration: 0.3, stagger: 0.35 }, 77.5);
+    tl.to(".s4-card-sp", { boxShadow: "0 0 0 rgba(16,185,129,0)", duration: 0.6 }, 79.6);
+    // "Swift vẫn có class khi bạn cần" (81.58 / class 82.48)
+    fadeIn(".s4-clschip", 82.35, 0.5, 18);
+    // "khả năng trước (86.24), dòng dõi sau (87.02)"
+    fadeOut(".s4-notree, .s4-nt-cap, .s4-clschip", 85.9, 0.4);
+    fadeIn(".s4-k1", 86.1, 0.55, 26);
+    fadeIn(".s4-k2", 86.9, 0.55, 26);
+
+    /* ---------- "Hãy nhớ lại câu hỏi đầu tiên" (88.52) ---------- */
+    fadeOut(".s4-code, .s4-card, .s4-clones, .s4-animal, .s4-cut, .s4-k1, .s4-k2", 88.4, 0.6);
+    gsap.set(".s4-q1, .s4-q2", { opacity: 0 });
+    // "thay vì hỏi nó là cái gì" (89.84)
+    fadeIn(".s4-q1", 89.7, 0.55, 24);
+    tl.to(".s4-q1", { "--s4-q": 1, duration: 0.4, ease: "power2.out" }, 90.95);
+    tl.to(".s4-q1", { opacity: 0.55, duration: 0.4 }, 91.4);
+    // "PoP hỏi nó làm được gì" (91.64)
+    tl.fromTo(".s4-q2", { opacity: 0, scale: 0.7, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.6, ease: "power3.out" }, 91.5);
+    tl.to(".s4-q2", { textShadow: "0 0 40px rgba(16,185,129,0.6)", duration: 0.8 }, 92.3);
+  })();
+  </script>
+</div>
+
+</template>
+  </body>
+</html>

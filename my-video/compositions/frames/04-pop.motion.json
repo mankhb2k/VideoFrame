@@ -1,0 +1,7 @@
+{
+  "scene": "04-pop",
+  "duration_s": 93.9,
+  "rules": ["theme-crossfade-morph", "spring-pop-entrance", "press-release-spring", "physics-press-reaction", "discrete-text-sequence", "stat-bars-and-fills"],
+  "exit": { "vector": "static hold of final question; only a slow text-shadow glow plus stage opacity fade 1->0 over the last 0.4s; ~0 px/s", "still_moving": false },
+  "entry": { "vector": "background skin crossfade 0.3-1.2s and WWDC badge pop at 0.3s; frame 0 is at rest", "from_rest": true }
+}

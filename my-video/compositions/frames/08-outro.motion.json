@@ -1,0 +1,7 @@
+{
+  "scene": "08-outro",
+  "duration_s": 24.8,
+  "rules": ["kinetic-beat-slam", "press-release-spring", "spring-pop-entrance", "fixed-anchor-cycle", "discrete-text-sequence"],
+  "exit": { "vector": "opacity fade-out only over last 0.4s on a still frame (0 px/s translation)", "still_moving": false },
+  "entry": { "vector": "opacity fade-in over first 0.4s; title scale 1.5 to 1 slam (about 1 scale unit/s)", "from_rest": false }
+}
