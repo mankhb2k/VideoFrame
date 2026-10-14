@@ -1,0 +1,11 @@
+{
+  "name": "{{slug}}",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx --yes hyperframes@{{hyperframes}} preview",
+    "check": "npx --yes hyperframes@{{hyperframes}} check",
+    "render:nhap": "npx --yes hyperframes@{{hyperframes}} render --fps 30 --quality draft -o ../renders/{{slug}}-nhap-30fps.mp4",
+    "render:cuoi": "npx --yes hyperframes@{{hyperframes}} render --fps 60 --quality looks -o ../renders/{{slug}}-60fps.mp4"
+  }
+}

@@ -1,0 +1,52 @@
+[
+ {
+  "canh": "canh1_ong-son-va-20-trieu-dong",
+  "id": "canh1",
+  "stt": 1,
+  "audio": 57.0,
+  "start": 0.0,
+  "duration": 57.6,
+  "uoc_tinh": true,
+  "composition": "compositions/frames/01-canh1.html"
+ },
+ {
+  "canh": "canh2_ong-son-bat-dau-thue-nguoi",
+  "id": "canh2",
+  "stt": 2,
+  "audio": 99.0,
+  "start": 57.6,
+  "duration": 99.6,
+  "uoc_tinh": true,
+  "composition": "compositions/frames/02-canh2.html"
+ },
+ {
+  "canh": "canh3_doi-ke-toan-cua-ong-son",
+  "id": "canh3",
+  "stt": 3,
+  "audio": 131.0,
+  "start": 157.2,
+  "duration": 131.6,
+  "uoc_tinh": true,
+  "composition": "compositions/frames/03-canh3.html"
+ },
+ {
+  "canh": "canh4_black-friday-cua-ong-son",
+  "id": "canh4",
+  "stt": 4,
+  "audio": 78.0,
+  "start": 288.8,
+  "duration": 78.6,
+  "uoc_tinh": true,
+  "composition": "compositions/frames/04-canh4.html"
+ },
+ {
+  "canh": "canh5_tu-tiem-tap-hoa-den-phan-mem-trieu-do",
+  "id": "canh5",
+  "stt": 5,
+  "audio": 154.0,
+  "start": 367.4,
+  "duration": 154.6,
+  "uoc_tinh": true,
+  "composition": "compositions/frames/05-canh5.html"
+ }
+]

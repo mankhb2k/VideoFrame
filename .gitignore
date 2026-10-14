@@ -30,3 +30,12 @@ kich-ban-video-oop-pop.zip
 thumbnail/.hyperframes/
 thumbnail/.thumbnails/
 thumbnail/.waveform-cache/
+
+# dự án tạo từ khuôn
+*.zip
+**/.hyperframes/
+**/.thumbnails/
+**/.waveform-cache/
+videos/*/renders/*
+!videos/*/renders/.gitkeep
+videos/*/video/assets/audio/sfx-track.wav

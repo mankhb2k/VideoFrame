@@ -14,9 +14,12 @@ import urllib.request
 import uuid
 from pathlib import Path
 
-KIT = Path(__file__).resolve().parent.parent                       # thư mục VideoKit
-GOC = Path(os.environ.get("VIDEOKIT_PROJECT") or Path.cwd())  # thư mục gốc dự án video (mặc định: nơi bạn đang đứng)
-AUDIO = GOC / "my-video" / "assets" / "audio"
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from _du_an import KIT, du_an  # noqa: E402
+
+DA = du_an()   # đường dẫn dự án: xem _du_an.py
+GOC = DA.goc
+AUDIO = DA.audio
 DO_TRE = 0.3  # giọng bắt đầu sau 0,3 giây so với đầu cảnh (xem index.html)
 
 

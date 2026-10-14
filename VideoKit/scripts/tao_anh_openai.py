@@ -22,9 +22,12 @@ import urllib.request
 import uuid
 from pathlib import Path
 
-KIT = Path(__file__).resolve().parent.parent                       # thư mục VideoKit
-GOC = Path(os.environ.get("VIDEOKIT_PROJECT") or Path.cwd())  # thư mục gốc dự án video (mặc định: nơi bạn đang đứng)
-DAU_RA = GOC / "my-video" / "assets" / "images"
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from _du_an import KIT, du_an  # noqa: E402
+
+DA = du_an()   # đường dẫn dự án: xem _du_an.py
+GOC = DA.goc
+DAU_RA = DA.images
 API = "https://api.openai.com/v1/images"
 
 # giá USD / 1M token (đầu vào chữ, đầu ra ảnh) theo trang giá OpenAI, dùng để ước tính chi phí

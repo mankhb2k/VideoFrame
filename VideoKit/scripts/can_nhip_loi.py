@@ -15,21 +15,13 @@ import subprocess
 import sys
 from pathlib import Path
 
-KIT = Path(__file__).resolve().parent.parent                       # thư mục VideoKit
-GOC = Path(os.environ.get("VIDEOKIT_PROJECT") or Path.cwd())  # thư mục gốc dự án video (mặc định: nơi bạn đang đứng)
-def _tim_loi_thoai():
-    """Thư mục lời thoại: biến VIDEOKIT_LOI_THOAI, hoặc kich-ban/loi-thoai, hoặc kich-ban*/loi-thoai đầu tiên."""
-    if os.environ.get("VIDEOKIT_LOI_THOAI"):
-        return Path(os.environ["VIDEOKIT_LOI_THOAI"])
-    mac_dinh = GOC / "kich-ban" / "loi-thoai"
-    if mac_dinh.exists():
-        return mac_dinh
-    ung_vien = sorted(GOC.glob("kich-ban*/loi-thoai"))
-    return ung_vien[0] if ung_vien else mac_dinh
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from _du_an import KIT, du_an  # noqa: E402
 
-
-LOI = _tim_loi_thoai()
-AUDIO = GOC / "my-video" / "assets" / "audio"
+DA = du_an()   # đường dẫn dự án: xem _du_an.py
+GOC = DA.goc
+LOI = DA.loi_thoai
+AUDIO = DA.audio
 DO_TRE = 0.3  # giọng bắt đầu sau 0,3 giây so với đầu cảnh (xem index.html)
 
 

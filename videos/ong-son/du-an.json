@@ -1,0 +1,78 @@
+{
+  "slug": "ong-son",
+  "ten": "Ông Sơn: từ tiệm tạp hoá đến phần mềm triệu đô (tên làm việc)",
+  "tao_ngay": "2026-10-14",
+  "phien_ban_hyperframes": "0.8.152",
+  "khung": {
+    "rong": 1920,
+    "cao": 1080,
+    "fps_nhap": 30,
+    "fps_cuoi": 60
+  },
+  "thu_muc": {
+    "kich_ban": "kich-ban",
+    "loi_thoai": "loi-thoai",
+    "video": "video",
+    "thumbnail": "thumbnail"
+  },
+  "giong": {
+    "nha_cung_cap": "gemini",
+    "model": "gemini-3.8-flash-tts",
+    "giong": "vi-vn-advisor-2",
+    "do_tre_giay": 0.3,
+    "am_luong": 1
+  },
+  "logo": {
+    "hien": true,
+    "file": "assets/images/logo-tron.png",
+    "vi_tri": "phai-duoi",
+    "kich_thuoc": 132,
+    "le": 44
+  },
+  "sfx": {
+    "track": "assets/audio/sfx-track.wav",
+    "am_luong": 0.65
+  },
+  "canh": [
+    {
+      "id": "canh1",
+      "ten": "Ông Sơn và 20 triệu đồng",
+      "tep_kich_ban": "canh-1-ong-son-va-20-trieu.md",
+      "tep_loi_thoai": "canh1_ong-son-va-20-trieu-dong",
+      "du_kien_giay": 57,
+      "giu_them_giay": 0
+    },
+    {
+      "id": "canh2",
+      "ten": "Ông Sơn bắt đầu thuê người",
+      "tep_kich_ban": "canh-2-ong-son-bat-dau-thue-nguoi.md",
+      "tep_loi_thoai": "canh2_ong-son-bat-dau-thue-nguoi",
+      "du_kien_giay": 99,
+      "giu_them_giay": 0
+    },
+    {
+      "id": "canh3",
+      "ten": "Đội kế toán của ông Sơn",
+      "tep_kich_ban": "canh-3-doi-ke-toan-cua-ong-son.md",
+      "tep_loi_thoai": "canh3_doi-ke-toan-cua-ong-son",
+      "du_kien_giay": 131,
+      "giu_them_giay": 0
+    },
+    {
+      "id": "canh4",
+      "ten": "Black Friday của ông Sơn",
+      "tep_kich_ban": "canh-4-black-friday-cua-ong-son.md",
+      "tep_loi_thoai": "canh4_black-friday-cua-ong-son",
+      "du_kien_giay": 78,
+      "giu_them_giay": 0
+    },
+    {
+      "id": "canh5",
+      "ten": "Từ tiệm tạp hoá đến phần mềm triệu đô",
+      "tep_kich_ban": "canh-5-tu-tiem-tap-hoa-den-phan-mem-trieu-do.md",
+      "tep_loi_thoai": "canh5_tu-tiem-tap-hoa-den-phan-mem-trieu-do",
+      "du_kien_giay": 154,
+      "giu_them_giay": 0
+    }
+  ]
+}

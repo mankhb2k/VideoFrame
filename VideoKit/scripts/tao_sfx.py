@@ -9,6 +9,7 @@ của từng cảnh lấy từ my-video/index.html (host-scene-N). Mọi âm đ�
 cố định nên kết quả giống nhau mỗi lần chạy, không dùng mẫu âm của bên thứ ba. Cần: numpy.
 """
 import os
+import sys
 import argparse
 import json
 import re
@@ -17,9 +18,12 @@ from pathlib import Path
 
 import numpy as np
 
-KIT = Path(__file__).resolve().parent.parent                       # thư mục VideoKit
-GOC = Path(os.environ.get("VIDEOKIT_PROJECT") or Path.cwd())  # thư mục gốc dự án video (mặc định: nơi bạn đang đứng)
-VIDEO = Path(os.environ.get("VIDEOKIT_VIDEO") or (GOC / "my-video"))   # thư mục dự án HyperFrames
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from _du_an import KIT, du_an  # noqa: E402
+
+DA = du_an()   # đường dẫn dự án: xem _du_an.py
+GOC = DA.goc
+VIDEO = DA.video   # thư mục dự án HyperFrames
 SR = 48000
 # mức cơ bản của từng loại (đỉnh tương đối trước khi nhân gain của cue); nhỏ để không át giọng đọc
 MUC = {"whoosh": 0.30, "pop": 0.30, "tick": 0.22, "click": 0.40, "ding": 0.32, "error": 0.34,

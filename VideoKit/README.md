@@ -12,15 +12,17 @@ Bộ asset và công cụ dùng chung cho các video giải thích làm bằng [
 | `music/` | nhạc nền; chỉ thêm nhạc có giấy phép rõ ràng và ghi nguồn vào `NGUON.md` |
 | `styles/` | khối prompt phong cách ảnh, `design.md` mẫu |
 | `scripts/` | công cụ dòng lệnh (bảng dưới) |
-| `templates/` | `font-face.css`, `BRIEF.md`, `STORYBOARD.md`, định dạng cue âm thanh, cấu trúc dự án |
+| `templates/` | **`du-an/` (khuôn dự án chuẩn)**, `du-an.schema.md`, `font-face.css`, `BRIEF.md`, `STORYBOARD.md`, định dạng cue âm thanh, cấu trúc dự án |
 | `ledger/` | sổ chi phí API (`chi-phi-api.csv`) |
 
 ## Script
 
-Chạy từ thư mục gốc của dự án video (hoặc đặt `VIDEOKIT_PROJECT`). Cần Python 3.10+; script chỉ dùng thư viện chuẩn, trừ `tao_sfx.py` (numpy) và các script xử lý ảnh (pillow).
+Chạy trong thư mục dự án video hoặc bất kỳ thư mục con nào (script tìm `du-an.json` đi lên), hoặc đặt `VIDEOKIT_PROJECT`. Cần Python 3.10+; script chỉ dùng thư viện chuẩn, trừ `tao_sfx.py` (numpy) và các script xử lý ảnh (pillow).
 
 | Script | Việc |
 |---|---|
+| `tao_du_an.py` | **tạo dự án mới từ khuôn** (`videos/<slug>/`), tự đọc các file `canh-N-*.md` |
+| `build_index.py` | **sinh `index.html` và `moc-canh.json`** từ `du-an.json` và độ dài giọng đọc thật (logo, sfx, font, khung hình theo chuẩn) |
 | `sync_assets.py` | chép nhân vật, sfx, font, logo vào dự án và ghi manifest |
 | `tao_anh_openai.py` | tạo ảnh nhân vật nền trong bằng API ảnh OpenAI (lấy `khi.png` làm tham chiếu phong cách) |
 | `phien_am_openai.py` | lấy mốc **từng từ** của giọng đọc (whisper-1) |
@@ -30,6 +32,15 @@ Chạy từ thư mục gốc của dự án video (hoặc đặt `VIDEOKIT_PROJE
 | `tao_thumbnail_nen.py` | tạo nền thumbnail 16:9 (không chữ); chữ và logo ghép sau bằng HTML |
 | `tach_nen_trang.py` | tách nền trắng khỏi ảnh hoạt hình (xóa vùng trắng nối với mép) |
 | `ghep_xem.py` | xếp nhiều PNG nền trong lên nền video để xem nhanh |
+
+## Bắt đầu một video mới
+
+```
+python3 VideoKit/scripts/tao_du_an.py <slug> --ten "..." --kich-ban <thư mục chứa canh-N-*.md> --di-chuyen
+cd videos/<slug>        # từ đây các script tự tìm du-an.json
+```
+
+Bố cục và lệnh thường dùng: `templates/du-an/README.md`. Cấu hình: `templates/du-an.schema.md`.
 
 ## Quy trình (rút gọn)
 

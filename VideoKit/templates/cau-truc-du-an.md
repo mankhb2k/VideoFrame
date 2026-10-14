@@ -1,15 +1,20 @@
 # Cấu trúc một dự án video
 
+Chuẩn nằm trong `templates/du-an/` (xem `README.md` ở đó) và được `scripts/tao_du_an.py` chép ra thành `videos/<slug>/`:
+
 ```
-Videos/<yyyy-mm-ten>/
-├── kich-ban/           script.md, loi-thoai/canhN_*.txt, bang-phat-am.csv
-├── video/              dự án HyperFrames (index.html, BRIEF.md, STORYBOARD.md, design.md)
-│   ├── compositions/frames/NN-ten.html  (+ .sfx.json, .motion.json)
-│   └── assets/         audio/ (wav, words-*.json, moc-canh.json, sfx-track.wav), images/, sfx/, fonts/
-├── renders/            draft-30fps.mp4, final-60fps.mp4   (không đưa lên git)
+videos/<slug>/
+├── du-an.json      cấu hình duy nhất (xem templates/du-an.schema.md)
+├── kich-ban/       kịch bản gốc, mỗi cảnh một file canh-N-*.md
+├── loi-thoai/      lời thoại tách ra để đọc
+├── video/          dự án HyperFrames (index.html do build_index.py sinh)
+│   ├── compositions/frames/NN-ten.html  (+ .sfx.json)  và compositions/logo.html
+│   └── assets/     audio/ (wav, words-*.json, moc-canh.json, sfx-track.wav), images/, sfx/, fonts/
+├── renders/        file render (không đưa lên git)
 ├── thumbnail/
-└── dang-bai/           tieu-de.md, mo-ta.md, tags.txt
+└── dang-bai/       tieu-de.md, mo-ta.md, tags.txt
 ```
 
-Quy ước: tên file không dấu; mỗi class/id trong cảnh có tiền tố `sN-`; khai báo `@font-face` trong `index.html` và trong từng file cảnh;
-dừng `hyperframes preview` trước khi sửa file bằng tay (Studio tự thêm thuộc tính vào HTML).
+Quy ước: tên file không dấu; mỗi class/id trong cảnh có tiền tố `sN-`; `@font-face` khai báo trong `index.html` (build_index lo) và trong từng file cảnh (dán `templates/font-face.css`);
+dừng `hyperframes preview` trước khi sửa HTML bằng tay hoặc chạy `build_index.py`.
+Video đầu tiên (OOP vs POP) có bố cục cũ (`my-video/`); mọi script vẫn chạy với bố cục đó.
