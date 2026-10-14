@@ -1,7 +1,7 @@
 """Tìm thư mục dự án video cho mọi script của VideoKit.
 
 Thứ tự: biến VIDEOKIT_PROJECT, nếu không có thì thư mục hiện tại; nếu ở đó (hoặc thư mục cha gần nhất) có `du-an.json`
-thì đọc đường dẫn từ file đó; nếu không thì dùng bố cục cũ của video đầu tiên (my-video, kich-ban*/loi-thoai).
+thì đọc đường dẫn từ file đó; nếu không thì dùng bố cục chuẩn mặc định (video/, loi-thoai/).
 Có thể ghi đè từng đường dẫn bằng VIDEOKIT_VIDEO và VIDEOKIT_LOI_THOAI.
 """
 import json
@@ -29,9 +29,8 @@ def du_an():
         video = goc / td.get("video", "video")
         loi = goc / td.get("loi_thoai", "loi-thoai")
     else:
-        video = goc / "my-video"
-        ung_vien = sorted(goc.glob("kich-ban*/loi-thoai"))
-        loi = ung_vien[0] if ung_vien else goc / "kich-ban" / "loi-thoai"
+        video = goc / "video"
+        loi = goc / "loi-thoai"
     if os.environ.get("VIDEOKIT_VIDEO"):
         video = Path(os.environ["VIDEOKIT_VIDEO"])
     if os.environ.get("VIDEOKIT_LOI_THOAI"):

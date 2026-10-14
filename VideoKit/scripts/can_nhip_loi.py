@@ -6,7 +6,7 @@ Không cần model nhận dạng giọng nói. Cách làm: tách lời thoại t
 Độ chính xác cỡ vài phần mười giây, đủ để đồng bộ highlight/hiệu ứng theo câu (không phải theo từng từ).
 
     python3 VideoKit/scripts/can_nhip_loi.py
-Kết quả: my-video/assets/audio/cues.json  (giây tính từ đầu mỗi cảnh, đã cộng 0,3 giây lặng đầu cảnh)
+Kết quả: <video>/assets/audio/cues.json  (giây tính từ đầu mỗi cảnh, đã cộng 0,3 giây lặng đầu cảnh)
 """
 import os
 import json

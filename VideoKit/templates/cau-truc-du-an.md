@@ -17,4 +17,4 @@ videos/<slug>/
 
 Quy ước: tên file không dấu; mỗi class/id trong cảnh có tiền tố `sN-`; `@font-face` khai báo trong `index.html` (build_index lo) và trong từng file cảnh (dán `templates/font-face.css`);
 dừng `hyperframes preview` trước khi sửa HTML bằng tay hoặc chạy `build_index.py`.
-Video đầu tiên (OOP vs POP) có bố cục cũ (`my-video/`); mọi script vẫn chạy với bố cục đó.
+Video đầu tiên (OOP vs POP) dùng bố cục cũ và đã được gỡ khỏi cây làm việc; mã nguồn của nó còn trong lịch sử git (commit `bb86b53`).

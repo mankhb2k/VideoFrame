@@ -4,8 +4,8 @@
     python VideoKit/scripts/tao_sfx.py --thu-vien   # chỉ ghi thư viện vào VideoKit/sfx/*.wav
     python VideoKit/scripts/tao_sfx.py              # thư viện + ghép track <video>/assets/audio/sfx-track.wav
 
-Track được ghép từ các file my-video/compositions/frames/*.sfx.json (t tính theo giây từ đầu mỗi cảnh) và mốc bắt đầu
-của từng cảnh lấy từ my-video/index.html (host-scene-N). Mọi âm đều tạo ra bằng sóng sin, nhiễu và bộ lọc, hạt giống
+Track được ghép từ các file <video>/compositions/frames/*.sfx.json (t tính theo giây từ đầu mỗi cảnh) và mốc bắt đầu
+của từng cảnh lấy từ <video>/index.html (host-scene-N). Mọi âm đều tạo ra bằng sóng sin, nhiễu và bộ lọc, hạt giống
 cố định nên kết quả giống nhau mỗi lần chạy, không dùng mẫu âm của bên thứ ba. Cần: numpy.
 """
 import os

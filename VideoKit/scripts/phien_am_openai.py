@@ -5,7 +5,7 @@ Khóa đọc từ OPENAI_API_KEY (biến môi trường hoặc .env). Chi phí k
 
     python3 VideoKit/scripts/phien_am_openai.py canh0_hook            # một cảnh
     python3 VideoKit/scripts/phien_am_openai.py                       # mọi cảnh
-Kết quả: my-video/assets/audio/words-<cảnh>.json  (giây tính từ đầu cảnh, đã cộng 0,3 giây lặng đầu cảnh)
+Kết quả: <video>/assets/audio/words-<cảnh>.json  (giây tính từ đầu cảnh, đã cộng 0,3 giây lặng đầu cảnh)
 """
 import os
 import json

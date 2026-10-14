@@ -3,8 +3,8 @@
 
 HyperFrames đọc asset theo đường dẫn tương đối trong dự án, nên VideoKit không dùng symlink mà chép theo nhu cầu.
 
-    python VideoKit/scripts/sync_assets.py --project my-video --characters khi chuoi --sfx --fonts --logo
-    python VideoKit/scripts/sync_assets.py --project my-video --characters all --sfx
+    python VideoKit/scripts/sync_assets.py --characters khi chuoi --sfx --fonts --logo   # chạy trong thư mục dự án
+    python VideoKit/scripts/sync_assets.py --project videos/ong-son/video --characters all --sfx
     python VideoKit/scripts/sync_assets.py --lietke            # xem VideoKit đang có gì
 
 Đích: <project>/assets/images (nhân vật, logo), <project>/assets/sfx, <project>/assets/fonts.
@@ -18,7 +18,8 @@ import shutil
 import sys
 from pathlib import Path
 
-KIT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from _du_an import KIT, du_an  # noqa: E402
 
 
 def sha(p):
@@ -51,7 +52,7 @@ def liet_ke():
 
 def main():
     ap = argparse.ArgumentParser(description="Chép asset VideoKit vào dự án video")
-    ap.add_argument("--project", default="my-video", help="thư mục dự án HyperFrames (chứa index.html)")
+    ap.add_argument("--project", default=None, help="thư mục dự án HyperFrames (chứa index.html); mặc định lấy từ du-an.json")
     ap.add_argument("--characters", nargs="*", default=[], help="tên nhân vật hoặc 'all'")
     ap.add_argument("--sfx", action="store_true", help="chép thư viện âm thanh")
     ap.add_argument("--fonts", action="store_true", help="chép font Be Vietnam Pro")
@@ -63,7 +64,7 @@ def main():
     if a.lietke:
         liet_ke()
         return
-    proj = Path(a.project)
+    proj = Path(a.project) if a.project else du_an().video
     if not proj.exists():
         sys.exit(f"Không thấy thư mục dự án: {proj}")
     assets = proj / "assets"

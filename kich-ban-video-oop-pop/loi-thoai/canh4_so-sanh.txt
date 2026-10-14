@@ -1,9 +1,0 @@
-Bây giờ hãy thử một yêu cầu mới: cho Sparrow và Drone phát được tiếng kêu.
-
-Với cây kế thừa, SoundPlayer không thể nằm ở Animal, vì Drone đâu phải động vật. Bạn hoặc phải copy code, hoặc phải đổi cả cái cây. Chạm vào cây là chạm vào mọi class con, và bạn phải kiểm tra lại tất cả.
-
-Với protocol, bạn thêm một khối mới tên là SoundPlayer, rồi ký vào đúng hai kiểu cần dùng. Không ai khác bị động chạm.
-
-Hãy nhìn vào bảng so sánh. Câu hỏi đầu tiên: OOP hỏi nó là cái gì, POP hỏi nó làm được gì. Về cách tái sử dụng: OOP thừa hưởng từ class cha, còn POP ghép các protocol cùng extension mặc định. Một kiểu chỉ có một class cha, nhưng có thể ký nhiều protocol. Về phát hiện lỗi: kế thừa dễ nổ lúc chạy, như Penguin gọi fly, còn protocol để compiler chặn ngay từ lúc build. Và hình dạng của code theo thời gian: cây kế thừa càng sâu càng rối, còn POP mở rộng theo chiều ngang, thêm khối chứ không thêm tầng.
-
-Khác biệt lớn nhất không nằm ở cú pháp, mà ở câu hỏi đầu tiên bạn đặt ra.

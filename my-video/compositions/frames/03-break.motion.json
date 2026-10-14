@@ -1,7 +1,0 @@
-{
-  "scene": "03-break",
-  "duration_s": 62.2,
-  "rules": ["multi-phase-camera", "chromatic-glitch", "physics-press-reaction", "spring-pop-entrance", "svg-path-draw", "discrete-text-sequence", "viewport-change"],
-  "exit": { "vector": "camera drift only: ~2px/s sine + scale +0.4%/s (z 1.715->1.727); stage opacity fades 1->0 over the last 0.4s", "still_moving": true },
-  "entry": { "vector": "camera dive-in: scale 0.914->1.0 over 1.8s power2.out, ~95px/s at frame edges at t=0; stage fades in over 0.4s", "from_rest": false }
-}

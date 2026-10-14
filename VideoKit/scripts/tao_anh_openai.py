@@ -9,7 +9,7 @@ Khóa đọc từ OPENAI_API_KEY (biến môi trường hoặc file .env ở th�
     python3 VideoKit/scripts/tao_anh_openai.py --model gpt-image-2.5-sunburst --chat-luong high
 
 Thứ tự: `khi` tạo từ chữ; mọi ảnh còn lại dùng ảnh khỉ làm tham chiếu phong cách (endpoint /v1/images/edits)
-để cả bộ đồng nhất. Kết quả ghi vào my-video/assets/images/. Chạy lại sẽ bỏ qua ảnh đã có.
+để cả bộ đồng nhất. Kết quả ghi vào <video>/assets/images/. Chạy lại sẽ bỏ qua ảnh đã có.
 """
 import argparse
 import base64

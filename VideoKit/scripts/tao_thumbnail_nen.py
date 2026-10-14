@@ -4,7 +4,7 @@
     python3 VideoKit/scripts/tao_thumbnail_nen.py                 # 3 phương án
     python3 VideoKit/scripts/tao_thumbnail_nen.py --so-luong 1 --model gpt-image-2.5-sunburst --chat-luong high
 
-Kết quả: thumbnail/nen-1.png, nen-2.png, ... (1536x864). Chữ và logo được ghép sau bằng HTML (đủ dấu tiếng Việt).
+Kết quả: <dự án>/thumbnail/nen-1.png, nen-2.png, ... (1536x864). Chữ và logo được ghép sau bằng HTML (đủ dấu tiếng Việt).
 """
 import os
 import argparse

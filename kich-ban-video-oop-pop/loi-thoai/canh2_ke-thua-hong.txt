@@ -1,7 +1,0 @@
-Rồi sếp báo: thêm chim cánh cụt. Chim cánh cụt là một loài chim, nên bạn cho nó kế thừa Bird. Nhưng Bird có hàm fly. Còn chim cánh cụt thì không biết bay.
-
-Bạn có hai lựa chọn xấu. Một là cho hàm fly của Penguin ném ra một lỗi. Hai là tách lại cả cây kế thừa. Cách thứ nhất phá vỡ nguyên tắc thay thế Liskov: ở bất cứ chỗ nào dùng được Bird, thì Penguin cũng phải dùng được. Vậy mà khi một hàm gọi fly cho cả đàn chim, chương trình nổ ngay khi gặp chim cánh cụt.
-
-Chưa hết. Tuần sau, sếp muốn thêm một chiếc máy bay không người lái, tên là Drone. Nó biết bay, nhưng không phải động vật. Nó không thể kế thừa Bird, vì nó đâu phải chim. Mà TypeScript chỉ cho phép kế thừa một class duy nhất. Vậy là bạn copy logic bay sang một chỗ khác. Từ giờ, có hai bản sao cần sửa cùng lúc, và sớm muộn gì cũng có một bản bị quên.
-
-Cứ thế, cây kế thừa mọc thêm nhánh, các mũi tên chồng chéo lên nhau, và không ai dám sửa nữa. Đây chính là con khỉ và quả chuối. Bạn chỉ muốn khả năng bay, nhưng OOP bắt bạn lấy cả dòng dõi.

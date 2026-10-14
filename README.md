@@ -1,10 +1,9 @@
 # VideoFrame
 
-Dự án làm video giải thích bằng HyperFrames, kèm **VideoKit**: thư viện asset và công cụ dùng lại cho các video sau.
+Hệ thống làm video giải thích bằng [HyperFrames](https://hyperframes.heygen.com): một thư viện dùng chung và các dự án video làm từ cùng một khuôn.
 
-- [`VideoKit/`](VideoKit/README.md): nhân vật, hiệu ứng âm thanh, font, logo, script, mẫu và quy trình.
-- `my-video/`: dự án HyperFrames của video đầu tiên, "So sánh OOP và POP" (8 cảnh, 8 phút 42 giây).
-- `kich-ban-video-oop-pop/`: kịch bản, lời thoại và script tạo giọng đọc của video đầu tiên.
-- `thumbnail/`: thumbnail YouTube của video đầu tiên (dựng bằng HTML).
+- [`VideoKit/`](VideoKit/README.md): nhân vật, hiệu ứng âm thanh, font, logo, script, khuôn dự án và quy trình.
+- `videos/<slug>/`: mỗi video một thư mục theo khuôn chuẩn (xem `VideoKit/templates/du-an/README.md`). Tạo video mới bằng `python3 VideoKit/scripts/tao_du_an.py <slug> ...`.
 
+Video đầu tiên ("So sánh OOP và POP") dùng bố cục cũ và chỉ còn trong lịch sử git (commit `bb86b53`).
 File render (`*.mp4`), khóa API (`.env`) và cache không nằm trong repo.

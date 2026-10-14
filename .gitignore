@@ -8,28 +8,8 @@
 __pycache__/
 *.pyc
 
-# sản phẩm render và cache (tái tạo được, quá lớn)
 *.mp4
-my-video/renders/
-my-video/.hyperframes/
-my-video/.thumbnails/
-my-video/.waveform-cache/
-my-video/assets/audio/sfx-track.wav
-thumbnail/out/
 node_modules/
-
-# tệp thử nghiệm / nguồn bản quyền chưa rõ
-my-video/assets/images/khi-mau-cat-nen.png
-my-video/assets/images/thu-nghiem-openai/
-my-video/assets/images/demo-logo-goc-phai.png
-kich-ban-video-oop-pop/nghe-thu-giong/
-kich-ban-video-oop-pop.zip
-
-# bản gốc logo ở gốc dự án đã có bản sao trong VideoKit/brand
-/logo.PNG
-thumbnail/.hyperframes/
-thumbnail/.thumbnails/
-thumbnail/.waveform-cache/
 
 # dự án tạo từ khuôn
 *.zip

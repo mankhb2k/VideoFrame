@@ -1,3 +1,0 @@
-Tóm lại: đừng bỏ OOP, hãy bỏ thói quen kế thừa mặc định. Trước khi viết class, hãy hỏi một câu: mình cần khả năng gì? Hãy bắt đầu từ khả năng, rồi mới tới dòng dõi.
-
-Việc nên làm trong tuần sau: mở dự án của bạn, tìm cây kế thừa sâu nhất, và thử tách một khả năng trong đó ra thành một interface. Cây kế thừa trong dự án của bạn sâu mấy tầng? Hãy viết vào phần bình luận nhé. Cảm ơn bạn đã xem video.

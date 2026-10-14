@@ -1,7 +1,0 @@
-{
-  "scene": "07-rules",
-  "duration_s": 85.2,
-  "rules": ["waterfall-entry", "discrete-text-sequence", "fixed-anchor-cycle", "stat-bars-and-fills", "asr-keyword-glow", "grid-card-assemble"],
-  "exit": { "vector": "opacity fade-out only over last 0.4s, still checklist (0 px/s translation)", "still_moving": false },
-  "entry": { "vector": "opacity fade-in over first 0.4s; title words rising ~ +90px to 0 (about 450 px/s at 0.4s)", "from_rest": false }
-}
