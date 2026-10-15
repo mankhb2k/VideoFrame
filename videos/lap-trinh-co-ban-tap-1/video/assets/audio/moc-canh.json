@@ -1,0 +1,13 @@
+[
+ {
+  "canh": "canh1_bien-va-kieu-du-lieu",
+  "id": "canh1",
+  "stt": 1,
+  "audio": 155.0,
+  "start": 0.0,
+  "duration": 155.6,
+  "uoc_tinh": true,
+  "composition": "compositions/frames/01-canh1.html",
+  "doan": []
+ }
+]

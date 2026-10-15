@@ -1,0 +1,11 @@
+{
+  "name": "lap-trinh-co-ban-tap-1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx --yes hyperframes@0.8.152 preview",
+    "check": "npx --yes hyperframes@0.8.152 check",
+    "render:nhap": "HF_CAPTURE_PARALLEL_STREAM=true npx --yes hyperframes@0.8.152 render --fps 30 --quality draft -o ../renders/lap-trinh-co-ban-tap-1-nhap-30fps.mp4",
+    "render:cuoi": "HF_CAPTURE_PARALLEL_STREAM=true npx --yes hyperframes@0.8.152 render --fps 60 --quality looks -o ../renders/lap-trinh-co-ban-tap-1-60fps.mp4"
+  }
+}

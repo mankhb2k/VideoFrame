@@ -1,0 +1,47 @@
+{
+  "slug": "lap-trinh-co-ban-tap-1",
+  "ten": "Lập trình cơ bản tập 1: Biến và kiểu dữ liệu",
+  "tao_ngay": "2026-10-15",
+  "phien_ban_hyperframes": "0.8.152",
+  "khung": {
+    "rong": 1920,
+    "cao": 1080,
+    "fps_nhap": 30,
+    "fps_cuoi": 60,
+    "chu_de": "sang"
+  },
+  "thu_muc": {
+    "kich_ban": "kich-ban",
+    "loi_thoai": "loi-thoai",
+    "video": "video",
+    "thumbnail": "thumbnail"
+  },
+  "giong": {
+    "nha_cung_cap": "gemini",
+    "model": "gemini-3.8-flash-tts",
+    "giong": "vi-vn-advisor-2",
+    "do_tre_giay": 0.3,
+    "am_luong": 1
+  },
+  "logo": {
+    "hien": true,
+    "file": "assets/images/logo-tron.png",
+    "vi_tri": "phai-duoi",
+    "kich_thuoc": 132,
+    "le": 44
+  },
+  "sfx": {
+    "track": "assets/audio/sfx-track.wav",
+    "am_luong": 0.65
+  },
+  "canh": [
+    {
+      "id": "canh1",
+      "ten": "Biến và kiểu dữ liệu",
+      "tep_kich_ban": "canh-1-bien-va-kieu-du-lieu.md",
+      "tep_loi_thoai": "canh1_bien-va-kieu-du-lieu",
+      "du_kien_giay": 155,
+      "giu_them_giay": 0
+    }
+  ]
+}
