@@ -1,3 +1,0 @@
-Đây là một đoạn code thật của một tiệm tạp hoá. Nếu bạn nhìn vào và thấy rối, bạn không đơn độc: ai mới học lập trình cũng vậy.
-
-Nhưng cuối video này, bạn sẽ đọc được từng dòng của nó, và hiểu cách một phần mềm triệu đô được tạo ra. Để làm được điều đó, chúng ta sẽ không bắt đầu bằng code. Chúng ta bắt đầu bằng một câu chuyện.

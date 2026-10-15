@@ -43,7 +43,7 @@ Chỉ tạo dáng riêng khi **cơ thể hoặc nét mặt** mang ý nghĩa (b�
 - Chiều cao tương đối giữa các nhân vật chỉnh khi dựng cảnh, không chỉnh trong ảnh.
 - Dáng ngồi hoặc đứng sau quầy chỉ lấy nửa thân trên.
 
-## Thứ tự làm một video (rút kinh nghiệm video Ông Sơn)
+## Thứ tự làm một video (rút kinh nghiệm từ video trước)
 
 1. Kịch bản → danh sách ảnh và ảnh (tối thiểu, gộp, path motion) → **giọng đọc → nghe và chốt giọng → whisper lấy mốc từng từ** → storyboard theo mốc thật → dựng cảnh → sfx → render.
 2. **Chốt giọng trước khi dựng cảnh.** Giọng đọc rẻ (vài chục cent) nhưng mọi nhịp hình trong cảnh gán theo mốc giây của giọng; đổi giọng sau khi dựng là phải co giãn lại toàn bộ.
@@ -57,7 +57,7 @@ Nền trắng ngà `#F8F7F4`, chữ đen, màu chữ theo nghĩa (giá liệt k�
 
 ## Ngôn ngữ: mã component và nội dung video
 
-- **Mã dùng chung trong `VideoKit/components/`** (tên hàm, tuỳ chọn, class CSS mới) viết **tiếng Anh**, ví dụ `vk.ide`, `type`, `show`, `highlight`. Phần cũ của `core/` còn tên tiếng Việt (`vao`, `pop`, `cung`...), không đổi khi chưa có bí danh vì các cảnh Ông Sơn đang dùng.
+- **Mã dùng chung trong `VideoKit/components/`** (tên hàm, tuỳ chọn, class CSS mới) viết **tiếng Anh**, ví dụ `vk.ide`, `type`, `show`, `highlight`. Phần cũ của `core/` còn tên tiếng Việt (`vao`, `pop`, `cung`...), không đổi khi chưa có bí danh.
 - **Nội dung hiển thị trong video** (code demo, chữ trên màn hình, lời dẫn, tên nhân vật) giữ **tiếng Việt**: tên biến trong code demo không dấu (`ten_cua_hang`), chuỗi chữ có dấu (`"Tạp hoá Ông Sơn"`).
 
 ## Kịch bản dạy tư duy lập trình
@@ -67,7 +67,7 @@ Khi viết hoặc sửa kịch bản loạt "lập trình cơ bản" (thư mục
 ## Render
 
 - Lệnh render trong `package.json` đã kèm `HF_CAPTURE_PARALLEL_STREAM=true` để đưa khung hình thẳng sang ffmpeg, **không lưu ảnh tạm xuống đĩa**. Không bật thì nhiều worker lưu mỗi khung hình thành một file ảnh (video 13 phút ở 60 fps cần khoảng 97 GB) và lỗi nếu đĩa không đủ.
-- Ước thời gian render 60 fps: khoảng 3,3 phút cho mỗi phút video trên máy này (video Ông Sơn 13 phút mất 43 phút). Đừng ước từ tốc độ của vài chục giây đầu.
+- Ước thời gian render 60 fps: khoảng 3,3 phút cho mỗi phút video trên máy này (video 13 phút trước đây mất 43 phút). Đừng ước từ tốc độ của vài chục giây đầu.
 - Chỉ render khi người dùng yêu cầu; trước đó tắt `hyperframes preview` và kiểm `index.html` khớp bản vừa dựng.
 
 ## Chuyện cần nhớ
