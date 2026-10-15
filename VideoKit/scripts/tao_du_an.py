@@ -63,6 +63,7 @@ def main():
     ap.add_argument("--y-dinh", default="<video này là gì, cho ai, giọng điệu>")
     ap.add_argument("--giong", default="vi-vn-advisor-2")
     ap.add_argument("--model", default="gemini-3.8-flash-tts")
+    ap.add_argument("--chu-de", choices=["sang", "toi"], default="sang", help="nền sáng (mặc định, video học thuật) hoặc nền tối")
     a = ap.parse_args()
 
     slug = khong_dau(a.slug)
@@ -90,7 +91,7 @@ def main():
 
     cfg = {
         "slug": slug, "ten": ten, "tao_ngay": thay["ngay"], "phien_ban_hyperframes": PHIEN_BAN_HYPERFRAMES,
-        "khung": {"rong": 1920, "cao": 1080, "fps_nhap": 30, "fps_cuoi": 60},
+        "khung": {"rong": 1920, "cao": 1080, "fps_nhap": 30, "fps_cuoi": 60, "chu_de": a.chu_de},
         "thu_muc": {"kich_ban": "kich-ban", "loi_thoai": "loi-thoai", "video": "video", "thumbnail": "thumbnail"},
         "giong": {"nha_cung_cap": "gemini", "model": a.model, "giong": a.giong, "do_tre_giay": 0.3, "am_luong": 1},
         "logo": {"hien": True, "file": "assets/images/logo-tron.png", "vi_tri": "phai-duoi", "kich_thuoc": 132, "le": 44},

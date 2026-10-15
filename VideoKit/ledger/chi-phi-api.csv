@@ -4,3 +4,20 @@ ngay,du_an,dich_vu,model,muc_dich,so_luong,chi_phi_usd_uoc_tinh,ghi_chu
 2026-10-13,oop-vs-pop,OpenAI Images,gpt-image-1-mini/2.5-flare/2.5-sunburst/1.5,so sanh model (4 anh thu),4,0.088,chi de chon model
 2026-10-13,oop-vs-pop,OpenAI Audio,whisper-1,moc tung tu 8 canh (8.7 phut),8,0.055,0.006 USD moi phut
 2026-10-13,oop-vs-pop,OpenAI Images,gpt-image-2.5-flare,3 phuong an nen thumbnail 1536x864,3,0.126,quality high; edits voi anh tham chieu
+2026-10-14,ong-son,OpenAI Images,gpt-image-2.5-flare,tao_anh.py (chon-loc),6,0.136,uoc tinh tu so token
+2026-10-14,ong-son,OpenAI Images,gpt-image-2.5-sunburst,"tao_anh.py (chon-loc) (3 dang thu, sua model)",3,0.067,uoc tinh tu so token
+2026-10-14,ong-son,OpenAI Images,gpt-image-2.5-flare,tao_anh.py (goc),2,0.045,uoc tinh tu so token
+2026-10-14,ong-son,OpenAI Images,gpt-image-2.5-flare,tao_anh.py (vat-pham),14,0.311,uoc tinh tu so token
+2026-10-14,ong-son,OpenAI Images,gpt-image-2.5-flare,tao_anh.py (dang),9,0.2,uoc tinh tu so token
+2026-10-14,ong-son,OpenAI Images,gpt-image-2.5-flare,tao_anh.py (nen),2,0.083,uoc tinh tu so token
+2026-10-14,ong-son,OpenAI Images,gpt-image-2.5-flare,tao_anh.py (chon-loc),1,0.031,uoc tinh tu so token
+2026-10-14,ong-son,OpenAI Images,gpt-image-2.5-sunburst,"tao_anh.py (chon-loc) (3 dang thu, sua model)",3,0.067,uoc tinh tu so token
+2026-10-14,ong-son,Google Gemini TTS,gemini-3.8-flash-tts,giong doc cac khoi loi dan,7,0.021,uoc tinh tu usageMetadata
+2026-10-14,ong-son,Google Gemini TTS,gemini-3.8-flash-tts,giong doc cac khoi loi dan,42,0.110,uoc tinh tu usageMetadata
+2026-10-14,ong-son,OpenAI Audio,whisper-1,moc tung tu 6 canh (13.8 phut),6,0.083,0.006 USD moi phut
+2026-10-14,ong-son,OpenAI Images,gpt-image-2.5-flare,tao_anh.py (chon-loc),1,0.023,uoc tinh tu so token
+2026-10-14,ong-son,Google Gemini TTS,gemini-3.8-flash-tts,giong doc moi canh mot yeu cau,6,0.170,uoc tinh tu usageMetadata
+2026-10-14,ong-son,OpenAI Audio,whisper-1,moc tung tu 6 canh giong moi (12.5 phut),6,0.075,0.006 USD moi phut
+2026-10-14,ong-son,Google Gemini TTS,gemini-3.8-flash-tts,giong doc 1 khoi thay (canh5-d1-k1),1,0.003,uoc tinh
+2026-10-14,ong-son,OpenAI Audio,whisper-1,moc tung tu 6 canh ban phoi lai (12.9 phut),6,0.078,0.006 USD moi phut
+2026-10-14,ong-son,OpenAI Audio,whisper-1,moc tung tu sau chinh sua studio (2 lan),12,0.16,0.006 USD moi phut

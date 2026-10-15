@@ -19,3 +19,7 @@ Use the reference image ONLY as a style guide (rendering style, shading, outline
 ```
 
 Quy tắc màu trong video: đỏ chỉ để báo lỗi, xanh ngọc cho cái ổn/POP, hổ phách cho OOP. Nhân vật tránh đỏ và xanh lá; tránh thân quá tối vì chìm vào nền video `#0B1020`.
+
+## Với nền trắng ngà (video học thuật, thương hiệu THO CODE)
+
+Nhân vật không mặc trắng tinh (chìm vào nền trắng ngà), đỏ hoặc xanh lá. Ưu tiên xanh nhạt, xám xanh, cam, tím, vàng đậm. Ảnh vẫn là PNG nền trong suốt; bóng đổ nhẹ thêm bằng CSS (`.th-nhanvat`). Bảng màu đầy đủ: `brand/bang-mau-thuong-hieu.png`.

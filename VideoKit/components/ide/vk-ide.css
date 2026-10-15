@@ -1,0 +1,26 @@
+/* Cửa sổ soạn code kiểu VS Code + terminal (vk.ide). Khung đen có 3 chấm macOS theo thương hiệu; màu cú pháp theo VS Code Dark+ để người xem thấy quen. */
+.ide { position: absolute; left: 0; top: 0; background: #1E1E1E; color: #D4D4D4; border: var(--vien-ma); border-radius: var(--ban-kinh); box-shadow: var(--bong-ma); overflow: hidden; font-family: 'JetBrains Mono', monospace; }
+.ide-dau { position: absolute; left: 0; right: 0; top: 0; height: 44px; display: flex; align-items: center; gap: 9px; padding: 0 18px; background: var(--ma-dau); border-bottom: 1px solid #000; color: var(--ma-chu-thich); font-size: 16px; }
+.ide-dau i { display: inline-block; width: 15px; height: 15px; border-radius: 50%; }
+.ide-dau i:nth-child(1) { background: var(--cham-do); } .ide-dau i:nth-child(2) { background: var(--cham-vang); } .ide-dau i:nth-child(3) { background: var(--cham-xanh); }
+.ide-dau span { margin: 0 auto; transform: translateX(-24px); }
+.ide-tabs { position: absolute; left: 0; right: 0; top: 44px; height: 40px; display: flex; background: #252526; }
+.ide-tab { display: flex; align-items: center; gap: 10px; padding: 0 22px; font-size: 17px; color: #969696; border-right: 1px solid #1E1E1E; }
+.ide-tab.on { background: #1E1E1E; color: #FFFFFF; box-shadow: inset 0 2px 0 var(--cam); }
+.ide-tab b { color: #4EC9B0; font-weight: 700; }
+.ide-body { position: absolute; left: 0; right: 0; display: flex; overflow: hidden; }
+.ide-gutter { flex: 0 0 auto; text-align: right; color: #6E7681; padding-right: 18px; user-select: none; }
+.ide-code { flex: 1; min-width: 0; white-space: pre; }
+.ide-row { white-space: pre; border-left: 3px solid transparent; padding-left: 12px; margin-left: -3px; border-radius: 0 6px 6px 0; }
+.ide-term { position: absolute; left: 0; right: 0; background: #1E1E1E; border-top: 1px solid #3C3C3C; }
+.ide-term-dau { height: 38px; display: flex; align-items: center; gap: 26px; padding: 0 22px; font-size: 15px; color: #969696; letter-spacing: 1px; }
+.ide-term-dau b { color: #E7E7E7; font-weight: 700; box-shadow: 0 2px 0 var(--cam); padding: 8px 0; }
+.ide-term-than { position: absolute; left: 0; right: 0; top: 38px; bottom: 0; overflow: hidden; }
+.ide-trang { position: absolute; left: 0; top: 0; right: 0; padding: 6px 22px; white-space: pre; color: #CCCCCC; }
+.ide-dong-term { white-space: pre; }
+.ide-dong-term .dau { color: #6A9955; }
+.ide-trang-tr { background: rgba(255,255,255,0.0); }
+.ide-stt { position: absolute; left: 0; right: 0; bottom: 0; height: 30px; display: flex; align-items: center; justify-content: space-between; padding: 0 18px; background: #007ACC; color: #FFFFFF; font-size: 14px; }
+.t-kw { color: #C586C0; } .t-ctrl { color: #569CD6; } .t-fn { color: #DCDCAA; } .t-str { color: #CE9178; } .t-num { color: #B5CEA8; }
+.t-cmt { color: #6A9955; font-style: italic; } .t-var { color: #9CDCFE; } .t-const { color: #569CD6; } .t-op { color: #D4D4D4; }
+.ide-caret { display: inline-block; width: 0.55em; background: #AEAFAD; margin-left: 1px; }

@@ -1,0 +1,68 @@
+/* Hệ thống màu và vật thể THO CODE (nền trắng ngà). Một nguồn duy nhất: sửa ở đây rồi chạy lại build_index.py và tao_bang_mau.py.
+   build_index.py chèn nội dung này vào index.html nên mọi cảnh dùng được var(--...) và các lớp .th-*. */
+:root {
+  /* nền: trắng ngà, không dùng #FFFFFF cho nền (chói) */
+  --nen: #F8F7F4;
+  --nen-phu: #EFEDE8;     /* dải, vùng chia khu */
+  --be-mat: #FFFFFF;      /* mặt thẻ, hoá đơn, giấy (nhỏ, có viền nên không chói) */
+  --ke: #DDD9D0;         /* đường kẻ nhạt, lưới */
+  /* chữ: đen là chính; màu chữ khác chỉ để chỉ NGHĨA (giá, tổng, cảnh báo), không theo thương hiệu */
+  --muc: #111113;        /* chữ chính, viền vật thể (17,6:1) */
+  --muc-phu: #4B4B52;    /* chữ phụ (8,1:1) */
+  --muc-mo: #6B6B73;     /* chú thích (4,9:1), chữ nhỏ vừa đủ */
+  /* màu chữ theo nghĩa (đo trên nền): */
+  --chu-gia: #1E3A8A;      /* giá khi liệt kê, số liệu: xanh dương đậm (9,7:1); có thể dùng đen thay thế */
+  --chu-gia-ban: #15803D;  /* giá bán: xanh lá đậm (4,7:1) */
+  --chu-tong: #15803D;     /* tổng cộng: xanh lá đậm, in đậm và lớn hơn dòng thường */
+  --chu-canh-bao: #B91C1C; /* cảnh báo, lỗi, sai: đỏ đậm (6,2:1) */
+  /* thương hiệu: cam THO CODE, chỉ để TÔ nền, vòng, gạch chân; KHÔNG dùng làm màu chữ */
+  --cam: #F26A21;
+  /* năm khái niệm: tươi (tô nền vật thể) / đậm (chữ) / nhạt (nền thẻ) */
+  --bien: #FACC15; --bien-dam: #854D0E; --bien-nhat: #FEF9C3;   /* BIẾN: vàng */
+  --ham:  #3B82F6; --ham-dam:  #1D4ED8; --ham-nhat:  #DBEAFE;   /* HÀM: xanh dương */
+  --db:   #8B5CF6; --db-dam:   #6D28D9; --db-nhat:   #EDE9FE;   /* DATABASE: tím */
+  --re:   #14B8A6; --re-dam:   #0F766E; --re-nhat:   #CCFBF1;   /* IF/ELSE (rẽ nhánh): lục lam */
+  --lap:  #EC4899; --lap-dam:  #BE185D; --lap-nhat:  #FCE7F3;   /* VÒNG LẶP: hồng */
+  /* ngữ nghĩa: luôn đi kèm biểu tượng (dấu tích, dấu X), không chỉ dựa vào màu */
+  --on: #22C55E;  --on-dam: #15803D;
+  --loi: #EF4444; --loi-dam: #B91C1C;
+  /* cửa sổ code kiểu macOS: nền đen, thanh tiêu đề có 3 chấm; từ khoá tô theo màu khái niệm */
+  --ma-nen: #111113; --ma-dau: #1E1E22; --ma-chu: #F4F4F5; --ma-chu-thich: #9CA3AF;
+  --ma-bien: #FDE047; --ma-ham: #93C5FD; --ma-db: #C4B5FD; --ma-re: #5EEAD4; --ma-lap: #F9A8D4; --ma-cam: #FDBA74;
+  --cham-do: #FF5F57; --cham-vang: #FEBC2E; --cham-xanh: #28C840;   /* 3 chấm: chỉ là trang trí khung cửa sổ */
+  --chu-tren-mau: #111113;   /* chữ nằm trên màu TƯƠI (viên gạch, ổn, lỗi): luôn đen ở cả hai chế độ sáng/tối */
+  --nv-bong: rgba(17, 17, 19, 0.22);   /* bóng đổ dưới nhân vật và đạo cụ AI */
+  /* vật thể kiểu giao diện thường: viền mảnh và bóng mềm, không dùng bóng đổ cứng */
+  --vien: 1.5px solid #D2CCBE;                       /* thẻ, hoá đơn, sổ */
+  --bong: 0 1px 2px rgba(17, 17, 19, 0.06), 0 8px 24px rgba(17, 17, 19, 0.08);
+  --vien-chip: 1.5px solid rgba(17, 17, 19, 0.22);   /* viên gạch, nhãn, nút */
+  --bong-nho: 0 1px 3px rgba(17, 17, 19, 0.16);
+  --vien-ma: 1px solid #000000;                      /* cửa sổ code */
+  --bong-ma: 0 14px 36px rgba(17, 17, 19, 0.28);
+  --ban-kinh: 14px;
+}
+
+/* vật thể chung: thẻ, hoá đơn, sổ, biển, biểu tượng có khung */
+.th-vat  { background: var(--be-mat); color: var(--muc); border: var(--vien); border-radius: var(--ban-kinh); box-shadow: var(--bong); }
+/* nhân vật và đạo cụ AI (PNG nền trong): đã có viền riêng, chỉ thêm bóng mềm để tách khỏi nền */
+.th-nhanvat { filter: drop-shadow(0 8px 12px var(--nv-bong)); }
+/* viên gạch khái niệm: chữ luôn là --chu-tren-mau (đen), cỡ lớn và đậm */
+.th-gach { display: inline-flex; align-items: center; gap: 10px; padding: 8px 20px; color: var(--chu-tren-mau); font-weight: 800; border: var(--vien-chip); border-radius: 10px; box-shadow: var(--bong-nho); }
+.th-gach-bien { background: var(--bien); } .th-gach-ham { background: var(--ham); } .th-gach-db { background: var(--db); }
+.th-gach-re { background: var(--re); } .th-gach-lap { background: var(--lap); }
+/* chữ */
+.th-chu { color: var(--muc); } .th-chu-phu { color: var(--muc-phu); } .th-chu-mo { color: var(--muc-mo); }
+/* chữ theo nghĩa */
+.th-gia { color: var(--chu-gia); font-weight: 700; }
+.th-gia-ban { color: var(--chu-gia-ban); font-weight: 800; }
+.th-tong { color: var(--chu-tong); font-weight: 800; }
+.th-canh-bao { color: var(--chu-canh-bao); font-weight: 700; }
+.th-bien { color: var(--bien-dam); } .th-ham { color: var(--ham-dam); } .th-db { color: var(--db-dam); } .th-re { color: var(--re-dam); } .th-lap { color: var(--lap-dam); }
+/* cửa sổ code kiểu macOS:
+   <div class="th-cuaso"><div class="th-cuaso-dau"><i></i><i></i><i></i><span>ten-file.py</span></div><pre class="th-ma">...code...</pre></div> */
+.th-cuaso { background: var(--ma-nen); color: var(--ma-chu); border: var(--vien-ma); border-radius: var(--ban-kinh); box-shadow: var(--bong-ma); overflow: hidden; }
+.th-cuaso-dau { display: flex; align-items: center; gap: 9px; padding: 12px 18px; background: var(--ma-dau); border-bottom: 2px solid #000; font: 500 16px 'JetBrains Mono', monospace; color: var(--ma-chu-thich); }
+.th-cuaso-dau i { display: inline-block; width: 15px; height: 15px; border-radius: 50%; }
+.th-cuaso-dau i:nth-child(1) { background: var(--cham-do); } .th-cuaso-dau i:nth-child(2) { background: var(--cham-vang); } .th-cuaso-dau i:nth-child(3) { background: var(--cham-xanh); }
+.th-cuaso-dau span { margin-left: 14px; }
+.th-ma { font-family: 'JetBrains Mono', monospace; padding: 18px 24px; margin: 0; white-space: pre; }

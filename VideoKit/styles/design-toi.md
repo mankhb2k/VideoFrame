@@ -1,5 +1,5 @@
 ---
-name: Khuôn chung VideoKit
+name: Khuôn tối VideoKit (video công nghệ, nhiều code)
 colors:
   background: "#0B1020"
   surface: "#16213E"

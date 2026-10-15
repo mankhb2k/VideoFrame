@@ -27,7 +27,7 @@ def lay_khoa():
     import os
     if os.environ.get("OPENAI_API_KEY"):
         return os.environ["OPENAI_API_KEY"]
-    for env in (GOC / ".env", GOC.parent / ".env"):
+    for env in (GOC / ".env", GOC.parent / ".env", GOC.parent.parent / ".env"):
         if env.exists():
             for dong in env.read_text(encoding="utf-8").splitlines():
                 ten, _, gt = dong.partition("=")

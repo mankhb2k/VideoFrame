@@ -1,0 +1,181 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><style>
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 500;
+  src: url('fonts/be-vietnam-pro-vietnamese-500-normal.woff2') format('woff2');
+  unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;
+}
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 500;
+  src: url('fonts/be-vietnam-pro-latin-ext-500-normal.woff2') format('woff2');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 500;
+  src: url('fonts/be-vietnam-pro-latin-500-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: url('fonts/be-vietnam-pro-vietnamese-700-normal.woff2') format('woff2');
+  unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;
+}
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: url('fonts/be-vietnam-pro-latin-ext-700-normal.woff2') format('woff2');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: url('fonts/be-vietnam-pro-latin-700-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 800;
+  src: url('fonts/be-vietnam-pro-vietnamese-800-normal.woff2') format('woff2');
+  unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;
+}
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 800;
+  src: url('fonts/be-vietnam-pro-latin-ext-800-normal.woff2') format('woff2');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 800;
+  src: url('fonts/be-vietnam-pro-latin-800-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+/* Hệ thống màu và vật thể THO CODE (nền trắng ngà). Một nguồn duy nhất: sửa ở đây rồi chạy lại build_index.py và tao_bang_mau.py.
+   build_index.py chèn nội dung này vào index.html nên mọi cảnh dùng được var(--...) và các lớp .th-*. */
+:root {
+  /* nền: trắng ngà, không dùng #FFFFFF cho nền (chói) */
+  --nen: #F8F7F4;
+  --nen-phu: #EFEDE8;     /* dải, vùng chia khu */
+  --be-mat: #FFFFFF;      /* mặt thẻ, hoá đơn, giấy (nhỏ, có viền nên không chói) */
+  --ke: #DDD9D0;         /* đường kẻ nhạt, lưới */
+  /* chữ: đen là chính; màu chữ khác chỉ để chỉ NGHĨA (giá, tổng, cảnh báo), không theo thương hiệu */
+  --muc: #111113;        /* chữ chính, viền vật thể (17,6:1) */
+  --muc-phu: #4B4B52;    /* chữ phụ (8,1:1) */
+  --muc-mo: #6B6B73;     /* chú thích (4,9:1), chữ nhỏ vừa đủ */
+  /* màu chữ theo nghĩa (đo trên nền): */
+  --chu-gia: #1E3A8A;      /* giá khi liệt kê, số liệu: xanh dương đậm (9,7:1); có thể dùng đen thay thế */
+  --chu-gia-ban: #15803D;  /* giá bán: xanh lá đậm (4,7:1) */
+  --chu-tong: #15803D;     /* tổng cộng: xanh lá đậm, in đậm và lớn hơn dòng thường */
+  --chu-canh-bao: #B91C1C; /* cảnh báo, lỗi, sai: đỏ đậm (6,2:1) */
+  /* thương hiệu: cam THO CODE, chỉ để TÔ nền, vòng, gạch chân; KHÔNG dùng làm màu chữ */
+  --cam: #F26A21;
+  /* năm khái niệm: tươi (tô nền vật thể) / đậm (chữ) / nhạt (nền thẻ) */
+  --bien: #FACC15; --bien-dam: #854D0E; --bien-nhat: #FEF9C3;   /* BIẾN: vàng */
+  --ham:  #3B82F6; --ham-dam:  #1D4ED8; --ham-nhat:  #DBEAFE;   /* HÀM: xanh dương */
+  --db:   #8B5CF6; --db-dam:   #6D28D9; --db-nhat:   #EDE9FE;   /* DATABASE: tím */
+  --re:   #14B8A6; --re-dam:   #0F766E; --re-nhat:   #CCFBF1;   /* IF/ELSE (rẽ nhánh): lục lam */
+  --lap:  #EC4899; --lap-dam:  #BE185D; --lap-nhat:  #FCE7F3;   /* VÒNG LẶP: hồng */
+  /* ngữ nghĩa: luôn đi kèm biểu tượng (dấu tích, dấu X), không chỉ dựa vào màu */
+  --on: #22C55E;  --on-dam: #15803D;
+  --loi: #EF4444; --loi-dam: #B91C1C;
+  /* cửa sổ code kiểu macOS: nền đen, thanh tiêu đề có 3 chấm; từ khoá tô theo màu khái niệm */
+  --ma-nen: #111113; --ma-dau: #1E1E22; --ma-chu: #F4F4F5; --ma-chu-thich: #9CA3AF;
+  --ma-bien: #FDE047; --ma-ham: #93C5FD; --ma-db: #C4B5FD; --ma-re: #5EEAD4; --ma-lap: #F9A8D4; --ma-cam: #FDBA74;
+  --cham-do: #FF5F57; --cham-vang: #FEBC2E; --cham-xanh: #28C840;   /* 3 chấm: chỉ là trang trí khung cửa sổ */
+  --chu-tren-mau: #111113;   /* chữ nằm trên màu TƯƠI (viên gạch, ổn, lỗi): luôn đen ở cả hai chế độ sáng/tối */
+  --nv-bong: rgba(17, 17, 19, 0.22);   /* bóng đổ dưới nhân vật và đạo cụ AI */
+  /* vật thể kiểu giao diện thường: viền mảnh và bóng mềm, không dùng bóng đổ cứng */
+  --vien: 1.5px solid #D2CCBE;                       /* thẻ, hoá đơn, sổ */
+  --bong: 0 1px 2px rgba(17, 17, 19, 0.06), 0 8px 24px rgba(17, 17, 19, 0.08);
+  --vien-chip: 1.5px solid rgba(17, 17, 19, 0.22);   /* viên gạch, nhãn, nút */
+  --bong-nho: 0 1px 3px rgba(17, 17, 19, 0.16);
+  --vien-ma: 1px solid #000000;                      /* cửa sổ code */
+  --bong-ma: 0 14px 36px rgba(17, 17, 19, 0.28);
+  --ban-kinh: 14px;
+}
+
+/* vật thể chung: thẻ, hoá đơn, sổ, biển, biểu tượng có khung */
+.th-vat  { background: var(--be-mat); color: var(--muc); border: var(--vien); border-radius: var(--ban-kinh); box-shadow: var(--bong); }
+/* nhân vật và đạo cụ AI (PNG nền trong): đã có viền riêng, chỉ thêm bóng mềm để tách khỏi nền */
+.th-nhanvat { filter: drop-shadow(0 8px 12px var(--nv-bong)); }
+/* viên gạch khái niệm: chữ luôn là --chu-tren-mau (đen), cỡ lớn và đậm */
+.th-gach { display: inline-flex; align-items: center; gap: 10px; padding: 8px 20px; color: var(--chu-tren-mau); font-weight: 800; border: var(--vien-chip); border-radius: 10px; box-shadow: var(--bong-nho); }
+.th-gach-bien { background: var(--bien); } .th-gach-ham { background: var(--ham); } .th-gach-db { background: var(--db); }
+.th-gach-re { background: var(--re); } .th-gach-lap { background: var(--lap); }
+/* chữ */
+.th-chu { color: var(--muc); } .th-chu-phu { color: var(--muc-phu); } .th-chu-mo { color: var(--muc-mo); }
+/* chữ theo nghĩa */
+.th-gia { color: var(--chu-gia); font-weight: 700; }
+.th-gia-ban { color: var(--chu-gia-ban); font-weight: 800; }
+.th-tong { color: var(--chu-tong); font-weight: 800; }
+.th-canh-bao { color: var(--chu-canh-bao); font-weight: 700; }
+.th-bien { color: var(--bien-dam); } .th-ham { color: var(--ham-dam); } .th-db { color: var(--db-dam); } .th-re { color: var(--re-dam); } .th-lap { color: var(--lap-dam); }
+/* cửa sổ code kiểu macOS:
+   <div class="th-cuaso"><div class="th-cuaso-dau"><i></i><i></i><i></i><span>ten-file.py</span></div><pre class="th-ma">...code...</pre></div> */
+.th-cuaso { background: var(--ma-nen); color: var(--ma-chu); border: var(--vien-ma); border-radius: var(--ban-kinh); box-shadow: var(--bong-ma); overflow: hidden; }
+.th-cuaso-dau { display: flex; align-items: center; gap: 9px; padding: 12px 18px; background: var(--ma-dau); border-bottom: 2px solid #000; font: 500 16px 'JetBrains Mono', monospace; color: var(--ma-chu-thich); }
+.th-cuaso-dau i { display: inline-block; width: 15px; height: 15px; border-radius: 50%; }
+.th-cuaso-dau i:nth-child(1) { background: var(--cham-do); } .th-cuaso-dau i:nth-child(2) { background: var(--cham-vang); } .th-cuaso-dau i:nth-child(3) { background: var(--cham-xanh); }
+.th-cuaso-dau span { margin-left: 14px; }
+.th-ma { font-family: 'JetBrains Mono', monospace; padding: 18px 24px; margin: 0; white-space: pre; }
+
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1600px;background:var(--nen);color:var(--muc);font-family:'Be Vietnam Pro',sans-serif;padding:56px 64px 60px}
+h1{font-size:46px;font-weight:800;letter-spacing:-.01em} h1 u{text-decoration:none;border-bottom:8px solid var(--cam)}
+.top{display:flex;align-items:center;gap:26px;margin-bottom:34px} .top img{width:96px;height:96px;border-radius:50%}
+.sub{font-size:21px;color:var(--muc-phu);margin-top:6px}
+h2{font-size:26px;font-weight:800;margin:38px 0 16px;color:var(--muc)}
+.bill{width:760px;padding:22px 28px;margin-top:24px} .bill .bd{font-size:26px;font-weight:800;margin-bottom:10px} .r1{display:flex;justify-content:space-between;font-size:24px;padding:7px 0;border-bottom:1px solid var(--ke)} .r1.tt{border-bottom:none;font-size:30px;padding-top:12px} .r1.gb{border-bottom:none;font-size:22px;padding-top:2px}
+.row{display:flex;gap:18px;flex-wrap:wrap}
+.sw{width:172px} .sw .chip{height:84px;border:var(--vien);border-radius:12px;box-shadow:var(--bong);margin-bottom:12px}
+.sw b{display:block;font-size:17px} .sw span{display:block;font-size:15px;color:var(--muc-phu);font-family:'JetBrains Mono',monospace} .sw i{display:block;font-size:14px;color:var(--muc-mo);font-style:normal}
+.kn{flex:1} .hexs{font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--muc-phu);margin-top:16px;line-height:1.55}
+.cmp{display:flex;gap:36px;align-items:flex-start} .cmp>div{flex:1}
+.sem{display:flex;gap:18px} .sem .th-vat{padding:14px 22px;font-size:22px;font-weight:800;display:flex;align-items:center;gap:12px;color:var(--chu-tren-mau)}
+.th-ma{font-size:25px;line-height:1.7} .c{color:var(--ma-chu-thich)} .b{color:var(--ma-bien)} .h{color:var(--ma-ham)} .d{color:var(--ma-db)} .r{color:var(--ma-re)} .l{color:var(--ma-lap)} .o{color:var(--ma-cam)}
+.mau p{font-size:30px;line-height:1.5;font-weight:600}
+</style></head><body>
+<div class="top"><img src="logo-tron.png"><div><h1>THO CODE · Bảng <u>nhận diện</u> video học thuật (nền sáng)</h1><div class="sub">Nền trắng ngà · chữ đen · màu chữ theo nghĩa (giá, tổng, cảnh báo) · thẻ viền mảnh, bóng mềm · code trong cửa sổ đen</div></div></div>
+<h2>1. Nền và chữ (độ tương phản đo trên nền)</h2>
+<div class="row">
+<div class="sw"><div class="chip" style="background:var(--nen)"></div><b>Nền trắng ngà</b><span>#F8F7F4</span><i>nền chính</i></div><div class="sw"><div class="chip" style="background:var(--nen-phu)"></div><b>Nền phụ</b><span>#EFEDE8</span><i>dải, chia khu</i></div><div class="sw"><div class="chip" style="background:var(--be-mat)"></div><b>Mặt thẻ</b><span>#FFFFFF</span><i>thẻ, giấy, hoá đơn</i></div><div class="sw"><div class="chip" style="background:var(--ke)"></div><b>Đường kẻ</b><span>#DDD9D0</span><i>lưới, kẻ nhạt</i></div>
+<div class="sw"><div class="chip" style="background:var(--muc)"></div><b>Đen</b><span>#111113</span><i>17.6 : 1 trên nền</i></div><div class="sw"><div class="chip" style="background:var(--muc-phu)"></div><b>Chữ phụ</b><span>#4B4B52</span><i>8.1 : 1 trên nền</i></div><div class="sw"><div class="chip" style="background:var(--muc-mo)"></div><b>Chú thích</b><span>#6B6B73</span><i>4.9 : 1 trên nền</i></div>
+<div class="sw"><div class="chip" style="background:var(--chu-gia)"></div><b>Giá liệt kê, số liệu</b><span>#1E3A8A</span><i>9.7 : 1 trên nền</i></div><div class="sw"><div class="chip" style="background:var(--chu-gia-ban)"></div><b>Giá bán, tổng</b><span>#15803D</span><i>4.7 : 1 trên nền</i></div><div class="sw"><div class="chip" style="background:var(--chu-canh-bao)"></div><b>Cảnh báo, lỗi</b><span>#B91C1C</span><i>6.0 : 1 trên nền</i></div><div class="sw"><div class="chip" style="background:var(--cam)"></div><b>Cam THO CODE</b><span>#F26A21</span><i>chỉ tô nền, logo</i></div>
+</div>
+<div class="mau" style="margin-top:26px"><p>Chữ thường màu đen. Màu chữ khác chỉ để chỉ nghĩa: <span class="th-gia">giá khi liệt kê</span> xanh dương đậm, <span class="th-gia-ban">giá bán</span> và <span class="th-tong">tổng</span> xanh lá đậm, <span class="th-canh-bao">cảnh báo</span> đỏ.</p></div>
+<div class="th-vat bill"><div class="bd">Hoá đơn HD001</div>
+<div class="r1"><span>Gạo ST25 × 10 ký</span><span class="th-gia">300.000đ</span></div>
+<div class="r1"><span>Nước mắm hãng A × 2 chai</span><span class="th-gia">90.000đ</span></div>
+<div class="r1"><span>Muối × 1 gói</span><span class="th-gia">8.000đ</span></div>
+<div class="r1"><span class="th-canh-bao">⚠ Hết hàng: nước mắm hãng B</span><span></span></div>
+<div class="r1 tt"><span>Tổng cộng</span><span class="th-tong">398.000đ</span></div>
+<div class="r1 gb"><span class="th-chu-phu">Giá bán lẻ hôm nay: gạo ST25</span><span class="th-gia-ban">30.000đ / ký</span></div></div>
+<h2>2. Năm khái niệm: tươi để tô vật thể, đậm/sáng để làm chữ, nhạt để làm nền thẻ</h2>
+<div class="row"><div class="kn"><div class="th-gach th-gach-bien" style="font-size:30px">BIẾN</div><div class="th-vat" style="background:var(--bien-nhat);padding:14px 16px;margin-top:22px"><div style="font-size:22px;font-weight:800;color:var(--bien-dam)">Biến là cái nhãn</div><div style="font-size:15px;color:var(--muc-phu);margin-top:4px">chữ đậm trên nền nhạt</div></div><div class="hexs">tươi #FACC15<br>đậm/sáng #854D0E<br>nhạt #FEF9C3</div></div><div class="kn"><div class="th-gach th-gach-ham" style="font-size:30px">HÀM</div><div class="th-vat" style="background:var(--ham-nhat);padding:14px 16px;margin-top:22px"><div style="font-size:22px;font-weight:800;color:var(--ham-dam)">Hàm là người làm một việc</div><div style="font-size:15px;color:var(--muc-phu);margin-top:4px">chữ đậm trên nền nhạt</div></div><div class="hexs">tươi #3B82F6<br>đậm/sáng #1D4ED8<br>nhạt #DBEAFE</div></div><div class="kn"><div class="th-gach th-gach-db" style="font-size:30px">DATABASE</div><div class="th-vat" style="background:var(--db-nhat);padding:14px 16px;margin-top:22px"><div style="font-size:22px;font-weight:800;color:var(--db-dam)">Database là cuốn sổ</div><div style="font-size:15px;color:var(--muc-phu);margin-top:4px">chữ đậm trên nền nhạt</div></div><div class="hexs">tươi #8B5CF6<br>đậm/sáng #6D28D9<br>nhạt #EDE9FE</div></div><div class="kn"><div class="th-gach th-gach-re" style="font-size:30px">IF / ELSE</div><div class="th-vat" style="background:var(--re-nhat);padding:14px 16px;margin-top:22px"><div style="font-size:22px;font-weight:800;color:var(--re-dam)">if/else là ngã ba đường</div><div style="font-size:15px;color:var(--muc-phu);margin-top:4px">chữ đậm trên nền nhạt</div></div><div class="hexs">tươi #14B8A6<br>đậm/sáng #0F766E<br>nhạt #CCFBF1</div></div><div class="kn"><div class="th-gach th-gach-lap" style="font-size:30px">VÒNG LẶP</div><div class="th-vat" style="background:var(--lap-nhat);padding:14px 16px;margin-top:22px"><div style="font-size:22px;font-weight:800;color:var(--lap-dam)">Vòng lặp là hỏi đi hỏi lại</div><div style="font-size:15px;color:var(--muc-phu);margin-top:4px">chữ đậm trên nền nhạt</div></div><div class="hexs">tươi #EC4899<br>đậm/sáng #BE185D<br>nhạt #FCE7F3</div></div></div>
+<h2>3. Vật thể kiểu giao diện thường: viền mảnh, bóng mềm</h2>
+<div class="cmp">
+ <div><div style="display:flex;gap:14px;align-items:center"><div style="background:var(--bien);border-radius:10px;padding:8px 20px;font-weight:800;font-size:30px;color:var(--chu-tren-mau)">BIẾN</div><div style="background:var(--be-mat);border-radius:14px;padding:16px 22px;font-size:22px">Hoá đơn HD001</div></div><div class="sub" style="margin-top:12px;font-size:18px">Không viền, không bóng: dẹt, dễ chìm vào nền.</div></div>
+ <div><div style="display:flex;gap:14px;align-items:center"><div class="th-gach th-gach-bien" style="font-size:30px">BIẾN</div><div class="th-vat" style="padding:16px 22px;font-size:22px">Hoá đơn HD001</div></div><div class="sub" style="margin-top:12px;font-size:18px">Viền mảnh và bóng mềm: nổi vừa đủ, sạch, nhất quán mọi cảnh.</div></div>
+</div>
+<h2>4. Code luôn nằm trong cửa sổ đen kiểu macOS có 3 chấm; từ khoá tô theo màu khái niệm</h2>
+<div class="th-cuaso"><div class="th-cuaso-dau"><i></i><i></i><i></i><span>mot_ngay_ban_hang.py</span></div>
+<pre class="th-ma"><span class="b">tong_tien</span> = 0   <span class="c"># biến: cái nhãn</span>
+<span class="r">while</span> con_mon_trong_gio:   <span class="c"># vòng lặp</span>
+    gia = <span class="d">hoi_ke_toan</span>(<span class="o">"gia_ban"</span>)   <span class="c"># database</span>
+    tong_tien += <span class="h">tinh_tien</span>(gia, so_ky=1)   <span class="c"># hàm</span>
+<span class="r">if</span> black_friday == <span class="o">"27/11"</span>:   <span class="c"># ngã ba đường</span></pre></div>
+<h2>5. Ngữ nghĩa: luôn kèm biểu tượng, không chỉ dựa vào màu</h2>
+<div class="sem"><div class="th-vat" style="background:var(--on)">✓ ổn / đúng</div><div class="th-vat" style="background:var(--loi)">✗ lỗi / sai</div><div class="th-vat" style="background:var(--nen-phu);color:var(--chu-canh-bao)">⚠ cảnh báo (chữ đỏ)</div></div>
+</body></html>

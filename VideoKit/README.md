@@ -10,10 +10,15 @@ Bộ asset và công cụ dùng chung cho các video giải thích làm bằng [
 | `characters/` | mỗi nhân vật một thư mục: PNG nền trong suốt + `prompt.md` (prompt gốc, model, cách tạo) |
 | `sfx/` | thư viện 9 hiệu ứng tổng hợp bằng code (loại thứ 10, `type`, tạo theo độ dài cue) |
 | `music/` | nhạc nền; chỉ thêm nhạc có giấy phép rõ ràng và ghi nguồn vào `NGUON.md` |
-| `styles/` | khối prompt phong cách ảnh, `design.md` mẫu |
+| `styles/` | khối prompt phong cách ảnh; `design-sang.md` (nền trắng ngà, mặc định cho video học thuật), `design-toi.md` (nền tối, video công nghệ nhiều code) |
 | `scripts/` | công cụ dòng lệnh (bảng dưới) |
 | `templates/` | **`du-an/` (khuôn dự án chuẩn)**, `du-an.schema.md`, `font-face.css`, `BRIEF.md`, `STORYBOARD.md`, định dạng cue âm thanh, cấu trúc dự án |
 | `ledger/` | sổ chi phí API (`chi-phi-api.csv`) |
+
+## Thương hiệu (nền trắng ngà)
+
+Nền trắng ngà `#F8F7F4` (không dùng trắng tinh), chữ đen `#111113`; màu chữ khác theo **nghĩa** (giá liệt kê xanh dương đậm, giá bán và tổng xanh lá đậm, cảnh báo đỏ); cam THO CODE `#F26A21` là màu nhận diện (chỉ tô nền, không làm chữ). Năm màu khái niệm: biến vàng, hàm xanh dương, database tím, if/else lục lam, vòng lặp hồng. Vật thể kiểu giao diện thường (viền mảnh, bóng mềm); **code luôn nằm trong cửa sổ nền đen kiểu macOS có 3 chấm**.
+Một nguồn duy nhất: `templates/thuong-hieu.css`. `build_index.py` chèn nó vào `index.html`, nên cảnh nào cũng dùng được `var(--muc)`, `.th-vat`, `.th-gach`, `.th-cuaso` (cửa sổ code). Ảnh bảng màu sinh bằng `scripts/tao_bang_mau.py` từ chính file CSS, xem `brand/bang-mau-thuong-hieu.png`.
 
 ## Script
 
@@ -21,6 +26,7 @@ Chạy trong thư mục dự án video hoặc bất kỳ thư mục con nào (sc
 
 | Script | Việc |
 |---|---|
+| `tao_bang_mau.py` | sinh ảnh bảng nhận diện thương hiệu từ `templates/thuong-hieu.css` |
 | `tao_du_an.py` | **tạo dự án mới từ khuôn** (`videos/<slug>/`), tự đọc các file `canh-N-*.md` |
 | `build_index.py` | **sinh `index.html` và `moc-canh.json`** từ `du-an.json` và độ dài giọng đọc thật (logo, sfx, font, khung hình theo chuẩn) |
 | `sync_assets.py` | chép nhân vật, sfx, font, logo vào dự án và ghi manifest |

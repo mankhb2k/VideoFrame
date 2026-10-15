@@ -1,0 +1,33 @@
+/* Thành phần dùng chung cho mọi cảnh (build_canh.py chèn vào chỗ đánh dấu VK_CSS). Màu và vật thể lấy từ thuong-hieu.css (.th-*, var(--...)).
+   Tọa độ khung 1920x1080; lề an toàn 96 px; KHÔNG đặt nội dung vào góc phải dưới (x > 1700 và y > 880) vì có logo kênh. */
+.vk-abs { position: absolute; left: 0; top: 0; }
+.vk-nv { position: absolute; left: 0; top: 0; transform-origin: 50% 100%; filter: drop-shadow(0 8px 12px var(--nv-bong)); pointer-events: none; }
+.vk-bong { position: absolute; left: 0; top: 0; border-radius: 50%; background: radial-gradient(ellipse at center, rgba(17,17,19,0.20) 0%, rgba(17,17,19,0) 70%); pointer-events: none; }
+.vk-chu { font-family: 'Be Vietnam Pro', sans-serif; color: var(--muc); font-weight: 700; line-height: 1.2; white-space: nowrap; }
+.vk-chu-to { font-size: 96px; font-weight: 800; letter-spacing: -0.5px; }
+.vk-chu-vua { font-size: 64px; font-weight: 800; }
+.vk-chu-nho { font-size: 40px; font-weight: 700; }
+.vk-chu-ct { font-size: 28px; font-weight: 500; color: var(--muc-phu); }
+.vk-chip { display: inline-flex; align-items: center; gap: 10px; padding: 10px 24px; background: var(--be-mat); color: var(--muc); border: var(--vien-chip); border-radius: 14px; box-shadow: var(--bong-nho); font: 700 32px/1.2 'Be Vietnam Pro', sans-serif; white-space: nowrap; }
+.vk-chip-bien { background: var(--bien-nhat); color: var(--bien-dam); border-color: var(--bien-dam); }
+.vk-chip-ham  { background: var(--ham-nhat);  color: var(--ham-dam);  border-color: var(--ham-dam); }
+.vk-chip-db   { background: var(--db-nhat);   color: var(--db-dam);   border-color: var(--db-dam); }
+.vk-chip-re   { background: var(--re-nhat);   color: var(--re-dam);   border-color: var(--re-dam); }
+.vk-chip-lap  { background: var(--lap-nhat);  color: var(--lap-dam);  border-color: var(--lap-dam); }
+.vk-chip-loi  { background: #FEE2E2; color: var(--loi-dam); border-color: var(--loi-dam); }
+.vk-chip-on   { background: #DCFCE7; color: var(--on-dam); border-color: var(--on-dam); }
+.vk-the { position: absolute; left: 0; top: 0; background: var(--be-mat); color: var(--muc); border: var(--vien); border-radius: var(--ban-kinh); box-shadow: var(--bong); font-family: 'Be Vietnam Pro', sans-serif; }
+.vk-bubble { position: absolute; left: 0; top: 0; padding: 14px 26px; background: var(--be-mat); color: var(--muc); border: var(--vien); border-radius: 26px; box-shadow: var(--bong); font: 600 34px/1.25 'Be Vietnam Pro', sans-serif; white-space: nowrap; }
+/* cửa sổ code: thêm lớp .th-cuaso (đã có trong thuong-hieu.css). Mỗi dòng code là một <span class="vk-dong">; tô sáng dòng bằng vk.sangDong */
+.vk-code { font-family: 'JetBrains Mono', monospace; font-size: 30px; line-height: 1.55; padding: 22px 28px; margin: 0; white-space: normal; color: var(--ma-chu); }
+.vk-dong { display: block; white-space: pre; min-height: 1.55em; padding: 0 14px; margin: 0 -14px; border-radius: 8px; }
+.vk-dong .k-bien { color: var(--ma-bien); } .vk-dong .k-ham { color: var(--ma-ham); } .vk-dong .k-db { color: var(--ma-db); }
+.vk-dong .k-re { color: var(--ma-re); } .vk-dong .k-lap { color: var(--ma-lap); } .vk-dong .k-ct { color: var(--ma-chu-thich); } .vk-dong .k-cam { color: var(--ma-cam); }
+/* kệ gạch ở góc trên trái (vk.keGach) */
+.vk-ke { position: absolute; left: 96px; top: 48px; width: 760px; height: 84px; }
+.vk-o { position: absolute; top: 0; width: 144px; height: 84px; border: 3px dashed rgba(17,17,19,0.28); border-radius: 12px; box-sizing: border-box; }
+.vk-gach { position: absolute; top: 0; width: 144px; height: 84px; display: flex; align-items: center; justify-content: center; box-sizing: border-box; color: var(--chu-tren-mau); font: 800 23px/1 'Be Vietnam Pro', sans-serif; border: var(--vien-chip); border-radius: 12px; box-shadow: var(--bong-nho); white-space: nowrap; }
+.vk-gach-bien { background: var(--bien); } .vk-gach-ham { background: var(--ham); } .vk-gach-db { background: var(--db); } .vk-gach-re { background: var(--re); } .vk-gach-lap { background: var(--lap); }
+/* nét vẽ SVG (đường nối, mũi tên): dùng pathLength="1" để vẽ dần bằng vk.ve, không cần đo */
+.vk-net { fill: none; stroke: var(--muc); stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+.vk-net-mong { stroke-width: 3; stroke: var(--muc-phu); }

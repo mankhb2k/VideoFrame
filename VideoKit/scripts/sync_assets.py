@@ -82,7 +82,9 @@ def main():
     if a.fonts:
         for f in sorted((KIT / "brand" / "fonts").glob("*")):
             chep(f, assets / "fonts" / f.name, a.ghi_de, nhat_ky)
-        print("  nhớ dán templates/font-face.css vào <style> của index.html và mỗi cảnh (HyperFrames yêu cầu @font-face trong từng file)")
+        for nguon, ten in [(KIT / "templates" / "font-face.css", "_font-face.css"), (KIT / "templates" / "thuong-hieu.css", "_thuong-hieu.css")]:
+            chep(nguon, proj / "compositions" / "frames" / ten, a.ghi_de, nhat_ky)
+        print("  _font-face.css: dán vào <style> của MỖI file cảnh (HyperFrames yêu cầu @font-face trong từng file); _thuong-hieu.css: màu và lớp .th-* (build_index đã chèn sẵn vào index.html)")
     if a.logo:
         for f in sorted((KIT / "brand").glob("logo*.png")):
             chep(f, assets / "images" / f.name, a.ghi_de, nhat_ky)

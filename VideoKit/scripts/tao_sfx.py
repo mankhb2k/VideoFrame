@@ -5,7 +5,7 @@
     python VideoKit/scripts/tao_sfx.py              # thư viện + ghép track <video>/assets/audio/sfx-track.wav
 
 Track được ghép từ các file <video>/compositions/frames/*.sfx.json (t tính theo giây từ đầu mỗi cảnh) và mốc bắt đầu
-của từng cảnh lấy từ <video>/index.html (host-scene-N). Mọi âm đều tạo ra bằng sóng sin, nhiễu và bộ lọc, hạt giống
+của từng khối (host-<id> trong index.html, id = scene-N hoặc id đoạn). Mọi âm đều tạo ra bằng sóng sin, nhiễu và bộ lọc, hạt giống
 cố định nên kết quả giống nhau mỗi lần chạy, không dùng mẫu âm của bên thứ ba. Cần: numpy.
 """
 import os
@@ -229,10 +229,13 @@ def lam_thua(cues):
 
 
 def moc_canh():
+    """Mốc bắt đầu của mọi khối host trong index.html: khoá là id composition (scene-N hoặc id đoạn như c1-d2)."""
     h = (VIDEO / "index.html").read_text(encoding="utf-8")
     ket_qua = {}
-    for m in re.finditer(r'id="host-scene-(\d+)"[^>]*?data-start="([0-9.]+)"', h):
-        ket_qua[int(m.group(1))] = float(m.group(2))
+    for m in re.finditer(r'id="host-([^"]+)"[^>]*?data-start="([0-9.]+)"', h):
+        if m.group(1) == "logo":
+            continue
+        ket_qua[m.group(1)] = float(m.group(2))
     tong = float(re.search(r'data-composition-id="main"[^>]*?data-duration="([0-9.]+)"', h).group(1))
     return ket_qua, tong
 
@@ -242,11 +245,11 @@ def ghep(lib):
     track = np.zeros(int(SR * (tong + 1.0)))
     rng = np.random.default_rng(777)
     so_cue = 0
-    for n in sorted(bat_dau):
+    for n in sorted(bat_dau, key=lambda k: bat_dau[k]):
         f = VIDEO / "compositions" / "frames"
-        tep = [p for p in sorted(f.glob("*.sfx.json")) if json.loads(p.read_text(encoding="utf-8")).get("scene") == f"scene-{n}"]
+        tep = [p for p in sorted(f.glob("*.sfx.json")) if json.loads(p.read_text(encoding="utf-8")).get("scene") == n]
         if not tep:
-            print(f"scene-{n}: chưa có file .sfx.json, bỏ qua")
+            print(f"{n}: chưa có file .sfx.json, bỏ qua")
             continue
         goc = json.loads(tep[0].read_text(encoding="utf-8"))["cues"]
         cues = lam_thua(goc)
@@ -262,7 +265,7 @@ def ghep(lib):
                 continue
             track[i:i + len(y)] += y[:len(track) - i]
             so_cue += 1
-        print(f"scene-{n}: giữ {len(cues)}/{len(goc)} cue")
+        print(f"{n}: giữ {len(cues)}/{len(goc)} cue")
     dinh = np.max(np.abs(track))
     if dinh > 0.9:  # tránh vỡ tiếng khi nhiều âm chồng nhau
         track *= 0.9 / dinh

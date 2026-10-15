@@ -1,0 +1,40 @@
+/* Chế độ TỐI của hệ thống THO CODE: chỉ ghi đè các biến màu (lớp .th-* lấy từ thuong-hieu.css).
+   Dùng bằng cách đặt "chu_de": "toi" trong khung của du-an.json rồi chạy lại build_index.py. */
+:root {
+  /* nền */
+  --nen: #121214;
+  --nen-phu: #1A1A1E;
+  --be-mat: #202026;       /* mặt thẻ, hoá đơn, giấy */
+  --ke: #34343C;
+  /* chữ: sáng là chính; màu theo nghĩa dùng bản SÁNG hơn để đủ tương phản trên nền tối */
+  --muc: #F4F4F5;          /* chữ chính, viền vật thể */
+  --muc-phu: #B4B4BC;
+  --muc-mo: #8E8E98;
+  --chu-gia: #93C5FD;      /* giá khi liệt kê */
+  --chu-gia-ban: #4ADE80;  /* giá bán */
+  --chu-tong: #4ADE80;     /* tổng cộng */
+  --chu-canh-bao: #F87171; /* cảnh báo, lỗi */
+  --cam: #F26A21;
+  /* năm khái niệm: tươi giữ nguyên để tô nền; "đậm" trở thành bản sáng để làm chữ; "nhạt" là nền thẻ tối */
+  --bien: #FACC15; --bien-dam: #FDE047; --bien-nhat: #2B2508;
+  --ham:  #3B82F6; --ham-dam:  #93C5FD; --ham-nhat:  #0F1E3D;
+  --db:   #8B5CF6; --db-dam:   #C4B5FD; --db-nhat:   #1E1537;
+  --re:   #14B8A6; --re-dam:   #5EEAD4; --re-nhat:   #0B2A27;
+  --lap:  #EC4899; --lap-dam:  #F9A8D4; --lap-nhat:  #34112A;
+  --on: #22C55E;  --on-dam: #4ADE80;
+  --loi: #EF4444; --loi-dam: #F87171;
+  --chu-tren-mau: #111113;
+  --nv-bong: rgba(0, 0, 0, 0.6);
+  /* cửa sổ code: đen hơn cả nền để tách khỏi trang */
+  --ma-nen: #050506; --ma-dau: #17171B; --ma-chu: #F4F4F5; --ma-chu-thich: #9CA3AF;
+  --ma-bien: #FDE047; --ma-ham: #93C5FD; --ma-db: #C4B5FD; --ma-re: #5EEAD4; --ma-lap: #F9A8D4; --ma-cam: #FDBA74;
+  --cham-do: #FF5F57; --cham-vang: #FEBC2E; --cham-xanh: #28C840;
+  /* vật thể kiểu giao diện thường: viền mảnh sáng, bóng mềm */
+  --vien: 1.5px solid #3A3A44;
+  --bong: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --vien-chip: 1.5px solid rgba(255, 255, 255, 0.22);
+  --bong-nho: 0 1px 3px rgba(0, 0, 0, 0.5);
+  --vien-ma: 1px solid #3A3A44;
+  --bong-ma: 0 14px 36px rgba(0, 0, 0, 0.6);
+  --ban-kinh: 14px;
+}

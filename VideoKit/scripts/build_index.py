@@ -9,6 +9,8 @@ nên mọi dự án ra cùng một chuẩn và đổi độ dài một cảnh ch
 
 Độ dài cảnh = độ dài file giọng + 2 x độ trễ (đầu và cuối) + `giu_them_giay` của cảnh. Cảnh chưa có file giọng dùng `du_kien_giay`
 (chỉ để xem trước khung; moc-canh.json ghi `uoc_tinh: true`). Cảnh chưa có file HTML sẽ được tạo file cảnh tạm.
+Nếu cảnh có `doan` (danh sách đoạn: id, bat_dau tính từ đầu cảnh, thoi_luong) thì mỗi đoạn là một sub-composition riêng
+`compositions/frames/<id>.html` (đặt lên timeline tại start cảnh + bat_dau); cảnh không có `doan` dùng một file cho cả cảnh.
 Logo được ghi thành sub-composition `compositions/logo.html` (HyperFrames không cho thẻ lồng nhau trong index.html).
 Dừng `hyperframes preview` trước khi chạy: Studio tự sửa file HTML đang mở.
 """
@@ -20,6 +22,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from _du_an import KIT, du_an  # noqa: E402
+from _thuong_hieu import doc_css, lay_bien  # noqa: E402
 
 DA = du_an()
 
@@ -38,13 +41,21 @@ def tinh_moc(cfg):
         L = thoi_luong_wav(wav) if co_giong else float(c.get("du_kien_giay", 30))
         dur = round(L + 2 * do_tre + float(c.get("giu_them_giay", 0)), 1)
         ten_file = c.get("tep_composition") or f"{i:02d}-{c['id']}"
+        dd = []
+        for j, d in enumerate(c.get("doan", [])):
+            bd = float(d["bat_dau"])
+            tl_ = (float(c["doan"][j + 1]["bat_dau"]) if j + 1 < len(c["doan"]) else dur) - bd
+            dd.append({"id": d["id"], "ten": d.get("ten", ""), "start": round(t + bd, 2), "duration": round(tl_, 2),
+                       "composition": f"compositions/frames/{d['id']}.html"})
         hang.append({"canh": c["tep_loi_thoai"], "id": c["id"], "stt": i, "audio": round(L, 2), "start": round(t, 1),
-                     "duration": dur, "uoc_tinh": not co_giong, "composition": f"compositions/frames/{ten_file}.html"})
+                     "duration": dur, "uoc_tinh": not co_giong, "composition": f"compositions/frames/{ten_file}.html", "doan": dd})
         t = round(t + dur, 1)
     return hang, t, do_tre
 
 
-def stub(i, W, H):
+def stub(i, W, H, nen, chu, cid=None, nhan=None):
+    cid = cid or f"scene-{i}"
+    nhan = nhan or f"cảnh {i} (đang dựng)"
     return f'''<!doctype html>
 <html>
   <head><meta charset="UTF-8" /></head>
@@ -52,14 +63,14 @@ def stub(i, W, H):
     <template>
       <style>
         #root {{ position: absolute; inset: 0; }}
-        .s{i}-stub {{ position: absolute; inset: 0; background: #0b1020; display: flex; align-items: center; justify-content: center; color: #94a3b8; font-family: sans-serif; font-size: 64px; }}
+        .s{i}-stub {{ position: absolute; inset: 0; background: {nen}; display: flex; align-items: center; justify-content: center; color: {chu}; font-family: sans-serif; font-size: 64px; }}
       </style>
-      <div id="root" data-composition-id="scene-{i}" data-width="{W}" data-height="{H}">
-        <div class="s{i}-stub">cảnh {i} (đang dựng)</div>
+      <div id="root" data-composition-id="{cid}" data-width="{W}" data-height="{H}">
+        <div class="s{i}-stub">{nhan}</div>
       </div>
       <script>
         const tl = gsap.timeline({{ paused: true }});
-        window.__timelines["scene-{i}"] = tl;
+        window.__timelines["{cid}"] = tl;
       </script>
     </template>
   </body>
@@ -96,12 +107,21 @@ def sinh_logo(lg, W, H):
 
 def sinh_html(cfg, hang, tong, do_tre, W, H):
     font_css = (KIT / "templates" / "font-face.css").read_text(encoding="utf-8")
+    thuong_hieu_css = doc_css(cfg.get("khung", {}).get("chu_de", "sang"))   # "sang" (mặc định) hoặc "toi"
+    mau = lay_bien(thuong_hieu_css)
+    nen = cfg.get("khung", {}).get("nen", mau["nen"])
+    chu = cfg.get("khung", {}).get("chu", mau["muc"])
     hosts, audio = [], []
     am_giong = float(cfg.get("giong", {}).get("am_luong", 1))
     for r in hang:
         i = r["stt"]
-        hosts.append(f'      <div id="host-scene-{i}" data-composition-id="scene-{i}" data-composition-src="{r["composition"]}" '
-                     f'data-start="{r["start"]}" data-duration="{r["duration"]}" data-track-index="0" data-width="{W}" data-height="{H}"></div>')
+        if r.get("doan"):
+            for d in r["doan"]:
+                hosts.append(f'      <div id="host-{d["id"]}" data-composition-id="{d["id"]}" data-composition-src="{d["composition"]}" '
+                             f'data-start="{d["start"]}" data-duration="{d["duration"]}" data-track-index="0" data-width="{W}" data-height="{H}"></div>')
+        else:
+            hosts.append(f'      <div id="host-scene-{i}" data-composition-id="scene-{i}" data-composition-src="{r["composition"]}" '
+                         f'data-start="{r["start"]}" data-duration="{r["duration"]}" data-track-index="0" data-width="{W}" data-height="{H}"></div>')
         if not r["uoc_tinh"]:
             audio.append(f'      <audio id="vo{i - 1}" src="assets/audio/{r["canh"]}.wav" data-start="{round(r["start"] + do_tre, 1)}" '
                          f'data-duration="{r["audio"]}" data-track-index="1" data-volume="{am_giong}"></audio>')
@@ -122,9 +142,10 @@ def sinh_html(cfg, hang, tong, do_tre, W, H):
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
     <style>
 {font_css}
+{thuong_hieu_css}
       * {{ margin: 0; padding: 0; box-sizing: border-box; }}
-      html, body {{ width: {W}px; height: {H}px; overflow: hidden; background: #0b1020; }}
-      #root {{ position: relative; width: 100%; height: 100%; background: #0b1020; color: #e2e8f0; font-family: 'Be Vietnam Pro', ui-sans-serif, sans-serif; }}
+      html, body {{ width: {W}px; height: {H}px; overflow: hidden; background: {nen}; }}
+      #root {{ position: relative; width: 100%; height: 100%; background: {nen}; color: {chu}; font-family: 'Be Vietnam Pro', ui-sans-serif, sans-serif; }}
     </style>
   </head>
   <body>
@@ -159,15 +180,19 @@ def main():
         (DA.video / "compositions" / "logo.html").write_text(sinh_logo(lg, W, H), encoding="utf-8")
     (DA.video / "index.html").write_text(sinh_html(cfg, hang, tong, do_tre, W, H), encoding="utf-8")
     tao = 0
+    mau = lay_bien(doc_css(cfg.get("khung", {}).get("chu_de", "sang")))
+    nen_, chu_ = cfg.get("khung", {}).get("nen", mau["nen"]), cfg.get("khung", {}).get("chu", mau["muc"])
     for r in hang:
-        f = DA.video / r["composition"]
-        if not f.exists() and not a.khong_stub:
-            f.parent.mkdir(parents=True, exist_ok=True)
-            f.write_text(stub(r["stt"], W, H), encoding="utf-8")
-            tao += 1
+        muc = [(r["composition"], r["stt"], None, None)] if not r.get("doan") else [(d["composition"], r["stt"], d["id"], d["ten"] or d["id"]) for d in r["doan"]]
+        for comp, stt, cid, nhan in muc:
+            f = DA.video / comp
+            if not f.exists() and not a.khong_stub:
+                f.parent.mkdir(parents=True, exist_ok=True)
+                f.write_text(stub(stt, W, H, nen_, chu_, cid, nhan), encoding="utf-8")
+                tao += 1
     print(f"index.html: {len(hang)} cảnh, tổng {tong} giây ({int(tong // 60)}:{tong % 60:04.1f}); tạo {tao} file cảnh tạm")
     for r in hang:
-        print(f"  cảnh {r['stt']}: bắt đầu {r['start']:7.1f}s, dài {r['duration']:6.1f}s" + ("  (ước tính, chưa có giọng đọc)" if r["uoc_tinh"] else ""))
+        print(f"  scene-{r['stt']} ({r['id']}): bắt đầu {r['start']:7.1f}s, dài {r['duration']:6.1f}s" + ("  (ước tính, chưa có giọng đọc)" if r["uoc_tinh"] else "") + (f", {len(r['doan'])} đoạn" if r.get("doan") else ""))
 
 
 if __name__ == "__main__":

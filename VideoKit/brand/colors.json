@@ -1,12 +1,104 @@
 {
-  "nen": "#0B1020",
-  "nen-pop": "#121A33",
-  "be-mat": "#16213E",
-  "chu": "#E2E8F0",
-  "chu-mo": "#94A3B8",
-  "oop-ho-phach": "#F59E0B",
-  "pop-xanh-ngoc": "#10B981",
-  "loi-do": "#EF4444",
-  "vien-logo": "#FFFFFF",
-  "quy-tac": "đỏ chỉ để báo lỗi; xanh ngọc cho cái ổn/POP; hổ phách cho OOP; không dùng màu để trang trí"
+  "thuong_hieu": "THO CODE",
+  "ghi_chu": "Bảng màu duy nhất của thương hiệu (nền trắng ngà). Nguồn dùng để sinh: templates/thuong-hieu.css. Cam lấy từ logo.",
+  "nen": {
+    "trang_nga": "#F8F7F4",
+    "phu": "#EFEDE8",
+    "be_mat": "#FFFFFF",
+    "ke": "#DDD9D0"
+  },
+  "chu": {
+    "den": "#111113",
+    "phu": "#4B4B52",
+    "mo": "#6B6B73"
+  },
+  "thuong_hieu_cam": {
+    "cam": "#F26A21",
+    "ghi_chu": "Chỉ để tô nền, logo, gạch chân; không làm màu chữ."
+  },
+  "khai_niem": {
+    "bien": {
+      "ten": "BIẾN",
+      "tuoi": "#FACC15",
+      "dam": "#854D0E",
+      "nhat": "#FEF9C3"
+    },
+    "ham": {
+      "ten": "HÀM",
+      "tuoi": "#3B82F6",
+      "dam": "#1D4ED8",
+      "nhat": "#DBEAFE"
+    },
+    "database": {
+      "ten": "DATABASE",
+      "tuoi": "#8B5CF6",
+      "dam": "#6D28D9",
+      "nhat": "#EDE9FE"
+    },
+    "if_else": {
+      "ten": "IF/ELSE",
+      "tuoi": "#14B8A6",
+      "dam": "#0F766E",
+      "nhat": "#CCFBF1"
+    },
+    "vong_lap": {
+      "ten": "VÒNG LẶP",
+      "tuoi": "#EC4899",
+      "dam": "#BE185D",
+      "nhat": "#FCE7F3"
+    }
+  },
+  "ngu_nghia": {
+    "on": {
+      "tuoi": "#22C55E",
+      "dam": "#15803D"
+    },
+    "loi": {
+      "tuoi": "#EF4444",
+      "dam": "#B91C1C"
+    }
+  },
+  "cua_so_code": {
+    "nen": "#111113",
+    "thanh_tieu_de": "#1E1E22",
+    "chu": "#F4F4F5",
+    "chu_thich": "#9CA3AF",
+    "cham": [
+      "#FF5F57",
+      "#FEBC2E",
+      "#28C840"
+    ],
+    "bien": "#FDE047",
+    "ham": "#93C5FD",
+    "database": "#C4B5FD",
+    "if_else": "#5EEAD4",
+    "vong_lap": "#F9A8D4",
+    "cam": "#FDBA74"
+  },
+  "vat_the": {
+    "kieu": "giao diện thường: viền mảnh và bóng mềm, không dùng bóng đổ cứng",
+    "vien": "1.5px solid #D2CCBE",
+    "bong": "0 1px 2px rgba(17,17,19,0.06), 0 8px 24px rgba(17,17,19,0.08)",
+    "chip_vien": "1.5px solid rgba(17,17,19,0.22)",
+    "chip_bong": "0 1px 3px rgba(17,17,19,0.16)",
+    "cua_so_code_vien": "1px solid #000000",
+    "cua_so_code_bong": "0 14px 36px rgba(17,17,19,0.28)",
+    "ban_kinh": "14px"
+  },
+  "quy_tac": [
+    "Nền trắng ngà #F8F7F4, không dùng #FFFFFF làm nền (chói).",
+    "Chữ thường đen. Màu chữ khác chỉ để chỉ nghĩa: giá liệt kê xanh dương đậm (hoặc đen), giá bán và tổng xanh lá đậm, cảnh báo đỏ. Cam thương hiệu không làm màu chữ.",
+    "Màu tươi chỉ để tô nền vật thể; chữ trên màu tươi là đen, cỡ lớn và đậm; chữ nhỏ dùng màu đậm trên nền nhạt.",
+    "Mọi vật thể (thẻ, viên gạch, sổ, hoá đơn) kiểu giao diện thường: viền mảnh 1,5 px và bóng mềm, không dùng viền đen dày hay bóng đổ cứng.",
+    "Code luôn nằm trong cửa sổ nền đen kiểu macOS có 3 chấm (đỏ, vàng, xanh) ở thanh tiêu đề.",
+    "Đỏ chỉ để báo lỗi, xanh lá chỉ cho điều ổn, luôn kèm biểu tượng (3 chấm cửa sổ là ngoại lệ trang trí). Nhân vật không mặc đỏ, xanh lá hoặc trắng tinh.",
+    "Chữ trong ảnh luôn là chữ HTML, không để AI vẽ chữ."
+  ],
+  "chu_theo_nghia": {
+    "gia_liet_ke": "#1E3A8A",
+    "gia_ban": "#15803D",
+    "tong": "#15803D",
+    "canh_bao": "#B91C1C",
+    "ghi_chu": "Màu chữ chỉ nghĩa, không theo thương hiệu. Giá liệt kê có thể dùng đen thay xanh dương đậm."
+  }
 }

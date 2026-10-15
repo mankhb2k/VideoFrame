@@ -6,7 +6,7 @@ Mọi script của VideoKit đọc file này (tìm từ thư mục hiện tại 
 |---|---|
 | `slug`, `ten` | tên ngắn không dấu và tên hiển thị |
 | `phien_ban_hyperframes` | phiên bản CLI đã dùng (khóa trong `package.json` để render lại giống nhau) |
-| `khung` | `rong`, `cao` (mặc định 1920x1080), `fps_nhap` (30), `fps_cuoi` (60) |
+| `khung` | `rong`, `cao` (mặc định 1920x1080), `fps_nhap` (30), `fps_cuoi` (60), `chu_de` (`sang` mặc định, nền trắng ngà; hoặc `toi`, nền đen than; xem `brand/so-sanh-sang-toi.png`), tùy chọn `nen`, `chu` để ghi đè màu nền và màu chữ |
 | `thu_muc` | `kich_ban`, `loi_thoai`, `video`, `thumbnail` (đường dẫn trong dự án) |
 | `giong` | `nha_cung_cap`, `model`, `giong` (ví dụ `vi-vn-advisor-2`), `do_tre_giay` (0,3: lặng đầu và cuối mỗi cảnh), `am_luong` |
 | `logo` | `hien`, `file`, `vi_tri` (`phai-duoi` hoặc `trai-duoi`), `kich_thuoc` (132), `le` (44), `bong` (false; true thì thêm bóng đổ nhẹ) |
