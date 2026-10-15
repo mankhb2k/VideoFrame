@@ -1,0 +1,29 @@
+{
+ "scene": "c3-d1",
+ "cues": [
+  {
+   "t": 0.3,
+   "type": "pop",
+   "gain": 0.9,
+   "note": "Gạo bán chạy"
+  },
+  {
+   "t": 5.0,
+   "type": "whoosh",
+   "gain": 0.8,
+   "note": "nhập thêm nước mắm"
+  },
+  {
+   "t": 8.4,
+   "type": "tick",
+   "gain": 0.9,
+   "note": "Sáu mặt hàng"
+  },
+  {
+   "t": 10.3,
+   "type": "tick",
+   "gain": 0.9,
+   "note": "rồi hai mươi"
+  }
+ ]
+}

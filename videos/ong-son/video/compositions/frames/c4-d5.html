@@ -1,0 +1,429 @@
+<!doctype html>
+<html>
+  <head><meta charset="UTF-8" /></head>
+  <body>
+<template>
+<style>
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 500;
+  src: url('assets/fonts/be-vietnam-pro-vietnamese-500-normal.woff2') format('woff2');
+  unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;
+}
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 500;
+  src: url('assets/fonts/be-vietnam-pro-latin-ext-500-normal.woff2') format('woff2');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 500;
+  src: url('assets/fonts/be-vietnam-pro-latin-500-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: url('assets/fonts/be-vietnam-pro-vietnamese-700-normal.woff2') format('woff2');
+  unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;
+}
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: url('assets/fonts/be-vietnam-pro-latin-ext-700-normal.woff2') format('woff2');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: url('assets/fonts/be-vietnam-pro-latin-700-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 800;
+  src: url('assets/fonts/be-vietnam-pro-vietnamese-800-normal.woff2') format('woff2');
+  unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;
+}
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 800;
+  src: url('assets/fonts/be-vietnam-pro-latin-ext-800-normal.woff2') format('woff2');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 800;
+  src: url('assets/fonts/be-vietnam-pro-latin-800-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('assets/fonts/jetbrains-mono-vietnamese-400-normal.woff2') format('woff2');
+  unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('assets/fonts/jetbrains-mono-latin-ext-400-normal.woff2') format('woff2');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('assets/fonts/jetbrains-mono-latin-400-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: url('assets/fonts/jetbrains-mono-vietnamese-700-normal.woff2') format('woff2');
+  unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: url('assets/fonts/jetbrains-mono-latin-ext-700-normal.woff2') format('woff2');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: url('assets/fonts/jetbrains-mono-latin-700-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+/* Thành phần dùng chung cho mọi cảnh (build_canh.py chèn vào chỗ đánh dấu VK_CSS). Màu và vật thể lấy từ thuong-hieu.css (.th-*, var(--...)).
+   Tọa độ khung 1920x1080; lề an toàn 96 px; KHÔNG đặt nội dung vào góc phải dưới (x > 1700 và y > 880) vì có logo kênh. */
+.vk-abs { position: absolute; left: 0; top: 0; }
+.vk-nv { position: absolute; left: 0; top: 0; transform-origin: 50% 100%; filter: drop-shadow(0 8px 12px var(--nv-bong)); pointer-events: none; }
+.vk-bong { position: absolute; left: 0; top: 0; border-radius: 50%; background: radial-gradient(ellipse at center, rgba(17,17,19,0.20) 0%, rgba(17,17,19,0) 70%); pointer-events: none; }
+.vk-chu { font-family: 'Be Vietnam Pro', sans-serif; color: var(--muc); font-weight: 700; line-height: 1.2; white-space: nowrap; }
+.vk-chu-to { font-size: 96px; font-weight: 800; letter-spacing: -0.5px; }
+.vk-chu-vua { font-size: 64px; font-weight: 800; }
+.vk-chu-nho { font-size: 40px; font-weight: 700; }
+.vk-chu-ct { font-size: 28px; font-weight: 500; color: var(--muc-phu); }
+.vk-chip { display: inline-flex; align-items: center; gap: 10px; padding: 10px 24px; background: var(--be-mat); color: var(--muc); border: var(--vien-chip); border-radius: 14px; box-shadow: var(--bong-nho); font: 700 32px/1.2 'Be Vietnam Pro', sans-serif; white-space: nowrap; }
+.vk-chip-bien { background: var(--bien-nhat); color: var(--bien-dam); border-color: var(--bien-dam); }
+.vk-chip-ham  { background: var(--ham-nhat);  color: var(--ham-dam);  border-color: var(--ham-dam); }
+.vk-chip-db   { background: var(--db-nhat);   color: var(--db-dam);   border-color: var(--db-dam); }
+.vk-chip-re   { background: var(--re-nhat);   color: var(--re-dam);   border-color: var(--re-dam); }
+.vk-chip-lap  { background: var(--lap-nhat);  color: var(--lap-dam);  border-color: var(--lap-dam); }
+.vk-chip-loi  { background: #FEE2E2; color: var(--loi-dam); border-color: var(--loi-dam); }
+.vk-chip-on   { background: #DCFCE7; color: var(--on-dam); border-color: var(--on-dam); }
+.vk-the { position: absolute; left: 0; top: 0; background: var(--be-mat); color: var(--muc); border: var(--vien); border-radius: var(--ban-kinh); box-shadow: var(--bong); font-family: 'Be Vietnam Pro', sans-serif; }
+.vk-bubble { position: absolute; left: 0; top: 0; padding: 14px 26px; background: var(--be-mat); color: var(--muc); border: var(--vien); border-radius: 26px; box-shadow: var(--bong); font: 600 34px/1.25 'Be Vietnam Pro', sans-serif; white-space: nowrap; }
+/* cửa sổ code: thêm lớp .th-cuaso (đã có trong thuong-hieu.css). Mỗi dòng code là một <span class="vk-dong">; tô sáng dòng bằng vk.sangDong */
+.vk-code { font-family: 'JetBrains Mono', monospace; font-size: 30px; line-height: 1.55; padding: 22px 28px; margin: 0; white-space: normal; color: var(--ma-chu); }
+.vk-dong { display: block; white-space: pre; min-height: 1.55em; padding: 0 14px; margin: 0 -14px; border-radius: 8px; }
+.vk-dong .k-bien { color: var(--ma-bien); } .vk-dong .k-ham { color: var(--ma-ham); } .vk-dong .k-db { color: var(--ma-db); }
+.vk-dong .k-re { color: var(--ma-re); } .vk-dong .k-lap { color: var(--ma-lap); } .vk-dong .k-ct { color: var(--ma-chu-thich); } .vk-dong .k-cam { color: var(--ma-cam); }
+/* kệ gạch ở góc trên trái (vk.keGach) */
+.vk-ke { position: absolute; left: 96px; top: 48px; width: 760px; height: 84px; }
+.vk-o { position: absolute; top: 0; width: 144px; height: 84px; border: 3px dashed rgba(17,17,19,0.28); border-radius: 12px; box-sizing: border-box; }
+.vk-gach { position: absolute; top: 0; width: 144px; height: 84px; display: flex; align-items: center; justify-content: center; box-sizing: border-box; color: var(--chu-tren-mau); font: 800 23px/1 'Be Vietnam Pro', sans-serif; border: var(--vien-chip); border-radius: 12px; box-shadow: var(--bong-nho); white-space: nowrap; }
+.vk-gach-bien { background: var(--bien); } .vk-gach-ham { background: var(--ham); } .vk-gach-db { background: var(--db); } .vk-gach-re { background: var(--re); } .vk-gach-lap { background: var(--lap); }
+/* nét vẽ SVG (đường nối, mũi tên): dùng pathLength="1" để vẽ dần bằng vk.ve, không cần đo */
+.vk-net { fill: none; stroke: var(--muc); stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+.vk-net-mong { stroke-width: 3; stroke: var(--muc-phu); }
+
+#root { position: absolute; inset: 0; }
+.c4d5-svg { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; z-index: 1; overflow: visible; }
+.c4d5-vong { fill: none; stroke: var(--lap); stroke-width: 14; stroke-linecap: round; }
+.c4d5-mt { fill: none; stroke: var(--lap-dam); stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+.c4d5-nhanh { fill: none; stroke: var(--muc-phu); stroke-width: 4; stroke-linecap: round; }
+.c4d5-clip { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; z-index: 5; clip-path: polygon(0px 0px, 1920px 0px, 1920px 1080px, 1690px 1080px, 1690px 655px, 1675px 658px, 1566px 707px, 1444px 741px, 1332px 707px, 1216px 653px, 1195px 640px, 1170px 640px, 1170px 1080px, 0px 1080px); }
+.c4d5-it { position: absolute; left: 0; top: 0; }
+.c4d5-nhan { position: absolute; display: flex; align-items: center; justify-content: center; text-align: center; font: 800 26px/1.05 'Be Vietnam Pro', sans-serif; color: var(--muc); }
+.c4d5-tia { opacity: 0; position: absolute; left: 944px; top: 653px; width: 84px; height: 8px; border-radius: 4px; background: #EF4444; box-shadow: 0 0 14px rgba(239,68,68,0.8); z-index: 6; }
+.c4d5-bubble { left: 640px; top: 250px; z-index: 8; }
+.c4d5-chip { position: absolute; z-index: 8; font-size: 34px; }
+.c4d5-fk { position: absolute; z-index: 8; left: 110px; font-size: 32px; }
+.c4d5-fk svg { width: 28px; height: 28px; flex: none; }
+.c4d5-nhan-lap { position: absolute; left: 820px; top: 160px; width: 600px; text-align: center; z-index: 8; color: var(--lap-dam); }
+.c4d5-cua { position: absolute; left: 96px; top: 190px; width: 560px; z-index: 8; }
+.c4d5-cua .vk-code { font-size: 30px; }
+.c4d5-while { display: inline-block; padding: 0 8px; margin: 0 -2px; border-radius: 7px; background: rgba(236,72,153,0); font-weight: 800; }
+.c4d5-tong { color: var(--chu-tong); position: absolute; left: 96px; top: 610px; z-index: 8; font-size: 96px; font-weight: 800; letter-spacing: 1px; }
+</style>
+<div data-hf-id="hf-1mkk" id="root" data-composition-id="c4-d5" data-width="1920" data-height="1080">
+  <svg data-hf-id="hf-3lv2" class="c4d5-svg" viewBox="0 0 1920 1080">
+    <path data-hf-id="hf-qou5" class="c4d5-vong" id="c4d5-vong" pathLength="1" d="M 1120 310 A 650 340 0 0 1 1120 990 A 650 340 0 0 1 1120 310" />
+    <path data-hf-id="hf-dua3" class="c4d5-mt" id="c4d5-vong-mt" d="M 1096 286 L 1142 310 L 1096 334 Z" style="fill: var(--lap); stroke-width: 4" />
+    <path data-hf-id="hf-5w3e" class="c4d5-mt vk-net" id="c4d5-ma" pathLength="1" d="M 1020 268 C 1180 188 1380 248 1400 430 M 1372 398 L 1400 436 L 1430 396" style="stroke: var(--lap-dam); stroke-width: 6" />
+    <path data-hf-id="hf-z9ox" class="c4d5-mt vk-net" id="c4d5-mb" pathLength="1" d="M 1030 300 C 1170 240 1290 290 1318 430 M 1290 396 L 1318 434 L 1348 398" style="stroke: var(--lap-dam); stroke-width: 6" />
+    <path data-hf-id="hf-u0pm" class="c4d5-nhanh vk-net" id="c4d5-f0" pathLength="1" d="M 636 283 L 592 283" />
+    <path data-hf-id="hf-gr51" class="c4d5-nhanh vk-net" id="c4d5-f1" pathLength="1" d="M 592 283 C 560 283 540 218 484 218" />
+    <path data-hf-id="hf-a964" class="c4d5-nhanh vk-net" id="c4d5-f2" pathLength="1" d="M 592 283 C 560 283 540 365 484 365" />
+  </svg>
+  <div data-hf-id="hf-lewo" class="c4d5-clip" id="c4d5-clip"></div>
+  <div data-hf-id="hf-hfkm" class="c4d5-tia" id="c4d5-tia"></div>
+  <div data-hf-id="hf-q3xb" class="vk-bubble c4d5-bubble" id="c4d5-bubble">Còn món nào không?</div>
+  <div data-hf-id="hf-yg72" class="vk-chip vk-chip-lap c4d5-chip" id="c4d5-v1" style="left:1050px;top:345px">vòng 1</div>
+  <div data-hf-id="hf-5qgk" class="vk-chip vk-chip-lap c4d5-chip" id="c4d5-v2" style="left:1050px;top:420px">vòng 2</div>
+  <div data-hf-id="hf-8ctm" class="vk-chip vk-chip-on c4d5-fk" id="c4d5-fk1" style="top:187px"><svg data-hf-id="hf-u3w7" viewBox="0 0 30 30"><path data-hf-id="hf-sbfn" d="M5 16 L12 23 L25 7" fill="none" stroke="#15803D" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" /></svg>ĐÚNG: còn món</div>
+  <div data-hf-id="hf-mqcs" class="vk-chip vk-chip-loi c4d5-fk" id="c4d5-fk2" style="top:334px"><svg data-hf-id="hf-3l13" viewBox="0 0 30 30"><path data-hf-id="hf-313y" d="M7 7 L23 23 M23 7 L7 23" fill="none" stroke="#B91C1C" stroke-width="4.5" stroke-linecap="round" /></svg>SAI: hết món</div>
+  <div data-hf-id="hf-p0oj" class="vk-chu vk-chu-to c4d5-nhan-lap" id="c4d5-lap">VÒNG LẶP</div>
+  <div data-hf-id="hf-n132" class="th-cuaso c4d5-cua" id="c4d5-cua">
+    <div data-hf-id="hf-xhm1" class="th-cuaso-dau"><i data-hf-id="hf-wt6k"></i><i data-hf-id="hf-zeb8"></i><i data-hf-id="hf-y7e5"></i><span data-hf-id="hf-vtd4">quet_hang.py</span></div>
+    <pre data-hf-id="hf-gwgb" class="vk-code"><span data-hf-id="hf-snzx" class="vk-dong" id="c4d5-l1"><span data-hf-id="hf-iuv1" class="c4d5-while k-lap" id="c4d5-while">while</span> con_mon_trong_gio:</span>
+<span data-hf-id="hf-a1qz" class="vk-dong" id="c4d5-l2">    <span data-hf-id="hf-9wi4" class="k-ham">quet_mot_mon</span>()</span></pre>
+  </div>
+  <div data-hf-id="hf-clri" class="vk-chu c4d5-tong th-tong" id="c4d5-tong">TỔNG</div>
+</div>
+<script>
+/* Hàm dùng chung cho mọi cảnh (build_canh.py chèn vào chỗ đánh dấu VK_JS trong thẻ <script>, TRƯỚC khi tạo `tl`).
+   Mọi hàm nhận timeline `tl` và đích (phần tử hoặc selector), chỉ tạo tween xác định (không Math.random, không Date.now),
+   dùng fromTo với trạng thái đầu rõ ràng nên seek theo hai chiều đều đúng. Thời điểm `t` tính bằng giây trong cảnh hiện tại. */
+const vk = (() => {
+  const GACH = [
+    { ten: "BIẾN", lop: "bien" }, { ten: "HÀM", lop: "ham" }, { ten: "DATABASE", lop: "db" },
+    { ten: "IF / ELSE", lop: "re" }, { ten: "VÒNG LẶP", lop: "lap" },
+  ];
+  const dinhDang = (n) => String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+  const q = (x) => (typeof x === "string" ? document.querySelector(x) : x);
+
+  /* hiện dần: mờ -> rõ, trượt từ dưới lên `dy` px (mặc định 28) */
+  function vao(tl, el, t, o = {}) {
+    tl.fromTo(el, { opacity: 0, y: (o.dy ?? 28) + (o.y ?? 0), x: o.x ?? 0, scale: o.scale0 ?? 1 },
+      { opacity: 1, y: o.y ?? 0, x: o.x ?? 0, scale: 1, duration: o.dur ?? 0.55, ease: o.ease ?? "power3.out" }, t);
+  }
+  /* biến mất: mờ dần (và thu nhỏ nhẹ nếu cho `scale1`) */
+  function ra(tl, el, t, o = {}) {
+    tl.to(el, { opacity: o.opacity ?? 0, scale: o.scale1 ?? 1, duration: o.dur ?? 0.4, ease: "power2.in" }, t);
+  }
+  /* bật lên có nảy (cho chữ nhấn, viên gạch, dấu hỏi) */
+  function pop(tl, el, t, o = {}) {
+    tl.fromTo(el, { opacity: 0, scale: o.scale0 ?? 0.5 }, { opacity: 1, scale: o.scale1 ?? 1, duration: o.dur ?? 0.5, ease: "back.out(1.9)" }, t);
+  }
+  /* nảy một nhịp khi vật chạm đích (scale 1 -> 1.08 -> 1) */
+  function nay(tl, el, t, o = {}) {
+    const m = o.m ?? 1.08;
+    tl.to(el, { scale: m, duration: 0.12, ease: "power2.out" }, t).to(el, { scale: 1, duration: 0.28, ease: "back.out(2.4)" }, t + 0.12);
+  }
+  /* bay theo cung từ (x0,y0) tới (x1,y1) trong `dur` giây; `cao` là độ vồng (âm = vồng lên). Phần tử nên đặt left:0; top:0 (lớp .vk-abs / .vk-nv / .vk-the) */
+  function cung(tl, el, o) {
+    const dur = o.dur ?? 0.9, cao = o.cao ?? -140, ymid = (o.y0 + o.y1) / 2 + cao;
+    tl.fromTo(el, { x: o.x0, y: o.y0, rotation: o.r0 ?? 0, scale: o.s0 ?? 1, opacity: o.hien0 === false ? 0 : 1 },
+      { x: o.x1, rotation: o.r1 ?? 0, scale: o.s1 ?? 1, opacity: 1, duration: dur, ease: o.easeX ?? "power1.inOut" }, o.t);
+    tl.to(el, { keyframes: { y: [ymid, o.y1], easeEach: "sine.inOut" }, duration: dur }, o.t);
+  }
+  /* đếm số: từ `tu` tới `den`, hiển thị kiểu 20.000.000 (dấu chấm ngăn nghìn), kèm hậu tố tuỳ ý */
+  function dem(tl, el, o) {
+    const e = q(el), p = { v: o.tu ?? 0 }, hau = o.hau ?? "", tien = o.tien ?? "";
+    e.textContent = tien + dinhDang(o.tu ?? 0) + hau;
+    tl.to(p, { v: o.den, duration: o.dur ?? 1.2, ease: o.ease ?? "power2.out", onUpdate() { e.textContent = tien + dinhDang(p.v) + hau; } }, o.t);
+  }
+  /* gõ chữ: hiện dần từng ký tự của `text` trong `dur` giây (đặt phần tử rỗng ban đầu) */
+  function go(tl, el, text, o) {
+    const e = q(el), p = { n: 0 };
+    e.textContent = "";
+    tl.to(p, { n: text.length, duration: o.dur ?? text.length * 0.04, ease: "none", onUpdate() { e.textContent = text.slice(0, Math.round(p.n)); } }, o.t);
+  }
+  /* tô sáng một dòng code (hoặc phần tử bất kỳ) từ tOn tới tOff, bằng màu nền mờ */
+  function sangDong(tl, el, tOn, tOff, mau = "rgba(250,204,21,0.22)") {
+    tl.fromTo(el, { backgroundColor: "rgba(0,0,0,0)" }, { backgroundColor: mau, duration: 0.25, ease: "power2.out" }, tOn);
+    if (tOff != null) tl.to(el, { backgroundColor: "rgba(0,0,0,0)", duration: 0.3, ease: "power2.in" }, tOff);
+  }
+  /* vẽ dần một nét SVG có pathLength="1" (class vk-net) trong `dur` giây */
+  function ve(tl, el, t, dur = 0.8) {
+    tl.fromTo(el, { strokeDasharray: 1, strokeDashoffset: 1, opacity: 1 }, { strokeDashoffset: 0, duration: dur, ease: "power1.inOut" }, t);
+  }
+  /* kệ gạch ở góc trên trái: `co` viên đã nằm sẵn từ đầu cảnh (0..5, theo thứ tự BIẾN, HÀM, DATABASE, IF/ELSE, VÒNG LẶP);
+     `roi` là viên rơi: một số (1..5) rơi lúc `t`, hoặc danh sách [{i: 4, t: 12.3}, {i: 5, t: 15}]. Trả về phần tử kệ. */
+  function keGach(tl, parent, o = {}) {
+    const ke = document.createElement("div");
+    ke.className = "vk-ke";
+    for (let i = 0; i < 5; i++) {
+      const slot = document.createElement("div");
+      slot.className = "vk-o"; slot.style.left = i * 154 + "px";
+      ke.appendChild(slot);
+    }
+    const dat = (i) => {
+      const g = document.createElement("div");
+      g.className = "vk-gach vk-gach-" + GACH[i].lop; g.style.left = i * 154 + "px"; g.textContent = GACH[i].ten;
+      ke.appendChild(g); return g;
+    };
+    for (let i = 0; i < (o.co ?? 0); i++) dat(i);
+    const roi = o.roi ? (Array.isArray(o.roi) ? o.roi : [{ i: o.roi, t: o.t ?? 0 }]) : [];
+    roi.forEach((r) => {
+      const g = dat(r.i - 1);
+      tl.fromTo(g, { y: -360, opacity: 0, rotation: -6 }, { y: 0, opacity: 1, rotation: 0, duration: 0.7, ease: "bounce.out" }, r.t);
+    });
+    q(parent).appendChild(ke);
+    return ke;
+  }
+  /* viên gạch lớn: rơi từ trên xuống giữa khung (cx, cy) lúc `t` với độ phóng `scale`, rồi (nếu có `tBay`) bay theo cung xuống đúng ô `i` (1..5) của kệ gạch
+     và thu về cỡ 1 trong `durBay` giây. Trả về phần tử. Kệ gạch tạo riêng bằng vk.keGach (ô trống) cùng cảnh. */
+  function gachLon(tl, parent, o) {
+    const i = o.i, g = document.createElement("div"), cx = o.cx ?? 960, cy = o.cy ?? 540, sc = o.scale ?? 3;
+    g.className = "vk-gach vk-gach-" + GACH[i - 1].lop; g.textContent = GACH[i - 1].ten;
+    g.style.left = "0px"; g.style.top = "0px"; g.style.transformOrigin = "50% 50%"; g.style.zIndex = "5";
+    q(parent).appendChild(g);
+    const x0 = cx - 72, y0 = cy - 42, x1 = 96 + (i - 1) * 154, y1 = 48;
+    tl.fromTo(g, { x: x0, y: y0 - 700, scale: sc, opacity: 0, rotation: -5 }, { y: y0, opacity: 1, rotation: 0, duration: 0.8, ease: "bounce.out" }, o.t);
+    if (o.tBay != null) {
+      const d = o.durBay ?? 1.0, ymid = (y0 + y1) / 2 - 120;
+      tl.to(g, { x: x1, scale: 1, duration: d, ease: "power2.inOut" }, o.tBay);
+      tl.to(g, { keyframes: { y: [ymid, y1], easeEach: "sine.inOut" }, duration: d }, o.tBay);
+    }
+    return g;
+  }
+  /* đặt ảnh nhân vật/đạo cụ vuông `size` px: tâm ngang `cx`, ĐÁY ẢNH tại `base` (chân nhân vật cách đáy ảnh khoảng 4%) */
+  function nv(parent, o) {
+    const img = document.createElement("img");
+    img.className = "vk-nv"; img.src = o.src; img.alt = "";
+    const w = o.size, h = o.cao ?? o.size;
+    img.style.width = w + "px"; img.style.height = h + "px";
+    img.style.left = o.cx - w / 2 + "px"; img.style.top = o.base - h + "px";
+    if (o.id) img.id = o.id;
+    if (o.bong !== false) {
+      const b = document.createElement("div");
+      b.className = "vk-bong"; b.style.width = w * 0.55 + "px"; b.style.height = w * 0.09 + "px";
+      b.style.left = o.cx - w * 0.275 + "px"; b.style.top = o.base - w * 0.09 * 0.62 - h * 0.035 + "px";
+      q(parent).appendChild(b); img._bong = b;
+    }
+    q(parent).appendChild(img);
+    return img;
+  }
+  return { GACH, dinhDang, vao, ra, pop, nay, cung, dem, go, sangDong, ve, keGach, gachLon, nv };
+})();
+
+/* Co giãn thời gian của cả đoạn khi giọng đọc đổi: build_canh.py thay `gsap.timeline(...)` bằng `vkWarp(gsap.timeline(...), PTS)` nếu có file <id>.warp.json.
+   PTS = [[giây cũ, giây mới], ...] tăng dần; mọi VỊ TRÍ bắt đầu (đối số thời điểm của to, from, fromTo, set, call, add, addLabel) đi qua đường gấp khúc này.
+   Thời lượng từng tween giữ nguyên; ngoài điểm cuối thì dịch song song. Không có PTS thì giữ nguyên timeline. */
+function vkWarp(tl, pts) {
+  if (!pts || pts.length < 2) return tl;
+  const f = (t) => {
+    if (t <= pts[0][0]) return pts[0][1] + (t - pts[0][0]);
+    for (let i = 1; i < pts.length; i++) {
+      if (t <= pts[i][0]) {
+        const [a, b] = pts[i - 1], [c, d] = pts[i];
+        return b + ((t - a) / (c - a)) * (d - b);
+      }
+    }
+    const e = pts[pts.length - 1];
+    return e[1] + (t - e[0]);
+  };
+  const vitri = { to: 2, from: 2, fromTo: 3, set: 2, call: 2, add: 1, addLabel: 1 };
+  Object.keys(vitri).forEach((m) => {
+    const goc = tl[m].bind(tl), i = vitri[m];
+    tl[m] = (...a) => {
+      if (a.length > i && typeof a[i] === "number") a[i] = f(a[i]);
+      return goc(...a);
+    };
+  });
+  return tl;
+}
+
+const D = 31.58;
+const tl = vkWarp(gsap.timeline({ paused: true }), [[0.0, 0.0], [2.76, 2.7], [5.44, 5.38], [6.68, 6.84], [10.16, 10.14], [15.88, 15.88], [22.56, 21.108], [26.82, 25.18], [30.98, 26.78], [31.58, 27.38]]);
+const root = document.getElementById("root");
+const ke = vk.keGach(tl, root, { co: 3 });
+const clip = document.getElementById("c4d5-clip");
+const lan = vk.nv(root, { src: "assets/images/co-lan/quay-thu-ngan.png", size: 670, cx: 900, base: 1040, id: "c4d5-lan" });
+lan.style.zIndex = 2; lan._bong.style.zIndex = 2;
+const mt = vk.nv(root, { src: "assets/images/vat/may-tinh-tien-cu.png", size: 210, cx: 772, base: 808, id: "c4d5-mt", bong: false });
+mt.style.zIndex = 3;
+const gio = vk.nv(root, { src: "assets/images/vat/gio-hang-trong.png", size: 520, cx: 1440, base: 960, id: "c4d5-gio" });
+gio.style.zIndex = 3; gio._bong.style.zIndex = 3;
+
+// các món trong giỏ (thả vào theo thứ tự; món sau nằm trên)
+const MON = {
+  chai: { src: "vat/chai-nuoc-mam", size: 320, cx: 1330, base: 848, nhan: { x: 0.51, y: 0.64, w: 0.26, h: 0.36, t: "MẮM" } },
+  gao:  { src: "vat/bao-gao", size: 240, cx: 1505, base: 794, nhan: { x: 0.515, y: 0.645, w: 0.47, h: 0.28, t: "GẠO" } },
+  muoi: { src: "vat/bao-muoi", size: 240, cx: 1400, base: 786, nhan: { x: 0.51, y: 0.68, w: 0.42, h: 0.2, t: "MUỐI" } },
+  mi:   { src: "vat/goi-mi-chinh", size: 280, cx: 1468, base: 820, nhan: { x: 0.51, y: 0.52, w: 0.4, h: 0.26, t: "MÌ<br>CHÍNH" } },
+};
+const SX = 985, SY = 655;           // đầu máy quét của Cô Lan
+Object.entries(MON).forEach(([k, m]) => {
+  const c = document.createElement("div"); c.className = "c4d5-it"; c.id = "c4d5-m-" + k; clip.appendChild(c);
+  vk.nv(c, { src: "assets/images/" + m.src + ".png", size: m.size, cx: m.cx, base: m.base, bong: false });
+  const n = document.createElement("div"); n.className = "c4d5-nhan"; n.innerHTML = m.nhan.t;
+  const w = m.nhan.w * m.size, h = m.nhan.h * m.size;
+  n.style.width = w + "px"; n.style.height = h + "px";
+  n.style.left = m.cx - m.size / 2 + m.nhan.x * m.size - w / 2 + "px";
+  n.style.top = m.base - m.size + m.nhan.y * m.size - h / 2 + "px";
+  if (k === "mi" || k === "chai") n.style.fontSize = "24px";
+  c.appendChild(n);
+  m.el = c; m.cy = m.base - m.size / 2;
+  gsap.set(c, { transformOrigin: m.cx + "px " + m.cy + "px" });
+});
+// món bay từ giỏ tới đầu máy quét rồi biến mất
+function quet(m, t, dur) {
+  const dx = SX - m.cx, dy = SY - m.cy;
+  tl.fromTo(m.el, { x: 0, scale: 1, opacity: 1 }, { x: dx, scale: 0.55, duration: dur, ease: "power1.inOut", immediateRender: false }, t);
+  tl.to(m.el, { keyframes: { y: [dy - 190, dy], easeEach: "sine.inOut" }, duration: dur }, t);
+  tl.to(m.el, { opacity: 0, scale: 0.25, duration: 0.25, ease: "power2.in" }, t + dur);
+  tl.fromTo("#c4d5-tia", { opacity: 0 }, { opacity: 1, duration: 0.08, ease: "none", immediateRender: false }, t + dur - 0.05);
+  tl.to("#c4d5-tia", { opacity: 0, duration: 0.18, ease: "power1.in" }, t + dur + 0.08);
+}
+
+// 0,0s: giỏ hàng bên phải hiện; các món rơi vào giỏ theo thứ tự (chai, gạo, muối, mì chính)
+vk.pop(tl, gio, 0.0, { scale0: 0.75, dur: 0.45 });
+tl.fromTo(gio._bong, { opacity: 0 }, { opacity: 1, duration: 0.4 }, 0.0);
+[["chai", 0.45], ["gao", 0.95], ["muoi", 1.45], ["mi", 1.95]].forEach(([k, t]) => {
+  const m = MON[k];
+  tl.fromTo(m.el, { y: -(m.base + 90), x: 0 }, { y: 0, duration: 0.75, ease: "bounce.out" }, t);
+});
+// 2,8s: Cô Lan quét món 1 (gói mì chính bay tới máy quét); chip "vòng 1"
+vk.pop(tl, "#c4d5-v1", 2.8, { scale0: 0.6, dur: 0.45 });
+quet(MON.mi, 2.8, 0.85);
+// 5,4s: bong bóng "Còn món nào không?"; mũi tên cong quay lại giỏ
+vk.pop(tl, "#c4d5-bubble", 5.4, { scale0: 0.7, dur: 0.5 });
+vk.ve(tl, "#c4d5-ma", 5.7, 0.8);
+// 6,7s: món 2 (bao muối) bay ra; chip "vòng 2"; mũi tên vòng lần hai
+vk.pop(tl, "#c4d5-v2", 6.7, { scale0: 0.6, dur: 0.45 });
+quet(MON.muoi, 6.7, 0.85);
+vk.ve(tl, "#c4d5-mb", 7.2, 0.8);
+// 10,2s: ngã ba đường nhỏ (đúng / sai) cạnh bong bóng
+vk.ve(tl, "#c4d5-f0", 10.2, 0.25);
+vk.ve(tl, "#c4d5-f1", 10.4, 0.4);
+vk.ve(tl, "#c4d5-f2", 10.4, 0.4);
+vk.pop(tl, "#c4d5-fk1", 10.6, { scale0: 0.7, dur: 0.45 });
+vk.pop(tl, "#c4d5-fk2", 10.9, { scale0: 0.7, dur: 0.45 });
+// 15,9s: các mũi tên khép thành vòng tròn hồng liền; chữ VÒNG LẶP (2 giây dừng)
+tl.to(["#c4d5-bubble", "#c4d5-ma", "#c4d5-mb", "#c4d5-v1", "#c4d5-v2", "#c4d5-fk1", "#c4d5-fk2", "#c4d5-f0", "#c4d5-f1", "#c4d5-f2"], { opacity: 0, duration: 0.5, ease: "power2.in" }, 15.7);
+tl.fromTo("#c4d5-vong", { strokeDasharray: "1 1", strokeDashoffset: 1, opacity: 1 }, { strokeDashoffset: 0, duration: 1.1, ease: "power1.inOut" }, 15.9);
+tl.fromTo("#c4d5-vong-mt", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 16.9);
+vk.pop(tl, "#c4d5-lap", 16.2, { scale0: 0.8, dur: 0.55 });
+// 22,6s: cửa sổ code hai dòng; từ while sáng hồng đậm
+vk.vao(tl, "#c4d5-cua", 22.4, { dy: 24, dur: 0.55 });
+tl.fromTo("#c4d5-while", { backgroundColor: "rgba(236,72,153,0)", color: "#F9A8D4" }, { backgroundColor: "rgba(236,72,153,0.7)", color: "#FFFFFF", duration: 0.35, ease: "power2.out" }, 23.4);
+vk.sangDong(tl, "#c4d5-l1", 24.0, 25.3, "rgba(236,72,153,0.22)");
+vk.sangDong(tl, "#c4d5-l2", 25.3, 27.4, "rgba(59,130,246,0.25)");
+// 26,0s: những món còn lại ra nhanh (quét tiếp) cho tới khi giỏ trống
+quet(MON.gao, 25.6, 0.6);
+quet(MON.chai, 26.05, 0.6);
+// 26,8s: "Hết món": vòng tròn đứt rồi ngừng
+tl.to("#c4d5-lap", { opacity: 0, duration: 0.4, ease: "power2.in" }, 26.7);
+tl.to("#c4d5-vong", { strokeDasharray: "0.74 1", opacity: 0.3, duration: 0.5, ease: "power2.inOut" }, 26.8);
+tl.to("#c4d5-vong-mt", { opacity: 0, duration: 0.3 }, 26.8);
+// 27,2s: Cô Lan nhấn máy tính tiền (nảy); "TỔNG" xanh lá đậm (giữ ba giây)
+vk.pop(tl, mt, 26.9, { scale0: 0.6, dur: 0.4 });
+tl.to(lan, { y: 8, duration: 0.12, ease: "power2.out" }, 27.35).to(lan, { y: 0, duration: 0.3, ease: "back.out(2.4)" }, 27.47);
+vk.nay(tl, mt, 27.35, { m: 1.14 });
+vk.pop(tl, "#c4d5-tong", 27.45, { scale0: 0.7, dur: 0.5 });
+window.__timelines["c4-d5"] = tl;
+</script>
+
+</template>
+  </body>
+</html>

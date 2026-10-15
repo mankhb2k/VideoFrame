@@ -1,0 +1,56 @@
+[
+ {
+  "id": "canh2-d1-k1",
+  "bat_dau": 0.0,
+  "ket_thuc": 14.036,
+  "dung_sau_giay": 0.6
+ },
+ {
+  "id": "canh2-d2-k1",
+  "bat_dau": 14.636,
+  "ket_thuc": 28.294,
+  "dung_sau_giay": 1.2
+ },
+ {
+  "id": "canh2-d2-k2",
+  "bat_dau": 29.494,
+  "ket_thuc": 34.317,
+  "dung_sau_giay": 0.6
+ },
+ {
+  "id": "canh2-d3-k1",
+  "bat_dau": 34.917,
+  "ket_thuc": 52.922,
+  "dung_sau_giay": 1.2
+ },
+ {
+  "id": "canh2-d3-k2",
+  "bat_dau": 54.122,
+  "ket_thuc": 68.197,
+  "dung_sau_giay": 0.6
+ },
+ {
+  "id": "canh2-d4-k1",
+  "bat_dau": 68.797,
+  "ket_thuc": 85.739,
+  "dung_sau_giay": 1.2
+ },
+ {
+  "id": "canh2-d4-k2",
+  "bat_dau": 86.939,
+  "ket_thuc": 91.965,
+  "dung_sau_giay": 0.6
+ },
+ {
+  "id": "canh2-d5-k1",
+  "bat_dau": 92.565,
+  "ket_thuc": 110.92,
+  "dung_sau_giay": 0.9
+ },
+ {
+  "id": "canh2-d5-k2",
+  "bat_dau": 111.82,
+  "ket_thuc": 125.138,
+  "dung_sau_giay": 0.0
+ }
+]

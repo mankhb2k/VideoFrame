@@ -1,0 +1,128 @@
+[
+ {
+  "id": "canh5-d1-k1",
+  "bat_dau": 0.0,
+  "ket_thuc": 5.743,
+  "dung_sau_giay": 0.7
+ },
+ {
+  "id": "canh5-d1-k2",
+  "bat_dau": 6.443,
+  "ket_thuc": 7.669,
+  "dung_sau_giay": 0.7
+ },
+ {
+  "id": "canh5-d1-k3",
+  "bat_dau": 8.369,
+  "ket_thuc": 10.509,
+  "dung_sau_giay": 0.7
+ },
+ {
+  "id": "canh5-d1-k4",
+  "bat_dau": 11.209,
+  "ket_thuc": 13.135,
+  "dung_sau_giay": 0.7
+ },
+ {
+  "id": "canh5-d1-k5",
+  "bat_dau": 13.835,
+  "ket_thuc": 16.362,
+  "dung_sau_giay": 0.7
+ },
+ {
+  "id": "canh5-d1-k6",
+  "bat_dau": 17.062,
+  "ket_thuc": 20.233,
+  "dung_sau_giay": 0.9
+ },
+ {
+  "id": "canh5-d2-k1",
+  "bat_dau": 21.133,
+  "ket_thuc": 46.203,
+  "dung_sau_giay": 0.6
+ },
+ {
+  "id": "canh5-d3-k1",
+  "bat_dau": 46.803,
+  "ket_thuc": 65.638,
+  "dung_sau_giay": 0.6
+ },
+ {
+  "id": "canh5-d4-k1",
+  "bat_dau": 66.238,
+  "ket_thuc": 87.695,
+  "dung_sau_giay": 0.6
+ },
+ {
+  "id": "canh5-d5-k1",
+  "bat_dau": 88.295,
+  "ket_thuc": 94.543,
+  "dung_sau_giay": 0.9
+ },
+ {
+  "id": "canh5-d5-k2",
+  "bat_dau": 95.443,
+  "ket_thuc": 111.703,
+  "dung_sau_giay": 0.9
+ },
+ {
+  "id": "canh5-d5-k3",
+  "bat_dau": 112.603,
+  "ket_thuc": 120.589,
+  "dung_sau_giay": 0.8
+ },
+ {
+  "id": "canh5-d5-k4",
+  "bat_dau": 121.389,
+  "ket_thuc": 134.865,
+  "dung_sau_giay": 1.05
+ },
+ {
+  "id": "canh5-d6-k1",
+  "bat_dau": 135.915,
+  "ket_thuc": 144.111,
+  "dung_sau_giay": 0.9
+ },
+ {
+  "id": "canh5-d6-k2",
+  "bat_dau": 145.011,
+  "ket_thuc": 162.903,
+  "dung_sau_giay": 0.9
+ },
+ {
+  "id": "canh5-d7-k1",
+  "bat_dau": 163.803,
+  "ket_thuc": 166.371,
+  "dung_sau_giay": 0.9
+ },
+ {
+  "id": "canh5-d7-k2",
+  "bat_dau": 167.271,
+  "ket_thuc": 183.793,
+  "dung_sau_giay": 1.2
+ },
+ {
+  "id": "canh5-d7-k3",
+  "bat_dau": 184.993,
+  "ket_thuc": 190.934,
+  "dung_sau_giay": 0.9
+ },
+ {
+  "id": "canh5-d7-k4",
+  "bat_dau": 191.834,
+  "ket_thuc": 208.621,
+  "dung_sau_giay": 0.8
+ },
+ {
+  "id": "canh5-d7-k5",
+  "bat_dau": 209.421,
+  "ket_thuc": 218.663,
+  "dung_sau_giay": 0.6
+ },
+ {
+  "id": "canh5-d7-k6",
+  "bat_dau": 219.263,
+  "ket_thuc": 241.373,
+  "dung_sau_giay": 0.0
+ }
+]

@@ -1,0 +1,25 @@
+Gạo bán chạy, ông Sơn làm ăn thuận lợi. Ông không chỉ bán gạo nữa, mà nhập thêm nước mắm, muối, mì chính. Sáu mặt hàng, rồi mười, rồi hai mươi.
+
+Hai mươi mặt hàng, mỗi mặt hàng một giá, một số lượng trong kho. Cô Lan bắt đầu nhớ nhầm giá. Anh Tâm không biết kho còn bao nhiêu để lấy ra xếp. Nhớ trong đầu thì được với ba loại gạo, nhưng với hai mươi mặt hàng thì không còn được nữa.
+
+Ông Sơn thuê một đội kế toán. Việc của họ không phải bán hàng, không phải xếp kệ. Việc của họ là giữ sổ: mặt hàng nào giá bao nhiêu, kho còn bao nhiêu, hôm nay bán gì. Cô Lan cần giá thì hỏi kế toán. Anh Tâm cần biết số lượng trong kho thì hỏi kế toán. Đội kế toán chính là database.
+
+Việc đầu tiên của kế toán là gán cho mỗi mặt hàng một mã riêng, không bao giờ trùng.
+
+Vì hai chai đều tên ‘nước mắm’, hỏi ‘nước mắm giá bao nhiêu’ thì kế toán không biết trả lời loại nào. Hỏi ‘NM01 giá bao nhiêu’ thì chỉ có đúng một đáp án.
+
+Mã riêng đó, trong database, gọi là khoá chính. Giống như số căn cước của mỗi người: tên có thể trùng, số thì không.
+
+Cuốn sổ thứ hai ghi hoá đơn: khách nào mua gì. Để ý: kế toán không chép lại tên hàng và giá, mà chỉ ghi mã. Muốn biết ‘NM01’ là gì, giá bao nhiêu, lần theo mã sang cuốn sổ hàng hoá.
+
+Cột ‘Mã hàng’ trong sổ hoá đơn, mượn mã từ cuốn sổ khác, gọi là khoá ngoại.
+
+Lý do ghi như vậy: hôm nay đổi giá nước mắm, kế toán chỉ sửa một chỗ trong sổ hàng hoá, mọi hoá đơn tự đúng theo. Không có chuyện chỗ này ghi 45, chỗ kia ghi 54.
+
+Bây giờ cô Lan hỏi kế toán giá của mã NM01 rồi mới tính tiền. Anh Tâm hỏi kế toán kho còn bao nhiêu NM01 rồi mới biết có cần lấy thêm không. Không ai phải nhớ trong đầu nữa. Hàm làm việc, kế toán giữ thông tin.
+
+Còn một lý do nữa phải thuê kế toán. Cô Lan nhớ trong đầu thì cô Lan nghỉ, thông tin biến mất. Máy tính cũng vậy: biến chỉ sống lúc máy đang chạy, tắt đi là quên sạch. Kế toán ghi vào sổ thì ai đến thay cũng đọc được, điện tắt rồi bật lại vẫn còn nguyên.
+
+Biến là trí nhớ tạm. Database là trí nhớ lâu dài.
+
+Viên gạch thứ ba: database, nơi giữ thông tin lâu dài. Giờ tiệm ông Sơn có nhãn để gọi tên, nhân viên để làm việc, kế toán để giữ sổ. Nhưng còn thiếu một thứ: khả năng tự quyết định, mà ông Sơn không phải đứng nhắc từng người.

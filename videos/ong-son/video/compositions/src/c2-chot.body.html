@@ -1,0 +1,47 @@
+<style>
+/*VK_FONT*/
+/*VK_CSS*/
+#root { position: absolute; inset: 0; }
+.c2c-dn { position: absolute; left: 0; top: 690px; width: 1920px; text-align: center; font-size: 56px; font-weight: 700; }
+.c2c-dn b { color: var(--ham-dam); font-weight: 800; }
+.c2c-chips { position: absolute; left: 0; top: 800px; width: 1920px; display: flex; justify-content: center; gap: 40px; }
+.c2c-chips .vk-chip { font-size: 34px; }
+.c2c-hoi { position: absolute; left: 0; top: 0; width: 100px; height: 100px; border-radius: 50%; background: var(--cam); border: var(--vien-chip); box-shadow: var(--bong-nho); color: var(--muc); font: 800 72px/96px 'Be Vietnam Pro', sans-serif; text-align: center; }
+</style>
+<div data-hf-id="hf-9bmp" id="root" data-composition-id="c2-chot" data-width="1920" data-height="1080">
+  <div data-hf-id="hf-3fom" class="vk-chu c2c-dn" id="c2c-dn"><b data-hf-id="hf-1unc">HÀM</b> = một người làm đúng một việc</div>
+  <div data-hf-id="hf-wkug" class="c2c-chips">
+    <div data-hf-id="hf-m1n3" class="vk-chip vk-chip-ham" id="c2c-ch1">Cô Lan: tính tiền</div>
+    <div data-hf-id="hf-v1fe" class="vk-chip vk-chip-ham" id="c2c-ch2">Anh Tâm: xếp kệ</div>
+  </div>
+  <div data-hf-id="hf-iwgu" class="c2c-hoi" id="c2c-h1">?</div>
+  <div data-hf-id="hf-g4jf" class="c2c-hoi" id="c2c-h2">?</div>
+</div>
+<script>
+/*VK_JS*/
+const D = 13.83;
+const tl = gsap.timeline({ paused: true });
+const root = document.getElementById("root");
+const ke = vk.keGach(tl, root, { co: 1 });
+// 0,5s: viên HÀM lớn rơi giữa khung (cạch); 7,1s: thu nhỏ bay lên ô 2 của kệ
+vk.gachLon(tl, root, { i: 2, t: 0.5, tBay: 7.1, durBay: 1.0, scale: 3, cx: 960, cy: 440 });
+// 2,6s: định nghĩa hiện dưới viên gạch
+vk.vao(tl, "#c2c-dn", 2.5, { dy: 24 });
+// 4,6s: hai chip hiện lần lượt
+vk.vao(tl, "#c2c-ch1", 4.5, { dy: 20, dur: 0.5 });
+vk.vao(tl, "#c2c-ch2", 5.2, { dy: 20, dur: 0.5 });
+// 7,1s: định nghĩa và chip mờ đi; Anh Tâm hiện bên phải, dấu hỏi trên đầu
+tl.to(["#c2c-dn", "#c2c-ch1", "#c2c-ch2"], { opacity: 0, duration: 0.5, ease: "power2.in" }, 7.1);
+const tam = vk.nv(root, { src: "assets/images/anh-tam/hoi.png", size: 640, cx: 1160, base: 1050, id: "c2c-tam" });
+tl.fromTo([tam, tam._bong], { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 7.3);
+document.getElementById("c2c-h1").style.cssText += ";left:1130px;top:300px";
+vk.pop(tl, "#c2c-h1", 8.1, { scale0: 0.4, dur: 0.5 });
+// 10,6s: Cô Lan cau mày hiện cạnh Anh Tâm, dấu hỏi thứ hai; hai dấu hỏi cùng nhấp
+const lan = vk.nv(root, { src: "assets/images/co-lan/cau-may.png", size: 670, cx: 780, base: 1050, id: "c2c-lan" });
+tl.fromTo([lan, lan._bong], { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 10.5);
+document.getElementById("c2c-h2").style.cssText += ";left:750px;top:300px";
+vk.pop(tl, "#c2c-h2", 11.1, { scale0: 0.4, dur: 0.5 });
+vk.nay(tl, "#c2c-h1", 11.8, { m: 1.14 });
+vk.nay(tl, "#c2c-h2", 11.8, { m: 1.14 });
+window.__timelines["c2-chot"] = tl;
+</script>

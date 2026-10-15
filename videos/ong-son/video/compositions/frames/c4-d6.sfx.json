@@ -1,0 +1,35 @@
+{
+ "scene": "c4-d6",
+ "cues": [
+  {
+   "t": 0.9,
+   "type": "click",
+   "gain": 1.0,
+   "note": "Không có if else"
+  },
+  {
+   "t": 2.9,
+   "type": "click",
+   "gain": 1.0,
+   "note": "tự dán giấy"
+  },
+  {
+   "t": 6.9,
+   "type": "click",
+   "gain": 1.0,
+   "note": "Chỉ cần quên một lần"
+  },
+  {
+   "t": 7.9,
+   "type": "pop",
+   "gain": 0.9,
+   "note": "lãi bốc hơi"
+  },
+  {
+   "t": 9.5,
+   "type": "ding",
+   "gain": 0.9,
+   "note": "Máy tính không quên"
+  }
+ ]
+}

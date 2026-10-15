@@ -1,0 +1,65 @@
+{
+ "scene": "c5-d6",
+ "cues": [
+  {
+   "t": 0.3,
+   "type": "whoosh",
+   "gain": 0.8,
+   "note": "Thợ"
+  },
+  {
+   "t": 2.8,
+   "type": "tick",
+   "gain": 0.8,
+   "note": "Kiến trúc sư hỏi ba câu"
+  },
+  {
+   "t": 4.3,
+   "type": "tick",
+   "gain": 0.8,
+   "note": "thứ này là gì"
+  },
+  {
+   "t": 6.0,
+   "type": "tick",
+   "gain": 0.8,
+   "note": "ai làm việc gì"
+  },
+  {
+   "t": 7.4,
+   "type": "tick",
+   "gain": 0.8,
+   "note": "thông tin nằm ở đâu"
+  },
+  {
+   "t": 13.3,
+   "type": "tick",
+   "gain": 0.8,
+   "note": "là cái nhãn"
+  },
+  {
+   "t": 15.6,
+   "type": "tick",
+   "gain": 0.8,
+   "note": "là người làm một việc"
+  },
+  {
+   "t": 18.2,
+   "type": "tick",
+   "gain": 0.8,
+   "note": "là cuốn sổ kế toán"
+  },
+  {
+   "t": 20.4,
+   "type": "whoosh",
+   "gain": 0.8,
+   "note": "Câu đầu tiên chính là"
+  },
+  {
+   "t": 25.5,
+   "type": "error",
+   "gain": 0.9,
+   "note": "Ai trượt bài này"
+  }
+ ]
+}

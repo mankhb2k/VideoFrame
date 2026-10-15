@@ -1,0 +1,46 @@
+<style>
+/*VK_FONT*/
+/*VK_CSS*/
+#root { position: absolute; inset: 0; }
+.c1d1-nen { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+.c1d1-so { position: absolute; left: 0; top: 105px; width: 1920px; text-align: center; font-size: 110px; font-weight: 800; letter-spacing: -1px; }
+.c1d1-chip { position: absolute; left: 0; top: 0; }
+.c1d1-nho { position: absolute; left: 1010px; top: 470px; }
+.c1d1-lon { position: absolute; left: 1010px; top: 540px; font-size: 64px; }
+</style>
+<div data-hf-id="hf-cawd" id="root" data-composition-id="c1-d1" data-width="1920" data-height="1080">
+  <img data-hf-id="hf-v3pp" class="c1d1-nen" id="c1d1-nen" src="assets/images/nen/mat-bang-trong.png" alt="">
+  <div data-hf-id="hf-7act" class="vk-chu c1d1-so" id="c1d1-so">0đ</div>
+  <div data-hf-id="hf-qt06" id="c1d1-chips">
+    <div data-hf-id="hf-qujp" class="vk-chip c1d1-chip" id="c1d1-a" style="left:1060px;top:470px">một người</div>
+    <div data-hf-id="hf-l6w8" class="vk-chip c1d1-chip" id="c1d1-b" style="left:1060px;top:570px">một ít vốn</div>
+    <div data-hf-id="hf-0n9n" class="vk-chip c1d1-chip" id="c1d1-c" style="left:1060px;top:670px">một ý tưởng</div>
+  </div>
+  <div data-hf-id="hf-l2v0" class="vk-chip vk-chip-bien c1d1-nho" id="c1d1-nho">cửa hàng 20 triệu</div>
+  <div data-hf-id="hf-4lb7" class="vk-chu vk-chu-vua c1d1-lon" id="c1d1-lon">phần mềm triệu đô</div>
+</div>
+<script>
+/*VK_JS*/
+const D = 17.85;
+const tl = gsap.timeline({ paused: true });
+const root = document.getElementById("root");
+const sm = vk.nv(root, { src: "assets/images/ong-son/cam-tien.png", size: 760, cx: 560, base: 1030, id: "c1d1-son" });
+// 0,3s: Ông Sơn trượt từ trái vào
+tl.fromTo(sm, { x: -700, opacity: 1 }, { x: 0, duration: 1.2, ease: "power3.out" }, 0.3);
+tl.fromTo(sm._bong, { x: -700 }, { x: 0, duration: 1.2, ease: "power3.out" }, 0.3);
+// 4,3s: số tiền đếm từ 0 lên 20.000.000đ (trên biển hiệu)
+vk.vao(tl, "#c1d1-so", 4.3, { dy: 20, dur: 0.4 });
+vk.dem(tl, "#c1d1-so", { tu: 0, den: 20000000, hau: "đ", t: 4.3, dur: 1.6 });
+vk.nay(tl, "#c1d1-so", 5.9);
+// 6,5s: Ông Sơn nghiêng nhẹ như hỏi người xem
+tl.to(sm, { rotation: 2, duration: 0.35, ease: "sine.inOut" }, 6.5).to(sm, { rotation: 0, duration: 0.5, ease: "sine.inOut" }, 6.85);
+// 10,5s: ba chip lần lượt hiện
+vk.vao(tl, "#c1d1-a", 10.5, { dy: 22, dur: 0.5 });
+vk.vao(tl, "#c1d1-b", 11.1, { dy: 22, dur: 0.5 });
+vk.vao(tl, "#c1d1-c", 11.7, { dy: 22, dur: 0.5 });
+// 13,8s: ba chip gộp thành "phần mềm triệu đô"
+tl.to(["#c1d1-a", "#c1d1-b", "#c1d1-c"], { opacity: 0, scale: 0.9, duration: 0.4, ease: "power2.in" }, 13.6);
+vk.vao(tl, "#c1d1-nho", 13.8, { dy: 16 });
+vk.pop(tl, "#c1d1-lon", 14.2, { scale0: 0.8 });
+window.__timelines["c1-d1"] = tl;
+</script>

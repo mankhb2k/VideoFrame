@@ -1,0 +1,29 @@
+{
+ "scene": "c3-d2",
+ "cues": [
+  {
+   "t": 1.7,
+   "type": "pop",
+   "gain": 0.9,
+   "note": "mỗi mặt hàng một giá"
+  },
+  {
+   "t": 4.6,
+   "type": "whoosh",
+   "gain": 0.8,
+   "note": "Cô Lan bắt đầu nhớ nhầm giá"
+  },
+  {
+   "t": 6.7,
+   "type": "pop",
+   "gain": 0.9,
+   "note": "Anh Tâm không biết"
+  },
+  {
+   "t": 13.3,
+   "type": "error",
+   "gain": 0.9,
+   "note": "không còn được nữa"
+  }
+ ]
+}

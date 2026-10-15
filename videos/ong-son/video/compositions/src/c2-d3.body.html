@@ -1,0 +1,78 @@
+<style>
+/*VK_FONT*/
+/*VK_CSS*/
+#root { position: absolute; inset: 0; }
+.c2d3-bao { position: absolute; left: 0; top: 0; width: 130px; height: 130px; transform-origin: 50% 100%; filter: drop-shadow(0 6px 8px rgba(17,17,19,0.25)); }
+.c2d3-the { width: 440px; padding: 20px 28px 22px; font-size: 34px; font-weight: 700; line-height: 1.3; border-radius: 10px; background: #FFF8D6; border: 1.5px solid #D2CCBE; text-align: center; }
+.c2d3-ghim { position: absolute; left: 50%; top: -12px; margin-left: -11px; width: 22px; height: 22px; border-radius: 50%; background: var(--cam); box-shadow: 0 2px 4px rgba(17,17,19,0.3); }
+.c2d3-net { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; pointer-events: none; }
+.c2d3-cua { position: absolute; left: 1100px; top: 430px; width: 720px; }
+.c2d3-cua .k-re { display: inline-block; border-radius: 6px; padding: 0 4px; margin: 0 -4px; }
+.c2d3-ma { position: absolute; left: 0; top: 0; }
+</style>
+<div data-hf-id="hf-7hlc" id="root" data-composition-id="c2-d3" data-width="1920" data-height="1080">
+  <div data-hf-id="hf-w2he" class="vk-the c2d3-the" id="c2d3-the"><span data-hf-id="hf-ml0x" class="c2d3-ghim"></span>Thấy kệ hết hàng thì vào kho lấy ra xếp</div>
+  <svg data-hf-id="hf-2suj" class="c2d3-net" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+    <path data-hf-id="hf-bwze" id="c2d3-ngam" class="vk-net vk-net-mong" pathLength="1" d="M 850 520 C 790 500 700 530 650 610" style="stroke:var(--ham-dam);stroke-width:5" opacity="0" />
+    <path data-hf-id="hf-a947" id="c2d3-ngam2" class="vk-net vk-net-mong" pathLength="1" d="M 650 610 L 654 580 M 650 610 L 678 598" style="stroke:var(--ham-dam);stroke-width:5" opacity="0" />
+  </svg>
+  <div data-hf-id="hf-y3vi" class="th-cuaso c2d3-cua" id="c2d3-cua">
+    <div data-hf-id="hf-xhm1" class="th-cuaso-dau"><i data-hf-id="hf-wt6k"></i><i data-hf-id="hf-zeb8"></i><i data-hf-id="hf-y7e5"></i><span data-hf-id="hf-ux32">tiem_tap_hoa.py</span></div>
+    <pre data-hf-id="hf-gwgb" class="vk-code"><span data-hf-id="hf-t3rj" class="vk-dong" id="c2d3-l1"><span data-hf-id="hf-690c" class="k-ham">def</span> xep_hang_len_ke(so_ky_tren_ke):</span>
+<span data-hf-id="hf-ce3e" class="vk-dong" id="c2d3-l2">    <span data-hf-id="hf-xsaj" class="k-re" id="c2d3-if">if</span> so_ky_tren_ke == 0:</span>
+<span data-hf-id="hf-3czo" class="vk-dong" id="c2d3-l3">        lay_hang_tu_kho()</span>
+<span data-hf-id="hf-ghif" class="vk-dong" id="c2d3-l4">        xep_len_ke()</span></pre>
+  </div>
+</div>
+<script>
+/*VK_JS*/
+const D = 36.38;
+const tl = gsap.timeline({ paused: true });
+const root = document.getElementById("root");
+const ke = vk.keGach(tl, root, { co: 1 });
+// nhân vật và đạo cụ (z-order: kệ, bao, Ông Sơn, Anh Tâm)
+const kg = vk.nv(root, { src: "assets/images/vat/ke-gao-trong.png", size: 760, cx: 480, base: 1040, id: "c2d3-kg" });
+const bao1 = document.createElement("img"); bao1.className = "c2d3-bao"; bao1.id = "c2d3-b1"; bao1.src = "assets/images/vat/bao-gao.png"; bao1.alt = "";
+const bao2 = document.createElement("img"); bao2.className = "c2d3-bao"; bao2.id = "c2d3-b2"; bao2.src = "assets/images/vat/bao-gao.png"; bao2.alt = "";
+root.appendChild(bao1); root.appendChild(bao2);
+const son = vk.nv(root, { src: "assets/images/ong-son/khuan-gao.png", size: 620, cx: 250, base: 1040, id: "c2d3-son" });
+const tam = vk.nv(root, { src: "assets/images/anh-tam/hoi.png", size: 640, cx: 900, base: 1040, id: "c2d3-tam" });
+const ma = vk.nv(root, { src: "assets/images/ong-son/khuan-gao.png", size: 360, cx: 700, base: 1000, id: "c2d3-ma", bong: false });
+ma.style.filter = "grayscale(1)";
+const mv = (n, p, t) => { tl.fromTo([n, n._bong].filter(Boolean), p.from, p.to, t); };
+root.appendChild(document.querySelector(".c2d3-net"));
+// 0,5s: Ông Sơn đi vào từ trái, nhún nhẹ như đang chạy việc
+mv(son, { from: { x: -700 }, to: { x: 0, duration: 1.0, ease: "power3.out" } }, 0.4);
+for (let i = 0; i < 6; i++) {
+  tl.to(son, { y: -12, duration: 0.45, ease: "sine.out" }, 1.4 + i * 0.85).to(son, { y: 0, duration: 0.4, ease: "sine.in" }, 1.85 + i * 0.85);
+}
+// bao gạo từ kho (trái) bay lên kệ, nảy, rồi "bán" đi; vòng hai lặp lại
+vk.cung(tl, bao1, { t: 1.0, dur: 0.9, x0: -200, y0: 640, x1: 340, y1: 514, r0: -25, r1: 0, cao: -230 });
+vk.nay(tl, bao1, 1.9);
+tl.to(bao1, { opacity: 0, duration: 0.35, ease: "power2.in" }, 3.0);
+vk.cung(tl, bao2, { t: 3.7, dur: 0.9, x0: -200, y0: 640, x1: 470, y1: 514, r0: -25, r1: 0, cao: -230 });
+vk.nay(tl, bao2, 4.6);
+tl.to(bao2, { opacity: 0, duration: 0.35, ease: "power2.in" }, 5.7);
+// 6,3s: Anh Tâm trượt vào từ phải thay chỗ Ông Sơn
+mv(son, { from: { x: 0 }, to: { x: -800, duration: 0.9, ease: "power2.in", immediateRender: false } }, 6.2);
+mv(tam, { from: { x: 1500 }, to: { x: 0, duration: 1.0, ease: "power3.out" } }, 6.3);
+// 12,5s: tờ quy tắc bay lên tường cạnh Anh Tâm, ghim lại
+vk.cung(tl, "#c2d3-the", { t: 12.4, dur: 0.9, x0: -480, y0: 560, x1: 800, y1: 180, r0: -8, r1: 2, cao: -180 });
+vk.nay(tl, "#c2d3-the", 13.3, { m: 1.05 });
+// 17,5s: đường ngắm từ mắt Anh Tâm tới kệ trống
+vk.ve(tl, "#c2d3-ngam", 17.4, 0.8);
+tl.fromTo("#c2d3-ngam2", { opacity: 0 }, { opacity: 1, duration: 0.15 }, 18.15);
+// 22,1s: cửa sổ code hiện; từ `if` sáng lục lam
+vk.vao(tl, "#c2d3-cua", 22.0, { dy: 24, dur: 0.5 });
+tl.fromTo("#c2d3-if", { backgroundColor: "rgba(20,184,166,0)" }, { backgroundColor: "rgba(20,184,166,0.45)", duration: 0.3, ease: "power2.out" }, 22.4);
+// 24,6s: cả khối thụt vào dưới `if` sáng nền lục lam nhạt
+vk.sangDong(tl, "#c2d3-l3", 24.5, null, "rgba(20,184,166,0.24)");
+vk.sangDong(tl, "#c2d3-l4", 24.5, null, "rgba(20,184,166,0.24)");
+// 30,5s: hình Ông Sơn nhỏ, nhạt (xám) rời khung về bên trái
+tl.fromTo(ma, { opacity: 0, x: 0 }, { opacity: 0.4, duration: 0.25, ease: "power1.out" }, 30.3);
+tl.to(ma, { x: -1100, duration: 1.5, ease: "power1.in" }, 30.5);
+// 34,5s: chữ `if` nhấp sáng một lần rồi hạ xuống
+tl.to("#c2d3-if", { backgroundColor: "rgba(20,184,166,0.85)", scale: 1.3, duration: 0.25, ease: "power2.out" }, 34.5);
+tl.to("#c2d3-if", { backgroundColor: "rgba(20,184,166,0.45)", scale: 1, duration: 0.5, ease: "power2.inOut" }, 34.8);
+window.__timelines["c2-d3"] = tl;
+</script>

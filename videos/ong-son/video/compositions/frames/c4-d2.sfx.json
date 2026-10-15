@@ -1,0 +1,35 @@
+{
+ "scene": "c4-d2",
+ "cues": [
+  {
+   "t": 4.7,
+   "type": "tick",
+   "gain": 0.8,
+   "note": "không thì thôi"
+  },
+  {
+   "t": 5.7,
+   "type": "pop",
+   "gain": 0.9,
+   "note": "Cô Lan cũng vậy"
+  },
+  {
+   "t": 12.1,
+   "type": "tick",
+   "gain": 0.8,
+   "note": "Cô nhìn lịch"
+  },
+  {
+   "t": 18.2,
+   "type": "ding",
+   "gain": 0.9,
+   "note": "đúng thì đi lối này"
+  },
+  {
+   "t": 20.5,
+   "type": "pop",
+   "gain": 0.9,
+   "note": "Đó là"
+  }
+ ]
+}

@@ -1,0 +1,23 @@
+{
+ "scene": "c3-d3",
+ "cues": [
+  {
+   "t": 0.2,
+   "type": "whoosh",
+   "gain": 0.8,
+   "note": "Ông Sơn thuê một đội kế toán"
+  },
+  {
+   "t": 5.4,
+   "type": "pop",
+   "gain": 0.9,
+   "note": "Việc của họ là giữ sổ"
+  },
+  {
+   "t": 17.5,
+   "type": "pop",
+   "gain": 0.9,
+   "note": "Đội kế toán chính là"
+  }
+ ]
+}

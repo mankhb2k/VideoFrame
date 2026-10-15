@@ -1,0 +1,131 @@
+<style>
+/*VK_FONT*/
+/*VK_CSS*/
+#root { position: absolute; inset: 0; overflow: hidden; }
+#c3d2-wrap { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+.c3d2-o { position: absolute; width: 270px; height: 150px; background: var(--be-mat); border: var(--vien); border-radius: var(--ban-kinh); box-shadow: var(--bong-nho); opacity: 0.55; }
+.c3d2-o img { position: absolute; left: 85px; top: 20px; width: 110px; height: 110px; }
+.c3d2-gia { position: absolute; left: 124px; top: 53px; padding: 4px 10px; border-radius: 10px; background: var(--ham-nhat); border: 1.5px solid rgba(30,58,138,0.35); font: 700 28px/1.2 'Be Vietnam Pro', sans-serif; color: var(--chu-gia); white-space: nowrap; }
+.c3d2-the { position: absolute; left: 810px; top: 430px; width: 300px; height: 260px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; transform: scale(1.4); }
+.c3d2-so { font: 800 130px/1 'Be Vietnam Pro', sans-serif; color: var(--muc); letter-spacing: -2px; }
+.c3d2-nhan { font: 700 40px/1.2 'Be Vietnam Pro', sans-serif; color: var(--muc-phu); }
+.c3d2-chip { position: absolute; left: 0; top: 0; width: 262px; justify-content: center; font-size: 30px; }
+.c3d2-bb { position: absolute; left: 0; top: 0; }
+.c3d2-hoi { position: absolute; left: 885px; top: 300px; width: 140px; text-align: center; font: 800 150px/1 'Be Vietnam Pro', sans-serif; color: var(--chu-canh-bao); }
+.c3d2-nho { position: absolute; left: 660px; top: 600px; width: 480px; text-align: center; font-size: 64px; }
+.c3d2-x { position: absolute; left: 1070px; top: 540px; width: 96px; height: 96px; }
+</style>
+<div data-hf-id="hf-ojuq" id="root" data-composition-id="c3-d2" data-width="1920" data-height="1080">
+  <div data-hf-id="hf-d5uy" id="c3d2-wrap">
+    <div data-hf-id="hf-3qjj" id="c3d2-luoi"></div>
+    <div data-hf-id="hf-jp6v" class="vk-the c3d2-the" id="c3d2-the"><div data-hf-id="hf-cqe5" class="c3d2-so">20</div><div data-hf-id="hf-jex5" class="c3d2-nhan">mặt hàng</div></div>
+    <div data-hf-id="hf-3z6a" id="c3d2-nv"></div>
+    <div data-hf-id="hf-7xkj" id="c3d2-chips"></div>
+    <div data-hf-id="hf-304z" class="vk-bubble c3d2-bb" id="c3d2-bl" style="color:var(--chu-canh-bao)">45? hay 54?</div>
+    <div data-hf-id="hf-qyi7" class="vk-bubble c3d2-bb" id="c3d2-bt">Trong kho còn bao nhiêu chai?</div>
+    <div data-hf-id="hf-6btr" class="c3d2-hoi" id="c3d2-hoi">?</div>
+    <div data-hf-id="hf-kvep" class="vk-chu vk-chu-vua c3d2-nho" id="c3d2-nho">nhớ trong đầu</div>
+    <svg data-hf-id="hf-bmb8" class="c3d2-x" id="c3d2-x" viewBox="0 0 96 96">
+      <circle data-hf-id="hf-3iks" cx="48" cy="48" r="44" fill="#B91C1C" stroke="#FFFFFF" stroke-width="4" id="c3d2-xnen" />
+      <path data-hf-id="hf-9g66" class="vk-net" id="c3d2-x1" pathLength="1" d="M30 30 L66 66" style="stroke:#FFFFFF; stroke-width:9" />
+      <path data-hf-id="hf-k3un" class="vk-net" id="c3d2-x2" pathLength="1" d="M66 30 L30 66" style="stroke:#FFFFFF; stroke-width:9" />
+    </svg>
+  </div>
+</div>
+<script>
+/*VK_JS*/
+const D = 14.42;
+const tl = gsap.timeline({ paused: true });
+const root = document.getElementById("root");
+
+// ---- lưới 20 ô: cùng kích thước và vị trí với cuối c3-d1 (cắt thẳng sang vẫn liền hình)
+const LOAI = ["bao-gao", "bao-muoi", "goi-mi-chinh", "chai-nuoc-mam", "thung-nuoc-mam", "thung-gao"];
+const GIA = ["28.000đ", "8.000đ", "32.000đ", "45.000đ", "95.000đ", "26.000đ", "9.000đ", "35.000đ", "48.000đ", "92.000đ",
+             "30.000đ", "7.000đ", "29.000đ", "42.000đ", "88.000đ", "27.000đ", "10.000đ", "34.000đ", "46.000đ", "99.000đ"];
+const luoi = document.getElementById("c3d2-luoi");
+const GL = 261, GT = 200, CW = 270, CH = 150, GAP = 12;
+const o20 = [], chipGia = [], anhO = [];
+for (let i = 0; i < 20; i++) {
+  const c = document.createElement("div");
+  c.className = "c3d2-o";
+  const col = i % 5, row = Math.floor(i / 5);
+  c.style.left = GL + col * (CW + GAP) + "px"; c.style.top = GT + row * (CH + GAP) + "px";
+  const im = document.createElement("img");
+  im.src = `assets/images/vat/${LOAI[i % LOAI.length]}.png`; im.alt = "";
+  const g = document.createElement("div");
+  g.className = "c3d2-gia"; g.textContent = GIA[i];
+  c.appendChild(im); c.appendChild(g); luoi.appendChild(c);
+  o20.push(c); chipGia.push(g); anhO.push(im);
+}
+// 0 -> 1,4s: ô "20 mặt hàng" như cuối đoạn trước, rồi mờ đi
+tl.to("#c3d2-the", { opacity: 0, duration: 0.4, ease: "power2.in" }, 1.4);
+// 1,7s: lưới rõ lên, mỗi ô một chip giá xanh dương đậm
+o20.forEach((c, i) => {
+  const t = 1.7 + i * 0.04;
+  tl.fromTo(c, { opacity: 0.55 }, { opacity: 1, duration: 0.4, ease: "power2.out" }, t);
+  tl.fromTo(anhO[i], { x: 0 }, { x: -77, duration: 0.4, ease: "power3.out" }, t);
+  tl.fromTo(chipGia[i], { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.9)" }, t + 0.05);
+});
+// lưới lùi xuống làm nền khi nhân vật hiện
+tl.to(o20, { opacity: 0.09, duration: 0.6, ease: "power2.inOut" }, 4.3);
+
+// ---- 4,6s: Cô Lan trượt vào từ trái; các chip giá nhầm xoay trên đầu cô
+const nv = document.getElementById("c3d2-nv");
+const lan = vk.nv(nv, { src: "assets/images/co-lan/cau-may.png", size: 670, cx: 440, base: 1040, id: "c3d2-lan" });
+tl.fromTo(lan, { x: -720, opacity: 1 }, { x: 0, duration: 0.8, ease: "power3.out" }, 4.45);
+tl.fromTo(lan._bong, { x: -720 }, { x: 0, duration: 0.8, ease: "power3.out" }, 4.45);
+const TEXT = ["nước mắm 45?", "nước mắm 54?", "mì chính 32?", "mì chính 23?"];
+const chips = [];
+const chipBox = document.getElementById("c3d2-chips");
+TEXT.forEach((tx, i) => {
+  const e = document.createElement("div");
+  e.className = "vk-chip vk-chip-loi c3d2-chip"; e.textContent = tx;
+  chipBox.appendChild(e); chips.push(e);
+});
+const OX = 470, OY = 290, RX = 215, RY = 58, T0 = 4.9, T1 = 9.3, W = (Math.PI * 2) / 2.6;
+const quay = (t) => chips.forEach((e, i) => {
+  const a = (t - T0) * W + i * Math.PI / 2;
+  const s = 0.9 + 0.1 * Math.sin(a);
+  gsap.set(e, { x: OX + RX * Math.cos(a) - 131, y: OY + RY * Math.sin(a) - 27, scale: s });
+});
+quay(T0);
+const po = { t: T0 };
+tl.to(po, { t: T1, duration: T1 - T0, ease: "none", onUpdate() { quay(po.t); } }, T0);
+chips.forEach((e, i) => {
+  tl.fromTo(e, { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out" }, T0 + i * 0.22);
+  tl.to(e, { opacity: 0, duration: 0.3, ease: "power2.in" }, 9.05);
+});
+
+// ---- 6,7s: Anh Tâm hiện bên phải trước kệ trống, bong bóng hỏi kho
+const ke = vk.nv(nv, { src: "assets/images/vat/ke-gao-trong.png", size: 720, cx: 1420, base: 1045, id: "c3d2-ke", bong: false });
+tl.fromTo(ke, { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.out" }, 6.5);
+const tam = vk.nv(nv, { src: "assets/images/anh-tam/hoi.png", size: 640, cx: 1400, base: 1040, id: "c3d2-tam" });
+tl.fromTo(tam, { x: 360, opacity: 0 }, { x: 0, opacity: 1, duration: 0.7, ease: "power3.out" }, 6.6);
+tl.fromTo(tam._bong, { opacity: 0 }, { opacity: 1, duration: 0.7 }, 6.6);
+const bt = document.getElementById("c3d2-bt"), bl = document.getElementById("c3d2-bl");
+gsap.set(bt, { left: 1100, top: 190 });
+gsap.set(bl, { left: 480, top: 190 });
+vk.pop(tl, bt, 7.0, { scale0: 0.8, dur: 0.5 });
+// 7,0s .. 8,3s: Tâm hỏi "còn bao nhiêu chai" (bong bóng nằm yên)
+
+// ---- 9,6s: hai bong bóng chạm nhau, dấu hỏi đỏ ở giữa; không ai trả lời
+tl.fromTo(bl, { opacity: 0, x: 0, scale: 0.8 }, { opacity: 1, x: 0, scale: 1, duration: 0.4, ease: "back.out(1.9)" }, 9.0);
+tl.to(bl, { x: 205, duration: 0.5, ease: "power2.inOut" }, 9.45);
+tl.to(bt, { x: -140, duration: 0.5, ease: "power2.inOut" }, 9.45);
+vk.nay(tl, bl, 9.95, { m: 1.06 });
+vk.nay(tl, bt, 9.95, { m: 1.04 });
+vk.pop(tl, "#c3d2-hoi", 9.9, { scale0: 0.4, dur: 0.5 });
+// 9,5s: "nhớ trong đầu"
+vk.pop(tl, "#c3d2-nho", 9.5, { scale0: 0.85, dur: 0.5 });
+
+// ---- 13,1s: cả khung rung nhẹ rồi lặng; dấu X đỏ hiện trên chữ "nhớ trong đầu"
+tl.to("#c3d2-wrap", { keyframes: { x: [-9, 8, -6, 4, -2, 0], easeEach: "sine.inOut" }, duration: 0.5 }, 13.05);
+tl.fromTo("#c3d2-xnen", { opacity: 0, scale: 0.4, transformOrigin: "48px 48px" }, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(2)" }, 13.2);
+vk.ve(tl, "#c3d2-x1", 13.4, 0.18);
+vk.ve(tl, "#c3d2-x2", 13.55, 0.18);
+tl.to("#c3d2-nho", { opacity: 0.55, duration: 0.3, ease: "power2.out" }, 13.2);
+// kệ gạch (2 viên có sẵn) ở trên cùng
+const keGach = vk.keGach(tl, root, { co: 2 });
+keGach.style.zIndex = "30";
+window.__timelines["c3-d2"] = tl;
+</script>

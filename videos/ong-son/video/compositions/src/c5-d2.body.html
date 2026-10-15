@@ -1,0 +1,153 @@
+<style>
+/*VK_FONT*/
+/*VK_CSS*/
+#root { position: absolute; inset: 0; overflow: hidden; }
+#c5d2-world { position: absolute; left: 0; top: 0; width: 0; height: 0; transform-origin: 0 0; }
+.c5d2-z { position: absolute; width: 220px; height: 148px; box-sizing: border-box; background: #FFFFFF; border: 2px solid #D2CCBE; border-radius: 14px;
+  box-shadow: 0 0 0 0px rgba(242,106,33,0), 0 1px 2px rgba(17,17,19,0.06), 0 6px 16px rgba(17,17,19,0.08); }
+.c5d2-plan, .c5d2-bricks { position: absolute; left: 0; top: 0; width: 216px; height: 144px; }
+.c5d2-plan svg { position: absolute; left: 0; top: 0; }
+.c5d2-bricks { opacity: 0; }
+.c5d2-out .c5d2-plan { opacity: 0; }
+.c5d2-brick { position: absolute; display: flex; align-items: center; justify-content: center; box-sizing: border-box; height: 58px; border: 1.5px solid rgba(17,17,19,0.22); border-radius: 6px; font: 800 9.5px/1 'Be Vietnam Pro', sans-serif; color: var(--chu-tren-mau); white-space: nowrap; }
+.c5d2-brick.t { width: 62px; top: 10px; } .c5d2-brick.d { width: 95px; top: 74px; }
+.c5d2-hl { position: absolute; left: -14px; width: 2688px; height: 164px; box-sizing: border-box; border: 7px solid var(--cam); border-radius: 22px; background: rgba(242,106,33,0.10); opacity: 0; pointer-events: none; }
+#c5d2-band { position: absolute; left: 0; top: 0; width: 1920px; height: 150px; background: linear-gradient(to bottom, rgba(248,247,244,1) 0, rgba(248,247,244,1) 118px, rgba(248,247,244,0) 150px); pointer-events: none; }
+.c5d2-app { position: absolute; top: 165px; width: 220px; height: 190px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; box-sizing: border-box; }
+.c5d2-app svg { width: 100px; height: 100px; }
+.c5d2-app span { font-size: 30px; font-weight: 700; white-space: nowrap; }
+#c5d2-lines { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; pointer-events: none; }
+</style>
+<div data-hf-id="hf-ssgc" id="root" data-composition-id="c5-d2" data-width="1920" data-height="1080">
+  <div data-hf-id="hf-d1b0" id="c5d2-world"></div>
+  <div data-hf-id="hf-3ulh" id="c5d2-band"></div>
+  <svg data-hf-id="hf-h7yw" id="c5d2-lines" viewBox="0 0 1920 1080">
+    <path data-hf-id="hf-iyg0" id="c5d2-l0" class="vk-net vk-net-mong" pathLength="1" d="M657 355 V444" style="stroke-width:4" />
+    <path data-hf-id="hf-cmns" id="c5d2-l1" class="vk-net vk-net-mong" pathLength="1" d="M960 355 V444" style="stroke-width:4" />
+    <path data-hf-id="hf-v10t" id="c5d2-l2" class="vk-net vk-net-mong" pathLength="1" d="M1262 355 V444" style="stroke-width:4" />
+  </svg>
+  <div data-hf-id="hf-ump4" id="c5d2-apps"></div>
+</div>
+<script>
+/*VK_JS*/
+const D = 22.25;
+const tl = gsap.timeline({ paused: true });
+const root = document.getElementById("root");
+const world = document.getElementById("c5d2-world");
+
+const ZW = 220, ZH = 148, PX = 244, PY = 172, NC = 11, NR = 7, HC = 5, HR = 3;
+const PLAN = '<svg width="216" height="144" viewBox="0 0 216 144" font-family="Be Vietnam Pro, sans-serif" font-weight="700" font-size="14" fill="#2F2F35" text-anchor="middle">' +
+  '<rect x="8" y="8" width="200" height="128" rx="8" fill="#EFEDE8"/>' +
+  '<rect x="18" y="18" width="72" height="36" rx="5" fill="#E4DFD2" stroke="#B9B2A3" stroke-width="1.5"/><text x="54" y="41">quầy</text>' +
+  '<rect x="102" y="18" width="96" height="36" rx="5" fill="#E4DFD2" stroke="#B9B2A3" stroke-width="1.5"/><text x="150" y="41">kho</text>' +
+  '<rect x="18" y="80" width="84" height="48" rx="5" fill="#E4DFD2" stroke="#B9B2A3" stroke-width="1.5"/><text x="60" y="109">kế toán</text>' +
+  '<path d="M126 128 V102 M126 102 L112 82 M126 102 L142 82" fill="none" stroke="#8C8577" stroke-width="3" stroke-linecap="round"/>' +
+  '<circle cx="176" cy="104" r="20" fill="none" stroke="#8C8577" stroke-width="3"/><path d="M170 84 L180 84 L176 92" fill="none" stroke="#8C8577" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>' +
+  '</svg>';
+const BR = [["BIẾN", "bien", 10, "t", 10], ["HÀM", "ham", 77, "t", 10], ["DATABASE", "db", 144, "t", 10], ["IF / ELSE", "re", 10, "d", 74], ["VÒNG LẶP", "lap", 111, "d", 74]];
+const BRICKS = '<div class="c5d2-bricks">' + BR.map(b => `<i class="c5d2-brick ${b[3]} vk-gach-${b[1]}" style="left:${b[2]}px">${b[0]}</i>`).join("") + '</div>';
+
+// toà nhà: 11 cột x 7 tầng; khu giữa (5,3) là sơ đồ tiệm ban đầu
+const zones = {};
+const grpBlk = document.createElement("div"); grpBlk.id = "c5d2-blk";
+const grpOut = document.createElement("div"); grpOut.id = "c5d2-out";
+const inBlock = (c, r) => c >= 2 && c <= 8 && r >= 2 && r <= 5;
+for (let r = 0; r < NR; r++) for (let c = 0; c < NC; c++) {
+  const d = document.createElement("div");
+  const hero = c === HC && r === HR;
+  d.className = "c5d2-z c5d2-r" + r + (inBlock(c, r) ? "" : " c5d2-out");
+  d.id = hero ? "c5d2-hero" : `c5d2-z-${c}-${r}`;
+  d.style.left = c * PX + "px"; d.style.top = r * PY + "px";
+  d.innerHTML = '<div class="c5d2-plan">' + PLAN + "</div>" + BRICKS;
+  zones[c + "," + r] = d;
+  (hero ? world : inBlock(c, r) ? grpBlk : grpOut).appendChild(d);
+}
+world.appendChild(grpBlk); world.appendChild(grpOut);
+// thanh sáng theo tầng (nằm trên toà nhà)
+for (let r = 0; r < NR; r++) {
+  const h = document.createElement("div");
+  h.className = "c5d2-hl"; h.id = "c5d2-hl" + r; h.style.top = r * PY - 8 + "px";
+  world.appendChild(h);
+}
+const hero = document.getElementById("c5d2-hero");
+vk.keGach(tl, root, { co: 5 });
+
+// ba ứng dụng
+const S = 'fill="none" stroke="#111113" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"';
+const APPS = [
+  { t: "mua sắm", x: 547, svg: `<svg viewBox="0 0 100 100"><path d="M20 36h60l5 52H15z" fill="#FEF9C3" stroke="#111113" stroke-width="5" stroke-linejoin="round"/><path d="M36 42V30a14 14 0 0 1 28 0v12" ${S}/></svg>` },
+  { t: "ngân hàng", x: 850, svg: `<svg viewBox="0 0 100 100"><path d="M10 38 50 14l40 24z" fill="#DBEAFE" stroke="#111113" stroke-width="5" stroke-linejoin="round"/><path d="M22 46v30M40 46v30M60 46v30M78 46v30M12 86h76" ${S}/></svg>` },
+  { t: "mạng xã hội", x: 1152, svg: `<svg viewBox="0 0 100 100"><path d="M50 26 22 74M50 26l28 48M22 74h56" ${S}/><circle cx="50" cy="24" r="12" fill="#FCE7F3" stroke="#111113" stroke-width="5"/><circle cx="22" cy="74" r="12" fill="#CCFBF1" stroke="#111113" stroke-width="5"/><circle cx="78" cy="74" r="12" fill="#EDE9FE" stroke="#111113" stroke-width="5"/></svg>` },
+];
+APPS.forEach((a, i) => {
+  const d = document.createElement("div");
+  d.className = "vk-the th-vat c5d2-app"; d.id = "c5d2-app" + i; d.style.left = a.x + "px";
+  d.innerHTML = a.svg + "<span>" + a.t + "</span>";
+  document.getElementById("c5d2-apps").appendChild(d);
+});
+
+// máy quay: (wx,wy) là điểm của toà nhà đặt tại (sx,sy) trên màn hình
+const cam = (s, wx, wy, sx, sy) => ({ x: sx - wx * s, y: sy - wy * s, scale: s });
+const c1 = cam(2.4, 1330, 590, 960, 560);   // sơ đồ tiệm phóng to
+const c2 = cam(1.25, 1452, 676, 960, 560);  // bốn khu
+const c3 = cam(0.62, 1330, 676, 960, 650);  // lưới nhiều tầng + ba ứng dụng phía trên
+const c4 = cam(4.5, 1330, 590, 960, 530);   // zoom vào một khu
+const c5 = cam(0.6, 1330, 590, 960, 520);   // zoom out: toà nhà khổng lồ
+tl.set(world, { ...c1, transformOrigin: "0 0" }, 0);
+
+// 0,2s: sơ đồ tiệm phóng to hiện; 1,3s: nhân bản thành bốn khu; 2,5s: thành lưới nhiều tầng (toả từ giữa)
+tl.fromTo(hero, { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.6, ease: "back.out(1.5)" }, 0.2);
+tl.to(world, { ...c2, duration: 0.8, ease: "power2.inOut" }, 1.2);
+tl.to(world, { ...c3, duration: 1.0, ease: "power2.inOut" }, 2.5);
+const copy = (c, r, t, dur = 0.6) => {
+  const z = zones[c + "," + r];
+  tl.fromTo(z, { x: (HC - c) * PX, y: (HR - r) * PY, opacity: 0, scale: 0.7 }, { x: 0, y: 0, opacity: 1, scale: 1, duration: dur, ease: "power3.out" }, t);
+};
+[[6, 3], [5, 4], [6, 4]].forEach(([c, r], i) => copy(c, r, 1.3 + i * 0.12));
+for (let r = 2; r <= 5; r++) for (let c = 2; c <= 8; c++) {
+  if (c === HC && r === HR) continue;
+  if ((c === 6 && r === 3) || (c === 5 && r === 4) || (c === 6 && r === 4)) continue;
+  copy(c, r, 2.5 + Math.hypot(c - HC, r - HR) * 0.15, 0.55);
+}
+// 4,4s / 5,4s / 6,7s: ba ứng dụng hiện, mỗi cái nối bằng đường mảnh với một khu
+const khuNoi = [[3, 2], [5, 2], [7, 2]];
+[[4.4, 0], [5.4, 1], [6.7, 2]].forEach(([t, i]) => {
+  vk.vao(tl, "#c5d2-app" + i, t, { dy: 26, dur: 0.55 });
+  vk.ve(tl, "#c5d2-l" + i, t + 0.35, 0.45);
+  const z = zones[khuNoi[i][0] + "," + khuNoi[i][1]];
+  tl.to(z, { boxShadow: "0 0 0 7px rgba(242,106,33,1), 0 1px 2px rgba(17,17,19,0.06), 0 6px 16px rgba(17,17,19,0.08)", duration: 0.3, ease: "power2.out" }, t + 0.7);
+  tl.to(z, { boxShadow: "0 0 0 0px rgba(242,106,33,0), 0 1px 2px rgba(17,17,19,0.06), 0 6px 16px rgba(17,17,19,0.08)", duration: 0.3, ease: "power2.in" }, 7.65);
+});
+tl.to(["#c5d2-app0", "#c5d2-app1", "#c5d2-app2", "#c5d2-l0", "#c5d2-l1", "#c5d2-l2"], { opacity: 0, duration: 0.35, ease: "power2.in" }, 7.5);
+// 7,8s: zoom vào một khu: lộ năm viên gạch nhỏ (các khu khác mờ đi)
+tl.to(world, { ...c4, duration: 1.1, ease: "power3.inOut" }, 7.8);
+tl.to("#c5d2-blk", { opacity: 0.25, duration: 0.6, ease: "power2.out" }, 7.8);
+tl.set(hero.querySelector(".c5d2-bricks"), { opacity: 1 }, 0);
+tl.to(hero.querySelector(".c5d2-plan"), { opacity: 0, duration: 0.5, ease: "power2.in" }, 8.4);
+hero.querySelectorAll(".c5d2-brick").forEach((b, i) => vk.pop(tl, b, 8.55 + i * 0.7, { scale0: 0.4, dur: 0.5 }));
+// 14,3s: zoom out nhanh: toà nhà khổng lồ gồm vô số viên gạch cùng năm màu
+tl.to(world, { ...c5, duration: 1.0, ease: "power3.inOut" }, 14.3);
+tl.to("#c5d2-blk", { opacity: 1, duration: 0.5, ease: "power2.out" }, 14.3);
+const blkPlan = [], allBricks = [];
+Object.keys(zones).forEach((k) => {
+  const [c, r] = k.split(",").map(Number), z = zones[k];
+  if (z === hero) return;
+  allBricks.push(z.querySelector(".c5d2-bricks"));
+  if (inBlock(c, r)) blkPlan.push(z.querySelector(".c5d2-plan"));
+  else tl.fromTo(z, { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.5, ease: "power2.out" }, 14.4 + Math.hypot(c - HC, r - HR) * 0.06);
+});
+tl.to(blkPlan, { opacity: 0, duration: 0.5, ease: "power2.in" }, 14.4);
+tl.fromTo(allBricks, { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.out" }, 14.5);
+// các khung trắng tan đi, còn lại một bức tường gạch
+tl.to(Object.values(zones), { backgroundColor: "rgba(255,255,255,0)", borderColor: "rgba(210,204,190,0)", boxShadow: "0 0 0 0px rgba(242,106,33,0), 0 0 0 0 rgba(17,17,19,0), 0 0 0 0 rgba(17,17,19,0)", duration: 0.8, ease: "power2.inOut" }, 14.7);
+// 19,6s: các viên gạch nhấp sáng theo từng tầng (từ dưới lên); toà nhà giữ hình tới hết đoạn
+for (let r = NR - 1; r >= 0; r--) {
+  const t = 19.6 + (NR - 1 - r) * 0.33;
+  tl.fromTo("#c5d2-hl" + r, { opacity: 0 }, { opacity: 1, duration: 0.15, ease: "power2.out" }, t);
+  tl.to("#c5d2-hl" + r, { opacity: 0, duration: 0.35, ease: "power2.in" }, t + 0.2);
+  const bs = document.querySelectorAll(".c5d2-r" + r + " .c5d2-bricks");
+  tl.to(bs, { scale: 1.1, duration: 0.15, ease: "power2.out" }, t);
+  tl.to(bs, { scale: 1, duration: 0.35, ease: "power2.inOut" }, t + 0.15);
+}
+window.__timelines["c5-d2"] = tl;
+</script>

@@ -1,0 +1,319 @@
+[
+ {
+  "canh": "canh0_mo-dau",
+  "id": "canh0",
+  "stt": 1,
+  "audio": 20.32,
+  "start": 0.0,
+  "duration": 20.9,
+  "uoc_tinh": false,
+  "composition": "compositions/frames/01-canh0.html",
+  "doan": [
+   {
+    "id": "c0-d1",
+    "ten": "Đoạn 1: Một đoạn code trông như tiếng lạ",
+    "start": 0.0,
+    "duration": 20.9,
+    "composition": "compositions/frames/c0-d1.html"
+   }
+  ]
+ },
+ {
+  "canh": "canh1_ong-son-va-20-trieu-dong",
+  "id": "canh1",
+  "stt": 2,
+  "audio": 110.39,
+  "start": 20.9,
+  "duration": 111.0,
+  "uoc_tinh": false,
+  "composition": "compositions/frames/02-canh1.html",
+  "doan": [
+   {
+    "id": "c1-d1",
+    "ten": "Đoạn 1: Dự án bắt đầu từ đâu",
+    "start": 20.9,
+    "duration": 17.85,
+    "composition": "compositions/frames/c1-d1.html"
+   },
+   {
+    "id": "c1-d2",
+    "ten": "Đoạn 2: Nhập hàng",
+    "start": 38.75,
+    "duration": 12.1,
+    "composition": "compositions/frames/c1-d2.html"
+   },
+   {
+    "id": "c1-d3",
+    "ten": "Đoạn 3: Phân loại và ghi giá",
+    "start": 50.85,
+    "duration": 19.59,
+    "composition": "compositions/frames/c1-d3.html"
+   },
+   {
+    "id": "c1-d4",
+    "ten": "Đoạn 4: Cùng một việc, viết bằng code",
+    "start": 70.44,
+    "duration": 30.8,
+    "composition": "compositions/frames/c1-d4.html"
+   },
+   {
+    "id": "c1-d5",
+    "ten": "Đoạn 5: Cú lật, vì sao tên quan trọng",
+    "start": 101.24,
+    "duration": 20.4,
+    "composition": "compositions/frames/c1-d5.html"
+   },
+   {
+    "id": "c1-chot",
+    "ten": "Chốt cảnh: viên gạch BIẾN",
+    "start": 121.64,
+    "duration": 10.26,
+    "composition": "compositions/frames/c1-chot.html"
+   }
+  ]
+ },
+ {
+  "canh": "canh2_ong-son-bat-dau-thue-nguoi",
+  "id": "canh2",
+  "stt": 3,
+  "audio": 136.44,
+  "start": 131.9,
+  "duration": 137.0,
+  "uoc_tinh": false,
+  "composition": "compositions/frames/03-canh2.html",
+  "doan": [
+   {
+    "id": "c2-d1",
+    "ten": "Đoạn 1: Ông Sơn làm hết mọi việc",
+    "start": 131.9,
+    "duration": 14.89,
+    "composition": "compositions/frames/c2-d1.html"
+   },
+   {
+    "id": "c2-d2",
+    "ten": "Đoạn 2: Thuê người thứ nhất, hàm tính tiền",
+    "start": 146.79,
+    "duration": 24.78,
+    "composition": "compositions/frames/c2-d2.html"
+   },
+   {
+    "id": "c2-d3",
+    "ten": "Đoạn 3: Thuê người thứ hai, hàm xếp hàng lên kệ",
+    "start": 171.57,
+    "duration": 36.38,
+    "composition": "compositions/frames/c2-d3.html"
+   },
+   {
+    "id": "c2-d4",
+    "ten": "Đoạn 4: Ghép các hàm thành quy trình",
+    "start": 207.95,
+    "duration": 26.26,
+    "composition": "compositions/frames/c2-d4.html"
+   },
+   {
+    "id": "c2-d5",
+    "ten": "Đoạn 5: Cú lật, một người làm hết",
+    "start": 234.21,
+    "duration": 20.86,
+    "composition": "compositions/frames/c2-d5.html"
+   },
+   {
+    "id": "c2-chot",
+    "ten": "Chốt cảnh: viên gạch HÀM",
+    "start": 255.07,
+    "duration": 13.83,
+    "composition": "compositions/frames/c2-chot.html"
+   }
+  ]
+ },
+ {
+  "canh": "canh3_doi-ke-toan-cua-ong-son",
+  "id": "canh3",
+  "stt": 4,
+  "audio": 174.07,
+  "start": 268.9,
+  "duration": 174.7,
+  "uoc_tinh": false,
+  "composition": "compositions/frames/04-canh3.html",
+  "doan": [
+   {
+    "id": "c3-d1",
+    "ten": "Đoạn 1: Làm ăn thuận lợi, bán thêm hàng",
+    "start": 268.9,
+    "duration": 11.56,
+    "composition": "compositions/frames/c3-d1.html"
+   },
+   {
+    "id": "c3-d2",
+    "ten": "Đoạn 2: Nhớ trong đầu bắt đầu sai",
+    "start": 280.46,
+    "duration": 14.42,
+    "composition": "compositions/frames/c3-d2.html"
+   },
+   {
+    "id": "c3-d3",
+    "ten": "Đoạn 3: Thuê đội kế toán",
+    "start": 294.88,
+    "duration": 21.6,
+    "composition": "compositions/frames/c3-d3.html"
+   },
+   {
+    "id": "c3-d4",
+    "ten": "Đoạn 4: Kế toán phân loại, khoá chính",
+    "start": 316.48,
+    "duration": 28.81,
+    "composition": "compositions/frames/c3-d4.html"
+   },
+   {
+    "id": "c3-d5",
+    "ten": "Đoạn 5: Hoá đơn chỉ ghi mã, khoá ngoại",
+    "start": 345.29,
+    "duration": 40.36,
+    "composition": "compositions/frames/c3-d5.html"
+   },
+   {
+    "id": "c3-d6",
+    "ten": "Đoạn 6: Cô Lan không cần nhớ nữa",
+    "start": 385.65,
+    "duration": 17.34,
+    "composition": "compositions/frames/c3-d6.html"
+   },
+   {
+    "id": "c3-d7",
+    "ten": "Đoạn 7: Cú lật, nhớ trong đầu và ghi vào sổ",
+    "start": 402.99,
+    "duration": 24.87,
+    "composition": "compositions/frames/c3-d7.html"
+   },
+   {
+    "id": "c3-chot",
+    "ten": "Chốt cảnh: viên gạch DATABASE",
+    "start": 427.86,
+    "duration": 15.74,
+    "composition": "compositions/frames/c3-chot.html"
+   }
+  ]
+ },
+ {
+  "canh": "canh4_black-friday-cua-ong-son",
+  "id": "canh4",
+  "stt": 5,
+  "audio": 143.72,
+  "start": 443.6,
+  "duration": 144.3,
+  "uoc_tinh": false,
+  "composition": "compositions/frames/05-canh4.html",
+  "doan": [
+   {
+    "id": "c4-d1",
+    "ten": "Đoạn 1: Luật của ông Sơn",
+    "start": 443.6,
+    "duration": 13.69,
+    "composition": "compositions/frames/c4-d1.html"
+   },
+   {
+    "id": "c4-d2",
+    "ten": "Đoạn 2: If/else là nếu... thì... không thì...",
+    "start": 457.29,
+    "duration": 24.02,
+    "composition": "compositions/frames/c4-d2.html"
+   },
+   {
+    "id": "c4-d3",
+    "ten": "Đoạn 3: Viết thành code",
+    "start": 481.31,
+    "duration": 19.43,
+    "composition": "compositions/frames/c4-d3.html"
+   },
+   {
+    "id": "c4-d4",
+    "ten": "Đoạn 4: Chạy thử hai ngày",
+    "start": 500.74,
+    "duration": 19.46,
+    "composition": "compositions/frames/c4-d4.html"
+   },
+   {
+    "id": "c4-d5",
+    "ten": "Đoạn 5: Vòng lặp là if/else hỏi đi hỏi lại",
+    "start": 520.2,
+    "duration": 31.58,
+    "composition": "compositions/frames/c4-d5.html"
+   },
+   {
+    "id": "c4-d6",
+    "ten": "Đoạn 6: Cú lật, nếu không có if/else",
+    "start": 551.78,
+    "duration": 14.59,
+    "composition": "compositions/frames/c4-d6.html"
+   },
+   {
+    "id": "c4-chot",
+    "ten": "Chốt cảnh: hai viên gạch cuối",
+    "start": 566.37,
+    "duration": 21.53,
+    "composition": "compositions/frames/c4-chot.html"
+   }
+  ]
+ },
+ {
+  "canh": "canh5_tu-tiem-tap-hoa-den-phan-mem-trieu-do",
+  "id": "canh5",
+  "stt": 6,
+  "audio": 242.8,
+  "start": 587.9,
+  "duration": 243.4,
+  "uoc_tinh": false,
+  "composition": "compositions/frames/06-canh5.html",
+  "doan": [
+   {
+    "id": "c5-d1",
+    "ten": "Đoạn 1: Nhìn tiệm từ trên cao",
+    "start": 587.9,
+    "duration": 27.09,
+    "composition": "compositions/frames/c5-d1.html"
+   },
+   {
+    "id": "c5-d2",
+    "ten": "Đoạn 2: Hệ thống lớn là gạch nhỏ xếp lại",
+    "start": 614.99,
+    "duration": 22.25,
+    "composition": "compositions/frames/c5-d2.html"
+   },
+   {
+    "id": "c5-d3",
+    "ten": "Đoạn 3: Bình cũ rượu mới",
+    "start": 637.24,
+    "duration": 19.64,
+    "composition": "compositions/frames/c5-d3.html"
+   },
+   {
+    "id": "c5-d4",
+    "ten": "Đoạn 4: Ông Sơn chuyển sang bán bún",
+    "start": 656.88,
+    "duration": 22.25,
+    "composition": "compositions/frames/c5-d4.html"
+   },
+   {
+    "id": "c5-d5",
+    "ten": "Đoạn 5: Framework là cái khung đã đóng gói sẵn",
+    "start": 679.13,
+    "duration": 49.32,
+    "composition": "compositions/frames/c5-d5.html"
+   },
+   {
+    "id": "c5-d6",
+    "ten": "Đoạn 6: Tư duy kiến trúc sư",
+    "start": 728.45,
+    "duration": 31.39,
+    "composition": "compositions/frames/c5-d6.html"
+   },
+   {
+    "id": "c5-d7",
+    "ten": "Đoạn 7: Quay lại đoạn code, khép vòng hook và thử thách",
+    "start": 759.84,
+    "duration": 71.46,
+    "composition": "compositions/frames/c5-d7.html"
+   }
+  ]
+ }
+]

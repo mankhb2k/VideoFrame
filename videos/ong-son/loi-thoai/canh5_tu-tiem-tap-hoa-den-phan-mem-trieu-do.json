@@ -1,0 +1,175 @@
+{
+ "canh": "canh5",
+ "ten": "Từ tiệm tạp hoá đến phần mềm triệu đô",
+ "dung_dau_giay": 0.0,
+ "khoi": [
+  {
+   "id": "canh5-d1-k1",
+   "doan": 1,
+   "tieu_de": "Nhìn tiệm từ trên cao",
+   "phan": 1,
+   "van_ban": "Hãy lùi lại và nhìn tiệm ông Sơn từ trên cao. Tiệm này được xây từ những viên gạch đầu tiên.",
+   "dung_sau_giay": 1.0
+  },
+  {
+   "id": "canh5-d1-k2",
+   "doan": 1,
+   "tieu_de": "Nhìn tiệm từ trên cao",
+   "phan": 1,
+   "van_ban": "Cái nhãn là biến.",
+   "dung_sau_giay": 1.0
+  },
+  {
+   "id": "canh5-d1-k3",
+   "doan": 1,
+   "tieu_de": "Nhìn tiệm từ trên cao",
+   "phan": 1,
+   "van_ban": "Người làm một việc là hàm.",
+   "dung_sau_giay": 1.0
+  },
+  {
+   "id": "canh5-d1-k4",
+   "doan": 1,
+   "tieu_de": "Nhìn tiệm từ trên cao",
+   "phan": 1,
+   "van_ban": "Đội kế toán là database.",
+   "dung_sau_giay": 1.0
+  },
+  {
+   "id": "canh5-d1-k5",
+   "doan": 1,
+   "tieu_de": "Nhìn tiệm từ trên cao",
+   "phan": 1,
+   "van_ban": "Ngã ba đường là if/else.",
+   "dung_sau_giay": 1.0
+  },
+  {
+   "id": "canh5-d1-k6",
+   "doan": 1,
+   "tieu_de": "Nhìn tiệm từ trên cao",
+   "phan": 1,
+   "van_ban": "Và vòng tròn hỏi đi hỏi lại là vòng lặp.",
+   "dung_sau_giay": 2.0
+  },
+  {
+   "id": "canh5-d2-k1",
+   "doan": 2,
+   "tieu_de": "Hệ thống lớn là gạch nhỏ xếp lại",
+   "phan": 2,
+   "van_ban": "Phần mềm triệu đô nào cũng giống tiệm ông Sơn, chỉ lớn hơn. Ứng dụng mua sắm, ứng dụng ngân hàng, mạng xã hội, bên trong đều có nền móng của mọi hệ thống: những cái nhãn, những người làm một việc, những cuốn sổ, những ngã ba, những vòng lặp. Hệ thống lớn không phải được xây bằng thứ gì bí ẩn hơn. Nó được xây từ những viên gạch nền móng, nhưng xếp lại rất nhiều lần, rất có trật tự.",
+   "dung_sau_giay": 0.0
+  },
+  {
+   "id": "canh5-d3-k1",
+   "doan": 3,
+   "tieu_de": "Bình cũ rượu mới",
+   "phan": 3,
+   "van_ban": "Công nghệ đổi mới liên tục. Hôm nay có cái tên này, mai có cái tên khác. Nhưng nhìn kỹ, đa phần là bình cũ rượu mới. Ông Sơn thay máy tính tiền đời mới, màn hình đẹp hơn, nhanh hơn, nhưng cô Lan vẫn làm đúng việc cũ: nhập giá, nhân số ký, ra tổng tiền. Cái vỏ thay, nền móng không đổi.",
+   "dung_sau_giay": 0.0
+  },
+  {
+   "id": "canh5-d4-k1",
+   "doan": 4,
+   "tieu_de": "Ông Sơn chuyển sang bán bún",
+   "phan": 4,
+   "van_ban": "Một ngày, ông Sơn chán bán tạp hoá, muốn chuyển sang bán bún. Ông có phải xây lại từ đầu không? Không. Ông vẫn cần quầy thu ngân, vẫn cần kho, vẫn cần đội kế toán, vẫn cần luật giảm giá. Cái khung của một cửa hàng đã có sẵn. Ông chỉ thay hàng: từ gạo sang bún, từ nước mắm sang chả. Xây một lần, dùng lại cho mọi loại cửa hàng.",
+   "dung_sau_giay": 0.0
+  },
+  {
+   "id": "canh5-d5-k1",
+   "doan": 5,
+   "tieu_de": "Framework là cái khung đã đóng gói sẵn",
+   "phan": 5,
+   "van_ban": "Trong thế giới lập trình, đó chính là những thứ có tên như React, Zustand, Prisma.",
+   "dung_sau_giay": 2.0
+  },
+  {
+   "id": "canh5-d5-k2",
+   "doan": 5,
+   "tieu_de": "Framework là cái khung đã đóng gói sẵn",
+   "phan": 5,
+   "van_ban": "Người ta gọi chúng là framework hay thư viện, nhưng bản chất là những bộ khung đóng gói sẵn một phần quy trình, cho từng trường hợp cụ thể. Có cái đóng gói sẵn cách dựng giao diện, có cái đóng gói sẵn cách nhớ và chia sẻ dữ liệu, có cái đóng gói sẵn cách làm việc với database.",
+   "dung_sau_giay": 2.0
+  },
+  {
+   "id": "canh5-d5-k3",
+   "doan": 5,
+   "tieu_de": "Framework là cái khung đã đóng gói sẵn",
+   "phan": 5,
+   "van_ban": "Giống như ông Sơn dùng lại bộ khung cửa hàng để mở tiệm bún, lập trình viên dùng lại bộ khung có sẵn để dựng sản phẩm mới mà không phải xây từ đầu.",
+   "dung_sau_giay": 1.5
+  },
+  {
+   "id": "canh5-d5-k4",
+   "doan": 5,
+   "tieu_de": "Framework là cái khung đã đóng gói sẵn",
+   "phan": 5,
+   "van_ban": "Và bên trong mỗi bộ khung đó là gì? Vẫn là biến, hàm, database, if/else, vòng lặp. Nên nếu bạn nắm chắc nền móng, mỗi framework mới chỉ là học thêm một bộ khung mới, chứ không phải học lại từ đầu.",
+   "dung_sau_giay": 2.5
+  },
+  {
+   "id": "canh5-d6-k1",
+   "doan": 6,
+   "tieu_de": "Tư duy kiến trúc sư",
+   "phan": 6,
+   "van_ban": "Thợ code làm cho từng phần chạy được. Kiến trúc sư hỏi ba câu: thứ này là gì, ai làm việc gì, thông tin nằm ở đâu.",
+   "dung_sau_giay": 2.0
+  },
+  {
+   "id": "canh5-d6-k2",
+   "doan": 6,
+   "tieu_de": "Tư duy kiến trúc sư",
+   "phan": 6,
+   "van_ban": "Ba câu này khớp với ba viên gạch đầu tiên. Thứ này là gì: là cái nhãn. Ai làm việc gì: là người làm một việc. Thông tin nằm ở đâu: là cuốn sổ kế toán. Câu đầu tiên chính là chuyện đặt tên, và đó là bài kiểm tra đầu tiên của tư duy kiến trúc. Ai trượt bài này thì các bài sau không cần thi.",
+   "dung_sau_giay": 2.0
+  },
+  {
+   "id": "canh5-d7-k1",
+   "doan": 7,
+   "tieu_de": "Quay lại đoạn code, khép vòng hook và thử thách",
+   "phan": 7,
+   "van_ban": "Bây giờ, hãy quay lại đoạn code ở đầu video.",
+   "dung_sau_giay": 2.0
+  },
+  {
+   "id": "canh5-d7-k2",
+   "doan": 7,
+   "tieu_de": "Quay lại đoạn code, khép vòng hook và thử thách",
+   "phan": 7,
+   "van_ban": "Dòng tong_tien bằng 0: một cái nhãn, là biến. Tinh_tien: một người làm đúng một việc, là hàm. Hoi_ke_toan: hỏi cuốn sổ, là database. If: ngã ba đường. While: vòng tròn hỏi đi hỏi lại.",
+   "dung_sau_giay": 3.0
+  },
+  {
+   "id": "canh5-d7-k3",
+   "doan": 7,
+   "tieu_de": "Quay lại đoạn code, khép vòng hook và thử thách",
+   "phan": 7,
+   "van_ban": "Bạn vừa đọc được một đoạn code của tiệm tạp hoá. Năm viên gạch, xếp lại đúng thứ tự.",
+   "dung_sau_giay": 2.0
+  },
+  {
+   "id": "canh5-d7-k4",
+   "doan": 7,
+   "tieu_de": "Quay lại đoạn code, khép vòng hook và thử thách",
+   "phan": 7,
+   "van_ban": "Đầu video tôi hứa bạn sẽ đọc được đoạn code ấy, và hiểu cách một phần mềm triệu đô được tạo ra. Giờ bạn đã thấy: nó bắt đầu từ 20 triệu của ông Sơn, từ một cái nhãn dán đúng, từ một người làm một việc, từ một cuốn sổ ghi đúng chỗ. Khác nhau ở quy mô, không khác ở tư duy.",
+   "dung_sau_giay": 1.5
+  },
+  {
+   "id": "canh5-d7-k5",
+   "doan": 7,
+   "tieu_de": "Quay lại đoạn code, khép vòng hook và thử thách",
+   "phan": 7,
+   "van_ban": "Thử thách cho bạn: chọn một thứ bạn đang làm hàng ngày, như một quán cà phê hay một cửa hàng online, rồi trả lời ba câu hỏi vừa rồi và viết xuống phần bình luận.",
+   "dung_sau_giay": 0.0
+  },
+  {
+   "id": "canh5-d7-k6",
+   "doan": 7,
+   "tieu_de": "Quay lại đoạn code, khép vòng hook và thử thách",
+   "phan": 8,
+   "van_ban": "Nhưng đời không như mơ. Một buổi sáng, ông Sơn mở sổ kế toán và thấy giá nước mắm đã bị ai đó sửa thành một nghìn đồng. Cả đêm, hàng chục chai bán đi trong im lặng. Tiệm suýt phá sản. Ai đã mở cuốn sổ ấy? Và làm sao một cái tiệm biết người mở sổ đúng là kế toán chứ không phải kẻ lạ? Câu trả lời nằm ở video sau: authentication.",
+   "dung_sau_giay": 0.0
+  }
+ ]
+}

@@ -1,0 +1,35 @@
+{
+ "scene": "c4-d3",
+ "cues": [
+  {
+   "t": 0.5,
+   "type": "ding",
+   "gain": 0.9,
+   "note": "Đọc là bạn hiểu"
+  },
+  {
+   "t": 6.1,
+   "type": "tick",
+   "gain": 0.8,
+   "note": "Không thì giảm giá bằng"
+  },
+  {
+   "t": 7.8,
+   "type": "whoosh",
+   "gain": 0.8,
+   "note": "Để ý hai dấu bằng"
+  },
+  {
+   "t": 10.3,
+   "type": "click",
+   "gain": 1.0,
+   "note": "một dấu bằng là dán nhãn"
+  },
+  {
+   "t": 12.2,
+   "type": "pop",
+   "gain": 0.9,
+   "note": "Hai dấu bằng là một câu hỏi"
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "scene": "c2-d1",
+ "cues": [
+  {
+   "t": 2.3,
+   "type": "pop",
+   "gain": 0.9,
+   "note": "Ông Sơn một mình làm tất cả"
+  },
+  {
+   "t": 7.3,
+   "type": "tick",
+   "gain": 0.8,
+   "note": "Ông nhận ra"
+  },
+  {
+   "t": 10.7,
+   "type": "pop",
+   "gain": 0.9,
+   "note": "nhân giá với số ký"
+  },
+  {
+   "t": 13.7,
+   "type": "tick",
+   "gain": 0.9,
+   "note": "lần mỗi ngày"
+  }
+ ]
+}

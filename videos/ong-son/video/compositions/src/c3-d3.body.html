@@ -1,0 +1,113 @@
+<style>
+/*VK_FONT*/
+/*VK_CSS*/
+#root { position: absolute; inset: 0; overflow: hidden; }
+.c3d3-kt { -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%); mask-image: linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%); }
+.c3d3-svg { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+.c3d3-nhan { position: absolute; left: 0; top: 0; font-size: 28px; padding: 6px 20px; }
+.c3d3-chip { position: absolute; left: 0; top: 0; height: 54px; box-sizing: border-box; justify-content: center; font-size: 30px; }
+.c3d3-gia { color: var(--chu-gia); background: var(--ham-nhat); border-color: rgba(30,58,138,0.45); }
+.c3d3-db { position: absolute; left: 900px; top: 855px; padding: 8px 48px 12px; background: var(--db-nhat); border: 3px solid var(--db-dam); border-radius: 22px; box-shadow: var(--bong); font: 800 96px/1.15 'Be Vietnam Pro', sans-serif; color: var(--db-dam); letter-spacing: 1px; white-space: nowrap; }
+</style>
+<div data-hf-id="hf-hxzx" id="root" data-composition-id="c3-d3" data-width="1920" data-height="1080">
+  <div data-hf-id="hf-j7xp" id="c3d3-nv"></div>
+  <svg data-hf-id="hf-bt4v" class="c3d3-svg" viewBox="0 0 1920 1080">
+    <path data-hf-id="hf-z79x" class="vk-net vk-net-mong" id="c3d3-pl1" pathLength="1" d="M1110 530 C1110 620 1000 625 895 625 M915 607 L895 625 L915 643" style="stroke:var(--muc)" />
+    <path data-hf-id="hf-aycg" class="vk-net vk-net-mong" id="c3d3-pl2" pathLength="1" d="M885 690 C1020 700 1215 660 1200 545 M1182 565 L1200 545 L1218 565" style="stroke:var(--chu-gia)" />
+    <path data-hf-id="hf-8i7g" class="vk-net vk-net-mong" id="c3d3-pt1" pathLength="1" d="M1480 530 C1480 700 1200 740 895 735 M915 717 L895 735 L915 753" style="stroke:var(--muc)" />
+    <path data-hf-id="hf-tfoi" class="vk-net vk-net-mong" id="c3d3-pt2" pathLength="1" d="M885 795 C1280 810 1590 720 1585 545 M1567 565 L1585 545 L1603 565" style="stroke:var(--chu-gia)" />
+  </svg>
+  <div data-hf-id="hf-ib8m" id="c3d3-chips"></div>
+  <div data-hf-id="hf-qkg9" class="vk-chip c3d3-nhan" id="c3d3-nl">Cô Lan</div>
+  <div data-hf-id="hf-hemr" class="vk-chip c3d3-nhan" id="c3d3-nt">Anh Tâm</div>
+  <div data-hf-id="hf-b6af" class="c3d3-db" id="c3d3-db">DATABASE</div>
+</div>
+<script>
+/*VK_JS*/
+const D = 21.6;
+const tl = gsap.timeline({ paused: true });
+const root = document.getElementById("root");
+const nv = document.getElementById("c3d3-nv");
+
+// ---- 0,5s: ba kế toán (một ảnh) trượt lên từ dưới, nhún nhẹ; đáy ảnh sát đáy khung
+const kt = vk.nv(nv, { src: "assets/images/chi-hanh/ban-ke-toan.png", size: 760, cx: 476, base: 1080, id: "c3d3-kt", bong: false });
+kt.classList.add("c3d3-kt");
+tl.fromTo(kt, { y: 760 }, { y: 0, duration: 0.95, ease: "back.out(1.25)" }, 0.45);
+
+// ---- chip đứng trên đầu ba kế toán (giữ sổ: giá, kho, bán gì), theo từng cụm trong lời dẫn
+const hop = (txt, cls, w) => {
+  const e = document.createElement("div");
+  e.className = "vk-chip c3d3-chip " + (cls || ""); e.textContent = txt; e.style.width = w + "px";
+  document.getElementById("c3d3-chips").appendChild(e); return e;
+};
+const c1 = hop("giá bao nhiêu", "", 270), c2 = hop("kho còn bao nhiêu", "", 340), c3 = hop("hôm nay bán gì", "", 290);
+gsap.set(c1, { x: 256 - 135, y: 405 - 27 });
+gsap.set(c2, { x: 476 - 170, y: 335 - 27 });
+gsap.set(c3, { x: 734 - 145, y: 405 - 27 });
+// 7,6s / 8,6s / 9,8s (neo vào "giá bao nhiêu", "kho còn bao nhiêu", "hôm nay bán gì"; lời dẫn bắt đầu "giữ sổ" từ 5,4s)
+vk.vao(tl, c1, 7.65, { x: 121, y: 378, dy: 22, dur: 0.5 });
+vk.vao(tl, c2, 8.65, { x: 306, y: 308, dy: 22, dur: 0.5 });
+vk.vao(tl, c3, 9.85, { x: 589, y: 378, dy: 22, dur: 0.5 });
+// chip nhường chỗ cho sơ đồ ở 11,2s
+tl.to([c1, c2, c3], { opacity: 0, duration: 0.3, ease: "power2.in" }, 11.2);
+
+// ---- sơ đồ: hai người hỏi, phòng kế toán trả lời
+const lan = vk.nv(nv, { src: "assets/images/co-lan/goc.png", size: 300, cx: 1150, base: 440, id: "c3d3-lan", bong: false });
+const tam = vk.nv(nv, { src: "assets/images/anh-tam/goc.png", size: 290, cx: 1520, base: 440, id: "c3d3-tam", bong: false });
+const nl = document.getElementById("c3d3-nl"), nt = document.getElementById("c3d3-nt");
+gsap.set(nl, { x: 1150 - 52, y: 456 });
+gsap.set(nt, { x: 1520 - 66, y: 456 });
+
+// đường cong Bézier để chip chạy theo mũi tên (cùng toạ độ với path trong SVG)
+const bez = (P, u) => {
+  const m = 1 - u;
+  return [m * m * m * P[0][0] + 3 * m * m * u * P[1][0] + 3 * m * u * u * P[2][0] + u * u * u * P[3][0],
+          m * m * m * P[0][1] + 3 * m * m * u * P[1][1] + 3 * m * u * u * P[2][1] + u * u * u * P[3][1]];
+};
+const DUONG = {
+  l1: [[1110, 530], [1110, 620], [1000, 625], [895, 625]],
+  l2: [[885, 690], [1020, 700], [1215, 660], [1200, 545]],
+  t1: [[1480, 530], [1480, 700], [1200, 740], [895, 735]],
+  t2: [[885, 795], [1280, 810], [1590, 720], [1585, 545]],
+};
+// chip chạy dọc đường `k` từ thời điểm t, mất sau `roi` (true) hoặc dừng ở u = 0,9 (false)
+function chay(e, k, w, t, dur, roi) {
+  const P = DUONG[k], u1 = roi ? 1 : 0.9, po = { u: 0 };
+  const dat = () => { const q = bez(P, po.u); gsap.set(e, { x: q[0] - w / 2, y: q[1] - 27 }); };
+  dat();
+  tl.fromTo(e, { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.18, ease: "power2.out" }, t);
+  tl.to(po, { u: u1, duration: dur, ease: "power1.inOut", onUpdate: dat }, t);
+  if (roi) tl.to(e, { opacity: 0, scale: 0.8, duration: 0.15, ease: "power2.in" }, t + dur - 0.05);
+}
+const xin = (el, t) => tl.fromTo(el, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, t);
+const khung = (el, t) => tl.fromTo(el, { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power2.out" }, t);
+
+// 11,5s: Cô Lan mini hiện (trái); mũi tên cong tới kế toán; chip "giá?" chạy theo; mũi tên trả về, chip "45.000đ"
+xin(lan, 11.3);
+khung(nl, 11.35);
+vk.ve(tl, "#c3d3-pl1", 11.75, 0.55);
+const g1 = hop("giá?", "", 130);
+chay(g1, "l1", 130, 12.0, 0.85, true);
+vk.nay(tl, kt, 12.85, { m: 1.015 });
+vk.ve(tl, "#c3d3-pl2", 13.0, 0.5);
+const g2 = hop("45.000đ", "c3d3-gia", 170);
+chay(g2, "l2", 170, 13.15, 0.85, false);
+
+// 14,1s: Anh Tâm mini hiện (phải); "còn bao nhiêu?" đi, "60 chai" về
+xin(tam, 13.95);
+khung(nt, 14.0);
+vk.ve(tl, "#c3d3-pt1", 14.5, 0.6);
+const h1 = hop("còn bao nhiêu?", "", 300);
+chay(h1, "t1", 300, 15.15, 1.0, true);
+vk.nay(tl, kt, 16.15, { m: 1.015 });
+vk.ve(tl, "#c3d3-pt2", 16.25, 0.5);
+const h2 = hop("60 chai", "c3d3-gia", 160);
+chay(h2, "t2", 160, 16.5, 0.85, false);
+
+// 17,5s: chữ DATABASE tím đậm cạnh phòng kế toán, nền tím nhạt (dừng tới hết đoạn)
+vk.pop(tl, "#c3d3-db", 17.4, { scale0: 0.8, dur: 0.6 });
+
+const ke = vk.keGach(tl, root, { co: 2 });
+ke.style.zIndex = "30";
+window.__timelines["c3-d3"] = tl;
+</script>

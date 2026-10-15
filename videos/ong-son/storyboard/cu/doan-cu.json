@@ -1,0 +1,189 @@
+{
+ "canh0": [
+  {
+   "id": "c0-d1",
+   "ten": "Đoạn 1: Một đoạn code trông như tiếng lạ",
+   "bat_dau": 0.0
+  }
+ ],
+ "canh1": [
+  {
+   "id": "c1-d1",
+   "ten": "Đoạn 1: Dự án bắt đầu từ đâu",
+   "bat_dau": 0.0
+  },
+  {
+   "id": "c1-d2",
+   "ten": "Đoạn 2: Nhập hàng",
+   "bat_dau": 17.85
+  },
+  {
+   "id": "c1-d3",
+   "ten": "Đoạn 3: Phân loại và ghi giá",
+   "bat_dau": 29.95
+  },
+  {
+   "id": "c1-d4",
+   "ten": "Đoạn 4: Cùng một việc, viết bằng code",
+   "bat_dau": 49.54
+  },
+  {
+   "id": "c1-d5",
+   "ten": "Đoạn 5: Cú lật, vì sao tên quan trọng",
+   "bat_dau": 80.34
+  },
+  {
+   "id": "c1-chot",
+   "ten": "Chốt cảnh: viên gạch BIẾN",
+   "bat_dau": 100.74
+  }
+ ],
+ "canh2": [
+  {
+   "id": "c2-d1",
+   "ten": "Đoạn 1: Ông Sơn làm hết mọi việc",
+   "bat_dau": 0.0
+  },
+  {
+   "id": "c2-d2",
+   "ten": "Đoạn 2: Thuê người thứ nhất, hàm tính tiền",
+   "bat_dau": 14.89
+  },
+  {
+   "id": "c2-d3",
+   "ten": "Đoạn 3: Thuê người thứ hai, hàm xếp hàng lên kệ",
+   "bat_dau": 39.67
+  },
+  {
+   "id": "c2-d4",
+   "ten": "Đoạn 4: Ghép các hàm thành quy trình",
+   "bat_dau": 76.05
+  },
+  {
+   "id": "c2-d5",
+   "ten": "Đoạn 5: Cú lật, một người làm hết",
+   "bat_dau": 102.31
+  },
+  {
+   "id": "c2-chot",
+   "ten": "Chốt cảnh: viên gạch HÀM",
+   "bat_dau": 123.17
+  }
+ ],
+ "canh3": [
+  {
+   "id": "c3-d1",
+   "ten": "Đoạn 1: Làm ăn thuận lợi, bán thêm hàng",
+   "bat_dau": 0.0
+  },
+  {
+   "id": "c3-d2",
+   "ten": "Đoạn 2: Nhớ trong đầu bắt đầu sai",
+   "bat_dau": 11.56
+  },
+  {
+   "id": "c3-d3",
+   "ten": "Đoạn 3: Thuê đội kế toán",
+   "bat_dau": 25.98
+  },
+  {
+   "id": "c3-d4",
+   "ten": "Đoạn 4: Kế toán phân loại, khoá chính",
+   "bat_dau": 47.58
+  },
+  {
+   "id": "c3-d5",
+   "ten": "Đoạn 5: Hoá đơn chỉ ghi mã, khoá ngoại",
+   "bat_dau": 76.39
+  },
+  {
+   "id": "c3-d6",
+   "ten": "Đoạn 6: Cô Lan không cần nhớ nữa",
+   "bat_dau": 116.75
+  },
+  {
+   "id": "c3-d7",
+   "ten": "Đoạn 7: Cú lật, nhớ trong đầu và ghi vào sổ",
+   "bat_dau": 134.09
+  },
+  {
+   "id": "c3-chot",
+   "ten": "Chốt cảnh: viên gạch DATABASE",
+   "bat_dau": 158.96
+  }
+ ],
+ "canh4": [
+  {
+   "id": "c4-d1",
+   "ten": "Đoạn 1: Luật của ông Sơn",
+   "bat_dau": 0.0
+  },
+  {
+   "id": "c4-d2",
+   "ten": "Đoạn 2: If/else là nếu... thì... không thì...",
+   "bat_dau": 13.69
+  },
+  {
+   "id": "c4-d3",
+   "ten": "Đoạn 3: Viết thành code",
+   "bat_dau": 37.71
+  },
+  {
+   "id": "c4-d4",
+   "ten": "Đoạn 4: Chạy thử hai ngày",
+   "bat_dau": 57.14
+  },
+  {
+   "id": "c4-d5",
+   "ten": "Đoạn 5: Vòng lặp là if/else hỏi đi hỏi lại",
+   "bat_dau": 76.6
+  },
+  {
+   "id": "c4-d6",
+   "ten": "Đoạn 6: Cú lật, nếu không có if/else",
+   "bat_dau": 108.18
+  },
+  {
+   "id": "c4-chot",
+   "ten": "Chốt cảnh: hai viên gạch cuối",
+   "bat_dau": 122.77
+  }
+ ],
+ "canh5": [
+  {
+   "id": "c5-d1",
+   "ten": "Đoạn 1: Nhìn tiệm từ trên cao",
+   "bat_dau": 0.0
+  },
+  {
+   "id": "c5-d2",
+   "ten": "Đoạn 2: Hệ thống lớn là gạch nhỏ xếp lại",
+   "bat_dau": 27.09
+  },
+  {
+   "id": "c5-d3",
+   "ten": "Đoạn 3: Bình cũ rượu mới",
+   "bat_dau": 49.34
+  },
+  {
+   "id": "c5-d4",
+   "ten": "Đoạn 4: Ông Sơn chuyển sang bán bún",
+   "bat_dau": 68.98
+  },
+  {
+   "id": "c5-d5",
+   "ten": "Đoạn 5: Framework là cái khung đã đóng gói sẵn",
+   "bat_dau": 91.23
+  },
+  {
+   "id": "c5-d6",
+   "ten": "Đoạn 6: Tư duy kiến trúc sư",
+   "bat_dau": 140.55
+  },
+  {
+   "id": "c5-d7",
+   "ten": "Đoạn 7: Quay lại đoạn code, khép vòng hook và thử thách",
+   "bat_dau": 171.94
+  }
+ ]
+}

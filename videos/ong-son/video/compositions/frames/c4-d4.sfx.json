@@ -1,0 +1,29 @@
+{
+ "scene": "c4-d4",
+ "cues": [
+  {
+   "t": 1.7,
+   "type": "pop",
+   "gain": 0.9,
+   "note": "khách mua"
+  },
+  {
+   "t": 3.0,
+   "type": "tick",
+   "gain": 0.8,
+   "note": "được giảm"
+  },
+  {
+   "t": 8.9,
+   "type": "pop",
+   "gain": 0.9,
+   "note": "cùng đơn hàng"
+  },
+  {
+   "t": 13.9,
+   "type": "ding",
+   "gain": 0.9,
+   "note": "Luật tự dừng"
+  }
+ ]
+}

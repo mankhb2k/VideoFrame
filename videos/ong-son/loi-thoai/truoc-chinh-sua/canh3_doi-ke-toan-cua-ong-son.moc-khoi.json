@@ -1,0 +1,80 @@
+[
+ {
+  "id": "canh3-d1-k1",
+  "bat_dau": 0.0,
+  "ket_thuc": 10.709,
+  "dung_sau_giay": 0.6
+ },
+ {
+  "id": "canh3-d2-k1",
+  "bat_dau": 11.309,
+  "ket_thuc": 24.926,
+  "dung_sau_giay": 0.6
+ },
+ {
+  "id": "canh3-d3-k1",
+  "bat_dau": 25.526,
+  "ket_thuc": 44.325,
+  "dung_sau_giay": 0.9
+ },
+ {
+  "id": "canh3-d4-k1",
+  "bat_dau": 45.225,
+  "ket_thuc": 49.367,
+  "dung_sau_giay": 1.2
+ },
+ {
+  "id": "canh3-d4-k2",
+  "bat_dau": 50.567,
+  "ket_thuc": 61.043,
+  "dung_sau_giay": 0.35
+ },
+ {
+  "id": "canh3-d4-k3",
+  "bat_dau": 61.393,
+  "ket_thuc": 68.795,
+  "dung_sau_giay": 0.9
+ },
+ {
+  "id": "canh3-d5-k1",
+  "bat_dau": 69.695,
+  "ket_thuc": 83.565,
+  "dung_sau_giay": 1.2
+ },
+ {
+  "id": "canh3-d5-k2",
+  "bat_dau": 84.765,
+  "ket_thuc": 89.549,
+  "dung_sau_giay": 0.9
+ },
+ {
+  "id": "canh3-d5-k3",
+  "bat_dau": 90.449,
+  "ket_thuc": 102.35,
+  "dung_sau_giay": 1.2
+ },
+ {
+  "id": "canh3-d6-k1",
+  "bat_dau": 103.55,
+  "ket_thuc": 118.092,
+  "dung_sau_giay": 0.9
+ },
+ {
+  "id": "canh3-d7-k1",
+  "bat_dau": 118.992,
+  "ket_thuc": 135.4,
+  "dung_sau_giay": 0.8
+ },
+ {
+  "id": "canh3-d7-k2",
+  "bat_dau": 136.2,
+  "ket_thuc": 140.158,
+  "dung_sau_giay": 0.9
+ },
+ {
+  "id": "canh3-d7-k3",
+  "bat_dau": 141.058,
+  "ket_thuc": 156.219,
+  "dung_sau_giay": 0.0
+ }
+]

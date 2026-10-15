@@ -1,0 +1,27 @@
+<style>
+/*VK_FONT*/
+/*VK_CSS*/
+#root { position: absolute; inset: 0; }
+.c1c-dn { position: absolute; left: 0; top: 700px; width: 1920px; text-align: center; font-size: 56px; font-weight: 700; }
+.c1c-dn b { color: var(--bien-dam); font-weight: 800; }
+</style>
+<div data-hf-id="hf-dd9q" id="root" data-composition-id="c1-chot" data-width="1920" data-height="1080">
+  <div data-hf-id="hf-8iw5" class="vk-chu c1c-dn" id="c1c-dn"><b data-hf-id="hf-bg00">BIẾN</b> = cái nhãn gắn một cái tên vào một giá trị</div>
+</div>
+<script>
+/*VK_JS*/
+const D = 10.26;
+const tl = gsap.timeline({ paused: true });
+const root = document.getElementById("root");
+// 0,4s: kệ năm ô trống ở góc trên trái; viên BIẾN lớn rơi giữa khung (cạch)
+const ke = vk.keGach(tl, root, { co: 0 });
+vk.gachLon(tl, root, { i: 1, t: 0.4, tBay: 6.2, durBay: 1.0, scale: 3, cx: 960, cy: 470 });
+// 3,6s: định nghĩa hiện dưới viên gạch
+vk.vao(tl, "#c1c-dn", 3.6, { dy: 24 });
+// 6,2s: viên gạch bay lên ô 1; định nghĩa mờ; Ông Sơn hiện giữa khung
+tl.to("#c1c-dn", { opacity: 0, duration: 0.5, ease: "power2.in" }, 6.2);
+const son = vk.nv(root, { src: "assets/images/ong-son/ban-ron.png", size: 700, cx: 960, base: 1040, id: "c1c-son" });
+tl.fromTo(son, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 6.4);
+tl.fromTo(son._bong, { opacity: 0 }, { opacity: 1, duration: 0.6 }, 6.4);
+window.__timelines["c1-chot"] = tl;
+</script>

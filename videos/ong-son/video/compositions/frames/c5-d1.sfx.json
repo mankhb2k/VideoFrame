@@ -1,0 +1,47 @@
+{
+ "scene": "c5-d1",
+ "cues": [
+  {
+   "t": 0.3,
+   "type": "whoosh",
+   "gain": 0.8,
+   "note": "Hãy lùi lại"
+  },
+  {
+   "t": 5.1,
+   "type": "pop",
+   "gain": 0.9,
+   "note": "gạch đầu tiên"
+  },
+  {
+   "t": 7.7,
+   "type": "click",
+   "gain": 1.0,
+   "note": "nhãn là biến"
+  },
+  {
+   "t": 9.3,
+   "type": "whoosh",
+   "gain": 0.8,
+   "note": "một việc là hàm"
+  },
+  {
+   "t": 11.8,
+   "type": "whoosh",
+   "gain": 0.8,
+   "note": "Đội kế toán là database"
+  },
+  {
+   "t": 14.4,
+   "type": "whoosh",
+   "gain": 0.8,
+   "note": "Ngã ba đường là"
+  },
+  {
+   "t": 17.6,
+   "type": "whoosh",
+   "gain": 0.8,
+   "note": "Và vòng tròn"
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "scene": "c1-d3",
+ "cues": [
+  {
+   "t": 1.0,
+   "type": "click",
+   "gain": 1.0,
+   "note": "Thùng này là"
+  },
+  {
+   "t": 9.8,
+   "type": "pop",
+   "gain": 0.9,
+   "note": "Ông vừa làm hai việc"
+  },
+  {
+   "t": 11.2,
+   "type": "tick",
+   "gain": 0.8,
+   "note": "đặt tên cho từng thứ"
+  },
+  {
+   "t": 12.4,
+   "type": "tick",
+   "gain": 0.8,
+   "note": "gắn giá trị"
+  }
+ ]
+}

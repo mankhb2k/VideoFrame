@@ -1,0 +1,41 @@
+{
+ "scene": "c1-d4",
+ "cues": [
+  {
+   "t": 0.5,
+   "type": "whoosh",
+   "gain": 0.8,
+   "note": "Nhìn bên phải"
+  },
+  {
+   "t": 2.9,
+   "type": "tick",
+   "gain": 0.8,
+   "note": "Dòng đầu tiên"
+  },
+  {
+   "t": 8.6,
+   "type": "click",
+   "gain": 1.0,
+   "note": "bằng nghĩa là"
+  },
+  {
+   "t": 12.9,
+   "type": "tick",
+   "gain": 0.8,
+   "note": "Đọc to lên"
+  },
+  {
+   "t": 19.3,
+   "type": "tick",
+   "gain": 0.8,
+   "note": "Hai dòng còn lại"
+  },
+  {
+   "t": 21.5,
+   "type": "tick",
+   "gain": 0.8,
+   "note": "Ba cái nhãn, ba giá trị"
+  }
+ ]
+}

@@ -1,0 +1,71 @@
+<style>
+/*VK_FONT*/
+/*VK_CSS*/
+#root { position: absolute; inset: 0; }
+.c4d3-giay { position: absolute; left: 96px; top: 330px; width: 560px; padding: 34px 40px 40px; box-sizing: border-box; transform-origin: 50% 50%; }
+.c4d3-bang { position: absolute; left: 190px; top: -16px; width: 180px; height: 34px; background: var(--cam); opacity: 0.85; border-radius: 4px; }
+.c4d3-tde { font: 800 34px/1.2 'Be Vietnam Pro', sans-serif; color: var(--muc-phu); letter-spacing: 2px; margin-bottom: 24px; }
+.c4d3-hang { margin-bottom: 26px; }
+.c4d3-hang:last-child { margin-bottom: 0; }
+.c4d3-hang .vk-chip { font-size: 32px; }
+.c4d3-dong { margin-top: 12px; font: 800 60px/1.15 'Be Vietnam Pro', sans-serif; }
+.c4d3-dong small { font-size: 40px; font-weight: 700; color: var(--muc); }
+.c4d3-cua { position: absolute; left: 740px; top: 395px; width: 1040px; }
+.c4d3-cua .vk-code { font-variant-ligatures: none; font-size: 36px; line-height: 1.55; padding: 24px 28px; }
+.c4d3-cua .vk-dong { position: relative; }
+.c4d3-eq { display: inline-block; padding: 0 8px; margin: 0 6px; border: 3px solid rgba(239,68,68,0); border-radius: 8px; background: rgba(239,68,68,0); transform-origin: 50% 50%; }
+.c4d3-chip { position: absolute; right: 30px; top: 50%; margin-top: -26px; padding: 6px 18px; font-size: 30px; }
+.c4d3-chip i { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: var(--re); color: var(--chu-tren-mau); font: 800 26px/1 'Be Vietnam Pro', sans-serif; font-style: normal; }
+</style>
+<div data-hf-id="hf-6epe" id="root" data-composition-id="c4-d3" data-width="1920" data-height="1080">
+  <div data-hf-id="hf-x0dd" class="vk-the c4d3-giay" id="c4d3-giay">
+    <div data-hf-id="hf-5b6l" class="c4d3-bang"></div>
+    <div data-hf-id="hf-sqrb" class="c4d3-tde">LUẬT GIẢM GIÁ</div>
+    <div data-hf-id="hf-2s3j" class="c4d3-hang">
+      <span data-hf-id="hf-juay" class="vk-chip vk-chip-re">NẾU</span> <span data-hf-id="hf-d0vr" style="font:700 44px 'Be Vietnam Pro';margin-left:8px">ngày 27/11</span>
+      <div data-hf-id="hf-ihp5" class="c4d3-dong th-gia-ban">giảm 5%</div>
+    </div>
+    <div data-hf-id="hf-rlxb" class="c4d3-hang">
+      <span data-hf-id="hf-er8z" class="vk-chip vk-chip-re">KHÔNG THÌ</span>
+      <div data-hf-id="hf-us9h" class="c4d3-dong"><span data-hf-id="hf-0as9" class="th-chu-phu">giảm 0%</span></div>
+    </div>
+  </div>
+  <div data-hf-id="hf-xwqe" class="th-cuaso c4d3-cua" id="c4d3-cua">
+    <div data-hf-id="hf-xhm1" class="th-cuaso-dau"><i data-hf-id="hf-wt6k"></i><i data-hf-id="hf-zeb8"></i><i data-hf-id="hf-y7e5"></i><span data-hf-id="hf-rs60">giam_gia.py</span></div>
+    <pre data-hf-id="hf-gwgb" class="vk-code"><span data-hf-id="hf-x7h0" class="vk-dong" id="c4d3-l1"><span data-hf-id="hf-k8nl" class="k-re">if</span> black_friday <span data-hf-id="hf-ycxn" class="c4d3-eq" id="c4d3-eq">==</span> <span data-hf-id="hf-vfh0" class="k-cam">"27/11"</span>:<span data-hf-id="hf-3jpj" class="vk-chip vk-chip-re c4d3-chip" id="c4d3-chip2"><i data-hf-id="hf-d35l">?</i>hỏi</span></span>
+<span data-hf-id="hf-vpd5" class="vk-dong" id="c4d3-l2">    <span data-hf-id="hf-shfd" class="k-bien">giam_gia</span> = <span data-hf-id="hf-j615" class="k-cam">5</span><span data-hf-id="hf-0kno" class="vk-chip vk-chip-bien c4d3-chip" id="c4d3-chip1">= dán nhãn</span></span>
+<span data-hf-id="hf-nojj" class="vk-dong" id="c4d3-l3"><span data-hf-id="hf-6rgz" class="k-re">else</span>:</span>
+<span data-hf-id="hf-etjr" class="vk-dong" id="c4d3-l4">    <span data-hf-id="hf-u8lp" class="k-bien">giam_gia</span> = <span data-hf-id="hf-hz42" class="k-cam">0</span></span></pre>
+  </div>
+</div>
+<script>
+/*VK_JS*/
+const D = 19.43;
+const tl = gsap.timeline({ paused: true });
+const root = document.getElementById("root");
+const ke = vk.keGach(tl, root, { co: 3 });
+const RE = "rgba(20,184,166,0.32)", VANG = "rgba(250,204,21,0.26)";
+// 0,5s: tờ giấy luật trượt sang trái (từ giữa khung), hơi nghiêng; cửa sổ code hiện bên phải
+tl.fromTo("#c4d3-giay", { x: 584, rotation: 0 }, { x: 0, rotation: -2, duration: 0.8, ease: "power3.inOut" }, 0.5);
+tl.fromTo("#c4d3-cua", { opacity: 0, x: 80 }, { opacity: 1, x: 0, duration: 0.6, ease: "power3.out" }, 0.7);
+// 1,8s: "Nếu ngày Black Friday đúng là 27/11" -> dòng if sáng (lục lam); 4,7s: "thì giảm giá bằng 5"
+vk.sangDong(tl, "#c4d3-l1", 1.7, 4.4, RE);
+vk.sangDong(tl, "#c4d3-l2", 4.6, 6.0, VANG);
+// 6,1s: "Không thì" -> else sáng; 6,5s: "giảm giá bằng 0"
+vk.sangDong(tl, "#c4d3-l3", 6.1, 6.6, RE);
+vk.sangDong(tl, "#c4d3-l4", 6.5, 8.0, VANG);
+// 8,2s: "Để ý hai dấu bằng" -> phóng == 1,3 lần, viền đỏ nhạt
+tl.fromTo("#c4d3-eq", { scale: 1, borderColor: "rgba(239,68,68,0)", backgroundColor: "rgba(239,68,68,0)" },
+  { scale: 1.3, borderColor: "rgba(239,68,68,0.75)", backgroundColor: "rgba(239,68,68,0.2)", duration: 0.4, ease: "back.out(1.8)" }, 8.2);
+// 9,7s: "Một dấu bằng là dán nhãn" -> chip "= dán nhãn" cạnh giam_gia = 5 (== trở về cỡ thường)
+tl.to("#c4d3-eq", { scale: 1, borderColor: "rgba(239,68,68,0)", backgroundColor: "rgba(239,68,68,0)", duration: 0.3, ease: "power2.inOut" }, 9.5);
+vk.pop(tl, "#c4d3-chip1", 9.7, { scale0: 0.6, dur: 0.45 });
+// 12,3s: "Hai dấu bằng là một câu hỏi" -> chip "== ? hỏi" cạnh dòng if (== sáng lại nhẹ)
+vk.pop(tl, "#c4d3-chip2", 12.3, { scale0: 0.6, dur: 0.45 });
+tl.fromTo("#c4d3-eq", { scale: 1, borderColor: "rgba(239,68,68,0)", backgroundColor: "rgba(239,68,68,0)" },
+  { scale: 1.15, borderColor: "rgba(239,68,68,0.55)", backgroundColor: "rgba(239,68,68,0.14)", duration: 0.35, ease: "power2.out", immediateRender: false }, 12.3);
+// 15,4s: "Chỉ có vậy" -> mọi chip mờ xuống; giữ bốn dòng 3 giây
+tl.to(["#c4d3-chip1", "#c4d3-chip2"], { opacity: 0, duration: 0.5, ease: "power2.in" }, 15.4);
+tl.to("#c4d3-eq", { scale: 1, borderColor: "rgba(239,68,68,0)", backgroundColor: "rgba(239,68,68,0)", duration: 0.5, ease: "power2.inOut" }, 15.4);
+window.__timelines["c4-d3"] = tl;
+</script>

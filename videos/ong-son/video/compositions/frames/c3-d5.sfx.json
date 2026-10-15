@@ -1,0 +1,47 @@
+{
+ "scene": "c3-d5",
+ "cues": [
+  {
+   "t": 0.6,
+   "type": "whoosh",
+   "gain": 0.8,
+   "note": "Cuốn sổ thứ hai"
+  },
+  {
+   "t": 5.1,
+   "type": "error",
+   "gain": 0.9,
+   "note": "kế toán không chép lại"
+  },
+  {
+   "t": 11.9,
+   "type": "ding",
+   "gain": 0.9,
+   "note": "lần theo mã"
+  },
+  {
+   "t": 19.4,
+   "type": "tick",
+   "gain": 0.8,
+   "note": "gọi là khoá ngoại"
+  },
+  {
+   "t": 21.4,
+   "type": "whoosh",
+   "gain": 0.8,
+   "note": "Lý do ghi như vậy"
+  },
+  {
+   "t": 25.1,
+   "type": "whoosh",
+   "gain": 0.8,
+   "note": "chỉ sửa một chỗ"
+  },
+  {
+   "t": 30.3,
+   "type": "ding",
+   "gain": 0.9,
+   "note": "Không có chuyện"
+  }
+ ]
+}

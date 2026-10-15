@@ -1,0 +1,53 @@
+{
+ "scene": "c2-d4",
+ "cues": [
+  {
+   "t": 0.5,
+   "type": "pop",
+   "gain": 0.9,
+   "note": "Bây giờ nhìn tiệm"
+  },
+  {
+   "t": 2.5,
+   "type": "tick",
+   "gain": 0.8,
+   "note": "khách đến"
+  },
+  {
+   "t": 3.4,
+   "type": "tick",
+   "gain": 0.8,
+   "note": "cô Lan tính tiền"
+  },
+  {
+   "t": 4.6,
+   "type": "tick",
+   "gain": 0.8,
+   "note": "anh Tâm lo kệ"
+  },
+  {
+   "t": 12.4,
+   "type": "pop",
+   "gain": 0.9,
+   "note": "bạn có một thứ gọi là quy trình"
+  },
+  {
+   "t": 15.4,
+   "type": "pop",
+   "gain": 0.9,
+   "note": "một hàm lớn gọi"
+  },
+  {
+   "t": 18.7,
+   "type": "tick",
+   "gain": 0.8,
+   "note": "Đọc từ trên xuống"
+  },
+  {
+   "t": 22.5,
+   "type": "tick",
+   "gain": 0.8,
+   "note": "Không cần giải thích"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "scene": "c4-chot",
+ "cues": [
+  {
+   "t": 0.8,
+   "type": "thud",
+   "gain": 1.0,
+   "note": "Viên gạch thứ tư"
+  },
+  {
+   "t": 3.8,
+   "type": "whoosh",
+   "gain": 0.8,
+   "note": "Viên gạch thứ năm"
+  },
+  {
+   "t": 9.1,
+   "type": "click",
+   "gain": 1.0,
+   "note": "Biến để gọi tên"
+  },
+  {
+   "t": 9.6,
+   "type": "tick",
+   "gain": 0.8,
+   "note": "Hàm để chia việc"
+  },
+  {
+   "t": 11.4,
+   "type": "tick",
+   "gain": 0.8,
+   "note": "Database để nhớ"
+  },
+  {
+   "t": 13.4,
+   "type": "tick",
+   "gain": 0.8,
+   "note": "để tự quyết định"
+  },
+  {
+   "t": 14.6,
+   "type": "tick",
+   "gain": 0.8,
+   "note": "Vòng lặp để làm lại"
+  },
+  {
+   "t": 16.4,
+   "type": "whoosh",
+   "gain": 0.8,
+   "note": "Năm viên gạch đầu tiên"
+  }
+ ]
+}

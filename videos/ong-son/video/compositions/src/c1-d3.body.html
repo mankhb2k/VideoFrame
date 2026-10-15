@@ -1,0 +1,88 @@
+<style>
+/*VK_FONT*/
+/*VK_CSS*/
+#root { position: absolute; inset: 0; }
+.c1d3-nen { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+/* nhãn tên dán trên vùng nhãn của thùng: toạ độ x,y của GSAP là TÂM nhãn */
+.c1d3-nhan { position: absolute; left: 0; top: 0; z-index: 5; width: 172px; height: 48px; margin: -24px 0 0 -86px; display: flex; align-items: center; justify-content: center; background: var(--be-mat); color: var(--muc); border: var(--vien-chip); border-radius: 10px; box-shadow: var(--bong-nho); font: 800 30px/1.1 'Be Vietnam Pro', sans-serif; white-space: nowrap; }
+.c1d3-gw { position: absolute; top: 444px; width: 300px; z-index: 6; display: flex; justify-content: center; }
+.c1d3-gia { font-size: 40px; }
+/* hai chữ khái niệm trên biển hiệu */
+.c1d3-kn { position: absolute; top: 141px; width: 400px; z-index: 6; display: flex; justify-content: center; }
+.c1d3-kn .vk-chip { justify-content: center; padding: 8px 0; font-size: 64px; font-weight: 800; background: var(--be-mat); color: var(--muc); }
+#c1d3-ten .vk-chip { width: 200px; }
+#c1d3-gt .vk-chip { width: 340px; }
+.c1d3-mui { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; z-index: 7; pointer-events: none; overflow: visible; }
+.c1d3-khoi { position: absolute; left: 420px; top: 122px; width: 1070px; height: 136px; z-index: 1; background: var(--bien-nhat); border: 2px solid var(--bien-dam); border-radius: 24px; box-shadow: var(--bong); }
+.c1d3-bien { position: absolute; left: 357px; top: 147px; width: 370px; z-index: 8; text-align: right; font-size: 72px; font-weight: 800; line-height: 1.2; white-space: nowrap; }
+.c1d3-bien b { color: var(--bien-dam); font-weight: 800; }
+.c1d3-cong { position: absolute; left: 980px; top: 147px; width: 80px; z-index: 8; text-align: center; font-size: 72px; font-weight: 800; line-height: 1.2; color: var(--bien-dam); }
+</style>
+<div data-hf-id="hf-ekhf" id="root" data-composition-id="c1-d3" data-width="1920" data-height="1080">
+  <img data-hf-id="hf-fe4d" class="c1d3-nen" id="c1d3-nen" src="assets/images/nen/mat-bang-trong.png" alt="">
+  <div data-hf-id="hf-ri4s" class="c1d3-khoi" id="c1d3-khoi"></div>
+  <div data-hf-id="hf-88c9" class="c1d3-bien vk-chu" id="c1d3-bien"><b data-hf-id="hf-bg00">BIẾN</b> =</div>
+  <div data-hf-id="hf-e9jj" class="c1d3-cong vk-chu" id="c1d3-cong">+</div>
+  <div data-hf-id="hf-9qnt" class="c1d3-kn" id="c1d3-ten" style="left:660px"><div data-hf-id="hf-e4h5" class="vk-chip" id="c1d3-ten-c">TÊN</div></div>
+  <div data-hf-id="hf-qiig" class="c1d3-kn" id="c1d3-gt" style="left:1060px"><div data-hf-id="hf-7ffu" class="vk-chip" id="c1d3-gt-c">GIÁ TRỊ</div></div>
+  <svg data-hf-id="hf-10o4" class="c1d3-mui" viewBox="0 0 1920 1080">
+    <path data-hf-id="hf-efoc" id="c1d3-m1" class="vk-net" pathLength="1" d="M978 739 C 860 739, 866 440, 862 254" />
+    <path data-hf-id="hf-u29n" id="c1d3-h1" class="vk-net" d="M848 276 L862 252 L876 276" style="opacity:0" />
+    <path data-hf-id="hf-uqnt" id="c1d3-m2" class="vk-net" pathLength="1" d="M1170 442 C 1180 380, 1250 340, 1260 254" />
+    <path data-hf-id="hf-3icd" id="c1d3-h2" class="vk-net" d="M1246 276 L1260 252 L1274 276" style="opacity:0" />
+  </svg>
+</div>
+<script>
+/*VK_JS*/
+const D = 19.59;
+const tl = gsap.timeline({ paused: true });
+const root = document.getElementById("root");
+
+const sm = vk.nv(root, { src: "assets/images/ong-son/goc.png", size: 640, cx: 250, base: 1040, id: "c1d3-son" });
+
+// Ba thùng gạo xếp ngang, mỗi thùng hộp 400 px, cách nhau 120 px (mép hộp); mỗi thùng có nhãn tên và chip giá
+const LOAI = [
+  { ten: "ST25", w: 124, h: 50, gia: "30.000đ", L: 400, tThung: 0.6, tNhan: 1.0, tGia: 2.0 },
+  { ten: "Jasmine", w: 148, h: 50, gia: "20.000đ", L: 920, tThung: 3.9, tNhan: 4.3, tGia: 5.3 },
+  { ten: "Gạo<br>thường", w: 118, h: 72, gia: "15.000đ", L: 1440, tThung: 6.6, tNhan: 7.0, tGia: 8.0 },
+];
+const TOP = 494, HAND = { x: 380, y: 837 };
+LOAI.forEach((l, i) => {
+  const th = vk.nv(root, { src: "assets/images/vat/thung-gao.png", size: 400, cx: l.L + 200, base: TOP + 400, id: "c1d3-thung" + i });
+  vk.vao(tl, [th, th._bong], l.tThung, { dy: 30, dur: 0.5 });
+  // nhãn bay từ tay Ông Sơn vào vùng nhãn (tâm vùng nhãn: 37% rộng, 65% cao của hộp), nghiêng theo tấm nhãn
+  const nh = document.createElement("div");
+  nh.className = "c1d3-nhan"; nh.id = "c1d3-nhan" + i; nh.innerHTML = l.ten;
+  nh.style.width = l.w + "px"; nh.style.height = l.h + "px"; nh.style.margin = -l.h / 2 + "px 0 0 " + -l.w / 2 + "px";
+  root.appendChild(nh);
+  vk.cung(tl, nh, { t: l.tNhan, dur: 0.7, x0: HAND.x, y0: HAND.y, x1: l.L + 148, y1: TOP + 260, cao: -220, r0: -28, r1: 10, s0: 0.6, s1: 1, hien0: false });
+  vk.nay(tl, nh, l.tNhan + 0.7, { m: 1.1 });
+  // chip giá xanh dương đậm hiện trên thùng
+  const gw = document.createElement("div");
+  gw.className = "c1d3-gw"; gw.style.left = l.L + 50 + "px";
+  gw.innerHTML = '<div class="vk-chip th-gia c1d3-gia" id="c1d3-gia' + i + '">' + l.gia + "</div>";
+  root.appendChild(gw);
+  vk.pop(tl, "#c1d3-gia" + i, l.tGia, { scale0: 0.6, dur: 0.45 });
+});
+
+// 9,8s: hai chữ TÊN và GIÁ TRỊ hiện trên biển hiệu, hai mũi tên cong từ nhãn và từ giá cùng vẽ
+vk.vao(tl, "#c1d3-ten-c", 9.8, { dy: 20, dur: 0.45 });
+vk.vao(tl, "#c1d3-gt-c", 9.8, { dy: 20, dur: 0.45 });
+vk.ve(tl, "#c1d3-m1", 10.0, 0.8);
+vk.ve(tl, "#c1d3-m2", 10.0, 0.8);
+tl.fromTo(["#c1d3-h1", "#c1d3-h2"], { opacity: 0 }, { opacity: 1, duration: 0.2, ease: "none" }, 10.75);
+
+// 11,3s: TÊN sáng (vàng đậm trên nền vàng nhạt); 12,4s: GIÁ TRỊ sáng cùng kiểu
+const SANG = { backgroundColor: "#FEF9C3", color: "#854D0E", borderColor: "#854D0E", duration: 0.3, ease: "power2.out" };
+tl.to("#c1d3-ten-c", SANG, 11.3);
+tl.to("#c1d3-gt-c", SANG, 12.4);
+
+// 16,5s: hai chip nối bằng dấu "+" thành khối "BIẾN = TÊN + GIÁ TRỊ" 72 px nền vàng nhạt, giữ tới hết đoạn
+tl.to(["#c1d3-m1", "#c1d3-m2", "#c1d3-h1", "#c1d3-h2"], { opacity: 0, duration: 0.3, ease: "power2.in" }, 16.3);
+vk.pop(tl, "#c1d3-khoi", 16.5, { scale0: 0.92, dur: 0.45 });
+tl.set(["#c1d3-ten-c", "#c1d3-gt-c"], { boxShadow: "none" }, 16.5);
+tl.to(["#c1d3-ten-c", "#c1d3-gt-c"], { backgroundColor: "rgba(254,249,195,0)", borderColor: "rgba(133,77,14,0)", scale: 1.125, duration: 0.4, ease: "power2.out" }, 16.5);
+vk.vao(tl, "#c1d3-bien", 16.6, { dy: 0, x: 0, dur: 0.4 });
+vk.pop(tl, "#c1d3-cong", 16.7, { scale0: 0.4, dur: 0.45 });
+window.__timelines["c1-d3"] = tl;
+</script>

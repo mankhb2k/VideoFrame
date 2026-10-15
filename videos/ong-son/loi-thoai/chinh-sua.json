@@ -1,0 +1,80 @@
+{
+ "canh0": {
+  "dai": 18.01975,
+  "clip": [
+   {
+    "id": "hf-hk6r",
+    "start": 0.3,
+    "media": 0.0,
+    "dai": 18.02
+   }
+  ],
+  "giu_them_giay": 0.18
+ },
+ "canh1": {
+  "dai": 102.38820833333334,
+  "clip": [
+   {
+    "id": "hf-5pkd",
+    "start": 19.1,
+    "media": 0.0,
+    "dai": 102.39
+   }
+  ],
+  "giu_them_giay": 0.51
+ },
+ "canh2": {
+  "dai": 127.06133333333334,
+  "clip": [
+   {
+    "id": "hf-kon0",
+    "start": 122.6,
+    "media": 0.0,
+    "dai": 34.617
+   },
+   {
+    "id": "hf-s3zn",
+    "start": 159.14,
+    "media": 34.617,
+    "dai": 90.523
+   }
+  ],
+  "giu_them_giay": 0.36
+ },
+ "canh3": {
+  "dai": 156.21879166666668,
+  "clip": [
+   {
+    "id": "hf-983t",
+    "start": 250.62,
+    "media": 0.0,
+    "dai": 156.22
+   }
+  ],
+  "giu_them_giay": 0.98
+ },
+ "canh4": {
+  "dai": 126.41,
+  "clip": [
+   {
+    "id": "hf-0sie",
+    "start": 408.42,
+    "media": 0.0,
+    "dai": 126.41
+   }
+  ],
+  "giu_them_giay": 0.79
+ },
+ "canh5": {
+  "dai": 243.108,
+  "clip": [
+   {
+    "id": "hf-k4ta",
+    "start": 536.22,
+    "media": 0.0,
+    "dai": 243.11
+   }
+  ],
+  "giu_them_giay": 0.0
+ }
+}

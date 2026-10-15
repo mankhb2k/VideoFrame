@@ -1,0 +1,41 @@
+{
+ "scene": "c5-d2",
+ "cues": [
+  {
+   "t": 4.4,
+   "type": "pop",
+   "gain": 0.9,
+   "note": "Ứng dụng mua sắm"
+  },
+  {
+   "t": 5.4,
+   "type": "pop",
+   "gain": 0.9,
+   "note": "ứng dụng ngân hàng"
+  },
+  {
+   "t": 6.7,
+   "type": "pop",
+   "gain": 0.9,
+   "note": "mạng xã hội"
+  },
+  {
+   "t": 8.8,
+   "type": "whoosh",
+   "gain": 0.8,
+   "note": "nền móng của mọi hệ thống"
+  },
+  {
+   "t": 16.7,
+   "type": "whoosh",
+   "gain": 0.8,
+   "note": "Hệ thống lớn"
+  },
+  {
+   "t": 22.4,
+   "type": "tick",
+   "gain": 0.8,
+   "note": "xếp lại rất nhiều lần"
+  }
+ ]
+}

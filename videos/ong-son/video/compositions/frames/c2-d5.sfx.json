@@ -1,0 +1,35 @@
+{
+ "scene": "c2-d5",
+ "cues": [
+  {
+   "t": 0.5,
+   "type": "whoosh",
+   "gain": 0.8,
+   "note": "Giả sử ông Sơn thuê"
+  },
+  {
+   "t": 3.6,
+   "type": "ding",
+   "gain": 0.9,
+   "note": "Lúc đầu ổn"
+  },
+  {
+   "t": 7.1,
+   "type": "whoosh",
+   "gain": 0.8,
+   "note": "người đó nghỉ"
+  },
+  {
+   "t": 8.3,
+   "type": "pop",
+   "gain": 0.9,
+   "note": "cả tiệm đứng im"
+  },
+  {
+   "t": 17.3,
+   "type": "ding",
+   "gain": 0.9,
+   "note": "không sập khi mất một người"
+  }
+ ]
+}

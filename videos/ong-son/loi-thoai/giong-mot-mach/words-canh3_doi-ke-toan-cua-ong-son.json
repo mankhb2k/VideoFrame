@@ -1,0 +1,2430 @@
+{
+ "van_ban": "Gạo bán chạy, ông Sơn là măn thuận lợi, ông không chỉ bán gạo nữa mà nhập thêm nước mắm, muối, mì chính, 6 mặt hàng, rồi 10, rồi 20, 20 mặt hàng, mỗi mặt hàng 1 giá, 1 số lượng trong kho, cô Lan bắt đầu nhớ nhầm giá, anh Tâm không biết kho còn bao nhiêu để lấy ra xếp, nhớ trong đầu thì được với 3 loại gạo, nhưng với 20 mặt hàng thì không còn được nữa. Ông Sơn thuê một đội kế toán, việc của họ không phải bán hàng, không phải xếp kệ, việc của họ là giữ sổ, mặt hàng nào, giá bao nhiêu, kho còn bao nhiêu, hôm nay bán gì. Cô Lan cần giá thì hỏi kế toán, anh Tâm cần biết số lượng trong kho thì hỏi kế toán. Đội kế toán chính là database. Việc đầu tiên của kế toán là gán cho mỗi mặt hàng một mã riêng, không bao giờ trùng. Vì 2 chai đều tên nước mắm, hỏi nước mắm giá bao nhiêu thì kế toán không biết trả lời loại nào, hỏi NM01 giá bao nhiêu thì chỉ có đúng một đáp án. Mã riêng đó trong database gọi là khóa chính, giống như số căn cước của mỗi người, tên có thể trùng, số thì không. Cuốn sổ thứ 2 ghi hóa đơn, khách nào mua gì. Để ý, kế toán không chép lại tên hàng và giá, mà chỉ ghi mã. Muốn biết NM01 là gì, giá bao nhiêu, lần theo mã sang cuốn sổ hàng hóa. Cột mã hàng trong sổ hóa đơn, mượn mã từ cuốn sổ khác, gọi là khóa ngoại. Lý do ghi như vậy, hôm nay đổi giá nước mắm, kế toán chỉ sửa một chỗ trong sổ hàng hóa, mọi hóa đơn tự đúng theo. Không có chuyện, chỗ này ghi 45, chỗ kia ghi 54. Bây giờ, cô Lan hỏi kế toán giá của mã NM01 rồi mới tính tiền. Anh Tâm hỏi kế toán kho còn bao nhiêu NM01 rồi mới biết có cần lấy thêm không. Không ai phải nhớ trong đầu nữa. Hàm, làm việc, kế toán, giữ thông tin. Còn một lý do nữa phải thuê kế toán. Cô Lan nhớ trong đầu thì cô Lan nghỉ, thông tin biến mất. Máy tính cũng vậy, biến chỉ sống lúc máy đang chạy, tắt đi là quên sạch. Kế toán ghi vào sổ thì ai đến thay cũng đọc được, điện tắt rồi bật lại vẫn còn nguyên. Biến là trí nhớ tạm, database là trí nhớ lâu dài. Viên gạch thứ ba, database, nơi giữ thông tin lâu dài. Giờ tiệm ông Sơn có nhãn để gọi tên, nhân viên để làm việc, kế toán để giữ sổ. Nhưng còn thiếu một thứ, khả năng tự quyết định mà ông Sơn không phải đứng nhắc từng người.",
+ "cac_tu": [
+  {
+   "tu": "Gạo",
+   "bat_dau": 0.3,
+   "ket_thuc": 0.6
+  },
+  {
+   "tu": "bán",
+   "bat_dau": 0.6,
+   "ket_thuc": 0.86
+  },
+  {
+   "tu": "chạy",
+   "bat_dau": 0.86,
+   "ket_thuc": 1.12
+  },
+  {
+   "tu": "ông",
+   "bat_dau": 1.76,
+   "ket_thuc": 1.76
+  },
+  {
+   "tu": "Sơn",
+   "bat_dau": 1.76,
+   "ket_thuc": 1.86
+  },
+  {
+   "tu": "là",
+   "bat_dau": 1.86,
+   "ket_thuc": 2.12
+  },
+  {
+   "tu": "măn",
+   "bat_dau": 2.12,
+   "ket_thuc": 2.26
+  },
+  {
+   "tu": "thuận",
+   "bat_dau": 2.26,
+   "ket_thuc": 2.46
+  },
+  {
+   "tu": "lợi",
+   "bat_dau": 2.46,
+   "ket_thuc": 2.8
+  },
+  {
+   "tu": "ông",
+   "bat_dau": 3.38,
+   "ket_thuc": 3.42
+  },
+  {
+   "tu": "không",
+   "bat_dau": 3.42,
+   "ket_thuc": 3.6
+  },
+  {
+   "tu": "chỉ",
+   "bat_dau": 3.6,
+   "ket_thuc": 3.76
+  },
+  {
+   "tu": "bán",
+   "bat_dau": 3.76,
+   "ket_thuc": 3.9
+  },
+  {
+   "tu": "gạo",
+   "bat_dau": 3.9,
+   "ket_thuc": 4.04
+  },
+  {
+   "tu": "nữa",
+   "bat_dau": 4.04,
+   "ket_thuc": 4.32
+  },
+  {
+   "tu": "mà",
+   "bat_dau": 4.32,
+   "ket_thuc": 4.82
+  },
+  {
+   "tu": "nhập",
+   "bat_dau": 4.82,
+   "ket_thuc": 5.0
+  },
+  {
+   "tu": "thêm",
+   "bat_dau": 5.0,
+   "ket_thuc": 5.32
+  },
+  {
+   "tu": "nước",
+   "bat_dau": 5.32,
+   "ket_thuc": 5.56
+  },
+  {
+   "tu": "mắm",
+   "bat_dau": 5.56,
+   "ket_thuc": 6.0
+  },
+  {
+   "tu": "muối",
+   "bat_dau": 6.48,
+   "ket_thuc": 6.48
+  },
+  {
+   "tu": "mì",
+   "bat_dau": 7.02,
+   "ket_thuc": 7.02
+  },
+  {
+   "tu": "chính",
+   "bat_dau": 7.02,
+   "ket_thuc": 7.26
+  },
+  {
+   "tu": "6",
+   "bat_dau": 7.94,
+   "ket_thuc": 8.0
+  },
+  {
+   "tu": "mặt",
+   "bat_dau": 8.0,
+   "ket_thuc": 8.14
+  },
+  {
+   "tu": "hàng",
+   "bat_dau": 8.14,
+   "ket_thuc": 8.36
+  },
+  {
+   "tu": "rồi",
+   "bat_dau": 8.76,
+   "ket_thuc": 8.92
+  },
+  {
+   "tu": "10",
+   "bat_dau": 8.92,
+   "ket_thuc": 9.24
+  },
+  {
+   "tu": "rồi",
+   "bat_dau": 9.64,
+   "ket_thuc": 9.76
+  },
+  {
+   "tu": "20",
+   "bat_dau": 9.76,
+   "ket_thuc": 10.22
+  },
+  {
+   "tu": "20",
+   "bat_dau": 11.52,
+   "ket_thuc": 11.52
+  },
+  {
+   "tu": "mặt",
+   "bat_dau": 11.52,
+   "ket_thuc": 11.52
+  },
+  {
+   "tu": "hàng",
+   "bat_dau": 11.52,
+   "ket_thuc": 11.78
+  },
+  {
+   "tu": "mỗi",
+   "bat_dau": 12.24,
+   "ket_thuc": 12.26
+  },
+  {
+   "tu": "mặt",
+   "bat_dau": 12.26,
+   "ket_thuc": 12.46
+  },
+  {
+   "tu": "hàng",
+   "bat_dau": 12.46,
+   "ket_thuc": 12.58
+  },
+  {
+   "tu": "1",
+   "bat_dau": 12.58,
+   "ket_thuc": 12.86
+  },
+  {
+   "tu": "giá",
+   "bat_dau": 12.86,
+   "ket_thuc": 13.02
+  },
+  {
+   "tu": "1",
+   "bat_dau": 13.44,
+   "ket_thuc": 13.62
+  },
+  {
+   "tu": "số",
+   "bat_dau": 13.62,
+   "ket_thuc": 13.62
+  },
+  {
+   "tu": "lượng",
+   "bat_dau": 13.62,
+   "ket_thuc": 13.78
+  },
+  {
+   "tu": "trong",
+   "bat_dau": 13.78,
+   "ket_thuc": 14.0
+  },
+  {
+   "tu": "kho",
+   "bat_dau": 14.0,
+   "ket_thuc": 14.18
+  },
+  {
+   "tu": "cô",
+   "bat_dau": 14.98,
+   "ket_thuc": 14.98
+  },
+  {
+   "tu": "Lan",
+   "bat_dau": 14.98,
+   "ket_thuc": 15.16
+  },
+  {
+   "tu": "bắt",
+   "bat_dau": 15.16,
+   "ket_thuc": 15.48
+  },
+  {
+   "tu": "đầu",
+   "bat_dau": 15.48,
+   "ket_thuc": 15.64
+  },
+  {
+   "tu": "nhớ",
+   "bat_dau": 15.64,
+   "ket_thuc": 15.9
+  },
+  {
+   "tu": "nhầm",
+   "bat_dau": 15.9,
+   "ket_thuc": 16.12
+  },
+  {
+   "tu": "giá",
+   "bat_dau": 16.12,
+   "ket_thuc": 16.38
+  },
+  {
+   "tu": "anh",
+   "bat_dau": 17.1,
+   "ket_thuc": 17.1
+  },
+  {
+   "tu": "Tâm",
+   "bat_dau": 17.1,
+   "ket_thuc": 17.22
+  },
+  {
+   "tu": "không",
+   "bat_dau": 17.22,
+   "ket_thuc": 17.52
+  },
+  {
+   "tu": "biết",
+   "bat_dau": 17.52,
+   "ket_thuc": 17.7
+  },
+  {
+   "tu": "kho",
+   "bat_dau": 17.7,
+   "ket_thuc": 17.9
+  },
+  {
+   "tu": "còn",
+   "bat_dau": 17.9,
+   "ket_thuc": 18.08
+  },
+  {
+   "tu": "bao",
+   "bat_dau": 18.08,
+   "ket_thuc": 18.26
+  },
+  {
+   "tu": "nhiêu",
+   "bat_dau": 18.26,
+   "ket_thuc": 18.48
+  },
+  {
+   "tu": "để",
+   "bat_dau": 18.48,
+   "ket_thuc": 18.8
+  },
+  {
+   "tu": "lấy",
+   "bat_dau": 18.8,
+   "ket_thuc": 18.92
+  },
+  {
+   "tu": "ra",
+   "bat_dau": 18.92,
+   "ket_thuc": 19.18
+  },
+  {
+   "tu": "xếp",
+   "bat_dau": 19.18,
+   "ket_thuc": 19.36
+  },
+  {
+   "tu": "nhớ",
+   "bat_dau": 20.08,
+   "ket_thuc": 20.1
+  },
+  {
+   "tu": "trong",
+   "bat_dau": 20.1,
+   "ket_thuc": 20.34
+  },
+  {
+   "tu": "đầu",
+   "bat_dau": 20.34,
+   "ket_thuc": 20.56
+  },
+  {
+   "tu": "thì",
+   "bat_dau": 20.56,
+   "ket_thuc": 20.86
+  },
+  {
+   "tu": "được",
+   "bat_dau": 20.86,
+   "ket_thuc": 20.98
+  },
+  {
+   "tu": "với",
+   "bat_dau": 20.98,
+   "ket_thuc": 21.2
+  },
+  {
+   "tu": "3",
+   "bat_dau": 21.2,
+   "ket_thuc": 21.38
+  },
+  {
+   "tu": "loại",
+   "bat_dau": 21.38,
+   "ket_thuc": 21.48
+  },
+  {
+   "tu": "gạo",
+   "bat_dau": 21.48,
+   "ket_thuc": 21.7
+  },
+  {
+   "tu": "nhưng",
+   "bat_dau": 22.18,
+   "ket_thuc": 22.38
+  },
+  {
+   "tu": "với",
+   "bat_dau": 22.38,
+   "ket_thuc": 22.62
+  },
+  {
+   "tu": "20",
+   "bat_dau": 22.62,
+   "ket_thuc": 23.06
+  },
+  {
+   "tu": "mặt",
+   "bat_dau": 23.06,
+   "ket_thuc": 23.16
+  },
+  {
+   "tu": "hàng",
+   "bat_dau": 23.16,
+   "ket_thuc": 23.42
+  },
+  {
+   "tu": "thì",
+   "bat_dau": 23.42,
+   "ket_thuc": 23.78
+  },
+  {
+   "tu": "không",
+   "bat_dau": 23.78,
+   "ket_thuc": 23.98
+  },
+  {
+   "tu": "còn",
+   "bat_dau": 23.98,
+   "ket_thuc": 24.16
+  },
+  {
+   "tu": "được",
+   "bat_dau": 24.16,
+   "ket_thuc": 24.38
+  },
+  {
+   "tu": "nữa",
+   "bat_dau": 24.38,
+   "ket_thuc": 24.54
+  },
+  {
+   "tu": "Ông",
+   "bat_dau": 25.04,
+   "ket_thuc": 25.44
+  },
+  {
+   "tu": "Sơn",
+   "bat_dau": 25.44,
+   "ket_thuc": 25.62
+  },
+  {
+   "tu": "thuê",
+   "bat_dau": 25.62,
+   "ket_thuc": 25.86
+  },
+  {
+   "tu": "một",
+   "bat_dau": 25.86,
+   "ket_thuc": 26.12
+  },
+  {
+   "tu": "đội",
+   "bat_dau": 26.12,
+   "ket_thuc": 26.3
+  },
+  {
+   "tu": "kế",
+   "bat_dau": 26.3,
+   "ket_thuc": 26.34
+  },
+  {
+   "tu": "toán",
+   "bat_dau": 26.34,
+   "ket_thuc": 26.54
+  },
+  {
+   "tu": "việc",
+   "bat_dau": 27.26,
+   "ket_thuc": 27.28
+  },
+  {
+   "tu": "của",
+   "bat_dau": 27.28,
+   "ket_thuc": 27.46
+  },
+  {
+   "tu": "họ",
+   "bat_dau": 27.46,
+   "ket_thuc": 27.64
+  },
+  {
+   "tu": "không",
+   "bat_dau": 27.64,
+   "ket_thuc": 27.92
+  },
+  {
+   "tu": "phải",
+   "bat_dau": 27.92,
+   "ket_thuc": 28.1
+  },
+  {
+   "tu": "bán",
+   "bat_dau": 28.1,
+   "ket_thuc": 28.24
+  },
+  {
+   "tu": "hàng",
+   "bat_dau": 28.24,
+   "ket_thuc": 28.44
+  },
+  {
+   "tu": "không",
+   "bat_dau": 28.88,
+   "ket_thuc": 28.98
+  },
+  {
+   "tu": "phải",
+   "bat_dau": 28.98,
+   "ket_thuc": 29.18
+  },
+  {
+   "tu": "xếp",
+   "bat_dau": 29.18,
+   "ket_thuc": 29.3
+  },
+  {
+   "tu": "kệ",
+   "bat_dau": 29.3,
+   "ket_thuc": 29.5
+  },
+  {
+   "tu": "việc",
+   "bat_dau": 30.14,
+   "ket_thuc": 30.14
+  },
+  {
+   "tu": "của",
+   "bat_dau": 30.14,
+   "ket_thuc": 30.26
+  },
+  {
+   "tu": "họ",
+   "bat_dau": 30.26,
+   "ket_thuc": 30.46
+  },
+  {
+   "tu": "là",
+   "bat_dau": 30.46,
+   "ket_thuc": 30.82
+  },
+  {
+   "tu": "giữ",
+   "bat_dau": 30.82,
+   "ket_thuc": 30.96
+  },
+  {
+   "tu": "sổ",
+   "bat_dau": 30.96,
+   "ket_thuc": 31.48
+  },
+  {
+   "tu": "mặt",
+   "bat_dau": 31.76,
+   "ket_thuc": 31.76
+  },
+  {
+   "tu": "hàng",
+   "bat_dau": 31.76,
+   "ket_thuc": 31.94
+  },
+  {
+   "tu": "nào",
+   "bat_dau": 31.94,
+   "ket_thuc": 32.38
+  },
+  {
+   "tu": "giá",
+   "bat_dau": 32.42,
+   "ket_thuc": 32.42
+  },
+  {
+   "tu": "bao",
+   "bat_dau": 32.42,
+   "ket_thuc": 32.64
+  },
+  {
+   "tu": "nhiêu",
+   "bat_dau": 32.64,
+   "ket_thuc": 32.84
+  },
+  {
+   "tu": "kho",
+   "bat_dau": 33.38,
+   "ket_thuc": 33.38
+  },
+  {
+   "tu": "còn",
+   "bat_dau": 33.38,
+   "ket_thuc": 33.64
+  },
+  {
+   "tu": "bao",
+   "bat_dau": 33.64,
+   "ket_thuc": 33.84
+  },
+  {
+   "tu": "nhiêu",
+   "bat_dau": 33.84,
+   "ket_thuc": 34.0
+  },
+  {
+   "tu": "hôm",
+   "bat_dau": 34.48,
+   "ket_thuc": 34.48
+  },
+  {
+   "tu": "nay",
+   "bat_dau": 34.48,
+   "ket_thuc": 34.68
+  },
+  {
+   "tu": "bán",
+   "bat_dau": 34.68,
+   "ket_thuc": 34.88
+  },
+  {
+   "tu": "gì",
+   "bat_dau": 34.88,
+   "ket_thuc": 35.1
+  },
+  {
+   "tu": "Cô",
+   "bat_dau": 35.96,
+   "ket_thuc": 35.96
+  },
+  {
+   "tu": "Lan",
+   "bat_dau": 35.96,
+   "ket_thuc": 36.1
+  },
+  {
+   "tu": "cần",
+   "bat_dau": 36.1,
+   "ket_thuc": 36.36
+  },
+  {
+   "tu": "giá",
+   "bat_dau": 36.36,
+   "ket_thuc": 36.66
+  },
+  {
+   "tu": "thì",
+   "bat_dau": 36.66,
+   "ket_thuc": 37.12
+  },
+  {
+   "tu": "hỏi",
+   "bat_dau": 37.12,
+   "ket_thuc": 37.22
+  },
+  {
+   "tu": "kế",
+   "bat_dau": 37.22,
+   "ket_thuc": 37.36
+  },
+  {
+   "tu": "toán",
+   "bat_dau": 37.36,
+   "ket_thuc": 37.58
+  },
+  {
+   "tu": "anh",
+   "bat_dau": 38.34,
+   "ket_thuc": 38.34
+  },
+  {
+   "tu": "Tâm",
+   "bat_dau": 38.34,
+   "ket_thuc": 38.5
+  },
+  {
+   "tu": "cần",
+   "bat_dau": 38.5,
+   "ket_thuc": 38.72
+  },
+  {
+   "tu": "biết",
+   "bat_dau": 38.72,
+   "ket_thuc": 38.94
+  },
+  {
+   "tu": "số",
+   "bat_dau": 38.94,
+   "ket_thuc": 39.06
+  },
+  {
+   "tu": "lượng",
+   "bat_dau": 39.06,
+   "ket_thuc": 39.2
+  },
+  {
+   "tu": "trong",
+   "bat_dau": 39.2,
+   "ket_thuc": 39.38
+  },
+  {
+   "tu": "kho",
+   "bat_dau": 39.38,
+   "ket_thuc": 39.6
+  },
+  {
+   "tu": "thì",
+   "bat_dau": 39.6,
+   "ket_thuc": 40.02
+  },
+  {
+   "tu": "hỏi",
+   "bat_dau": 40.02,
+   "ket_thuc": 40.14
+  },
+  {
+   "tu": "kế",
+   "bat_dau": 40.14,
+   "ket_thuc": 40.3
+  },
+  {
+   "tu": "toán",
+   "bat_dau": 40.3,
+   "ket_thuc": 40.52
+  },
+  {
+   "tu": "Đội",
+   "bat_dau": 41.3,
+   "ket_thuc": 41.3
+  },
+  {
+   "tu": "kế",
+   "bat_dau": 41.3,
+   "ket_thuc": 41.44
+  },
+  {
+   "tu": "toán",
+   "bat_dau": 41.44,
+   "ket_thuc": 41.68
+  },
+  {
+   "tu": "chính",
+   "bat_dau": 41.68,
+   "ket_thuc": 42.18
+  },
+  {
+   "tu": "là",
+   "bat_dau": 42.18,
+   "ket_thuc": 42.46
+  },
+  {
+   "tu": "database",
+   "bat_dau": 42.46,
+   "ket_thuc": 43.12
+  },
+  {
+   "tu": "Việc",
+   "bat_dau": 43.12,
+   "ket_thuc": 43.9
+  },
+  {
+   "tu": "đầu",
+   "bat_dau": 43.9,
+   "ket_thuc": 44.12
+  },
+  {
+   "tu": "tiên",
+   "bat_dau": 44.12,
+   "ket_thuc": 44.36
+  },
+  {
+   "tu": "của",
+   "bat_dau": 44.36,
+   "ket_thuc": 44.56
+  },
+  {
+   "tu": "kế",
+   "bat_dau": 44.56,
+   "ket_thuc": 44.72
+  },
+  {
+   "tu": "toán",
+   "bat_dau": 44.72,
+   "ket_thuc": 44.9
+  },
+  {
+   "tu": "là",
+   "bat_dau": 44.9,
+   "ket_thuc": 45.4
+  },
+  {
+   "tu": "gán",
+   "bat_dau": 45.4,
+   "ket_thuc": 45.6
+  },
+  {
+   "tu": "cho",
+   "bat_dau": 45.6,
+   "ket_thuc": 45.84
+  },
+  {
+   "tu": "mỗi",
+   "bat_dau": 45.84,
+   "ket_thuc": 45.98
+  },
+  {
+   "tu": "mặt",
+   "bat_dau": 45.98,
+   "ket_thuc": 46.16
+  },
+  {
+   "tu": "hàng",
+   "bat_dau": 46.16,
+   "ket_thuc": 46.36
+  },
+  {
+   "tu": "một",
+   "bat_dau": 46.36,
+   "ket_thuc": 46.68
+  },
+  {
+   "tu": "mã",
+   "bat_dau": 46.68,
+   "ket_thuc": 46.7
+  },
+  {
+   "tu": "riêng",
+   "bat_dau": 46.7,
+   "ket_thuc": 46.96
+  },
+  {
+   "tu": "không",
+   "bat_dau": 47.54,
+   "ket_thuc": 47.54
+  },
+  {
+   "tu": "bao",
+   "bat_dau": 47.54,
+   "ket_thuc": 47.72
+  },
+  {
+   "tu": "giờ",
+   "bat_dau": 47.72,
+   "ket_thuc": 47.82
+  },
+  {
+   "tu": "trùng",
+   "bat_dau": 47.82,
+   "ket_thuc": 47.98
+  },
+  {
+   "tu": "Vì",
+   "bat_dau": 48.9,
+   "ket_thuc": 48.9
+  },
+  {
+   "tu": "2",
+   "bat_dau": 48.9,
+   "ket_thuc": 49.14
+  },
+  {
+   "tu": "chai",
+   "bat_dau": 49.14,
+   "ket_thuc": 49.38
+  },
+  {
+   "tu": "đều",
+   "bat_dau": 49.38,
+   "ket_thuc": 49.76
+  },
+  {
+   "tu": "tên",
+   "bat_dau": 49.76,
+   "ket_thuc": 49.88
+  },
+  {
+   "tu": "nước",
+   "bat_dau": 49.88,
+   "ket_thuc": 50.16
+  },
+  {
+   "tu": "mắm",
+   "bat_dau": 50.16,
+   "ket_thuc": 50.34
+  },
+  {
+   "tu": "hỏi",
+   "bat_dau": 51.06,
+   "ket_thuc": 51.08
+  },
+  {
+   "tu": "nước",
+   "bat_dau": 51.08,
+   "ket_thuc": 51.5
+  },
+  {
+   "tu": "mắm",
+   "bat_dau": 51.5,
+   "ket_thuc": 51.68
+  },
+  {
+   "tu": "giá",
+   "bat_dau": 51.68,
+   "ket_thuc": 51.8
+  },
+  {
+   "tu": "bao",
+   "bat_dau": 51.8,
+   "ket_thuc": 52.02
+  },
+  {
+   "tu": "nhiêu",
+   "bat_dau": 52.02,
+   "ket_thuc": 52.24
+  },
+  {
+   "tu": "thì",
+   "bat_dau": 52.24,
+   "ket_thuc": 52.8
+  },
+  {
+   "tu": "kế",
+   "bat_dau": 52.8,
+   "ket_thuc": 52.98
+  },
+  {
+   "tu": "toán",
+   "bat_dau": 52.98,
+   "ket_thuc": 53.16
+  },
+  {
+   "tu": "không",
+   "bat_dau": 53.16,
+   "ket_thuc": 53.46
+  },
+  {
+   "tu": "biết",
+   "bat_dau": 53.46,
+   "ket_thuc": 53.66
+  },
+  {
+   "tu": "trả",
+   "bat_dau": 53.66,
+   "ket_thuc": 53.78
+  },
+  {
+   "tu": "lời",
+   "bat_dau": 53.78,
+   "ket_thuc": 53.92
+  },
+  {
+   "tu": "loại",
+   "bat_dau": 53.92,
+   "ket_thuc": 54.08
+  },
+  {
+   "tu": "nào",
+   "bat_dau": 54.08,
+   "ket_thuc": 54.36
+  },
+  {
+   "tu": "hỏi",
+   "bat_dau": 55.1,
+   "ket_thuc": 55.16
+  },
+  {
+   "tu": "NM01",
+   "bat_dau": 55.16,
+   "ket_thuc": 56.44
+  },
+  {
+   "tu": "giá",
+   "bat_dau": 56.44,
+   "ket_thuc": 56.88
+  },
+  {
+   "tu": "bao",
+   "bat_dau": 56.88,
+   "ket_thuc": 57.02
+  },
+  {
+   "tu": "nhiêu",
+   "bat_dau": 57.02,
+   "ket_thuc": 57.2
+  },
+  {
+   "tu": "thì",
+   "bat_dau": 57.2,
+   "ket_thuc": 57.78
+  },
+  {
+   "tu": "chỉ",
+   "bat_dau": 57.78,
+   "ket_thuc": 57.96
+  },
+  {
+   "tu": "có",
+   "bat_dau": 57.96,
+   "ket_thuc": 58.12
+  },
+  {
+   "tu": "đúng",
+   "bat_dau": 58.12,
+   "ket_thuc": 58.28
+  },
+  {
+   "tu": "một",
+   "bat_dau": 58.28,
+   "ket_thuc": 58.58
+  },
+  {
+   "tu": "đáp",
+   "bat_dau": 58.58,
+   "ket_thuc": 58.58
+  },
+  {
+   "tu": "án",
+   "bat_dau": 58.58,
+   "ket_thuc": 59.06
+  },
+  {
+   "tu": "Mã",
+   "bat_dau": 59.78,
+   "ket_thuc": 59.78
+  },
+  {
+   "tu": "riêng",
+   "bat_dau": 59.78,
+   "ket_thuc": 59.94
+  },
+  {
+   "tu": "đó",
+   "bat_dau": 59.94,
+   "ket_thuc": 60.4
+  },
+  {
+   "tu": "trong",
+   "bat_dau": 60.4,
+   "ket_thuc": 60.66
+  },
+  {
+   "tu": "database",
+   "bat_dau": 60.66,
+   "ket_thuc": 61.2
+  },
+  {
+   "tu": "gọi",
+   "bat_dau": 61.2,
+   "ket_thuc": 61.64
+  },
+  {
+   "tu": "là",
+   "bat_dau": 61.64,
+   "ket_thuc": 61.96
+  },
+  {
+   "tu": "khóa",
+   "bat_dau": 61.96,
+   "ket_thuc": 62.2
+  },
+  {
+   "tu": "chính",
+   "bat_dau": 62.2,
+   "ket_thuc": 62.42
+  },
+  {
+   "tu": "giống",
+   "bat_dau": 63.16,
+   "ket_thuc": 63.16
+  },
+  {
+   "tu": "như",
+   "bat_dau": 63.16,
+   "ket_thuc": 63.48
+  },
+  {
+   "tu": "số",
+   "bat_dau": 63.48,
+   "ket_thuc": 63.6
+  },
+  {
+   "tu": "căn",
+   "bat_dau": 63.6,
+   "ket_thuc": 63.84
+  },
+  {
+   "tu": "cước",
+   "bat_dau": 63.84,
+   "ket_thuc": 63.96
+  },
+  {
+   "tu": "của",
+   "bat_dau": 63.96,
+   "ket_thuc": 64.14
+  },
+  {
+   "tu": "mỗi",
+   "bat_dau": 64.14,
+   "ket_thuc": 64.28
+  },
+  {
+   "tu": "người",
+   "bat_dau": 64.28,
+   "ket_thuc": 64.5
+  },
+  {
+   "tu": "tên",
+   "bat_dau": 65.16,
+   "ket_thuc": 65.16
+  },
+  {
+   "tu": "có",
+   "bat_dau": 65.16,
+   "ket_thuc": 65.36
+  },
+  {
+   "tu": "thể",
+   "bat_dau": 65.36,
+   "ket_thuc": 65.46
+  },
+  {
+   "tu": "trùng",
+   "bat_dau": 65.46,
+   "ket_thuc": 65.64
+  },
+  {
+   "tu": "số",
+   "bat_dau": 66.26,
+   "ket_thuc": 66.26
+  },
+  {
+   "tu": "thì",
+   "bat_dau": 66.26,
+   "ket_thuc": 66.56
+  },
+  {
+   "tu": "không",
+   "bat_dau": 66.56,
+   "ket_thuc": 66.64
+  },
+  {
+   "tu": "Cuốn",
+   "bat_dau": 67.42,
+   "ket_thuc": 67.86
+  },
+  {
+   "tu": "sổ",
+   "bat_dau": 67.86,
+   "ket_thuc": 67.92
+  },
+  {
+   "tu": "thứ",
+   "bat_dau": 67.92,
+   "ket_thuc": 68.16
+  },
+  {
+   "tu": "2",
+   "bat_dau": 68.16,
+   "ket_thuc": 68.36
+  },
+  {
+   "tu": "ghi",
+   "bat_dau": 68.36,
+   "ket_thuc": 68.56
+  },
+  {
+   "tu": "hóa",
+   "bat_dau": 68.56,
+   "ket_thuc": 68.78
+  },
+  {
+   "tu": "đơn",
+   "bat_dau": 68.78,
+   "ket_thuc": 68.9
+  },
+  {
+   "tu": "khách",
+   "bat_dau": 69.48,
+   "ket_thuc": 69.48
+  },
+  {
+   "tu": "nào",
+   "bat_dau": 69.48,
+   "ket_thuc": 69.8
+  },
+  {
+   "tu": "mua",
+   "bat_dau": 69.8,
+   "ket_thuc": 69.96
+  },
+  {
+   "tu": "gì",
+   "bat_dau": 69.96,
+   "ket_thuc": 70.26
+  },
+  {
+   "tu": "Để",
+   "bat_dau": 71.06,
+   "ket_thuc": 71.06
+  },
+  {
+   "tu": "ý",
+   "bat_dau": 71.06,
+   "ket_thuc": 71.22
+  },
+  {
+   "tu": "kế",
+   "bat_dau": 71.8,
+   "ket_thuc": 71.8
+  },
+  {
+   "tu": "toán",
+   "bat_dau": 71.8,
+   "ket_thuc": 71.9
+  },
+  {
+   "tu": "không",
+   "bat_dau": 71.9,
+   "ket_thuc": 72.2
+  },
+  {
+   "tu": "chép",
+   "bat_dau": 72.2,
+   "ket_thuc": 72.38
+  },
+  {
+   "tu": "lại",
+   "bat_dau": 72.38,
+   "ket_thuc": 72.64
+  },
+  {
+   "tu": "tên",
+   "bat_dau": 72.64,
+   "ket_thuc": 72.82
+  },
+  {
+   "tu": "hàng",
+   "bat_dau": 72.82,
+   "ket_thuc": 73.06
+  },
+  {
+   "tu": "và",
+   "bat_dau": 73.06,
+   "ket_thuc": 73.38
+  },
+  {
+   "tu": "giá",
+   "bat_dau": 73.38,
+   "ket_thuc": 73.6
+  },
+  {
+   "tu": "mà",
+   "bat_dau": 73.9,
+   "ket_thuc": 74.02
+  },
+  {
+   "tu": "chỉ",
+   "bat_dau": 74.02,
+   "ket_thuc": 74.2
+  },
+  {
+   "tu": "ghi",
+   "bat_dau": 74.2,
+   "ket_thuc": 74.34
+  },
+  {
+   "tu": "mã",
+   "bat_dau": 74.34,
+   "ket_thuc": 74.5
+  },
+  {
+   "tu": "Muốn",
+   "bat_dau": 75.4,
+   "ket_thuc": 75.4
+  },
+  {
+   "tu": "biết",
+   "bat_dau": 75.4,
+   "ket_thuc": 75.62
+  },
+  {
+   "tu": "NM01",
+   "bat_dau": 75.62,
+   "ket_thuc": 76.64
+  },
+  {
+   "tu": "là",
+   "bat_dau": 76.64,
+   "ket_thuc": 77.06
+  },
+  {
+   "tu": "gì",
+   "bat_dau": 77.06,
+   "ket_thuc": 77.3
+  },
+  {
+   "tu": "giá",
+   "bat_dau": 77.8,
+   "ket_thuc": 77.8
+  },
+  {
+   "tu": "bao",
+   "bat_dau": 77.8,
+   "ket_thuc": 77.96
+  },
+  {
+   "tu": "nhiêu",
+   "bat_dau": 77.96,
+   "ket_thuc": 78.16
+  },
+  {
+   "tu": "lần",
+   "bat_dau": 78.72,
+   "ket_thuc": 78.76
+  },
+  {
+   "tu": "theo",
+   "bat_dau": 78.76,
+   "ket_thuc": 79.0
+  },
+  {
+   "tu": "mã",
+   "bat_dau": 79.0,
+   "ket_thuc": 79.14
+  },
+  {
+   "tu": "sang",
+   "bat_dau": 79.14,
+   "ket_thuc": 79.52
+  },
+  {
+   "tu": "cuốn",
+   "bat_dau": 79.52,
+   "ket_thuc": 79.72
+  },
+  {
+   "tu": "sổ",
+   "bat_dau": 79.72,
+   "ket_thuc": 79.82
+  },
+  {
+   "tu": "hàng",
+   "bat_dau": 79.82,
+   "ket_thuc": 80.08
+  },
+  {
+   "tu": "hóa",
+   "bat_dau": 80.08,
+   "ket_thuc": 80.28
+  },
+  {
+   "tu": "Cột",
+   "bat_dau": 81.28,
+   "ket_thuc": 81.36
+  },
+  {
+   "tu": "mã",
+   "bat_dau": 81.36,
+   "ket_thuc": 81.76
+  },
+  {
+   "tu": "hàng",
+   "bat_dau": 81.76,
+   "ket_thuc": 82.26
+  },
+  {
+   "tu": "trong",
+   "bat_dau": 82.26,
+   "ket_thuc": 82.56
+  },
+  {
+   "tu": "sổ",
+   "bat_dau": 82.56,
+   "ket_thuc": 82.7
+  },
+  {
+   "tu": "hóa",
+   "bat_dau": 82.7,
+   "ket_thuc": 82.88
+  },
+  {
+   "tu": "đơn",
+   "bat_dau": 82.88,
+   "ket_thuc": 83.04
+  },
+  {
+   "tu": "mượn",
+   "bat_dau": 83.62,
+   "ket_thuc": 83.68
+  },
+  {
+   "tu": "mã",
+   "bat_dau": 83.68,
+   "ket_thuc": 83.86
+  },
+  {
+   "tu": "từ",
+   "bat_dau": 83.86,
+   "ket_thuc": 84.18
+  },
+  {
+   "tu": "cuốn",
+   "bat_dau": 84.18,
+   "ket_thuc": 84.4
+  },
+  {
+   "tu": "sổ",
+   "bat_dau": 84.4,
+   "ket_thuc": 84.46
+  },
+  {
+   "tu": "khác",
+   "bat_dau": 84.46,
+   "ket_thuc": 84.78
+  },
+  {
+   "tu": "gọi",
+   "bat_dau": 85.2,
+   "ket_thuc": 85.2
+  },
+  {
+   "tu": "là",
+   "bat_dau": 85.2,
+   "ket_thuc": 85.48
+  },
+  {
+   "tu": "khóa",
+   "bat_dau": 85.48,
+   "ket_thuc": 85.7
+  },
+  {
+   "tu": "ngoại",
+   "bat_dau": 85.7,
+   "ket_thuc": 85.92
+  },
+  {
+   "tu": "Lý",
+   "bat_dau": 86.56,
+   "ket_thuc": 87.04
+  },
+  {
+   "tu": "do",
+   "bat_dau": 87.04,
+   "ket_thuc": 87.14
+  },
+  {
+   "tu": "ghi",
+   "bat_dau": 87.14,
+   "ket_thuc": 87.26
+  },
+  {
+   "tu": "như",
+   "bat_dau": 87.26,
+   "ket_thuc": 87.44
+  },
+  {
+   "tu": "vậy",
+   "bat_dau": 87.44,
+   "ket_thuc": 87.62
+  },
+  {
+   "tu": "hôm",
+   "bat_dau": 88.3,
+   "ket_thuc": 88.3
+  },
+  {
+   "tu": "nay",
+   "bat_dau": 88.3,
+   "ket_thuc": 88.54
+  },
+  {
+   "tu": "đổi",
+   "bat_dau": 88.54,
+   "ket_thuc": 88.84
+  },
+  {
+   "tu": "giá",
+   "bat_dau": 88.84,
+   "ket_thuc": 89.0
+  },
+  {
+   "tu": "nước",
+   "bat_dau": 89.0,
+   "ket_thuc": 89.2
+  },
+  {
+   "tu": "mắm",
+   "bat_dau": 89.2,
+   "ket_thuc": 89.56
+  },
+  {
+   "tu": "kế",
+   "bat_dau": 89.9,
+   "ket_thuc": 89.9
+  },
+  {
+   "tu": "toán",
+   "bat_dau": 89.9,
+   "ket_thuc": 90.02
+  },
+  {
+   "tu": "chỉ",
+   "bat_dau": 90.02,
+   "ket_thuc": 90.3
+  },
+  {
+   "tu": "sửa",
+   "bat_dau": 90.3,
+   "ket_thuc": 90.5
+  },
+  {
+   "tu": "một",
+   "bat_dau": 90.5,
+   "ket_thuc": 90.86
+  },
+  {
+   "tu": "chỗ",
+   "bat_dau": 90.86,
+   "ket_thuc": 90.86
+  },
+  {
+   "tu": "trong",
+   "bat_dau": 90.86,
+   "ket_thuc": 91.18
+  },
+  {
+   "tu": "sổ",
+   "bat_dau": 91.18,
+   "ket_thuc": 91.28
+  },
+  {
+   "tu": "hàng",
+   "bat_dau": 91.28,
+   "ket_thuc": 91.48
+  },
+  {
+   "tu": "hóa",
+   "bat_dau": 91.48,
+   "ket_thuc": 91.74
+  },
+  {
+   "tu": "mọi",
+   "bat_dau": 92.3,
+   "ket_thuc": 92.36
+  },
+  {
+   "tu": "hóa",
+   "bat_dau": 92.36,
+   "ket_thuc": 92.6
+  },
+  {
+   "tu": "đơn",
+   "bat_dau": 92.6,
+   "ket_thuc": 92.72
+  },
+  {
+   "tu": "tự",
+   "bat_dau": 92.72,
+   "ket_thuc": 93.14
+  },
+  {
+   "tu": "đúng",
+   "bat_dau": 93.14,
+   "ket_thuc": 93.34
+  },
+  {
+   "tu": "theo",
+   "bat_dau": 93.34,
+   "ket_thuc": 93.58
+  },
+  {
+   "tu": "Không",
+   "bat_dau": 94.16,
+   "ket_thuc": 94.16
+  },
+  {
+   "tu": "có",
+   "bat_dau": 94.16,
+   "ket_thuc": 94.36
+  },
+  {
+   "tu": "chuyện",
+   "bat_dau": 94.36,
+   "ket_thuc": 94.52
+  },
+  {
+   "tu": "chỗ",
+   "bat_dau": 94.76,
+   "ket_thuc": 94.76
+  },
+  {
+   "tu": "này",
+   "bat_dau": 94.76,
+   "ket_thuc": 95.0
+  },
+  {
+   "tu": "ghi",
+   "bat_dau": 95.0,
+   "ket_thuc": 95.12
+  },
+  {
+   "tu": "45",
+   "bat_dau": 95.12,
+   "ket_thuc": 95.52
+  },
+  {
+   "tu": "chỗ",
+   "bat_dau": 95.9,
+   "ket_thuc": 95.9
+  },
+  {
+   "tu": "kia",
+   "bat_dau": 95.9,
+   "ket_thuc": 96.04
+  },
+  {
+   "tu": "ghi",
+   "bat_dau": 96.04,
+   "ket_thuc": 96.24
+  },
+  {
+   "tu": "54",
+   "bat_dau": 96.24,
+   "ket_thuc": 96.66
+  },
+  {
+   "tu": "Bây",
+   "bat_dau": 97.44,
+   "ket_thuc": 97.5
+  },
+  {
+   "tu": "giờ",
+   "bat_dau": 97.5,
+   "ket_thuc": 97.58
+  },
+  {
+   "tu": "cô",
+   "bat_dau": 98.04,
+   "ket_thuc": 98.14
+  },
+  {
+   "tu": "Lan",
+   "bat_dau": 98.14,
+   "ket_thuc": 98.28
+  },
+  {
+   "tu": "hỏi",
+   "bat_dau": 98.28,
+   "ket_thuc": 98.52
+  },
+  {
+   "tu": "kế",
+   "bat_dau": 98.52,
+   "ket_thuc": 98.74
+  },
+  {
+   "tu": "toán",
+   "bat_dau": 98.74,
+   "ket_thuc": 98.98
+  },
+  {
+   "tu": "giá",
+   "bat_dau": 98.98,
+   "ket_thuc": 99.44
+  },
+  {
+   "tu": "của",
+   "bat_dau": 99.44,
+   "ket_thuc": 99.66
+  },
+  {
+   "tu": "mã",
+   "bat_dau": 99.66,
+   "ket_thuc": 99.82
+  },
+  {
+   "tu": "NM01",
+   "bat_dau": 99.82,
+   "ket_thuc": 100.96
+  },
+  {
+   "tu": "rồi",
+   "bat_dau": 100.96,
+   "ket_thuc": 101.44
+  },
+  {
+   "tu": "mới",
+   "bat_dau": 101.44,
+   "ket_thuc": 101.7
+  },
+  {
+   "tu": "tính",
+   "bat_dau": 101.7,
+   "ket_thuc": 101.78
+  },
+  {
+   "tu": "tiền",
+   "bat_dau": 101.78,
+   "ket_thuc": 101.98
+  },
+  {
+   "tu": "Anh",
+   "bat_dau": 102.86,
+   "ket_thuc": 102.9
+  },
+  {
+   "tu": "Tâm",
+   "bat_dau": 102.9,
+   "ket_thuc": 103.02
+  },
+  {
+   "tu": "hỏi",
+   "bat_dau": 103.02,
+   "ket_thuc": 103.32
+  },
+  {
+   "tu": "kế",
+   "bat_dau": 103.32,
+   "ket_thuc": 103.52
+  },
+  {
+   "tu": "toán",
+   "bat_dau": 103.52,
+   "ket_thuc": 103.76
+  },
+  {
+   "tu": "kho",
+   "bat_dau": 103.76,
+   "ket_thuc": 104.04
+  },
+  {
+   "tu": "còn",
+   "bat_dau": 104.04,
+   "ket_thuc": 104.34
+  },
+  {
+   "tu": "bao",
+   "bat_dau": 104.34,
+   "ket_thuc": 104.58
+  },
+  {
+   "tu": "nhiêu",
+   "bat_dau": 104.58,
+   "ket_thuc": 104.76
+  },
+  {
+   "tu": "NM01",
+   "bat_dau": 104.76,
+   "ket_thuc": 105.58
+  },
+  {
+   "tu": "rồi",
+   "bat_dau": 105.58,
+   "ket_thuc": 106.2
+  },
+  {
+   "tu": "mới",
+   "bat_dau": 106.2,
+   "ket_thuc": 106.52
+  },
+  {
+   "tu": "biết",
+   "bat_dau": 106.52,
+   "ket_thuc": 106.68
+  },
+  {
+   "tu": "có",
+   "bat_dau": 106.68,
+   "ket_thuc": 106.94
+  },
+  {
+   "tu": "cần",
+   "bat_dau": 106.94,
+   "ket_thuc": 107.04
+  },
+  {
+   "tu": "lấy",
+   "bat_dau": 107.04,
+   "ket_thuc": 107.14
+  },
+  {
+   "tu": "thêm",
+   "bat_dau": 107.14,
+   "ket_thuc": 107.34
+  },
+  {
+   "tu": "không",
+   "bat_dau": 107.34,
+   "ket_thuc": 107.54
+  },
+  {
+   "tu": "Không",
+   "bat_dau": 108.38,
+   "ket_thuc": 108.4
+  },
+  {
+   "tu": "ai",
+   "bat_dau": 108.4,
+   "ket_thuc": 108.58
+  },
+  {
+   "tu": "phải",
+   "bat_dau": 108.58,
+   "ket_thuc": 108.74
+  },
+  {
+   "tu": "nhớ",
+   "bat_dau": 108.74,
+   "ket_thuc": 108.86
+  },
+  {
+   "tu": "trong",
+   "bat_dau": 108.86,
+   "ket_thuc": 109.04
+  },
+  {
+   "tu": "đầu",
+   "bat_dau": 109.04,
+   "ket_thuc": 109.18
+  },
+  {
+   "tu": "nữa",
+   "bat_dau": 109.18,
+   "ket_thuc": 109.44
+  },
+  {
+   "tu": "Hàm",
+   "bat_dau": 110.1,
+   "ket_thuc": 110.44
+  },
+  {
+   "tu": "làm",
+   "bat_dau": 110.76,
+   "ket_thuc": 110.76
+  },
+  {
+   "tu": "việc",
+   "bat_dau": 110.76,
+   "ket_thuc": 110.94
+  },
+  {
+   "tu": "kế",
+   "bat_dau": 111.5,
+   "ket_thuc": 111.56
+  },
+  {
+   "tu": "toán",
+   "bat_dau": 111.56,
+   "ket_thuc": 111.76
+  },
+  {
+   "tu": "giữ",
+   "bat_dau": 112.2,
+   "ket_thuc": 112.2
+  },
+  {
+   "tu": "thông",
+   "bat_dau": 112.2,
+   "ket_thuc": 112.36
+  },
+  {
+   "tu": "tin",
+   "bat_dau": 112.36,
+   "ket_thuc": 113.26
+  },
+  {
+   "tu": "Còn",
+   "bat_dau": 113.26,
+   "ket_thuc": 113.52
+  },
+  {
+   "tu": "một",
+   "bat_dau": 113.52,
+   "ket_thuc": 113.76
+  },
+  {
+   "tu": "lý",
+   "bat_dau": 113.76,
+   "ket_thuc": 113.82
+  },
+  {
+   "tu": "do",
+   "bat_dau": 113.82,
+   "ket_thuc": 114.0
+  },
+  {
+   "tu": "nữa",
+   "bat_dau": 114.0,
+   "ket_thuc": 114.38
+  },
+  {
+   "tu": "phải",
+   "bat_dau": 114.38,
+   "ket_thuc": 114.56
+  },
+  {
+   "tu": "thuê",
+   "bat_dau": 114.56,
+   "ket_thuc": 114.74
+  },
+  {
+   "tu": "kế",
+   "bat_dau": 114.74,
+   "ket_thuc": 114.9
+  },
+  {
+   "tu": "toán",
+   "bat_dau": 114.9,
+   "ket_thuc": 115.12
+  },
+  {
+   "tu": "Cô",
+   "bat_dau": 115.94,
+   "ket_thuc": 115.94
+  },
+  {
+   "tu": "Lan",
+   "bat_dau": 115.94,
+   "ket_thuc": 116.08
+  },
+  {
+   "tu": "nhớ",
+   "bat_dau": 116.08,
+   "ket_thuc": 116.24
+  },
+  {
+   "tu": "trong",
+   "bat_dau": 116.24,
+   "ket_thuc": 116.44
+  },
+  {
+   "tu": "đầu",
+   "bat_dau": 116.44,
+   "ket_thuc": 116.62
+  },
+  {
+   "tu": "thì",
+   "bat_dau": 116.62,
+   "ket_thuc": 117.16
+  },
+  {
+   "tu": "cô",
+   "bat_dau": 117.16,
+   "ket_thuc": 117.46
+  },
+  {
+   "tu": "Lan",
+   "bat_dau": 117.46,
+   "ket_thuc": 117.58
+  },
+  {
+   "tu": "nghỉ",
+   "bat_dau": 117.58,
+   "ket_thuc": 117.76
+  },
+  {
+   "tu": "thông",
+   "bat_dau": 118.26,
+   "ket_thuc": 118.28
+  },
+  {
+   "tu": "tin",
+   "bat_dau": 118.28,
+   "ket_thuc": 118.38
+  },
+  {
+   "tu": "biến",
+   "bat_dau": 118.38,
+   "ket_thuc": 118.58
+  },
+  {
+   "tu": "mất",
+   "bat_dau": 118.58,
+   "ket_thuc": 118.8
+  },
+  {
+   "tu": "Máy",
+   "bat_dau": 119.36,
+   "ket_thuc": 119.46
+  },
+  {
+   "tu": "tính",
+   "bat_dau": 119.46,
+   "ket_thuc": 119.52
+  },
+  {
+   "tu": "cũng",
+   "bat_dau": 119.52,
+   "ket_thuc": 119.68
+  },
+  {
+   "tu": "vậy",
+   "bat_dau": 119.68,
+   "ket_thuc": 119.9
+  },
+  {
+   "tu": "biến",
+   "bat_dau": 120.48,
+   "ket_thuc": 120.48
+  },
+  {
+   "tu": "chỉ",
+   "bat_dau": 120.48,
+   "ket_thuc": 120.84
+  },
+  {
+   "tu": "sống",
+   "bat_dau": 120.84,
+   "ket_thuc": 121.1
+  },
+  {
+   "tu": "lúc",
+   "bat_dau": 121.1,
+   "ket_thuc": 121.46
+  },
+  {
+   "tu": "máy",
+   "bat_dau": 121.46,
+   "ket_thuc": 121.64
+  },
+  {
+   "tu": "đang",
+   "bat_dau": 121.64,
+   "ket_thuc": 121.98
+  },
+  {
+   "tu": "chạy",
+   "bat_dau": 121.98,
+   "ket_thuc": 122.0
+  },
+  {
+   "tu": "tắt",
+   "bat_dau": 122.56,
+   "ket_thuc": 122.56
+  },
+  {
+   "tu": "đi",
+   "bat_dau": 122.56,
+   "ket_thuc": 122.78
+  },
+  {
+   "tu": "là",
+   "bat_dau": 122.78,
+   "ket_thuc": 123.22
+  },
+  {
+   "tu": "quên",
+   "bat_dau": 123.22,
+   "ket_thuc": 123.42
+  },
+  {
+   "tu": "sạch",
+   "bat_dau": 123.42,
+   "ket_thuc": 123.62
+  },
+  {
+   "tu": "Kế",
+   "bat_dau": 124.32,
+   "ket_thuc": 124.44
+  },
+  {
+   "tu": "toán",
+   "bat_dau": 124.44,
+   "ket_thuc": 124.62
+  },
+  {
+   "tu": "ghi",
+   "bat_dau": 124.62,
+   "ket_thuc": 124.78
+  },
+  {
+   "tu": "vào",
+   "bat_dau": 124.78,
+   "ket_thuc": 124.98
+  },
+  {
+   "tu": "sổ",
+   "bat_dau": 124.98,
+   "ket_thuc": 125.14
+  },
+  {
+   "tu": "thì",
+   "bat_dau": 125.14,
+   "ket_thuc": 125.7
+  },
+  {
+   "tu": "ai",
+   "bat_dau": 125.7,
+   "ket_thuc": 125.92
+  },
+  {
+   "tu": "đến",
+   "bat_dau": 125.92,
+   "ket_thuc": 126.14
+  },
+  {
+   "tu": "thay",
+   "bat_dau": 126.14,
+   "ket_thuc": 126.34
+  },
+  {
+   "tu": "cũng",
+   "bat_dau": 126.34,
+   "ket_thuc": 126.56
+  },
+  {
+   "tu": "đọc",
+   "bat_dau": 126.56,
+   "ket_thuc": 126.7
+  },
+  {
+   "tu": "được",
+   "bat_dau": 126.7,
+   "ket_thuc": 126.9
+  },
+  {
+   "tu": "điện",
+   "bat_dau": 127.5,
+   "ket_thuc": 127.56
+  },
+  {
+   "tu": "tắt",
+   "bat_dau": 127.56,
+   "ket_thuc": 127.74
+  },
+  {
+   "tu": "rồi",
+   "bat_dau": 127.74,
+   "ket_thuc": 128.12
+  },
+  {
+   "tu": "bật",
+   "bat_dau": 128.12,
+   "ket_thuc": 128.3
+  },
+  {
+   "tu": "lại",
+   "bat_dau": 128.3,
+   "ket_thuc": 128.54
+  },
+  {
+   "tu": "vẫn",
+   "bat_dau": 128.54,
+   "ket_thuc": 128.88
+  },
+  {
+   "tu": "còn",
+   "bat_dau": 128.88,
+   "ket_thuc": 129.1
+  },
+  {
+   "tu": "nguyên",
+   "bat_dau": 129.1,
+   "ket_thuc": 129.44
+  },
+  {
+   "tu": "Biến",
+   "bat_dau": 130.24,
+   "ket_thuc": 130.48
+  },
+  {
+   "tu": "là",
+   "bat_dau": 130.48,
+   "ket_thuc": 131.16
+  },
+  {
+   "tu": "trí",
+   "bat_dau": 131.16,
+   "ket_thuc": 131.26
+  },
+  {
+   "tu": "nhớ",
+   "bat_dau": 131.26,
+   "ket_thuc": 131.38
+  },
+  {
+   "tu": "tạm",
+   "bat_dau": 131.38,
+   "ket_thuc": 131.68
+  },
+  {
+   "tu": "database",
+   "bat_dau": 132.66,
+   "ket_thuc": 132.66
+  },
+  {
+   "tu": "là",
+   "bat_dau": 132.66,
+   "ket_thuc": 133.26
+  },
+  {
+   "tu": "trí",
+   "bat_dau": 133.26,
+   "ket_thuc": 133.44
+  },
+  {
+   "tu": "nhớ",
+   "bat_dau": 133.44,
+   "ket_thuc": 133.58
+  },
+  {
+   "tu": "lâu",
+   "bat_dau": 133.58,
+   "ket_thuc": 133.8
+  },
+  {
+   "tu": "dài",
+   "bat_dau": 133.8,
+   "ket_thuc": 133.98
+  },
+  {
+   "tu": "Viên",
+   "bat_dau": 134.7,
+   "ket_thuc": 135.1
+  },
+  {
+   "tu": "gạch",
+   "bat_dau": 135.1,
+   "ket_thuc": 135.18
+  },
+  {
+   "tu": "thứ",
+   "bat_dau": 135.18,
+   "ket_thuc": 135.38
+  },
+  {
+   "tu": "ba",
+   "bat_dau": 135.38,
+   "ket_thuc": 135.56
+  },
+  {
+   "tu": "database",
+   "bat_dau": 136.56,
+   "ket_thuc": 136.56
+  },
+  {
+   "tu": "nơi",
+   "bat_dau": 137.22,
+   "ket_thuc": 137.22
+  },
+  {
+   "tu": "giữ",
+   "bat_dau": 137.22,
+   "ket_thuc": 137.4
+  },
+  {
+   "tu": "thông",
+   "bat_dau": 137.4,
+   "ket_thuc": 137.66
+  },
+  {
+   "tu": "tin",
+   "bat_dau": 137.66,
+   "ket_thuc": 137.82
+  },
+  {
+   "tu": "lâu",
+   "bat_dau": 137.82,
+   "ket_thuc": 138.08
+  },
+  {
+   "tu": "dài",
+   "bat_dau": 138.08,
+   "ket_thuc": 138.28
+  },
+  {
+   "tu": "Giờ",
+   "bat_dau": 139.5,
+   "ket_thuc": 139.5
+  },
+  {
+   "tu": "tiệm",
+   "bat_dau": 139.5,
+   "ket_thuc": 139.72
+  },
+  {
+   "tu": "ông",
+   "bat_dau": 139.72,
+   "ket_thuc": 139.9
+  },
+  {
+   "tu": "Sơn",
+   "bat_dau": 139.9,
+   "ket_thuc": 140.02
+  },
+  {
+   "tu": "có",
+   "bat_dau": 140.02,
+   "ket_thuc": 140.24
+  },
+  {
+   "tu": "nhãn",
+   "bat_dau": 140.24,
+   "ket_thuc": 140.6
+  },
+  {
+   "tu": "để",
+   "bat_dau": 140.6,
+   "ket_thuc": 140.76
+  },
+  {
+   "tu": "gọi",
+   "bat_dau": 140.76,
+   "ket_thuc": 140.92
+  },
+  {
+   "tu": "tên",
+   "bat_dau": 140.92,
+   "ket_thuc": 141.1
+  },
+  {
+   "tu": "nhân",
+   "bat_dau": 141.8,
+   "ket_thuc": 141.8
+  },
+  {
+   "tu": "viên",
+   "bat_dau": 141.8,
+   "ket_thuc": 142.0
+  },
+  {
+   "tu": "để",
+   "bat_dau": 142.0,
+   "ket_thuc": 142.34
+  },
+  {
+   "tu": "làm",
+   "bat_dau": 142.34,
+   "ket_thuc": 142.5
+  },
+  {
+   "tu": "việc",
+   "bat_dau": 142.5,
+   "ket_thuc": 142.68
+  },
+  {
+   "tu": "kế",
+   "bat_dau": 143.32,
+   "ket_thuc": 143.36
+  },
+  {
+   "tu": "toán",
+   "bat_dau": 143.36,
+   "ket_thuc": 143.56
+  },
+  {
+   "tu": "để",
+   "bat_dau": 143.56,
+   "ket_thuc": 143.92
+  },
+  {
+   "tu": "giữ",
+   "bat_dau": 143.92,
+   "ket_thuc": 144.06
+  },
+  {
+   "tu": "sổ",
+   "bat_dau": 144.06,
+   "ket_thuc": 144.26
+  },
+  {
+   "tu": "Nhưng",
+   "bat_dau": 144.98,
+   "ket_thuc": 145.16
+  },
+  {
+   "tu": "còn",
+   "bat_dau": 145.16,
+   "ket_thuc": 145.46
+  },
+  {
+   "tu": "thiếu",
+   "bat_dau": 145.46,
+   "ket_thuc": 145.58
+  },
+  {
+   "tu": "một",
+   "bat_dau": 145.58,
+   "ket_thuc": 145.8
+  },
+  {
+   "tu": "thứ",
+   "bat_dau": 145.8,
+   "ket_thuc": 145.92
+  },
+  {
+   "tu": "khả",
+   "bat_dau": 146.7,
+   "ket_thuc": 146.7
+  },
+  {
+   "tu": "năng",
+   "bat_dau": 146.7,
+   "ket_thuc": 146.84
+  },
+  {
+   "tu": "tự",
+   "bat_dau": 146.84,
+   "ket_thuc": 147.18
+  },
+  {
+   "tu": "quyết",
+   "bat_dau": 147.18,
+   "ket_thuc": 147.38
+  },
+  {
+   "tu": "định",
+   "bat_dau": 147.38,
+   "ket_thuc": 147.52
+  },
+  {
+   "tu": "mà",
+   "bat_dau": 147.52,
+   "ket_thuc": 148.06
+  },
+  {
+   "tu": "ông",
+   "bat_dau": 148.06,
+   "ket_thuc": 148.28
+  },
+  {
+   "tu": "Sơn",
+   "bat_dau": 148.28,
+   "ket_thuc": 148.5
+  },
+  {
+   "tu": "không",
+   "bat_dau": 148.5,
+   "ket_thuc": 148.8
+  },
+  {
+   "tu": "phải",
+   "bat_dau": 148.8,
+   "ket_thuc": 148.96
+  },
+  {
+   "tu": "đứng",
+   "bat_dau": 148.96,
+   "ket_thuc": 149.1
+  },
+  {
+   "tu": "nhắc",
+   "bat_dau": 149.1,
+   "ket_thuc": 149.32
+  },
+  {
+   "tu": "từng",
+   "bat_dau": 149.32,
+   "ket_thuc": 149.62
+  },
+  {
+   "tu": "người",
+   "bat_dau": 149.62,
+   "ket_thuc": 149.72
+  }
+ ]
+}
