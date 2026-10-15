@@ -7,7 +7,8 @@
     "rong": 1920,
     "cao": 1080,
     "fps_nhap": 30,
-    "fps_cuoi": 60
+    "fps_cuoi": 60,
+    "chu_de": "sang"
   },
   "thu_muc": {
     "kich_ban": "kich-ban",
@@ -35,44 +36,244 @@
   },
   "canh": [
     {
+      "id": "canh0",
+      "ten": "Mở đầu",
+      "tep_kich_ban": "canh-0-mo-dau.md",
+      "tep_loi_thoai": "canh0_mo-dau",
+      "du_kien_giay": 20,
+      "giu_them_giay": 0.18,
+      "doan": [
+        {
+          "id": "c0-d1",
+          "ten": "Đoạn 1: Một đoạn code trông như tiếng lạ",
+          "bat_dau": 0.0
+        }
+      ]
+    },
+    {
       "id": "canh1",
       "ten": "Ông Sơn và 20 triệu đồng",
       "tep_kich_ban": "canh-1-ong-son-va-20-trieu.md",
       "tep_loi_thoai": "canh1_ong-son-va-20-trieu-dong",
-      "du_kien_giay": 57,
-      "giu_them_giay": 0
+      "du_kien_giay": 85,
+      "giu_them_giay": 0.51,
+      "doan": [
+        {
+          "id": "c1-d1",
+          "ten": "Đoạn 1: Dự án bắt đầu từ đâu",
+          "bat_dau": 0.0
+        },
+        {
+          "id": "c1-d2",
+          "ten": "Đoạn 2: Nhập hàng",
+          "bat_dau": 17.65
+        },
+        {
+          "id": "c1-d3",
+          "ten": "Đoạn 3: Phân loại và ghi giá",
+          "bat_dau": 29.55
+        },
+        {
+          "id": "c1-d4",
+          "ten": "Đoạn 4: Cùng một việc, viết bằng code",
+          "bat_dau": 47.24
+        },
+        {
+          "id": "c1-d5",
+          "ten": "Đoạn 5: Cú lật, vì sao tên quan trọng",
+          "bat_dau": 73.84
+        },
+        {
+          "id": "c1-chot",
+          "ten": "Chốt cảnh: viên gạch BIẾN",
+          "bat_dau": 92.74
+        }
+      ]
     },
     {
       "id": "canh2",
       "ten": "Ông Sơn bắt đầu thuê người",
       "tep_kich_ban": "canh-2-ong-son-bat-dau-thue-nguoi.md",
       "tep_loi_thoai": "canh2_ong-son-bat-dau-thue-nguoi",
-      "du_kien_giay": 99,
-      "giu_them_giay": 0
+      "du_kien_giay": 110,
+      "giu_them_giay": 0.36,
+      "doan": [
+        {
+          "id": "c2-d1",
+          "ten": "Đoạn 1: Ông Sơn làm hết mọi việc",
+          "bat_dau": 0.0
+        },
+        {
+          "id": "c2-d2",
+          "ten": "Đoạn 2: Thuê người thứ nhất, hàm tính tiền",
+          "bat_dau": 14.69
+        },
+        {
+          "id": "c2-d3",
+          "ten": "Đoạn 3: Thuê người thứ hai, hàm xếp hàng lên kệ",
+          "bat_dau": 36.89
+        },
+        {
+          "id": "c2-d4",
+          "ten": "Đoạn 4: Ghép các hàm thành quy trình",
+          "bat_dau": 70.77
+        },
+        {
+          "id": "c2-d5",
+          "ten": "Đoạn 5: Cú lật, một người làm hết",
+          "bat_dau": 94.54
+        },
+        {
+          "id": "c2-chot",
+          "ten": "Chốt cảnh: viên gạch HÀM",
+          "bat_dau": 113.79
+        }
+      ]
     },
     {
       "id": "canh3",
       "ten": "Đội kế toán của ông Sơn",
       "tep_kich_ban": "canh-3-doi-ke-toan-cua-ong-son.md",
       "tep_loi_thoai": "canh3_doi-ke-toan-cua-ong-son",
-      "du_kien_giay": 131,
-      "giu_them_giay": 0
+      "du_kien_giay": 132,
+      "giu_them_giay": 0.98,
+      "doan": [
+        {
+          "id": "c3-d1",
+          "ten": "Đoạn 1: Làm ăn thuận lợi, bán thêm hàng",
+          "bat_dau": 0.0
+        },
+        {
+          "id": "c3-d2",
+          "ten": "Đoạn 2: Nhớ trong đầu bắt đầu sai",
+          "bat_dau": 11.36
+        },
+        {
+          "id": "c3-d3",
+          "ten": "Đoạn 3: Thuê đội kế toán",
+          "bat_dau": 25.58
+        },
+        {
+          "id": "c3-d4",
+          "ten": "Đoạn 4: Kế toán phân loại, khoá chính",
+          "bat_dau": 45.27
+        },
+        {
+          "id": "c3-d5",
+          "ten": "Đoạn 5: Hoá đơn chỉ ghi mã, khoá ngoại",
+          "bat_dau": 69.74
+        },
+        {
+          "id": "c3-d6",
+          "ten": "Đoạn 6: Cô Lan không cần nhớ nữa",
+          "bat_dau": 103.6
+        },
+        {
+          "id": "c3-d7",
+          "ten": "Đoạn 7: Cú lật, nhớ trong đầu và ghi vào sổ",
+          "bat_dau": 119.04
+        },
+        {
+          "id": "c3-chot",
+          "ten": "Chốt cảnh: viên gạch DATABASE",
+          "bat_dau": 141.11
+        }
+      ]
     },
     {
       "id": "canh4",
       "ten": "Black Friday của ông Sơn",
       "tep_kich_ban": "canh-4-black-friday-cua-ong-son.md",
       "tep_loi_thoai": "canh4_black-friday-cua-ong-son",
-      "du_kien_giay": 78,
-      "giu_them_giay": 0
+      "du_kien_giay": 99,
+      "giu_them_giay": 0.79,
+      "doan": [
+        {
+          "id": "c4-d1",
+          "ten": "Đoạn 1: Luật của ông Sơn",
+          "bat_dau": 0.0
+        },
+        {
+          "id": "c4-d2",
+          "ten": "Đoạn 2: If/else là nếu... thì... không thì...",
+          "bat_dau": 13.5
+        },
+        {
+          "id": "c4-d3",
+          "ten": "Đoạn 3: Viết thành code",
+          "bat_dau": 35.61
+        },
+        {
+          "id": "c4-d4",
+          "ten": "Đoạn 4: Chạy thử hai ngày",
+          "bat_dau": 52.44
+        },
+        {
+          "id": "c4-d5",
+          "ten": "Đoạn 5: Vòng lặp là if/else hỏi đi hỏi lại",
+          "bat_dau": 67.7
+        },
+        {
+          "id": "c4-d6",
+          "ten": "Đoạn 6: Cú lật, nếu không có if/else",
+          "bat_dau": 95.08
+        },
+        {
+          "id": "c4-chot",
+          "ten": "Chốt cảnh: hai viên gạch cuối",
+          "bat_dau": 108.07
+        }
+      ]
     },
     {
       "id": "canh5",
       "ten": "Từ tiệm tạp hoá đến phần mềm triệu đô",
       "tep_kich_ban": "canh-5-tu-tiem-tap-hoa-den-phan-mem-trieu-do.md",
       "tep_loi_thoai": "canh5_tu-tiem-tap-hoa-den-phan-mem-trieu-do",
-      "du_kien_giay": 154,
-      "giu_them_giay": 0
+      "du_kien_giay": 189,
+      "giu_them_giay": 0.0,
+      "doan": [
+        {
+          "id": "c5-d1",
+          "ten": "Đoạn 1: Nhìn tiệm từ trên cao",
+          "bat_dau": 0.0
+        },
+        {
+          "id": "c5-d2",
+          "ten": "Đoạn 2: Hệ thống lớn là gạch nhỏ xếp lại",
+          "bat_dau": 21.18
+        },
+        {
+          "id": "c5-d3",
+          "ten": "Đoạn 3: Bình cũ rượu mới",
+          "bat_dau": 46.85
+        },
+        {
+          "id": "c5-d4",
+          "ten": "Đoạn 4: Ông Sơn chuyển sang bán bún",
+          "bat_dau": 66.29
+        },
+        {
+          "id": "c5-d5",
+          "ten": "Đoạn 5: Framework là cái khung đã đóng gói sẵn",
+          "bat_dau": 88.34
+        },
+        {
+          "id": "c5-d6",
+          "ten": "Đoạn 6: Tư duy kiến trúc sư",
+          "bat_dau": 135.97
+        },
+        {
+          "id": "c5-d7",
+          "ten": "Đoạn 7: Quay lại đoạn code, khép vòng hook và thử thách",
+          "bat_dau": 163.85
+        },
+        {
+          "id": "c5-chot",
+          "ten": "Chốt: Đời không như mơ",
+          "bat_dau": 221.05
+        }
+      ]
     }
   ]
 }

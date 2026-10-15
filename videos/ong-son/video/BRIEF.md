@@ -2,7 +2,7 @@
 workflow: general-video
 flow: companion
 storyboard: yes
-message: "Phần mềm triệu đô được xây từ năm viên gạch nhỏ nhất, giống tiệm tạp hoá của ông Sơn: biến, hàm, database, if/else và vòng lặp."
+message: "Phần mềm triệu đô được xây trên những viên gạch nền móng, giống tiệm tạp hoá của ông Sơn: biến, hàm, database, if/else và vòng lặp."
 destination: youtube
 aspect: 1920x1080
 language: vi

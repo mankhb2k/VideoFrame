@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "npx --yes hyperframes@0.8.152 preview",
     "check": "npx --yes hyperframes@0.8.152 check",
-    "render:nhap": "npx --yes hyperframes@0.8.152 render --fps 30 --quality draft -o ../renders/ong-son-nhap-30fps.mp4",
-    "render:cuoi": "npx --yes hyperframes@0.8.152 render --fps 60 --quality looks -o ../renders/ong-son-60fps.mp4"
+    "render:nhap": "HF_CAPTURE_PARALLEL_STREAM=true npx --yes hyperframes@0.8.152 render --fps 30 --quality draft -o ../renders/ong-son-nhap-30fps.mp4",
+    "render:cuoi": "HF_CAPTURE_PARALLEL_STREAM=true npx --yes hyperframes@0.8.152 render --fps 60 --quality looks -o ../renders/ong-son-60fps.mp4"
   }
 }
